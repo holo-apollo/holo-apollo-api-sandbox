@@ -10,7 +10,13 @@ from .managers import HoloUserManager
 class HoloUser(AbstractBaseUser, PermissionsMixin):
     objects = HoloUserManager()
 
-    username = models.CharField(max_length=30)
+    username = models.CharField(
+        max_length=30,
+        unique=True,
+        error_messages={
+            'unique': _('That username is already taken.')
+        }
+    )
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
 
