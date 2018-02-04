@@ -1,1 +1,1 @@
-web: gunicorn holoapollo.wsgi
+web: gunicorn config.wsgi

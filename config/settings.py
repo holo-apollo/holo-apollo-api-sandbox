@@ -10,11 +10,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import sys
+
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +42,9 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    # local
+    'common',
 ]
 
 MIDDLEWARE = [
@@ -52,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'holoapollo.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'holoapollo.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
