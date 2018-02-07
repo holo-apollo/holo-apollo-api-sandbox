@@ -1,2 +1,2 @@
-release: python manage.py migrate --noinput
+release: ./release.sh
 web: gunicorn config.wsgi
