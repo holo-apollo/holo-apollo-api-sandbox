@@ -5,13 +5,10 @@
     "postdeploy": "./release.sh"
   },
   "env": {
-    "DJANGO_SETTINGS_MODULE": {
-      "required": true
-    },
     "SECRET_KEY": {
       "generator": "secret"
     },
-    "DEBUG": "True"
+    "DJANGO_SETTINGS_MODULE": "config.settings.review"
   },
   "formation": {
     "web": {
