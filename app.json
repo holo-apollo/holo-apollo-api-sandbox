@@ -1,0 +1,29 @@
+{
+  "name": "holo-apollo",
+  "description": "Craft Art Marketplace",
+  "scripts": {
+    "postdeploy": "./release.sh"
+  },
+  "env": {
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "generator": "secret"
+    },
+    "DEBUG": "True"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
