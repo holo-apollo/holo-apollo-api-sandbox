@@ -2,13 +2,16 @@
   "name": "holo-apollo",
   "description": "Craft Art Marketplace",
   "scripts": {
-    "postdeploy": "./release.sh"
+    "postdeploy": "./scripts/postdeploy.sh"
   },
   "env": {
     "SECRET_KEY": {
       "generator": "secret"
     },
-    "DJANGO_SETTINGS_MODULE": "config.settings.review"
+    "DJANGO_SETTINGS_MODULE": "config.settings.review",
+    "STAGING_DATABASE_URL": {
+      "required": true
+    }
   },
   "formation": {
     "web": {

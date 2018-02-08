@@ -1,2 +1,2 @@
-release: ./release.sh
+release: ./scripts/release.sh
 web: gunicorn config.wsgi
