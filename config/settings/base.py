@@ -182,3 +182,12 @@ LOGGING = {
         },
     },
 }
+
+
+# Celery
+CELERY_BROKER_URL = dotenv.get('REDIS_URL')
+CELERY_RESULT_BACKEND = dotenv.get('REDIS_URL')
+
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
