@@ -1,15 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Holo Apollo Art</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}" />
+{% block extrastyle %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <div class="outer">
         <div class="middle">
             <div class="inner">
@@ -17,8 +13,8 @@
                 <h1>Coming soon</h1>
                 <h3>Holo Apollo</h3>
                 <h5>The best marketplace of craft design</h5>
+                <a href="{% url 'users:subscribe' %}">Subscribe to our updates</a>
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
