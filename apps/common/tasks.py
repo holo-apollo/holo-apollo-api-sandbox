@@ -1,7 +1,11 @@
+import logging
+
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 
 from celery import shared_task
+
+logger = logging.getLogger(f'holo.{__name__}')
 
 
 @shared_task
@@ -16,6 +20,7 @@ def send_email(recipient, subject, text_content, html_content=None):
     msg = EmailMultiAlternatives(subject, text_content, from_email, [recipient])
     if html_content:
         msg.attach_alternative(html_content, "text/html")
+    logger.info('Sending email')
     msg.send()
 
 
@@ -25,4 +30,5 @@ def broadcast_email(recipients, subject, text_content, html_content=None):
     msg = EmailMultiAlternatives(subject, text_content, from_email, bcc=recipients)
     if html_content:
         msg.attach_alternative(html_content, "text/html")
-        msg.send()
+    logger.info('Sending emails')
+    msg.send()
