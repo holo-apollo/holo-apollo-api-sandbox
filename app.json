@@ -17,10 +17,16 @@
     },
     "EMAIL_HOST_PASSWORD": {
       "required": true
+    },
+    "REDIS_URL": {
+      "required": true
     }
   },
   "formation": {
     "web": {
+      "quantity": 1
+    },
+    "worker": {
       "quantity": 1
     }
   },

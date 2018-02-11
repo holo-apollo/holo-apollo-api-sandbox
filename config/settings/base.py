@@ -185,8 +185,9 @@ LOGGING = {
 
 
 # Celery
-CELERY_BROKER_URL = dotenv.get('REDIS_URL')
-CELERY_RESULT_BACKEND = dotenv.get('REDIS_URL')
+REDIS_URL = dotenv.get('REDIS_URL', default='redis://localhost:6379')
+CELERY_BROKER_URL = REDIS_URL
+CELERY_RESULT_BACKEND = REDIS_URL
 
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
@@ -196,7 +197,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 # Emails
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER')
+EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
 EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_SSL = True
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'

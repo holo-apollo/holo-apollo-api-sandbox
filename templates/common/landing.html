@@ -1,15 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Holo Apollo Art</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}" />
+{% block extrastyle %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <div class="outer">
         <div class="middle">
             <div class="inner">
@@ -20,5 +16,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
