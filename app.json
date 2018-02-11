@@ -11,12 +11,6 @@
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
     "STAGING_DATABASE_URL": {
       "required": true
-    },
-    "EMAIL_HOST_USER": {
-      "required": true
-    },
-    "EMAIL_HOST_PASSWORD": {
-      "required": true
     }
   },
   "formation": {
