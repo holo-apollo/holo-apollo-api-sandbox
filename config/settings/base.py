@@ -25,10 +25,10 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = dotenv.get('SECRET_KEY')
+SECRET_KEY = dotenv.get('SECRET_KEY', default='1e5_tvt+a34)w0u7w)jyma@#it+*s4#xy55x-&f0(2r3w3(h+-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = dotenv.get('DEBUG', default=False)
+DEBUG = True
 
 # Application definition
 
@@ -127,7 +127,7 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -188,7 +188,6 @@ LOGGING = {
 REDIS_URL = dotenv.get('REDIS_URL', default='redis://localhost:6379')
 CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
-
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
