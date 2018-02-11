@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
 from common.fields import PhoneField
+from common.tasks import send_email
 from .managers import HoloUserManager
 
 
@@ -61,3 +62,11 @@ class Subscription(models.Model):
             'unique': _('That email address is already subscribed.')
         }
     )
+
+    def save(self, **kwargs):
+        super(Subscription, self).save(**kwargs)
+        send_email.delay(
+            self.email,
+            _('Holo Apollo Subscription'),
+            _('You have subscribed to Holo Apollo updates. Thank you!')
+        )
