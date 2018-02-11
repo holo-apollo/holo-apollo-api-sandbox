@@ -3,6 +3,8 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
+from model_utils.models import TimeStampedModel
+
 from common.fields import PhoneField
 from common.tasks import send_email
 from .managers import HoloUserManager
@@ -54,7 +56,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     get_full_name.short_description = _('Full name')
 
 
-class Subscription(models.Model):
+class Subscription(TimeStampedModel):
     email = models.EmailField(
         max_length=254,
         unique=True,

@@ -11,5 +11,6 @@ class HoloUserAdmin(admin.ModelAdmin):
 
 @admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):
-    fields = ('email',)
-    list_display = ('email',)
+    fields = ('email', 'created', 'modified',)
+    readonly_fields = ('created', 'modified',)
+    list_display = ('email', 'created', 'modified',)
