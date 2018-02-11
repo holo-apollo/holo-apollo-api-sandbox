@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'raven.contrib.django.raven_compat',
 
     # local
     'common',
@@ -201,3 +202,9 @@ EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+# Raven
+RAVEN_CONFIG = {
+    'dsn': dotenv.get('SENTRY_DSN'),
+}
