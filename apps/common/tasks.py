@@ -21,7 +21,6 @@ def send_email(recipient, subject, text_content, html_content=None):
     if html_content:
         msg.attach_alternative(html_content, "text/html")
     logger.info('Sending email')
-    logger.info(settings.EMAIL_BACKEND)
     msg.send()
 
 
