@@ -6,3 +6,4 @@ staticfiles
 *.log
 *.rdb
 .pytest_cache
+.coverage
