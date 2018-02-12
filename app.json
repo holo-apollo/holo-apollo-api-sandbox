@@ -2,8 +2,7 @@
   "name": "holo-apollo",
   "description": "Craft Art Marketplace",
   "scripts": {
-    "postdeploy": "./scripts/postdeploy.sh",
-     "test": "pytest --cov=apps"
+    "postdeploy": "./scripts/postdeploy.sh"
   },
   "env": {
     "SECRET_KEY": {
@@ -30,5 +29,17 @@
     {
       "url": "heroku/python"
     }
-  ]
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+         "test": "pytest --cov=apps"
+      },
+      "env": {
+        "STAGING_DATABASE_URL": {
+          "required": false
+        }
+      }
+    }
+  }
 }
