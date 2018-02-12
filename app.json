@@ -2,7 +2,8 @@
   "name": "holo-apollo",
   "description": "Craft Art Marketplace",
   "scripts": {
-    "postdeploy": "./scripts/postdeploy.sh"
+    "postdeploy": "./scripts/postdeploy.sh",
+     "test": "pytest --cov=apps"
   },
   "env": {
     "SECRET_KEY": {
