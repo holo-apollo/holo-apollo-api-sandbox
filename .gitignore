@@ -7,3 +7,4 @@ staticfiles
 *.rdb
 .pytest_cache
 .coverage
+htmlcov
