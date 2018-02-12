@@ -1,5 +1,6 @@
 amqp==2.2.2
 appnope==0.1.0
+attrs==17.4.0
 billiard==3.5.0.3
 celery==4.1.0
 decorator==4.2.1
@@ -14,10 +15,14 @@ kombu==4.1.0
 parso==0.1.1
 pexpect==4.3.1
 pickleshare==0.7.4
+pluggy==0.6.0
 prompt-toolkit==1.0.15
 psycopg2==2.7.3.2
 ptyprocess==0.5.2
+py==1.5.2
 Pygments==2.2.0
+pytest==3.4.0
+pytest-django==3.1.2
 python-env==1.0.0
 pytz==2017.3
 raven==6.5.0

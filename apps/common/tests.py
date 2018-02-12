@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+
+class TestCommon(TestCase):
+    def test_addition(self):
+        self.assertEqual(5, 2 + 3)
