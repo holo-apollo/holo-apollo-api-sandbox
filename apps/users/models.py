@@ -72,3 +72,6 @@ class Subscription(TimeStampedModel):
             _('Holo Apollo Subscription'),
             _('You have subscribed to Holo Apollo updates. Thank you!')
         )
+
+    def __str__(self):
+        return self.email
