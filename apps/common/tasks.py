@@ -8,12 +8,6 @@ logger = logging.getLogger(f'holo.{__name__}')
 
 
 @shared_task
-def add(x, y):
-    """ Test task. """
-    return x + y
-
-
-@shared_task
 def send_email(recipient, subject, text_content, html_content=None):
     msg = EmailMultiAlternatives(subject, text_content, to=[recipient])
     if html_content:

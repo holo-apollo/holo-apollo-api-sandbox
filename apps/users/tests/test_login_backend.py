@@ -26,3 +26,9 @@ class TestLoginBackend(TestCase):
     def test_wrong_user(self):
         authenticated = self.backend.authenticate('foo@holo-apollo.art', '12345')
         self.assertIsNone(authenticated)
+
+    def test_get_user_success(self):
+        self.assertEqual(self.backend.get_user(self.user.id), self.user)
+
+    def test_get_user_error(self):
+        self.assertIsNone(self.backend.get_user(333))
