@@ -4,3 +4,5 @@ staticfiles
 .idea
 *.sqlite3
 *.log
+*.rdb
+.pytest_cache
