@@ -11,6 +11,9 @@
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
     "STAGING_DATABASE_URL": {
       "required": true
+    },
+    "TEST_DATABASE_URL": {
+      "required": true
     }
   },
   "formation": {
@@ -38,6 +41,9 @@
       "env": {
         "STAGING_DATABASE_URL": {
           "required": false
+        },
+        "TEST_DATABASE_URL": {
+          "required": true
         }
       }
     }
