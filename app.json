@@ -36,9 +36,10 @@
   "environments": {
     "test": {
       "scripts": {
-         "test": "pytest --cov=apps"
+         "test": "coverage run --source=apps manage.py test"
       },
       "env": {
+        "DJANGO_SETTINGS_MODULE": "config.settings.test",
         "STAGING_DATABASE_URL": {
           "required": false
         },
