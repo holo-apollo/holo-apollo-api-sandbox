@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Futura';
+    font-weight: bold;
+    src: url('../fonts/futur.ttf');
+    src: local('../fonts/futur.ttf')
+}
+
+
+@font-face {
+    font-family: 'Futura';
+    font-weight: 500;
+    src: url('../fonts/futura_medium_bt.ttf');
+    src: local('../fonts/futura_medium_bt.ttf')
+}
+
+
+body {
+    font-family: Futura, Arial, sans-serif;
+    color: #404040;
+    margin: 0;
+}
