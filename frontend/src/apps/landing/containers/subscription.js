@@ -4,21 +4,45 @@ import {Form, Text} from 'react-form';
 import autoBind from 'react-autobind';
 
 import {validateEmail} from 'validators';
+import {post} from 'rest';
 
 
 export default class Subscription extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
+        this.state = {
+            submitSuccess: false,
+            submitPending: false,
+            submitErrors: {email: null}
+        };
     }
 
     onSubmit(values) {
-        console.log('Submit', values);
+        this.setState({
+            submitSuccess: false,
+            submitPending: true
+        });
+        post('subscriptions/', values)
+            .then(() => {
+                this.setState({
+                    submitSuccess: true,
+                    submitPending: false
+                });
+            })
+            .catch(error => {
+                let message = 'Oops! Something went wrong. Please try again in a moment.';
+                if (error.response && error.response.data.email) {
+                    message = error.response.data.email[0];
+                }
+                this.setState({
+                    submitPending: false,
+                    submitErrors: {email: message}
+                });
+            });
     }
 
     validateError(values) {
-        console.log('Validate', values);
-        console.log(validateEmail(values.email));
         if (!values.email) {
             return {email: 'Please type your email.'};
         } else if (!validateEmail(values.email)) {
@@ -27,7 +51,7 @@ export default class Subscription extends Component {
         return {email: null};
     }
 
-    render() {
+    renderForm() {
         return (
             <div className={'subscription'}>
                 <Form
@@ -41,11 +65,32 @@ export default class Subscription extends Component {
                             <form onSubmit={formApi.submitForm}>
                                 <Text field="email" id="hello" />
                                 <button type="submit">Submit</button>
-                                <div className={'error'}>{formApi.errors.email}</div>
+                                <div className={'error'}>
+                                    {formApi.errors.email}
+                                    {this.state.submitErrors.email}
+                                </div>
                             </form>
                         );
                     }}
                 </Form>
+            </div>
+        );
+    }
+
+    renderContent() {
+        if (this.state.submitSuccess) {
+            return <h3>You were subscribed successfully! See ya!</h3>;
+        }
+        if (this.state.submitPending) {
+            return <div>Loading...</div>;
+        }
+        return this.renderForm();
+    }
+
+    render() {
+        return (
+            <div className={'subscription'}>
+                {this.renderContent()}
             </div>
         );
     }
