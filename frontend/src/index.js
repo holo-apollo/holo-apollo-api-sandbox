@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Landing from 'apps/landing/containers/landing';
+import Subscription from 'apps/landing/containers/subscription';
 
 
-const $root = document.getElementById('root');
-
-ReactDOM.render(<Landing/>, $root);
+ReactDOM.render(<Subscription/>, document.getElementById('react-subscription'));
