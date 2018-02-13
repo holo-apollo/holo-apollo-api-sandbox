@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
@@ -64,14 +66,19 @@ class Subscription(TimeStampedModel):
             'unique': _('That email address is already subscribed.')
         }
     )
+    subscribed = models.BooleanField(default=True)
+    edit_token = models.UUIDField(default=uuid.uuid4, editable=False)
 
     def save(self, **kwargs):
+        created = not self.pk
         super(Subscription, self).save(**kwargs)
-        send_email.delay(
-            self.email,
-            _('Holo Apollo Subscription'),
-            _('You have subscribed to Holo Apollo updates. Thank you!')
-        )
+        if created and self.subscribed:
+            send_email.delay(
+                self.email,
+                _('Holo Apollo Subscription'),
+                _('You have subscribed to Holo Apollo updates. Thank you!')
+            )
 
     def __str__(self):
-        return self.email
+        subscribed = 'subscribed' if self.subscribed else 'not subscribed'
+        return f'{self.email}: {subscribed}'

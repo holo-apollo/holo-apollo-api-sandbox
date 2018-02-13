@@ -1,16 +1,20 @@
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, TemplateView
+from rest_framework.exceptions import PermissionDenied
+from rest_framework import mixins, viewsets
+from rest_framework.permissions import AllowAny
 
-from .forms import SubscriptionForm
 from .models import Subscription
+from .serializers import SubscriptionSerializer
 
 
-class SubscriptionSuccessView(TemplateView):
-    template_name = 'users/subscription_success.html'
+class SubscriptionViewSet(mixins.CreateModelMixin,
+                          mixins.UpdateModelMixin,
+                          viewsets.GenericViewSet):
+    queryset = Subscription.objects.all()
+    serializer_class = SubscriptionSerializer
+    permission_classes = [AllowAny]
 
-
-class SubscriptionCreateView(CreateView):
-    model = Subscription
-    form_class = SubscriptionForm
-    template_name = 'users/subscription_form.html'
-    success_url = reverse_lazy('users:subscribe-success')
+    def update(self, request, *args, **kwargs):
+        sub = self.get_object()
+        if request.data.get('token') != sub.edit_token.hex:
+            raise PermissionDenied
+        return super(SubscriptionViewSet, self).update(request, *args, **kwargs)

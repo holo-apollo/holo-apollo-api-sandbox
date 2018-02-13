@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    # third-party
     'raven.contrib.django.raven_compat',
+    'rest_framework',
 
     # local
     'common',
@@ -209,4 +212,15 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Raven
 RAVEN_CONFIG = {
     'dsn': dotenv.get('SENTRY_DSN'),
+}
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
 }

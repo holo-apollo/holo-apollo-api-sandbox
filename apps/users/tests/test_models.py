@@ -22,10 +22,26 @@ class TestHoloUser(TestCase):
 class TestSubscription(TestCase):
     def test_repr(self):
         with patch('users.models.send_email.delay'):
-            sub = SubscriptionFactory()
-            self.assertEqual(str(sub), sub.email)
+            sub = SubscriptionFactory(email='jdoe@holo-apollo.art')
+            self.assertEqual(str(sub), 'jdoe@holo-apollo.art: subscribed')
+            sub.subscribed = False
+            sub.save()
+            self.assertEqual(str(sub), 'jdoe@holo-apollo.art: not subscribed')
 
     @patch('users.models.send_email.delay')
     def test_email_on_save(self, mock_send):
         SubscriptionFactory()
         mock_send.assert_called_once()
+
+    @patch('users.models.send_email.delay')
+    def test_no_email_on_next_save(self, mock_send):
+        sub = SubscriptionFactory()
+        mock_send.assert_called_once()
+        mock_send.reset_mock()
+        sub.save()
+        self.assertFalse(mock_send.called)
+
+    @patch('users.models.send_email.delay')
+    def test_no_email_without_subscription(self, mock_send):
+        SubscriptionFactory(subscribed=False)
+        self.assertFalse(mock_send.called)
