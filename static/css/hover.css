@@ -33,7 +33,7 @@
 }
 .hvr-bounce-to-left:hover, .hvr-bounce-to-left:focus, .hvr-bounce-to-left:active {
   color: white;
-  border: solid 1px #1bc9de;
+  border: none;
 }
 .hvr-bounce-to-left:hover:before, .hvr-bounce-to-left:focus:before, .hvr-bounce-to-left:active:before {
   -webkit-transform: scaleX(1);
