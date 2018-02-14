@@ -1,5 +1,9 @@
+import uuid
+
+from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
+from django.template.loader import get_template
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
@@ -64,14 +68,30 @@ class Subscription(TimeStampedModel):
             'unique': _('That email address is already subscribed.')
         }
     )
+    subscribed = models.BooleanField(default=True)
+    edit_token = models.UUIDField(default=uuid.uuid4, editable=False)
 
     def save(self, **kwargs):
+        previously_subscribed = False
+        if self.pk:
+            prev_version = Subscription.objects.get(pk=self.pk)
+            previously_subscribed = prev_version.subscribed
         super(Subscription, self).save(**kwargs)
-        send_email.delay(
-            self.email,
-            _('Holo Apollo Subscription'),
-            _('You have subscribed to Holo Apollo updates. Thank you!')
-        )
+        if not previously_subscribed and self.subscribed:
+            text_template = get_template('emails/subscription.txt')
+            text_content = text_template.render()
+            html_template = get_template('emails/subscription.html')
+            html_content = html_template.render({
+                'token': self.edit_token,
+                'host': settings.SITE_URL
+            })
+            send_email.delay(
+                self.email,
+                _('Holo-Apollo Subscription'),
+                text_content,
+                html_content
+            )
 
     def __str__(self):
-        return self.email
+        subscribed = 'subscribed' if self.subscribed else 'not subscribed'
+        return f'{self.email}: {subscribed}'

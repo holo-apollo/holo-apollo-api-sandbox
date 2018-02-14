@@ -1,26 +1,14 @@
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+.container {
+    margin: 0 20px;
 }
 
-
-.middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-
-.inner {
+.content {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 75px auto;
 }
 
 
-.inner h1 {
+.content h1 {
 	font-size: 72px;
 	font-weight: bold;
     text-transform: uppercase;
@@ -28,14 +16,21 @@
 }
 
 
-.inner h3 {
+.content h3 {
 	font-size: 60px;
-	font-weight: 500;
+	font-weight: bold;
     margin: 10px 0;
 }
 
 
-.inner h5 {
+.content h4 {
+	font-size: 36px;
+	font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.content h5 {
 	font-size: 16px;
 	font-weight: 500;
     margin: 10px 0;

@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holo-Apollo subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #404040;
+        }
+        #main {
+            border: solid 1px #d0d0d0;
+        }
+        .h1 {
+	        font-size: 48px;
+        }
+        .h5 {
+            font-size: 14px;
+            color: #a5a5a5;
+        }
+        .p {
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+            color: #2176e0;
+        }
+        #footer {
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<table width="100%" cellspacing="25" cellpadding="0">
+    <tr>
+        <td>
+            <table id="main" width="600" cellspacing="0" cellpadding="0" align="center">
+                <tr>
+                    <td>
+                        <img alt="Holo-Apollo Subscription" src="{{ host }}{% static 'img/email_header.png' %}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellpadding="15" cellspacing="15">
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="h1">Great!</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                 <div class="p">Thank You for subscription at <a href="https://www.holo-apollo.art">Holo-Apollo.art</a>.</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="p">My name is Ira.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="p">I'm very glad to stay in touch with you and inform you about our updates.</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="h5">We promise to never spam you or share your personal information!</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table id="footer" width="600" align="center" cellpadding="18">
+                <tr>
+                    <td>
+                        <a href="{{ host }}{% url 'index' %}?token={{ token }}">Unsubscribe</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

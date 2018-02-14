@@ -19,3 +19,8 @@ body {
     color: #404040;
     margin: 0;
 }
+
+
+.hidden {
+    display: none;
+}

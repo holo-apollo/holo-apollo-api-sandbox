@@ -27,8 +27,10 @@
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.9",
     "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-react": "^7.6.1",
+    "file-loader": "^1.1.6",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "style-loader": "^0.20.1",
@@ -37,7 +39,11 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "classnames": "^2.2.5",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-autobind": "^1.0.6",
+    "react-dom": "^16.2.0",
+    "react-form": "^2.16.2"
   }
 }

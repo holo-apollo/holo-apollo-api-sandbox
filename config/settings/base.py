@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    # third-party
     'raven.contrib.django.raven_compat',
+    'rest_framework',
 
     # local
     'common',
@@ -129,6 +132,7 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+SITE_URL = 'http://127.0.0.1:8000'
 ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
@@ -204,9 +208,22 @@ EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+if dotenv.get('EMAIL_ENABLED'):
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Raven
 RAVEN_CONFIG = {
     'dsn': dotenv.get('SENTRY_DSN'),
+}
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
 }
