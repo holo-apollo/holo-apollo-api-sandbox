@@ -6,8 +6,9 @@ import cx from 'classnames';
 
 import {Button} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
-import {validateEmail} from 'validators';
-import {post} from 'rest';
+import {validateEmail} from 'helpers/validators';
+import {post} from 'helpers/rest';
+import {getQueryParams} from 'helpers/utils';
 
 
 export default class Subscription extends Component {
@@ -17,8 +18,21 @@ export default class Subscription extends Component {
         this.state = {
             submitSuccess: false,
             submitPending: false,
-            submitErrors: {email: null}
+            submitErrors: {email: null},
+            unsubscribeSuccess: false,
+            unsubscribeError: ''
         };
+        this._token = getQueryParams().token;
+    }
+
+    validateError(values) {
+        this.setState({submitErrors: {email: null}});
+        if (!values.email) {
+            return {email: 'Please type your email.'};
+        } else if (!validateEmail(values.email)) {
+            return {email: 'Oops... There\'s a mistake. Please type a valid email.'};
+        }
+        return {email: null};
     }
 
     onSubmit(values) {
@@ -45,14 +59,24 @@ export default class Subscription extends Component {
             });
     }
 
-    validateError(values) {
-        this.setState({submitErrors: {email: null}});
-        if (!values.email) {
-            return {email: 'Please type your email.'};
-        } else if (!validateEmail(values.email)) {
-            return {email: 'Oops... There\'s a mistake. Please type a valid email.'};
-        }
-        return {email: null};
+    unsubscribe() {
+        this.setState({submitPending: true});
+        post('subscriptions/unsubscribe/', {token: this._token})
+            .then(() => {
+                this.setState({
+                    unsubscribeSuccess: true,
+                    submitPending: false
+                });
+            }).catch(error => {
+                let message = 'Oops! Something went wrong. Please try again in a moment.';
+                if (error.response && error.response.data.detail) {
+                    message = error.response.data.detail;
+                }
+                this.setState({
+                    submitPending: false,
+                    unsubscribeError: message
+                });
+            });
     }
 
     renderForm() {
@@ -77,7 +101,7 @@ export default class Subscription extends Component {
                                         className={'grow'}
                                         placeholder={'Email'}
                                     />
-                                    <Button>Subscribe</Button>
+                                    <Button type={'submit'}>Subscribe</Button>
                                 </div>
                                 <div className={'error'}>
                                     {formApi.errors.email}
@@ -91,13 +115,31 @@ export default class Subscription extends Component {
         );
     }
 
+    renderUnsubscribe() {
+        if (this.state.unsubscribeError) {
+            return <div className={'error'}>{this.state.unsubscribeError}</div>;
+        }
+        return (
+            <div className={cx('unsubscribe', {'hidden': this.state.unsubscribeSuccess || this.state.submitPending})}>
+                <h5>
+                    Are you sure that you want to unsubscribe?
+                </h5>
+                <span onClick={this.unsubscribe}>
+                    <Button>Yes, I'm sure</Button>
+                </span>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div className={'subscription'}>
                 {this.state.submitSuccess &&
                 <h4>You were subscribed successfully!<br/>See ya!</h4>}
+                {this.state.unsubscribeSuccess &&
+                <h4>You were unsubscribed.<br/>Hope to see you again.</h4>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}
-                {this.renderForm()}
+                {this._token ? this.renderUnsubscribe() : this.renderForm()}
                 <div className={'promise'}>
                     We promise to never spam you or share your personal information!
                 </div>

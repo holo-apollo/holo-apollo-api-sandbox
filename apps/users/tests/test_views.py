@@ -1,1 +1,1 @@
-# TODO: test subscription update with token
+# TODO: test subscription create with ability to update and unsubscribe with token

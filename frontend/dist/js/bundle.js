@@ -21981,9 +21981,11 @@ var _buttons = __webpack_require__(236);
 
 var _spinners = __webpack_require__(241);
 
-var _validators = __webpack_require__(234);
+var _validators = __webpack_require__(244);
 
-var _rest = __webpack_require__(235);
+var _rest = __webpack_require__(245);
+
+var _utils = __webpack_require__(246);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22005,12 +22007,26 @@ var Subscription = function (_Component) {
         _this.state = {
             submitSuccess: false,
             submitPending: false,
-            submitErrors: { email: null }
+            submitErrors: { email: null },
+            unsubscribeSuccess: false,
+            unsubscribeError: ''
         };
+        _this._token = (0, _utils.getQueryParams)().token;
         return _this;
     }
 
     _createClass(Subscription, [{
+        key: 'validateError',
+        value: function validateError(values) {
+            this.setState({ submitErrors: { email: null } });
+            if (!values.email) {
+                return { email: 'Please type your email.' };
+            } else if (!(0, _validators.validateEmail)(values.email)) {
+                return { email: 'Oops... There\'s a mistake. Please type a valid email.' };
+            }
+            return { email: null };
+        }
+    }, {
         key: 'onSubmit',
         value: function onSubmit(values) {
             var _this2 = this;
@@ -22036,20 +22052,31 @@ var Subscription = function (_Component) {
             });
         }
     }, {
-        key: 'validateError',
-        value: function validateError(values) {
-            this.setState({ submitErrors: { email: null } });
-            if (!values.email) {
-                return { email: 'Please type your email.' };
-            } else if (!(0, _validators.validateEmail)(values.email)) {
-                return { email: 'Oops... There\'s a mistake. Please type a valid email.' };
-            }
-            return { email: null };
+        key: 'unsubscribe',
+        value: function unsubscribe() {
+            var _this3 = this;
+
+            this.setState({ submitPending: true });
+            (0, _rest.post)('subscriptions/unsubscribe/', { token: this._token }).then(function () {
+                _this3.setState({
+                    unsubscribeSuccess: true,
+                    submitPending: false
+                });
+            }).catch(function (error) {
+                var message = 'Oops! Something went wrong. Please try again in a moment.';
+                if (error.response && error.response.data.detail) {
+                    message = error.response.data.detail;
+                }
+                _this3.setState({
+                    submitPending: false,
+                    unsubscribeError: message
+                });
+            });
         }
     }, {
         key: 'renderForm',
         value: function renderForm() {
-            var _this3 = this;
+            var _this4 = this;
 
             return _react2.default.createElement(
                 'div',
@@ -22082,7 +22109,7 @@ var Subscription = function (_Component) {
                                 }),
                                 _react2.default.createElement(
                                     _buttons.Button,
-                                    null,
+                                    { type: 'submit' },
                                     'Subscribe'
                                 )
                             ),
@@ -22090,10 +22117,39 @@ var Subscription = function (_Component) {
                                 'div',
                                 { className: 'error' },
                                 formApi.errors.email,
-                                _this3.state.submitErrors.email
+                                _this4.state.submitErrors.email
                             )
                         );
                     }
+                )
+            );
+        }
+    }, {
+        key: 'renderUnsubscribe',
+        value: function renderUnsubscribe() {
+            if (this.state.unsubscribeError) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'error' },
+                    this.state.unsubscribeError
+                );
+            }
+            return _react2.default.createElement(
+                'div',
+                { className: (0, _classnames2.default)('unsubscribe', { 'hidden': this.state.unsubscribeSuccess || this.state.submitPending }) },
+                _react2.default.createElement(
+                    'h5',
+                    null,
+                    'Are you sure that you want to unsubscribe?'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    { onClick: this.unsubscribe },
+                    _react2.default.createElement(
+                        _buttons.Button,
+                        null,
+                        'Yes, I\'m sure'
+                    )
                 )
             );
         }
@@ -22110,8 +22166,15 @@ var Subscription = function (_Component) {
                     _react2.default.createElement('br', null),
                     'See ya!'
                 ),
+                this.state.unsubscribeSuccess && _react2.default.createElement(
+                    'h4',
+                    null,
+                    'You were unsubscribed.',
+                    _react2.default.createElement('br', null),
+                    'Hope to see you again.'
+                ),
                 this.state.submitPending && _react2.default.createElement(_spinners.DoubleBounceSpinner, null),
-                this.renderForm(),
+                this._token ? this.renderUnsubscribe() : this.renderForm(),
                 _react2.default.createElement(
                     'div',
                     { className: 'promise' },
@@ -27209,66 +27272,8 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 234 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.validateEmail = validateEmail;
-function validateEmail(value) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(value).toLowerCase());
-}
-
-/***/ }),
-/* 235 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.get = get;
-exports.post = post;
-exports.put = put;
-exports.patch = patch;
-exports.del = del;
-
-var _axios = __webpack_require__(59);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function get(url) {
-    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    return _axios2.default.get(url, { params: data });
-}
-
-function post(url, data) {
-    return _axios2.default.post(url, data);
-}
-
-function put(url, data) {
-    return _axios2.default.put(url, data);
-}
-
-function patch(url, data) {
-    return _axios2.default.patch(url, data);
-}
-
-function del(url, data) {
-    return _axios2.default.delete(url, data);
-}
-
-/***/ }),
+/* 234 */,
+/* 235 */,
 /* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27328,7 +27333,7 @@ var Button = exports.Button = function (_Component) {
 
 Button.defaultProps = {
     size: 'lg',
-    type: 'submit',
+    type: 'button',
     color: 'black',
     hover: 'hvr-bounce-to-left'
 };
@@ -27514,6 +27519,93 @@ exports.push([module.i, ".spinner {\n  width: 40px;\n  height: 40px;\n  position
 
 // exports
 
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.validateEmail = validateEmail;
+function validateEmail(value) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(value).toLowerCase());
+}
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.get = get;
+exports.post = post;
+exports.put = put;
+exports.patch = patch;
+exports.del = del;
+
+var _axios = __webpack_require__(59);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function get(url) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    return _axios2.default.get(url, { params: data });
+}
+
+function post(url, data) {
+    return _axios2.default.post(url, data);
+}
+
+function put(url, data) {
+    return _axios2.default.put(url, data);
+}
+
+function patch(url, data) {
+    return _axios2.default.patch(url, data);
+}
+
+function del(url, data) {
+    return _axios2.default.delete(url, data);
+}
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getQueryParams = getQueryParams;
+function getQueryParams() {
+    var qs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.location.search;
+
+    qs = qs.split('+').join(' ');
+
+    var params = {};
+    var tokens = void 0;
+    var re = /[?&]?([^=]+)=([^&]*)/g;
+
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+
+    return params;
+}
 
 /***/ })
 /******/ ]);

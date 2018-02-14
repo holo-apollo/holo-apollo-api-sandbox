@@ -6,7 +6,7 @@ import cx from 'classnames';
 export class Button extends Component {
     static defaultProps = {
         size: 'lg',
-        type: 'submit',
+        type: 'button',
         color: 'black',
         hover: 'hvr-bounce-to-left'
     };

@@ -42,6 +42,19 @@ class TestSubscription(TestCase):
         self.assertFalse(mock_send.called)
 
     @patch('users.models.send_email.delay')
+    def test_email_again_on_next_save(self, mock_send):
+        sub = SubscriptionFactory()
+        mock_send.assert_called_once()
+        mock_send.reset_mock()
+        sub.save()
+        self.assertFalse(mock_send.called)
+        sub.subscribed = False
+        sub.save()
+        sub.subscribed = True
+        sub.save()
+        mock_send.assert_called_once()
+
+    @patch('users.models.send_email.delay')
     def test_no_email_without_subscription(self, mock_send):
         SubscriptionFactory(subscribed=False)
         self.assertFalse(mock_send.called)

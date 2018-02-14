@@ -10,8 +10,14 @@
         <div class="content">
             <h1>Coming soon</h1>
             <img src="/static/img/image_holo.png" alt="Holo"/>
-            <h3>Hello!</h3>
-            <h5>Welcome to Holo-Apollo.art</h5>
+            <h3>
+                {% if request.GET.token %}
+                    Welcome back
+                {% else %}
+                    Hello
+                {% endif %}
+            </h3>
+            <h5>{% if not request.GET.token %}Welcome {% endif %}to Holo-Apollo.art</h5>
             <h5>The best marketplace of DECOR & DESIGN</h5>
 
             <div id="react-subscription">
