@@ -1,3 +1,7 @@
+.container {
+    margin: 0 20px;
+}
+
 .content {
     text-align: center;
     margin: 75px auto;
@@ -14,6 +18,13 @@
 
 .content h3 {
 	font-size: 60px;
+	font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.content h4 {
+	font-size: 36px;
 	font-weight: bold;
     margin: 10px 0;
 }
