@@ -21918,6 +21918,10 @@ var _reactAutobind = __webpack_require__(232);
 
 var _reactAutobind2 = _interopRequireDefault(_reactAutobind);
 
+var _classnames = __webpack_require__(177);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _validators = __webpack_require__(234);
 
 var _rest = __webpack_require__(235);
@@ -21989,7 +21993,7 @@ var Subscription = function (_Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'subscription' },
+                { className: (0, _classnames2.default)('subscription-form', { 'hidden': this.state.submitSuccess || this.state.submitPending }) },
                 _react2.default.createElement(
                     _reactForm.Form,
                     {
@@ -22020,31 +22024,22 @@ var Subscription = function (_Component) {
             );
         }
     }, {
-        key: 'renderContent',
-        value: function renderContent() {
-            if (this.state.submitSuccess) {
-                return _react2.default.createElement(
-                    'h3',
-                    null,
-                    'You were subscribed successfully! See ya!'
-                );
-            }
-            if (this.state.submitPending) {
-                return _react2.default.createElement(
-                    'div',
-                    null,
-                    'Loading...'
-                );
-            }
-            return this.renderForm();
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
                 { className: 'subscription' },
-                this.renderContent()
+                this.state.submitSuccess && _react2.default.createElement(
+                    'h3',
+                    null,
+                    'You were subscribed successfully! See ya!'
+                ),
+                this.state.submitPending && _react2.default.createElement(
+                    'div',
+                    null,
+                    'Loading...'
+                ),
+                this.renderForm()
             );
         }
     }]);

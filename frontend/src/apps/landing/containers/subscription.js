@@ -2,6 +2,7 @@ import 'styles/subscription.less';
 import React, {Component} from 'react';
 import {Form, Text} from 'react-form';
 import autoBind from 'react-autobind';
+import cx from 'classnames';
 
 import {validateEmail} from 'validators';
 import {post} from 'rest';
@@ -53,7 +54,7 @@ export default class Subscription extends Component {
 
     renderForm() {
         return (
-            <div className={'subscription'}>
+            <div className={cx('subscription-form', {'hidden': this.state.submitSuccess || this.state.submitPending})}>
                 <Form
                     onSubmit={this.onSubmit}
                     validateError={this.validateError}
@@ -77,20 +78,14 @@ export default class Subscription extends Component {
         );
     }
 
-    renderContent() {
-        if (this.state.submitSuccess) {
-            return <h3>You were subscribed successfully! See ya!</h3>;
-        }
-        if (this.state.submitPending) {
-            return <div>Loading...</div>;
-        }
-        return this.renderForm();
-    }
-
     render() {
         return (
             <div className={'subscription'}>
-                {this.renderContent()}
+                {this.state.submitSuccess &&
+                <h3>You were subscribed successfully! See ya!</h3>}
+                {this.state.submitPending &&
+                <div>Loading...</div>}
+                {this.renderForm()}
             </div>
         );
     }
