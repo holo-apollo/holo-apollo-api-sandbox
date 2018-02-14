@@ -17,6 +17,7 @@ export default class Subscription extends Component {
         autoBind(this);
         this.state = {
             submitSuccess: false,
+            alreadySubscribed: false,
             submitPending: false,
             submitErrors: {email: null},
             unsubscribeSuccess: false,
@@ -41,10 +42,11 @@ export default class Subscription extends Component {
             submitPending: true
         });
         post('subscriptions/', values)
-            .then(() => {
+            .then(response => {
                 this.setState({
                     submitSuccess: true,
-                    submitPending: false
+                    submitPending: false,
+                    alreadySubscribed: response.data.already_subscribed
                 });
             })
             .catch(error => {
@@ -134,8 +136,10 @@ export default class Subscription extends Component {
     render() {
         return (
             <div className={'subscription'}>
-                {this.state.submitSuccess &&
+                {this.state.submitSuccess && !this.state.alreadySubscribed &&
                 <h4>You were subscribed successfully!<br/>See ya!</h4>}
+                {this.state.submitSuccess && this.state.alreadySubscribed &&
+                <h4>Looks like you are already subscribed.<br/>Thank you for being with us!</h4>}
                 {this.state.unsubscribeSuccess &&
                 <h4>You were unsubscribed.<br/>Hope to see you again.</h4>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}

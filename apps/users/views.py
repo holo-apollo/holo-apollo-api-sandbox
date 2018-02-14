@@ -24,11 +24,16 @@ class SubscriptionViewSet(mixins.CreateModelMixin,
         try:
             sub = Subscription.objects.get(email=email)
             subscribe = request.data.get('subscribed', True)
+            already_subscribed = False
             if subscribe:
-                sub.subscribed = True
-                sub.save()
-            serializer = self.get_serializer(sub)
-            return Response(serializer.data)
+                if not sub.subscribed:
+                    sub.subscribed = True
+                    sub.save()
+                else:
+                    already_subscribed = True
+            data = self.get_serializer(sub).data
+            data['already_subscribed'] = already_subscribed
+            return Response(data)
         except Subscription.DoesNotExist:
             return super(SubscriptionViewSet, self).create(request, *args, **kwargs)
 

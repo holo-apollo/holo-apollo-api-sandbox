@@ -22006,6 +22006,7 @@ var Subscription = function (_Component) {
         (0, _reactAutobind2.default)(_this);
         _this.state = {
             submitSuccess: false,
+            alreadySubscribed: false,
             submitPending: false,
             submitErrors: { email: null },
             unsubscribeSuccess: false,
@@ -22035,10 +22036,11 @@ var Subscription = function (_Component) {
                 submitSuccess: false,
                 submitPending: true
             });
-            (0, _rest.post)('subscriptions/', values).then(function () {
+            (0, _rest.post)('subscriptions/', values).then(function (response) {
                 _this2.setState({
                     submitSuccess: true,
-                    submitPending: false
+                    submitPending: false,
+                    alreadySubscribed: response.data.already_subscribed
                 });
             }).catch(function (error) {
                 var message = 'Oops! Something went wrong. Please try again in a moment.';
@@ -22159,12 +22161,19 @@ var Subscription = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'subscription' },
-                this.state.submitSuccess && _react2.default.createElement(
+                this.state.submitSuccess && !this.state.alreadySubscribed && _react2.default.createElement(
                     'h4',
                     null,
                     'You were subscribed successfully!',
                     _react2.default.createElement('br', null),
                     'See ya!'
+                ),
+                this.state.submitSuccess && this.state.alreadySubscribed && _react2.default.createElement(
+                    'h4',
+                    null,
+                    'Looks like you are already subscribed.',
+                    _react2.default.createElement('br', null),
+                    'Thank you for being with us!'
                 ),
                 this.state.unsubscribeSuccess && _react2.default.createElement(
                     'h4',
