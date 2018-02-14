@@ -132,6 +132,7 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+SITE_URL = 'http://127.0.0.1:8000'
 ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)

@@ -1,5 +1,6 @@
 import uuid
 
+from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.template.loader import get_template
@@ -77,7 +78,7 @@ class Subscription(TimeStampedModel):
             text_template = get_template('emails/subscription.txt')
             text_content = text_template.render()
             html_template = get_template('emails/subscription.html')
-            html_content = html_template.render()
+            html_content = html_template.render({'token': self.edit_token.hex, 'host': settings.SITE_URL})
             send_email.delay(
                 self.email,
                 _('Holo-Apollo Subscription'),

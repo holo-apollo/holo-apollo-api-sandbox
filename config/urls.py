@@ -15,5 +15,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include(drf_urls)),
     path('api/', include(router.urls)),
-    path('', index),
+    path('', index, name='index'),
 ]
