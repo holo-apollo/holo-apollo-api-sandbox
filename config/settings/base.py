@@ -207,6 +207,8 @@ EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+if dotenv.get('EMAIL_ENABLED'):
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Raven
