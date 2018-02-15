@@ -99,17 +99,17 @@ msgstr "Да, я уверен."
 #: frontend/dist/js/bundle.js:22631
 #: frontend/src/apps/landing/containers/subscription.js:140
 msgid "You were subscribed successfully!"
-msgstr "Вы подписались успешно!"
+msgstr "Спасибо за подписку!"
 
 #: frontend/dist/js/bundle.js:22633
 #: frontend/src/apps/landing/containers/subscription.js:140
 msgid "See ya!"
-msgstr "Увидимся!"
+msgstr "Теперь мы на связи."
 
 #: frontend/dist/js/bundle.js:22638
 #: frontend/src/apps/landing/containers/subscription.js:142
 msgid "Looks like you are already subscribed."
-msgstr "Похоже, Вы уже подписаны."
+msgstr "Судя по всему, Вы уже подписаны."
 
 #: frontend/dist/js/bundle.js:22640
 #: frontend/src/apps/landing/containers/subscription.js:143

@@ -102,7 +102,7 @@ msgstr "Здорово!"
 
 #: templates/emails/subscription.html:59
 msgid "Thank You for subscription at "
-msgstr "Спасибо, что подписались на "
+msgstr "Спасибо за подписку на "
 
 #: templates/emails/subscription.html:70
 msgid "My name is Ira."
