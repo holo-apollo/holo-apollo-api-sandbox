@@ -29,9 +29,9 @@ export default class Subscription extends Component {
     validateError(values) {
         this.setState({submitErrors: {email: null}});
         if (!values.email) {
-            return {email: 'Please type your email.'};
+            return {email: gettext('Please type your email.')};
         } else if (!validateEmail(values.email)) {
-            return {email: 'Oops... There\'s a mistake. Please type a valid email.'};
+            return {email: gettext('Oops... There\'s a mistake. Please type a valid email.')};
         }
         return {email: null};
     }
@@ -50,7 +50,7 @@ export default class Subscription extends Component {
                 });
             })
             .catch(error => {
-                let message = 'Oops! Something went wrong. Please try again in a moment.';
+                let message = gettext('Oops! Something went wrong. Please try again in a moment.');
                 if (error.response && error.response.data.email) {
                     message = error.response.data.email[0];
                 }
@@ -70,7 +70,7 @@ export default class Subscription extends Component {
                     submitPending: false
                 });
             }).catch(error => {
-                let message = 'Oops! Something went wrong. Please try again in a moment.';
+                let message = gettext('Oops! Something went wrong. Please try again in a moment.');
                 if (error.response && error.response.data.detail) {
                     message = error.response.data.detail;
                 }
@@ -85,7 +85,7 @@ export default class Subscription extends Component {
         return (
             <div className={cx('subscription-form', {'hidden': this.state.submitSuccess || this.state.submitPending})}>
                 <h5>
-                    Get notified when it's ready
+                    {gettext('Get notified when it\'s ready')}
                 </h5>
                 <Form
                     onSubmit={this.onSubmit}
@@ -103,7 +103,9 @@ export default class Subscription extends Component {
                                         className={'grow'}
                                         placeholder={'Email'}
                                     />
-                                    <Button type={'submit'}>Subscribe</Button>
+                                    <Button type={'submit'}>
+                                        {gettext('Subscribe')}
+                                    </Button>
                                 </div>
                                 <div className={'error'}>
                                     {formApi.errors.email}
@@ -123,11 +125,9 @@ export default class Subscription extends Component {
         }
         return (
             <div className={cx('unsubscribe', {'hidden': this.state.unsubscribeSuccess || this.state.submitPending})}>
-                <h5>
-                    Are you sure that you want to unsubscribe?
-                </h5>
+                <h5>{gettext('Are you sure that you want to unsubscribe?')}</h5>
                 <span onClick={this.unsubscribe}>
-                    <Button>Yes, I'm sure</Button>
+                    <Button>{gettext('Yes, I\'m sure')}</Button>
                 </span>
             </div>
         );
@@ -137,15 +137,17 @@ export default class Subscription extends Component {
         return (
             <div className={'subscription'}>
                 {this.state.submitSuccess && !this.state.alreadySubscribed &&
-                <h4>You were subscribed successfully!<br/>See ya!</h4>}
+                <h4>{gettext('You were subscribed successfully!')}<br/>{gettext('See ya!')}</h4>}
                 {this.state.submitSuccess && this.state.alreadySubscribed &&
-                <h4>Looks like you are already subscribed.<br/>Thank you for being with us!</h4>}
+                <h4>{gettext('Looks like you are already subscribed.')}<br/>
+                    {gettext('Thank you for being with us!')}</h4>}
                 {this.state.unsubscribeSuccess &&
-                <h4>You were unsubscribed.<br/>Hope to see you again.</h4>}
+                <h4>{gettext('You were unsubscribed.')}<br/>
+                    {gettext('Hope to see you again.')}</h4>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this._token ? this.renderUnsubscribe() : this.renderForm()}
                 <div className={'promise'}>
-                    We promise to never spam you or share your personal information!
+                    {gettext('We promise to never spam you or share your personal information!')}
                 </div>
             </div>
         );

@@ -1,10 +1,10 @@
-{% load static %}
+{% load static i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Holo-Apollo subscription</title>
+    <title>{% trans 'Holo-Apollo subscription' %}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,12 +51,12 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                <div class="h1">Great!</div>
+                                                <div class="h1">{% trans 'Great!' %}</div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                 <div class="p">Thank You for subscription at <a href="https://www.holo-apollo.art">Holo-Apollo.art</a>.</div>
+                                                 <div class="p">{% trans 'Thank You for subscription at ' %}<a href="https://www.holo-apollo.art">Holo-Apollo.art</a>.</div>
                                             </td>
                                         </tr>
                                     </table>
@@ -67,12 +67,12 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                <div class="p">My name is Ira.</div>
+                                                <div class="p">{% trans 'My name is Ira.' %}</div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="p">I'm very glad to stay in touch with you and inform you about our updates.</div>
+                                                <div class="p">{% trans 'I am very glad to stay in touch with you and inform you about our updates.' %}</div>
                                             </td>
                                         </tr>
                                     </table>
@@ -82,7 +82,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="h5">We promise to never spam you or share your personal information!</div>
+                                    <div class="h5">{% trans 'We promise to never spam you or share your personal information!' %}</div>
                                 </td>
                             </tr>
                         </table>
@@ -92,7 +92,7 @@
             <table id="footer" width="600" align="center" cellpadding="18">
                 <tr>
                     <td>
-                        <a href="{{ host }}{% url 'index' %}?token={{ token }}">Unsubscribe</a>
+                        <a href="{{ host }}{% url 'index' %}?token={{ token }}">{% trans 'Unsubscribe' %}</a>
                     </td>
                 </tr>
             </table>

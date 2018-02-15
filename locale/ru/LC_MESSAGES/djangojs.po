@@ -1,0 +1,951 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/underscore.string/test/speed.js:85
+#: frontend/node_modules/underscore.string/test/strings.js:35
+#: frontend/node_modules/underscore.string/test/strings.js:60
+#: frontend/node_modules/underscore.string/test/strings.js:88
+#: frontend/node_modules/underscore.string/test/strings.js:128
+#: frontend/node_modules/underscore.string/test/strings.js:161
+#: frontend/node_modules/underscore.string/test/strings.js:173
+#: frontend/node_modules/underscore.string/test/strings.js:207
+#: frontend/node_modules/underscore.string/test/strings.js:217
+#: frontend/node_modules/underscore.string/test/strings.js:239
+#: frontend/node_modules/underscore.string/test/strings.js:254
+#: frontend/node_modules/underscore.string/test/strings.js:265
+#: frontend/node_modules/underscore.string/test/strings.js:282
+#: frontend/node_modules/underscore.string/test/strings.js:293
+#: frontend/node_modules/underscore.string/test/strings.js:321
+#: frontend/node_modules/underscore.string/test/strings.js:330
+#: frontend/node_modules/underscore.string/test/strings.js:352
+#: frontend/node_modules/underscore.string/test/strings.js:358
+#: frontend/node_modules/underscore.string/test/strings.js:364
+#: frontend/node_modules/underscore.string/test/strings.js:379
+#: frontend/node_modules/underscore.string/test/strings.js:398
+#: frontend/node_modules/underscore.string/test/strings.js:412
+#: frontend/node_modules/underscore.string/test/strings.js:421
+#: frontend/node_modules/underscore.string/test/strings.js:429
+#: frontend/node_modules/underscore.string/test/strings.js:438
+#: frontend/node_modules/underscore.string/test/strings.js:453
+#: frontend/node_modules/underscore.string/test/strings.js:463
+#: frontend/node_modules/underscore.string/test/strings.js:474
+#: frontend/node_modules/underscore.string/test/strings.js:486
+#: frontend/node_modules/underscore.string/test/strings.js:508
+#: frontend/node_modules/underscore.string/test/strings.js:539
+#: frontend/node_modules/underscore.string/test/strings.js:551
+#: frontend/node_modules/underscore.string/test/strings.js:563
+#: frontend/node_modules/underscore.string/test/strings.js:575
+#: frontend/node_modules/underscore.string/test/strings.js:586
+#: frontend/node_modules/underscore.string/test/strings.js:610
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 12:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: frontend/dist/js/bundle.js:22488
+#: frontend/src/apps/landing/containers/subscription.js:32
+msgid "Please type your email."
+msgstr "Пожалуйста введите ваш имейл."
+
+#: frontend/dist/js/bundle.js:22490
+#: frontend/src/apps/landing/containers/subscription.js:34
+msgid "Oops... There's a mistake. Please type a valid email."
+msgstr "Ой... Произошла ошибка. Пожалуйста введите правильный имейл."
+
+#: frontend/dist/js/bundle.js:22510 frontend/dist/js/bundle.js:22532
+#: frontend/src/apps/landing/containers/subscription.js:53
+#: frontend/src/apps/landing/containers/subscription.js:73
+msgid "Oops! Something went wrong. Please try again in a moment."
+msgstr "Ой! Что-то пошло не так. Пожалуйста попробуйте через минутку."
+
+#: frontend/dist/js/bundle.js:22553
+#: frontend/src/apps/landing/containers/subscription.js:88
+msgid "Get notified when it's ready"
+msgstr "Получите уведомление когда она заработает"
+
+#: frontend/dist/js/bundle.js:22579
+#: frontend/src/apps/landing/containers/subscription.js:107
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: frontend/dist/js/bundle.js:22609
+#: frontend/src/apps/landing/containers/subscription.js:128
+msgid "Are you sure that you want to unsubscribe?"
+msgstr "Вы уверены, что хотите отписаться?"
+
+#: frontend/dist/js/bundle.js:22617
+#: frontend/src/apps/landing/containers/subscription.js:130
+msgid "Yes, I'm sure"
+msgstr "Да, я уверен."
+
+#: frontend/dist/js/bundle.js:22631
+#: frontend/src/apps/landing/containers/subscription.js:140
+msgid "You were subscribed successfully!"
+msgstr "Вы подписались успешно!"
+
+#: frontend/dist/js/bundle.js:22633
+#: frontend/src/apps/landing/containers/subscription.js:140
+msgid "See ya!"
+msgstr "Увидимся!"
+
+#: frontend/dist/js/bundle.js:22638
+#: frontend/src/apps/landing/containers/subscription.js:142
+msgid "Looks like you are already subscribed."
+msgstr "Похоже, Вы уже подписаны."
+
+#: frontend/dist/js/bundle.js:22640
+#: frontend/src/apps/landing/containers/subscription.js:143
+msgid "Thank you for being with us!"
+msgstr "Спасибо, что Вы с нами!"
+
+#: frontend/dist/js/bundle.js:22645
+#: frontend/src/apps/landing/containers/subscription.js:145
+msgid "You were unsubscribed."
+msgstr "Вы отписались."
+
+#: frontend/dist/js/bundle.js:22647
+#: frontend/src/apps/landing/containers/subscription.js:146
+msgid "Hope to see you again."
+msgstr "Надеемся еще увидеться."
+
+#: frontend/dist/js/bundle.js:22654
+#: frontend/src/apps/landing/containers/subscription.js:150
+msgid "We promise to never spam you or share your personal information!"
+msgstr ""
+"Мы обещаем никогда не спамить и не распространять вашу личную информацию!"
+
+#: frontend/node_modules/babel-polyfill/browser.js:1
+#: frontend/node_modules/babel-polyfill/dist/polyfill.min.js:1
+msgid "delete"
+msgstr ""
+
+#: frontend/node_modules/babel-polyfill/browser.js:1
+#: frontend/node_modules/babel-polyfill/dist/polyfill.min.js:1
+msgid "has"
+msgstr ""
+
+#: frontend/node_modules/babel-polyfill/browser.js:1
+#: frontend/node_modules/babel-polyfill/dist/polyfill.min.js:1
+msgid "get"
+msgstr ""
+
+#: frontend/node_modules/babel-polyfill/browser.js:2
+#: frontend/node_modules/babel-polyfill/dist/polyfill.min.js:2
+msgid "Wrong offset!"
+msgstr ""
+
+#: frontend/node_modules/babel-polyfill/browser.js:2
+#: frontend/node_modules/babel-polyfill/dist/polyfill.min.js:2
+msgid "Wrong length!"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/underscore.string/test/strings.js:110
+#: frontend/node_modules/underscore.string/test/strings.js:359
+msgid " "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "."
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "*"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "import"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "{}"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid ", "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "this"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "super"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "null"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid ",\n"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid " = "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/underscore.string/test/strings.js:360
+msgid "\n"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "debugger;"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid ":"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "empty"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "any"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "mixed"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "boolean"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "interface "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid " & "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "number"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "string"
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "typeof "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid " | "
+msgstr ""
+
+#: frontend/node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
+#: frontend/node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
+msgid "void"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:22
+msgid "  foobar  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:46
+#: frontend/node_modules/underscore.string/test/strings.js:189
+#: frontend/node_modules/underscore.string/test/strings.js:190
+#: frontend/node_modules/underscore.string/test/strings.js:191
+msgid "whitespace"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:50
+msgid "Hello worls"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:54
+#: frontend/node_modules/underscore.string/test/strings.js:215
+#: frontend/node_modules/underscore.string/test/strings.js:216
+msgid "Hello "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:58
+#: frontend/node_modules/underscore.string/test/strings.js:224
+msgid "https://edtsech@bitbucket.org/edtsech/underscore.strings"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:73
+#: frontend/node_modules/underscore.string/test/strings.js:237
+msgid "the titleize string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:77
+#: frontend/node_modules/underscore.string/test/speed.js:81
+#: frontend/node_modules/underscore.string/test/strings.js:203
+#: frontend/node_modules/underscore.string/test/strings.js:204
+#: frontend/node_modules/underscore.string/test/strings.js:205
+#: frontend/node_modules/underscore.string/test/strings.js:327
+#: frontend/node_modules/underscore.string/test/strings.js:328
+#: frontend/node_modules/underscore.string/test/strings.js:342
+msgid "Hello world"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:89
+msgid "<div>Blah blah blah</div>"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:93
+msgid "&lt;div&gt;Blah blah blah&lt;/div&gt;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:97
+#: frontend/node_modules/underscore.string/test/strings.js:428
+#: frontend/node_modules/underscore.string/test/strings.js:436
+msgid "Hello World"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:101
+#: frontend/node_modules/underscore.string/test/speed.js:105
+#: frontend/node_modules/underscore.string/test/speed.js:109
+#: frontend/node_modules/underscore.string/test/speed.js:113
+#: frontend/node_modules/underscore.string/test/speed.js:117
+#: frontend/node_modules/underscore.string/test/strings.js:450
+#: frontend/node_modules/underscore.string/test/strings.js:451
+#: frontend/node_modules/underscore.string/test/strings.js:452
+#: frontend/node_modules/underscore.string/test/strings.js:472
+#: frontend/node_modules/underscore.string/test/strings.js:473
+#: frontend/node_modules/underscore.string/test/strings.js:483
+#: frontend/node_modules/underscore.string/test/strings.js:484
+#: frontend/node_modules/underscore.string/test/strings.js:485
+#: frontend/node_modules/underscore.string/test/strings_standalone.js:6
+msgid "foo"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:121
+msgid "10.232323"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:125
+#: frontend/node_modules/underscore.string/test/speed.js:129
+#: frontend/node_modules/underscore.string/test/speed.js:133
+#: frontend/node_modules/underscore.string/test/speed.js:137
+msgid "aaa_bbb_ccc"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:141
+msgid "separator"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/speed.js:145
+#: frontend/node_modules/underscore.string/test/strings.js:607
+msgid "Un éléphant à l'orée du bois"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:16
+#: frontend/node_modules/underscore.string/test/strings.js:56
+#: frontend/node_modules/underscore.string/test/strings.js:75
+msgid " foo"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:17
+#: frontend/node_modules/underscore.string/test/strings.js:58
+#: frontend/node_modules/underscore.string/test/strings.js:76
+msgid "foo "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:18
+#: frontend/node_modules/underscore.string/test/strings.js:59
+#: frontend/node_modules/underscore.string/test/strings.js:79
+msgid " foo "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:19
+#: frontend/node_modules/underscore.string/test/strings.js:20
+msgid "    foo     "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:21
+msgid "\t    foo \t  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:23
+#: frontend/node_modules/underscore.string/test/strings.js:64
+#: frontend/node_modules/underscore.string/test/strings.js:81
+msgid "ffoo"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:24
+#: frontend/node_modules/underscore.string/test/strings.js:65
+#: frontend/node_modules/underscore.string/test/strings.js:82
+msgid "ooff"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:25
+#: frontend/node_modules/underscore.string/test/strings.js:66
+#: frontend/node_modules/underscore.string/test/strings.js:83
+msgid "ffooff"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:28
+#: frontend/node_modules/underscore.string/test/strings.js:68
+#: frontend/node_modules/underscore.string/test/strings.js:85
+msgid "_-foobar-_"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:30
+#: frontend/node_modules/underscore.string/test/strings.js:74
+msgid "http://foo/"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:31
+msgid "c:\\"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:57
+msgid "    foo"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:77
+msgid "foo     "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:78
+msgid "foo  bar     "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:93
+msgid "fabio"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:126
+msgid " foo    bar   "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:137
+#: frontend/node_modules/underscore.string/test/strings.js:148
+#, javascript-format
+msgid "Hello %s"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:138
+#: frontend/node_modules/underscore.string/test/strings.js:149
+#, javascript-format
+msgid "hello %s"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:157
+#: frontend/node_modules/underscore.string/test/strings.js:167
+msgid "foobar"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:158
+msgid "oobar"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:170
+msgid "fooba"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:206
+msgid "x.xx....x.x"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:230
+#: frontend/node_modules/underscore.string/test/strings.js:361
+msgid "a"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:231
+msgid "A"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:232
+msgid "+"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:238
+msgid "the titleize string  method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:242
+msgid "let's have some fun"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:243
+msgid "a-dash-separated-string"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:244
+msgid "A-DASH-SEPARATED-STRING"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:249
+msgid "the_camelize_string_method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:250
+msgid "-the-camelize-string-method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:251
+msgid "the camelize string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:252
+msgid " the camelize  string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:253
+msgid "the camelize   string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:261
+msgid "the-underscored-string-method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:262
+msgid "theUnderscoredStringMethod"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:263
+msgid "TheUnderscoredStringMethod"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:264
+msgid " the underscored  string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:272
+msgid "the_dasherize_string_method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:273
+msgid "TheDasherizeStringMethod"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:274
+msgid "thisIsATest"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:275
+msgid "this Is A Test"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:276
+msgid "thisIsATest123"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:277
+msgid "123thisIsATest"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:278
+msgid "the dasherize string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:279
+msgid "the  dasherize string method  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:280
+msgid "téléphone"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:281
+msgid "foo$bar"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:296
+msgid "_som eWeird---name-"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:308
+msgid "some_class_name"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:309
+msgid "my wonderfull class_name"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:310
+msgid "my wonderfull.class.name"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:314
+msgid "the_humanize_string_method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:315
+msgid "ThehumanizeStringMethod"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:316
+msgid "the humanize string method"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:317
+msgid "the humanize_id string method_id"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:318
+msgid "the  humanize string method  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:319
+msgid "   capitalize dash-CamelCase_underscore trim  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:329
+#: frontend/node_modules/underscore.string/test/strings.js:419
+msgid "Hello"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:337
+#: frontend/node_modules/underscore.string/test/strings.js:341
+msgid "Hello, cruel world"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:338
+#: frontend/node_modules/underscore.string/test/strings.js:339
+#: frontend/node_modules/underscore.string/test/strings.js:340
+msgid "Hello, world"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:343
+#: frontend/node_modules/underscore.string/test/strings.js:347
+msgid "Привет, жестокий мир"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:344
+#: frontend/node_modules/underscore.string/test/strings.js:345
+#: frontend/node_modules/underscore.string/test/strings.js:346
+#: frontend/node_modules/underscore.string/test/strings.js:348
+msgid "Привет, мир"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:349
+msgid "alksjd!!!!!!...."
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:362
+#: frontend/node_modules/underscore.string/test/strings.js:494
+msgid "0"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:375
+msgid "<div>Blah & \"blah\" & 'blah'</div>"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:377
+msgid "&lt;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:385
+msgid ""
+"&lt;div&gt;Blah &amp; &quot;blah&quot; &amp; &apos;blah&#39;&lt;/div&gt;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:387
+msgid "&amp;lt;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:388
+msgid "&apos;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:389
+msgid "&#39;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:390
+msgid "&#0039;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:391
+msgid "&#x4a;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:392
+msgid "&#x04A;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:393
+msgid "&#X4A;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:394
+msgid "&_#39;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:395
+msgid "&#39_;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:396
+msgid "&amp;#38;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:397
+msgid "&#38;amp;"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:406
+msgid "I love you!"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:407
+msgid " I    love   you!  "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:408
+msgid "I_love_you!"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:409
+msgid "I-love-you!"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:413
+msgid "   "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:427
+msgid "AaBbCcDdEe"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:435
+msgid ""
+"Hello\n"
+"World"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:444
+#: frontend/node_modules/underscore.string/test/strings.js:446
+#: frontend/node_modules/underscore.string/test/strings.js:447
+#: frontend/node_modules/underscore.string/test/strings.js:448
+#: frontend/node_modules/underscore.string/test/strings.js:449
+#: frontend/node_modules/underscore.string/test/strings.js:459
+#: frontend/node_modules/underscore.string/test/strings.js:461
+#: frontend/node_modules/underscore.string/test/strings.js:462
+#: frontend/node_modules/underscore.string/test/strings.js:469
+#: frontend/node_modules/underscore.string/test/strings.js:471
+#: frontend/node_modules/underscore.string/test/strings.js:480
+#: frontend/node_modules/underscore.string/test/strings.js:482
+msgid "1"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:492
+msgid "not a number"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:495
+msgid "0.0"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:496
+#: frontend/node_modules/underscore.string/test/strings.js:497
+msgid "0.1"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:498
+msgid "  0.1 "
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:499
+msgid "0000"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:500
+#: frontend/node_modules/underscore.string/test/strings.js:501
+#: frontend/node_modules/underscore.string/test/strings.js:502
+msgid "2.345"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:503
+msgid "2.344"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:504
+msgid "2"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:507
+msgid "-2"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:533
+#: frontend/node_modules/underscore.string/test/strings.js:534
+#: frontend/node_modules/underscore.string/test/strings.js:535
+#: frontend/node_modules/underscore.string/test/strings.js:536
+#: frontend/node_modules/underscore.string/test/strings.js:537
+#: frontend/node_modules/underscore.string/test/strings.js:538
+#: frontend/node_modules/underscore.string/test/strings.js:546
+#: frontend/node_modules/underscore.string/test/strings.js:547
+#: frontend/node_modules/underscore.string/test/strings.js:548
+#: frontend/node_modules/underscore.string/test/strings.js:549
+#: frontend/node_modules/underscore.string/test/strings.js:550
+#: frontend/node_modules/underscore.string/test/strings.js:558
+#: frontend/node_modules/underscore.string/test/strings.js:559
+#: frontend/node_modules/underscore.string/test/strings.js:560
+#: frontend/node_modules/underscore.string/test/strings.js:561
+#: frontend/node_modules/underscore.string/test/strings.js:562
+#: frontend/node_modules/underscore.string/test/strings.js:570
+#: frontend/node_modules/underscore.string/test/strings.js:571
+#: frontend/node_modules/underscore.string/test/strings.js:572
+#: frontend/node_modules/underscore.string/test/strings.js:573
+#: frontend/node_modules/underscore.string/test/strings.js:574
+msgid "This_is_a_test_string"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:582
+msgid "a <a href=\"#\">link</a>"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:583
+msgid "a <a href=\"#\">link</a><script>alert(\"hello world!\")</script>"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:584
+msgid "<html><body>hello world</body></html>"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:606
+msgid "Jack & Jill like numbers 1,2,3 and 4 and silly characters ?%.$!/"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:608
+msgid "I know latin characters: á í ó ú ç ã õ ñ ü ă ș ț"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:609
+msgid "I am a word too, even though I am but a single letter: i!"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:660
+msgid "false"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/strings.js:667
+msgid "true"
+msgstr ""
+
+#: frontend/node_modules/underscore.string/test/test_underscore/utility.js:51
+msgid "champ"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "using url"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_receiveInfo"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "info"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid " enabled transports"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "attempt"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "waiting for body"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "using timeout"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "transport url"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_transportTimeout"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_transportMessage"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "heartbeat"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "bad json"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "message"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "empty payload"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_transportClose"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_open"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "connected"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "_close"
+msgstr ""
+
+#: frontend/node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "disconnected"
+msgstr ""
