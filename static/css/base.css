@@ -1,21 +1,19 @@
 @font-face {
-    font-family: 'Futura';
+    font-family: 'MyFutura';
     font-weight: bold;
-    src: url('../fonts/futur.ttf');
-    src: local('../fonts/futur.ttf')
+    src: url('../fonts/futurafuturisc-bold.otf') format('opentype');
 }
 
 
 @font-face {
-    font-family: 'Futura';
+    font-family: 'MyFutura';
     font-weight: 500;
-    src: url('../fonts/futura_medium_bt.ttf');
-    src: local('../fonts/futura_medium_bt.ttf')
+    src: url('../fonts/futurabookc.otf') format('opentype');
 }
 
 
 body {
-    font-family: Futura, Arial, sans-serif;
+    font-family: MyFutura, Arial, sans-serif;
     color: #404040;
     margin: 0;
 }
