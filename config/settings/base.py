@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # third-party
     'raven.contrib.django.raven_compat',
     'rest_framework',
+    'storages',
 
     # local
     'common',

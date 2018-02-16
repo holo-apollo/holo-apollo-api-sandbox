@@ -1,4 +1,4 @@
-from .base import *
+from .staging import *
 
 DEBUG = False
 PRODUCTION = True
@@ -16,3 +16,7 @@ CSRF_COOKIE_SECURE = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 SITE_URL = 'https://www.holo-apollo.art'
+
+# AWS
+STATICFILES_LOCATION = 'static'
+MEDIAFILES_LOCATION = 'media'

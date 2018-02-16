@@ -9,7 +9,7 @@
     <div class="container">
         <div class="content">
             <h1>{% trans 'Coming soon' %}</h1>
-            <img src="/static/img/image_holo.png" alt="Holo"/>
+            <img src="{% static 'img/image_holo.png' %}" alt="Holo"/>
             <h3>
                 {% if request.GET.token %}
                     {% trans 'Welcome back' %}
