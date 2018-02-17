@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 13:25+0000\n"
+"POT-Creation-Date: 2018-02-17 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,14 @@ msgstr "Українська"
 msgid "English"
 msgstr "Англійська"
 
+#: templates/base.html:24
+msgid ""
+"Unique marketplace of design products will be here soon. In a meantime, "
+"subscribe for updates"
+msgstr ""
+"Незабаром тут буде унікальний торговий майданчик дизайнерських виробів. Тим "
+"часом, підпишіться на оновлення"
+
 #: templates/common/landing.html:11
 msgid "Coming soon"
 msgstr "Незабаром"
@@ -120,7 +128,8 @@ msgstr "Мене звати Іра."
 #: templates/emails/subscription.html:75
 msgid ""
 "I am very glad to stay in touch with you and inform you about our updates."
-msgstr "Мені дуже приємно бути на зв'язку з Вами та інформувати про наші оновлення."
+msgstr ""
+"Мені дуже приємно бути на зв'язку з Вами та інформувати про наші оновлення."
 
 #: templates/emails/subscription.html:85
 msgid "We promise to never spam you or share your personal information!"

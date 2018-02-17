@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 13:30+0000\n"
+"POT-Creation-Date: 2018-02-17 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,14 @@ msgstr ""
 #: config/settings/base.py:141
 msgid "English"
 msgstr "Английский"
+
+#: templates/base.html:24
+msgid ""
+"Unique marketplace of design products will be here soon. In a meantime, "
+"subscribe for updates"
+msgstr ""
+"Скоро здесь будет уникальная торговая площадка дизайнерских изделий. А пока, "
+"подписывайтесь на обновления"
 
 #: templates/common/landing.html:11
 msgid "Coming soon"
