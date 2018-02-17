@@ -22721,7 +22721,7 @@ exports = module.exports = __webpack_require__(34)(false);
 
 
 // module
-exports.push([module.i, ".subscription {\n  margin-top: 50px;\n}\n.subscription .inputs {\n  max-width: 500px;\n  margin-top: 18px;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n}\n.subscription .error {\n  margin-top: 17px;\n  color: #f57575;\n}\n.subscription .promise {\n  margin-top: 45px;\n  color: #a1a1a1;\n}\n", ""]);
+exports.push([module.i, ".subscription {\n  margin-top: 50px;\n}\n.subscription .inputs {\n  max-width: 500px;\n  margin-top: 18px;\n  margin-left: auto;\n  margin-right: auto;\n  display: flex;\n}\n.subscription .error {\n  margin-top: 17px;\n  color: #f57575;\n}\n.subscription .promise {\n  margin-top: 45px;\n  color: #a1a1a1;\n}\n@media screen and (max-width: 767px) {\n  .subscription .inputs {\n    flex-direction: column;\n  }\n  .subscription .inputs button {\n    margin-top: 10px;\n    width: 100%;\n  }\n}\n", ""]);
 
 // exports
 

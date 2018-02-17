@@ -40,3 +40,26 @@
 .instaicon {
     margin-top: 35px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        margin: 40px auto;
+    }
+
+    .content h1, .content h3 {
+        font-size: 30px;
+    }
+
+    .content h5 {
+        font-size: 14px;
+    }
+
+    img.image-holo {
+        width: 125px;
+    }
+
+    .instaicon {
+        margin-top: 20px;
+    }
+}
