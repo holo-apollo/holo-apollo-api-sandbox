@@ -115,7 +115,7 @@ msgstr "Підписка Holo-Apollo"
 
 #: templates/emails/subscription.html:54
 msgid "Great!"
-msgstr "Ура!"
+msgstr "Чудово!"
 
 #: templates/emails/subscription.html:59
 msgid "Thank You for subscription at "
