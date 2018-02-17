@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 13:30+0000\n"
+"POT-Creation-Date: 2018-02-17 13:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,77 +16,76 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: apps/common/fields.py:8
 msgid "Phone number"
-msgstr "Номер телефона"
+msgstr "Номер телефону"
 
 #: apps/common/validators.py:7
 msgid "Enter a valid phone number"
-msgstr "Введите действительный номер телефона"
+msgstr "Введіть дійсний номер телефону"
 
 #: apps/users/managers.py:13
 msgid "The given email must be set"
-msgstr "Адрес почты должен быть установлен."
+msgstr "Дана адреса пошти має бути встановлена"
 
 #: apps/users/models.py:28
 msgid "That username is already taken."
-msgstr "Это имя пользователя уже занято."
+msgstr "Це ім'я вже зайнято."
 
 #: apps/users/models.py:38
 msgid "That email address is already taken."
-msgstr "Этот адрес уже занят."
+msgstr "Ця адреса пошти вже зареєстрована."
 
 #: apps/users/models.py:44
 msgid "That phone number is already taken."
-msgstr "Этот телефон уже занят."
+msgstr "Цей номер телефону вже зареєстрований."
 
 #: apps/users/models.py:65
 msgid "Full name"
-msgstr "Полное имя"
+msgstr "Повне ім'я"
 
 #: apps/users/models.py:73
 msgid "That email address is already subscribed."
-msgstr "Этот адрес уже подписан."
+msgstr "Ця адреса пошти вже підписана."
 
 #: apps/users/models.py:95
 msgid "Holo-Apollo Subscription"
-msgstr "Подписка на Holo-Apollo"
+msgstr "Підписка Holo-Apollo"
 
 #: apps/users/views.py:45 apps/users/views.py:52
 msgid "Sorry, subscription not found."
-msgstr "Извините, подписка не найдена"
+msgstr "Вибачте, такої підписки немає."
 
 #: config/settings/base.py:139
 msgid "Russian"
-msgstr "Русский"
+msgstr "Російська"
 
 #: config/settings/base.py:140
 msgid "Ukrainian"
-msgstr ""
+msgstr "Українська"
 
 #: config/settings/base.py:141
 msgid "English"
-msgstr "Английский"
+msgstr "Англійська"
 
 #: templates/common/landing.html:11
 msgid "Coming soon"
-msgstr "Уже скоро"
+msgstr "Незабаром"
 
 #: templates/common/landing.html:15
 msgid "Welcome back"
-msgstr "С возвращением"
+msgstr "З поверненням"
 
 #: templates/common/landing.html:17
 msgid "Hello"
-msgstr "Привет"
+msgstr "Привіт"
 
 #: templates/common/landing.html:22
 msgid "Welcome "
-msgstr "Добро пожаловать"
+msgstr "Вітаємо "
 
 #: templates/common/landing.html:24
 msgid "to Holo-Apollo.art"
@@ -95,16 +94,16 @@ msgstr "на Holo-Apollo.art"
 #: templates/common/landing.html:27
 msgctxt "welcome back"
 msgid "The best marketplace of DECOR & DESIGN"
-msgstr "Лучшую торговую площадку ДЕКОРА и ДИЗАЙНА"
+msgstr "Кращий торговий майданчик ДЕКОРУ та ДИЗАЙНУ"
 
 #: templates/common/landing.html:29
 msgctxt "welcome"
 msgid "The best marketplace of DECOR & DESIGN"
-msgstr "Лучшую торговую площадку ДЕКОРА и ДИЗАЙНА"
+msgstr "Кращому торговому майданчику ДЕКОРУ та ДИЗАЙНУ"
 
 #: templates/emails/subscription.html:7
 msgid "Holo-Apollo subscription"
-msgstr "Подписка на Holo-Apollo"
+msgstr "Підписка Holo-Apollo"
 
 #: templates/emails/subscription.html:54
 msgid "Great!"
@@ -112,22 +111,21 @@ msgstr "Ура!"
 
 #: templates/emails/subscription.html:59
 msgid "Thank You for subscription at "
-msgstr "Спасибо за подписку на "
+msgstr "Дякуємо за підписку на "
 
 #: templates/emails/subscription.html:70
 msgid "My name is Ira."
-msgstr "Меня зовут Ира."
+msgstr "Мене звати Іра."
 
 #: templates/emails/subscription.html:75
 msgid ""
 "I am very glad to stay in touch with you and inform you about our updates."
-msgstr "Я очень рада быть с Вами на связи и информировать о наших обновлениях."
+msgstr "Мені дуже приємно бути на зв'язку з Вами та інформувати про наші оновлення."
 
 #: templates/emails/subscription.html:85
 msgid "We promise to never spam you or share your personal information!"
-msgstr ""
-"Мы обещаем никогда не спамить и не распространять Вашу личную информацию."
+msgstr "Обіцяємо ніколи не спамити та не поширювати Вашу особисту інформацію!"
 
 #: templates/emails/subscription.html:95
 msgid "Unsubscribe"
-msgstr "Отписаться"
+msgstr "Відписатися"
