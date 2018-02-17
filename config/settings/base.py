@@ -137,6 +137,7 @@ USE_L10N = True
 USE_TZ = True
 LANGUAGES = [
     ('ru', _('Russian')),
+    ('uk', _('Ukrainian')),
     ('en', _('English')),
 ]
 LOCALE_PATHS = [

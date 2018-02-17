@@ -23,7 +23,11 @@
                 {% endif %}
                 {% trans 'to Holo-Apollo.art' %}
             </h5>
-            <h5>{% trans 'The best marketplace of DECOR & DESIGN' %}</h5>
+            {% if request.GET.token %}
+                <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome back' %}</h5>
+            {% else %}
+                <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome' %}</h5>
+            {% endif %}
 
             <div id="react-subscription">
                 {#Rendered by React#}
