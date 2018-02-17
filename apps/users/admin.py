@@ -5,7 +5,8 @@ from .models import HoloUser, Subscription
 
 @admin.register(HoloUser)
 class HoloUserAdmin(admin.ModelAdmin):
-    fields = ('username', 'email', 'phone', 'first_name', 'last_name', 'is_staff', 'is_active',)
+    fields = ('username', 'email', 'phone', 'first_name', 'last_name', 'avatar', 'is_staff',
+              'is_active',)
     list_display = ('email', 'username', 'phone', 'get_full_name')
 
 

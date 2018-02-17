@@ -14,6 +14,10 @@ from common.tasks import send_email
 from .managers import HoloUserManager
 
 
+def avatar_upload_path(self, filename):
+    return f'avatars/{self.id}/{filename}'
+
+
 class HoloUser(AbstractBaseUser, PermissionsMixin):
     objects = HoloUserManager()
 
@@ -24,8 +28,8 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             'unique': _('That username is already taken.')
         }
     )
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30, blank=True, default='')
+    last_name = models.CharField(max_length=30, blank=True, default='')
 
     email = models.EmailField(
         max_length=254,
@@ -45,6 +49,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now=True)
+    avatar = models.ImageField(null=True, blank=True, upload_to=avatar_upload_path)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'phone']

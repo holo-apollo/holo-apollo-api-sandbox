@@ -33,6 +33,12 @@ SECRET_KEY = dotenv.get('SECRET_KEY', default='1e5_tvt+a34)w0u7w)jyma@#it+*s4#xy
 DEBUG = True
 PRODUCTION = False
 
+ADMINS = [
+    ('Valerii', 'kovvalole@gmail.com'),
+    ('Ira', 'irynahozhenko@gmail.com'),
+    ('Holo', 'ira@holo-apollo.art'),
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -157,10 +163,21 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'frontend', 'dist')
 ]
+STATICFILES_LOCATION = 'static'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# AWS
+AWS_STORAGE_BUCKET_NAME = dotenv.get('AWS_STORAGE_BUCKET_NAME', default='holo-apollo-assets')
+AWS_S3_REGION_NAME = dotenv.get('AWS_S3_REGION_NAME', default='us-east-2')
+AWS_ACCESS_KEY_ID = dotenv.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = dotenv.get('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = f's3.{AWS_S3_REGION_NAME}.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}'
+MEDIAFILES_LOCATION = 'media-local'
+DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
+
 
 LOGGING = {
     'version': 1,
