@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 import sys
 
+from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
 import dj_database_url
@@ -126,6 +127,7 @@ AUTH_USER_MODEL = 'users.HoloUser'
 AUTHENTICATION_BACKENDS = [
     'users.login_backend.HoloModelBackend',
 ]
+LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
