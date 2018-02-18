@@ -1,6 +1,6 @@
 import uuid
 
-from django.contrib.auth import login, authenticate, views
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponseRedirect
