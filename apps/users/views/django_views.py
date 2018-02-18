@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.utils.translation import ugettext as _
 from django.views import View
 
 
@@ -18,12 +19,13 @@ class ConfirmEmail(LoginRequiredMixin, View):
         if token != instance.email_confirm_token:
             messages.warning(
                 request,
-                _('Looks like you\'ve followed the wrong link for email verification')
+                _('We were unable to verify your email. '
+                  'Make sure that you\'re logged in as a correct user and follow the link again')
             )
         elif not instance.email_confirmed:
             instance.email_confirmed = True
             instance.save()
-            messages.success(request, _('Your email is verified successfully!'))
+            messages.success(request, _('Your email was verified successfully!'))
         else:
             messages.info(request, _('Your email is already verified'))
 
