@@ -1,6 +1,12 @@
 import uuid
 
+from django.contrib.auth import login
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext as _
+from django.urls import reverse
+from django.views import View
 
 from rest_framework.decorators import list_route
 from rest_framework.exceptions import NotFound
@@ -8,8 +14,8 @@ from rest_framework import mixins, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from .models import Subscription
-from .serializers import SubscriptionSerializer
+from .models import Subscription, HoloUser
+from .serializers import SubscriptionSerializer, HoloUserSerializer
 
 
 class SubscriptionViewSet(mixins.CreateModelMixin,
@@ -50,3 +56,37 @@ class SubscriptionViewSet(mixins.CreateModelMixin,
             return Response(serializer.data)
         except (Subscription.DoesNotExist, ValueError):
             raise NotFound(_('Sorry, subscription not found.'))
+
+
+class HoloUserViewSet(mixins.CreateModelMixin,
+                      viewsets.GenericViewSet):
+    queryset = HoloUser.objects.all()
+    serializer_class = HoloUserSerializer
+    permission_classes = [AllowAny]
+
+    def perform_create(self, serializer):
+        super(HoloUserViewSet, self).perform_create(serializer)
+        login(self.request, serializer.instance)
+
+
+class ConfirmEmail(LoginRequiredMixin, View):
+    def get(self, request):
+        instance = request.user
+        try:
+            token = uuid.UUID(self.request.GET.get('token'))
+        except (ValueError, TypeError):
+            token = None
+
+        if token != instance.email_confirm_token:
+            messages.warning(
+                request,
+                _('Looks like you\'ve followed the wrong link for email verification')
+            )
+        elif not instance.email_confirmed:
+            instance.email_confirmed = True
+            instance.save()
+            messages.success(request, _('Your email is verified successfully!'))
+        else:
+            messages.info(request, _('Your email is already verified'))
+
+        return HttpResponseRedirect(reverse('index'))
