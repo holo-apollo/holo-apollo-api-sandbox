@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 from django.test import TestCase
 
 from users.login_backend import HoloModelBackend
@@ -6,10 +8,11 @@ from .factories import HoloUserFactory
 
 class TestLoginBackend(TestCase):
     def setUp(self):
-        self.user = HoloUserFactory()
-        self.user.set_password('12345')
-        self.user.save()
-        self.backend = HoloModelBackend()
+        with patch('users.models.send_email.delay'):
+            self.user = HoloUserFactory()
+            self.user.set_password('12345')
+            self.user.save()
+            self.backend = HoloModelBackend()
 
     def test_login_with_email(self):
         authenticated = self.backend.authenticate(self.user.email, '12345')
