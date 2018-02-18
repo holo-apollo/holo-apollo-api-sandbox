@@ -6,6 +6,25 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.translation import ugettext as _
 from django.views import View
+from django.views.generic import TemplateView
+
+
+class LoginView(TemplateView):
+    template_name = 'users/login.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(reverse('index'))
+        return super(LoginView, self).get(request, *args, **kwargs)
+
+
+class SignupView(TemplateView):
+    template_name = 'users/signup.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(reverse('index'))
+        return super(SignupView, self).get(request, *args, **kwargs)
 
 
 class ConfirmEmail(LoginRequiredMixin, View):

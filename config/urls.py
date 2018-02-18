@@ -7,7 +7,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework import urls as drf_urls
 
 from common.views import index, about
-from users.views import SubscriptionViewSet, HoloUserViewSet, ConfirmEmail
+from users.views import SubscriptionViewSet, HoloUserViewSet, ConfirmEmail, LoginView, SignupView
 
 
 router = DefaultRouter()
@@ -16,6 +16,8 @@ router.register(r'users', HoloUserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', LoginView.as_view(), name='login'),
+    path('signup/', SignupView.as_view(), name='signup'),
     path('logout/', auth_views.logout, name='logout'),
     path('api-auth/', include(drf_urls)),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),

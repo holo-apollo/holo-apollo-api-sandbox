@@ -6,32 +6,36 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{% trans 'Coming soon' %}</h1>
-    <img class="image-holo" src="{% static 'img/image_holo.png' %}" alt="Holo"/>
-    <h3>
-        {% if request.GET.token %}
-            {% trans 'Welcome back' %}
-        {% else %}
-            {% trans 'Hello' %}
-        {% endif %}
-    </h3>
-    <h5>
-        {% if not request.GET.token %}
-            {% trans 'Welcome ' %}
-        {% endif %}
-        {% trans 'to Holo-Apollo.art' %}
-    </h5>
-    {% if request.GET.token %}
-        <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome back' %}</h5>
-    {% else %}
-        <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome' %}</h5>
-    {% endif %}
+    <div class="container">
+        <div class="content">
+            <h1>{% trans 'Coming soon' %}</h1>
+            <img class="image-holo" src="{% static 'img/image_holo.png' %}" alt="Holo"/>
+            <h3>
+                {% if request.GET.token %}
+                    {% trans 'Welcome back' %}
+                {% else %}
+                    {% trans 'Hello' %}
+                {% endif %}
+            </h3>
+            <h5>
+                {% if not request.GET.token %}
+                    {% trans 'Welcome ' %}
+                {% endif %}
+                {% trans 'to Holo-Apollo.art' %}
+            </h5>
+            {% if request.GET.token %}
+                <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome back' %}</h5>
+            {% else %}
+                <h5>{% trans 'The best marketplace of DECOR & DESIGN' context 'welcome' %}</h5>
+            {% endif %}
 
-    <div id="react-subscription">
-        {#Rendered by React#}
+            <div id="react-subscription">
+                {#Rendered by React#}
+            </div>
+
+            <a href="https://www.instagram.com/holo.apollo.art/" target="_blank">
+                <img class="instaicon" src="{% static 'img/instaicon.png' %}" alt="instaicon"/>
+            </a>
+        </div>
     </div>
-
-    <a href="https://www.instagram.com/holo.apollo.art/" target="_blank">
-        <img class="instaicon" src="{% static 'img/instaicon.png' %}" alt="instaicon"/>
-    </a>
 {% endblock %}

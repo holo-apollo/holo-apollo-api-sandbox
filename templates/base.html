@@ -37,12 +37,7 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
-</div>
-
+{% block content %}{% endblock %}
 
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 <script src='{% static 'js/bundle.js' %}'></script>

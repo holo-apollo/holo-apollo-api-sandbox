@@ -127,6 +127,8 @@ AUTH_USER_MODEL = 'users.HoloUser'
 AUTHENTICATION_BACKENDS = [
     'users.login_backend.HoloModelBackend',
 ]
+LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
 # Internationalization

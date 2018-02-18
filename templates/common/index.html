@@ -8,7 +8,8 @@
             {{ request.user.username }}
             <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
         {% else %}
-            <a href="#">{% trans 'Log in' %}</a> | <a href="#">{% trans 'Sign up' %}</a>
+            <a href="{% url 'login' %}">{% trans 'Log in' %}</a> |
+            <a href="{% url 'signup' %}">{% trans 'Sign up' %}</a>
         {% endif %}
     </div>
 
