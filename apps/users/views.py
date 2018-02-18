@@ -1,6 +1,6 @@
 import uuid
 
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate, views
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -9,7 +9,7 @@ from django.urls import reverse
 from django.views import View
 
 from rest_framework.decorators import list_route
-from rest_framework.exceptions import NotFound
+from rest_framework.exceptions import NotFound, AuthenticationFailed
 from rest_framework import mixins, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -67,6 +67,21 @@ class HoloUserViewSet(mixins.CreateModelMixin,
     def perform_create(self, serializer):
         super(HoloUserViewSet, self).perform_create(serializer)
         login(self.request, serializer.instance)
+
+    @list_route(methods=['POST'])
+    def login(self, request):
+        user = authenticate(
+            request,
+            username=request.data.get('username'),
+            password=request.data.get('password')
+        )
+
+        if not user:
+            raise AuthenticationFailed
+
+        login(request, user)
+        serializer = self.get_serializer(user)
+        return Response(serializer.data)
 
 
 class ConfirmEmail(LoginRequiredMixin, View):
