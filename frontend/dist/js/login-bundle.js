@@ -47,9 +47,29 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+__webpack_require__(246);
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactForm = __webpack_require__(135);
+
+var _reactAutobind = __webpack_require__(231);
+
+var _reactAutobind2 = _interopRequireDefault(_reactAutobind);
+
+var _classnames = __webpack_require__(52);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _buttons = __webpack_require__(233);
+
+var _spinners = __webpack_require__(236);
+
+var _validators = __webpack_require__(239);
+
+var _rest = __webpack_require__(240);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62,19 +82,143 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Login = function (_Component) {
     _inherits(Login, _Component);
 
-    function Login() {
+    function Login(props) {
         _classCallCheck(this, Login);
 
-        return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+
+        (0, _reactAutobind2.default)(_this);
+        _this.state = {
+            submitPending: false,
+            submitError: null
+        };
+        return _this;
     }
 
     _createClass(Login, [{
+        key: 'validateError',
+        value: function validateError(values) {
+            this.setState({ submitError: null });
+            var errors = {
+                username: null,
+                password: null
+            };
+            if (!values.username) {
+                errors.username = gettext('Please type your email or phone.');
+            } else if (!(0, _validators.validateEmail)(values.username) && !(0, _validators.validatePhone)(values.username)) {
+                errors.username = gettext('Oops... There\'s a mistake. Please type a valid email or phone.');
+            }
+            if (!values.password) {
+                errors.password = gettext('Please type your password.');
+            }
+            return errors;
+        }
+    }, {
+        key: 'onSubmit',
+        value: function onSubmit(values) {
+            var _this2 = this;
+
+            this.setState({
+                submitPending: true
+            });
+            (0, _rest.post)('users/login/', values).then(function () {
+                window.location = '/'; // TODO: this should be value of 'next' query param
+            }).catch(function (error) {
+                var message = gettext('Oops! Something went wrong. Please try again in a moment.');
+                if (error.response && error.response.data.detail) {
+                    message = error.response.data.detail;
+                }
+                _this2.setState({
+                    submitPending: false,
+                    submitError: message
+                });
+            });
+        }
+    }, {
+        key: 'renderForm',
+        value: function renderForm() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: (0, _classnames2.default)('login-form', { 'hidden': this.state.submitPending }) },
+                _react2.default.createElement(
+                    _reactForm.Form,
+                    {
+                        onSubmit: this.onSubmit,
+                        validateError: this.validateError,
+                        dontValidateOnMount: true,
+                        validateOnSubmit: true
+                    },
+                    function (formApi) {
+                        return _react2.default.createElement(
+                            'form',
+                            { onSubmit: formApi.submitForm },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'inputs' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'error' },
+                                    formApi.errors.username
+                                ),
+                                _react2.default.createElement(_reactForm.Text, {
+                                    field: 'username',
+                                    name: 'username',
+                                    className: 'grow',
+                                    placeholder: gettext('Email or phone')
+                                }),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'error' },
+                                    formApi.errors.password
+                                ),
+                                _react2.default.createElement(_reactForm.Text, {
+                                    field: 'password',
+                                    type: 'password',
+                                    name: 'password',
+                                    className: 'grow',
+                                    placeholder: gettext('Password')
+                                }),
+                                _react2.default.createElement(
+                                    _buttons.Button,
+                                    { type: 'submit' },
+                                    gettext('Log in')
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'error' },
+                                _this3.state.submitError
+                            )
+                        );
+                    }
+                )
+            );
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                'Login form'
+                { className: 'login-signup' },
+                _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Log in'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    'Don\'t have an account? ',
+                    _react2.default.createElement(
+                        'a',
+                        { href: '/signup/' },
+                        'Sign up'
+                    )
+                ),
+                this.state.submitPending && _react2.default.createElement(_spinners.DoubleBounceSpinner, null),
+                this.renderForm()
             );
         }
     }]);
@@ -83,6 +227,72 @@ var Login = function (_Component) {
 }(_react.Component);
 
 exports.default = Login;
+
+/***/ }),
+
+/***/ 246:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(247);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(37)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./login_signup.less", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./login_signup.less");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 247:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(36)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".login-signup .inputs {\n  display: flex;\n  flex-direction: column;\n}\n.login-signup .inputs input {\n  margin-bottom: 10px;\n}\n.login-signup .inputs button {\n  width: 100%;\n}\n.login-signup .error {\n  margin-top: 17px;\n  color: #f57575;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 

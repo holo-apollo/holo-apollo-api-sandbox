@@ -18,11 +18,11 @@ class HoloUserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = HoloUser.objects.create_user(
-            validated_data['email'],
-            validated_data['password'],
-            username=validated_data['username'],
-            first_name=validated_data['first_name'],
-            last_name=validated_data['last_name'],
-            phone=validated_data['phone']
+            validated_data.get('email'),
+            validated_data.get('password'),
+            username=validated_data.get('username'),
+            first_name=validated_data.get('first_name'),
+            last_name=validated_data.get('last_name', ''),
+            phone=validated_data.get('phone')
         )
         return user
