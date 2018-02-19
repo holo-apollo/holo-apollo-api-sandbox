@@ -1,13 +1,22 @@
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
+
+let commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
+    name: 'commons',
+    filename: 'js/commons.js'
+});
 
 module.exports = {
-    entry: [
-        './src/index.js'
-    ],
+    entry: {
+        landing: './src/landing.js',
+        login: './src/login.js',
+        signup: './src/signup.js'
+    },
     output: {
         path: __dirname + '/dist',
-        filename: 'js/bundle.js'
+        filename: 'js/[name]-bundle.js'
     },
+    plugins: [commonsPlugin],
     resolve: {
         modules: [
             path.resolve('./src'),

@@ -40,6 +40,8 @@
 {% block content %}{% endblock %}
 
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-<script src='{% static 'js/bundle.js' %}'></script>
+<script src="{% static 'js/commons.js' %}"></script>
+{% block extrascripts %}{% endblock %}
+
 </body>
 </html>
