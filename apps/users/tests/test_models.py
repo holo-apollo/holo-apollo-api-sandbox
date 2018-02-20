@@ -7,8 +7,7 @@ from .factories import HoloUserFactory, SubscriptionFactory
 
 class TestHoloUser(TestCase):
     def setUp(self):
-        with patch('users.models.send_email.delay'):
-            self.user = HoloUserFactory()
+        self.user = HoloUserFactory()
 
     def test_short_name(self):
         self.assertEqual(self.user.get_short_name(), 'Jane')
@@ -22,12 +21,11 @@ class TestHoloUser(TestCase):
 
 class TestSubscription(TestCase):
     def test_repr(self):
-        with patch('users.models.send_email.delay'):
-            sub = SubscriptionFactory(email='jdoe@holo-apollo.art')
-            self.assertEqual(str(sub), 'jdoe@holo-apollo.art: subscribed')
-            sub.subscribed = False
-            sub.save()
-            self.assertEqual(str(sub), 'jdoe@holo-apollo.art: not subscribed')
+        sub = SubscriptionFactory(email='jdoe@holo-apollo.art')
+        self.assertEqual(str(sub), 'jdoe@holo-apollo.art: subscribed')
+        sub.subscribed = False
+        sub.save()
+        self.assertEqual(str(sub), 'jdoe@holo-apollo.art: not subscribed')
 
     @patch('users.models.send_email.delay')
     def test_email_on_save(self, mock_send):
