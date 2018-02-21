@@ -91,6 +91,12 @@ export default class Login extends Component {
                                     <Button type={'submit'}>
                                         {gettext('Log in')}
                                     </Button>
+                                    <div>{gettext('or')}</div>
+                                    <a href={window.django_data.urls.facebook}>
+                                        <Button color={'blue'}>
+                                            {gettext('Log in with Facebook')}
+                                        </Button>
+                                    </a>
                                 </div>
                                 <div className={'error'}>
                                     {this.state.submitError}

@@ -29,7 +29,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             'unique': _('That username is already taken.')
         }
     )
-    first_name = models.CharField(max_length=30, default='HoloUser')
+    first_name = models.CharField(max_length=30, blank=True, default='')
     last_name = models.CharField(max_length=30, blank=True, default='')
 
     email = models.EmailField(
@@ -42,6 +42,8 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     email_confirmed = models.BooleanField(default=False)
     email_confirm_token = models.UUIDField(default=uuid.uuid4, editable=False)
     phone = PhoneField(
+        blank=True,
+        default='',
         unique=True,
         error_messages={
             'unique': _('That phone number is already taken.')
