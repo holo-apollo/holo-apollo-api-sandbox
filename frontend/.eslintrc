@@ -1,8 +1,4 @@
 {
-    "ecmaFeatures": {
-        "jsx": true,
-        "modules": true
-    },
     "env": {
         "browser": true,
         "node": true
@@ -13,10 +9,9 @@
         "quotes": [2, "single"],
         "space-infix-ops": 2,
         "strict": 2,
-        "babel/generator-star-spacing": 1,
-        "babel/object-shorthand": 1,
-        "babel/arrow-parens": 1,
-        "babel/no-await-in-loop": 1,
+        "generator-star-spacing": 1,
+        "object-shorthand": 1,
+        "no-await-in-loop": 1,
         "react/jsx-uses-react": 2,
         "react/jsx-uses-vars": 2,
         "react/react-in-jsx-scope": 2,
@@ -24,7 +19,8 @@
         "new-cap": [2, {
             "capIsNewExceptions": ["List", "Map", "Record", "Set", "OrderedSet"]
         }],
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "no-console": 1
     },
     "plugins": [
         "babel",

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-    {% if production %}
+    {% if PRODUCTION %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113883637-1"></script>
     <script>
@@ -36,9 +36,13 @@
     {% block extrastyle %}{% endblock %}
 </head>
 <body>
+
 {% block content %}{% endblock %}
 
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-<script src='{% static 'js/bundle.js' %}'></script>
+<script src="{% static 'js/commons.js' %}"></script>
+
+{% block extrascripts %}{% endblock %}
+
 </body>
 </html>

@@ -6,18 +6,25 @@ let commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
     filename: 'js/commons.js'
 });
 
+let definePlugin = new webpack.DefinePlugin({
+    'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+    }
+});
+
+let uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin();
+
 module.exports = {
-    devtool: 'eval',
     entry: {
         landing: './frontend/src/landing.js',
         login: './frontend/src/login.js',
         signup: './frontend/src/signup.js'
     },
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/build',
         filename: 'js/[name]-bundle.js'
     },
-    plugins: [commonsPlugin],
+    plugins: [commonsPlugin, definePlugin, uglifyJsPlugin],
     resolve: {
         modules: [
             path.resolve('./frontend/src'),

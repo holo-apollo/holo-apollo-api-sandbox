@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="react-login">
+        {#Rendered by React#}
+    </div>
+{% endblock %}
+
+{% block extrascripts %}
+    <script src="{% static 'js/login-bundle.js' %}"></script>
+{% endblock %}

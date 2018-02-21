@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 import sys
 
+from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
 import dj_database_url
@@ -88,6 +89,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'config.context_processors.settings_vars',
             ],
             'debug': DEBUG,
         },
@@ -126,6 +128,9 @@ AUTH_USER_MODEL = 'users.HoloUser'
 AUTHENTICATION_BACKENDS = [
     'users.login_backend.HoloModelBackend',
 ]
+LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -162,8 +167,11 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'frontend', 'dist')
 ]
+if PRODUCTION:
+    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'build')]
+else:
+    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
 STATICFILES_LOCATION = 'static'
 
 # Simplified static file serving.

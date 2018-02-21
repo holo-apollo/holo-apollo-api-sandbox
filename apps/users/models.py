@@ -4,6 +4,7 @@ from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.template.loader import get_template
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
@@ -28,7 +29,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             'unique': _('That username is already taken.')
         }
     )
-    first_name = models.CharField(max_length=30, blank=True, default='')
+    first_name = models.CharField(max_length=30, default='HoloUser')
     last_name = models.CharField(max_length=30, blank=True, default='')
 
     email = models.EmailField(
@@ -38,6 +39,8 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             'unique': _('That email address is already taken.')
         }
     )
+    email_confirmed = models.BooleanField(default=False)
+    email_confirm_token = models.UUIDField(default=uuid.uuid4, editable=False)
     phone = PhoneField(
         unique=True,
         error_messages={
@@ -63,6 +66,18 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
     get_full_name.short_description = _('Full name')
+
+    def save(self, *args, **kwargs):
+        is_new = not self.pk
+        super(HoloUser, self).save(*args, **kwargs)
+        if is_new:
+            text_content = _('To confirm your email address, follow the link: %s') % \
+                settings.SITE_URL + reverse('confirm-email') + f'?token={self.email_confirm_token}'
+            send_email.delay(
+                self.email,
+                _('Holo-Apollo Email Confirmation'),
+                text_content,
+            )
 
 
 class Subscription(TimeStampedModel):

@@ -8,8 +8,8 @@ from rest_framework import mixins, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from .models import Subscription
-from .serializers import SubscriptionSerializer
+from users.models import Subscription
+from users.serializers import SubscriptionSerializer
 
 
 class SubscriptionViewSet(mixins.CreateModelMixin,

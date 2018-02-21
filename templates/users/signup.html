@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="react-signup">
+        {#Rendered by React#}
+    </div>
+{% endblock %}
+
+{% block extrascripts %}
+<script src="{% static 'js/signup-bundle.js' %}"></script>
+{% endblock %}
