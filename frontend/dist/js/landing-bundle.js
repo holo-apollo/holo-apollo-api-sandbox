@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 102:
+/***/ 111:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,32 +10,23 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(34);
+var _reactDom = __webpack_require__(36);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(26);
+__webpack_require__(37);
 
-var _axios2 = _interopRequireDefault(_axios);
-
-var _subscription = __webpack_require__(131);
+var _subscription = __webpack_require__(140);
 
 var _subscription2 = _interopRequireDefault(_subscription);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_axios2.default.defaults.headers.post['Content-Type'] = 'application/json; charset=utf-8';
-_axios2.default.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-_axios2.default.defaults.xsrfCookieName = 'csrftoken';
-_axios2.default.defaults.xsrfHeaderName = 'X-CSRFToken';
-_axios2.default.defaults.baseURL = '/api/';
-_axios2.default.defaults.withCredentials = true;
-
 _reactDom2.default.render(_react2.default.createElement(_subscription2.default, null), document.getElementById('react-subscription'));
 
 /***/ }),
 
-/***/ 131:
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47,31 +38,31 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(132);
+__webpack_require__(141);
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactForm = __webpack_require__(135);
+var _reactForm = __webpack_require__(39);
 
-var _reactAutobind = __webpack_require__(231);
+var _reactAutobind = __webpack_require__(59);
 
 var _reactAutobind2 = _interopRequireDefault(_reactAutobind);
 
-var _classnames = __webpack_require__(52);
+var _classnames = __webpack_require__(26);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _buttons = __webpack_require__(233);
+var _buttons = __webpack_require__(60);
 
-var _spinners = __webpack_require__(236);
+var _spinners = __webpack_require__(61);
 
-var _validators = __webpack_require__(239);
+var _validators = __webpack_require__(62);
 
-var _rest = __webpack_require__(240);
+var _rest = __webpack_require__(63);
 
-var _utils = __webpack_require__(241);
+var _utils = __webpack_require__(244);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -286,11 +277,11 @@ exports.default = Subscription;
 
 /***/ }),
 
-/***/ 132:
+/***/ 141:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(133);
+var content = __webpack_require__(142);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -304,7 +295,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(37)(content, options);
+var update = __webpack_require__(20)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -337,10 +328,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 133:
+/***/ 142:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(36)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -352,7 +343,7 @@ exports.push([module.i, ".subscription {\n  margin-top: 50px;\n}\n.subscription 
 
 /***/ }),
 
-/***/ 241:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -380,4 +371,4 @@ function getQueryParams() {
 
 /***/ })
 
-},[102]);
+},[111]);

@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 242:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,32 +10,23 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(34);
+var _reactDom = __webpack_require__(36);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(26);
+__webpack_require__(37);
 
-var _axios2 = _interopRequireDefault(_axios);
-
-var _login = __webpack_require__(243);
+var _login = __webpack_require__(246);
 
 var _login2 = _interopRequireDefault(_login);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_axios2.default.defaults.headers.post['Content-Type'] = 'application/json; charset=utf-8';
-_axios2.default.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-_axios2.default.defaults.xsrfCookieName = 'csrftoken';
-_axios2.default.defaults.xsrfHeaderName = 'X-CSRFToken';
-_axios2.default.defaults.baseURL = '/api/';
-_axios2.default.defaults.withCredentials = true;
-
 _reactDom2.default.render(_react2.default.createElement(_login2.default, null), document.getElementById('react-login'));
 
 /***/ }),
 
-/***/ 243:
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47,29 +38,29 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(246);
+__webpack_require__(64);
 
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactForm = __webpack_require__(135);
+var _reactForm = __webpack_require__(39);
 
-var _reactAutobind = __webpack_require__(231);
+var _reactAutobind = __webpack_require__(59);
 
 var _reactAutobind2 = _interopRequireDefault(_reactAutobind);
 
-var _classnames = __webpack_require__(52);
+var _classnames = __webpack_require__(26);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _buttons = __webpack_require__(233);
+var _buttons = __webpack_require__(60);
 
-var _spinners = __webpack_require__(236);
+var _spinners = __webpack_require__(61);
 
-var _validators = __webpack_require__(239);
+var _validators = __webpack_require__(62);
 
-var _rest = __webpack_require__(240);
+var _rest = __webpack_require__(63);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -230,11 +221,11 @@ exports.default = Login;
 
 /***/ }),
 
-/***/ 246:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(247);
+var content = __webpack_require__(65);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -248,7 +239,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(37)(content, options);
+var update = __webpack_require__(20)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -281,10 +272,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 247:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(36)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -296,4 +287,4 @@ exports.push([module.i, ".login-signup .inputs {\n  display: flex;\n  flex-direc
 
 /***/ })
 
-},[242]);
+},[245]);
