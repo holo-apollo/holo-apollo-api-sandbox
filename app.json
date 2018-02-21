@@ -42,7 +42,7 @@
   "environments": {
     "test": {
       "scripts": {
-         "test": "python manage.py collectstatic && coverage run --source=apps manage.py test"
+         "test": "./scripts/test.sh"
       },
       "env": {
         "DJANGO_SETTINGS_MODULE": "config.settings.test",
