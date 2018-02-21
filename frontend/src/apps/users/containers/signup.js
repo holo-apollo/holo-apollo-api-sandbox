@@ -2,6 +2,7 @@ import 'styles/login_signup.less';
 import React, {Component} from 'react';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Form} from 'react-form';
 
 import {TextInput} from 'common/components/inputs';
@@ -11,7 +12,7 @@ import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
 import {get, post} from 'helpers/rest';
 
 
-export default class Signup extends Component {
+class Signup extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
@@ -266,3 +267,9 @@ export default class Signup extends Component {
         );
     }
 }
+
+
+const SignupWrapper = () => <MuiThemeProvider><Signup/></MuiThemeProvider>;
+
+
+export default SignupWrapper;
