@@ -7,7 +7,7 @@ import cx from 'classnames';
 import {Button} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
-import {post} from 'helpers/rest';
+import {get, post} from 'helpers/rest';
 
 
 export default class Signup extends Component {
@@ -100,12 +100,39 @@ export default class Signup extends Component {
 
     onSubmit1(values) {
         this.setState({
-            formValues: {
-                email: values.email,
-                password: values.password
-            }
+            submitPending: true
         });
-        this.goNext();
+        get(`users/check_email/?email=${values.email}`)
+            .then(response => {
+                this.setState({
+                    submitPending: false
+                });
+                const emailExists = response.data.email_exists;
+                if (emailExists) {
+                    this.setState({
+                        submitErrors: {
+                            ...this.state.submitErrors,
+                            email: gettext('That email already exists')
+                        }
+                    });
+                } else {
+                    this.setState({
+                        formValues: {
+                            email: values.email,
+                            password: values.password
+                        }
+                    });
+                    this.goNext();
+                }
+            })
+            .catch(() => {
+                this.setState({
+                    submitErrors: {
+                        ...this.state.submitErrors,
+                        email: gettext('\'Oops! Something went wrong. Please try again in a moment.')
+                    }
+                });
+            });
     }
 
     onSubmit2(values) {

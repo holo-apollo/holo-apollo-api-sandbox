@@ -175,18 +175,43 @@ var Signup = function (_Component) {
     }, {
         key: 'onSubmit1',
         value: function onSubmit1(values) {
+            var _this2 = this;
+
             this.setState({
-                formValues: {
-                    email: values.email,
-                    password: values.password
-                }
+                submitPending: true
             });
-            this.goNext();
+            (0, _rest.get)('users/check_email/?email=' + values.email).then(function (response) {
+                _this2.setState({
+                    submitPending: false
+                });
+                var emailExists = response.data.email_exists;
+                if (emailExists) {
+                    _this2.setState({
+                        submitErrors: _extends({}, _this2.state.submitErrors, {
+                            email: gettext('That email already exists')
+                        })
+                    });
+                } else {
+                    _this2.setState({
+                        formValues: {
+                            email: values.email,
+                            password: values.password
+                        }
+                    });
+                    _this2.goNext();
+                }
+            }).catch(function () {
+                _this2.setState({
+                    submitErrors: _extends({}, _this2.state.submitErrors, {
+                        email: gettext('\'Oops! Something went wrong. Please try again in a moment.')
+                    })
+                });
+            });
         }
     }, {
         key: 'onSubmit2',
         value: function onSubmit2(values) {
-            var _this2 = this;
+            var _this3 = this;
 
             this.setState({
                 submitPending: true
@@ -201,7 +226,7 @@ var Signup = function (_Component) {
                 if (error.response && error.response.data && _typeof(error.response.data) === 'object') {
                     messages = error.response.data;
                 }
-                _this2.setState({
+                _this3.setState({
                     submitPending: false,
                     submitErrors: messages
                 });
@@ -225,7 +250,7 @@ var Signup = function (_Component) {
     }, {
         key: 'renderForm1',
         value: function renderForm1() {
-            var _this3 = this;
+            var _this4 = this;
 
             return _react2.default.createElement(
                 'div',
@@ -245,7 +270,7 @@ var Signup = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: 'inputs' },
-                                _this3.renderTextInput(formApi.errors.email, 'email', gettext('Email')),
+                                _this4.renderTextInput(formApi.errors.email, 'email', gettext('Email')),
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'error' },
@@ -279,7 +304,7 @@ var Signup = function (_Component) {
     }, {
         key: 'renderForm2',
         value: function renderForm2() {
-            var _this4 = this;
+            var _this5 = this;
 
             return _react2.default.createElement(
                 'div',
@@ -311,7 +336,7 @@ var Signup = function (_Component) {
                                 'div',
                                 { className: 'inputs' },
                                 Object.keys(fields).map(function (item) {
-                                    return _this4.renderTextInput(formApi.errors[item], item, fields[item]);
+                                    return _this5.renderTextInput(formApi.errors[item], item, fields[item]);
                                 }),
                                 _react2.default.createElement(
                                     _buttons.Button,
@@ -322,12 +347,12 @@ var Signup = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: 'error' },
-                                _this4.state.submitErrors.email
+                                _this5.state.submitErrors.email
                             ),
                             _react2.default.createElement(
                                 'div',
                                 { className: 'error' },
-                                _this4.state.submitErrors.common
+                                _this5.state.submitErrors.common
                             )
                         );
                     }
