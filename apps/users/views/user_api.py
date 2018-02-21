@@ -34,3 +34,10 @@ class HoloUserViewSet(mixins.CreateModelMixin,
         login(request, user)
         serializer = self.get_serializer(user)
         return Response(serializer.data)
+
+    @list_route(methods=['GET'])
+    def check_email(self, request):
+        email = request.GET.get('email')
+        return Response({
+            'email_exists': HoloUser.objects.filter(email=email).exists()
+        })

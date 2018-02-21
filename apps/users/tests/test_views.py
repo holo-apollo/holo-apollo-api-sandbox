@@ -83,3 +83,15 @@ class TestUserApi(APITestCase):
         data = {'username': self.user.email, 'password': 'foo'}
         response = self.client.post(reverse('holouser-login'), data, format='json')
         self.assertEqual(response.status_code, 403)
+
+    def test_email_exists(self):
+        response = self.client.get(reverse('holouser-check-email') + f'?email={self.user.email}')
+        self.assertEqual(response.status_code, 200)
+        parsed_response = json.loads(response.content)
+        self.assertTrue(parsed_response['email_exists'])
+
+    def test_email_doesnt_exist(self):
+        response = self.client.get(reverse('holouser-check-email') + '?email=foo@example.com')
+        self.assertEqual(response.status_code, 200)
+        parsed_response = json.loads(response.content)
+        self.assertFalse(parsed_response['email_exists'])
