@@ -252,7 +252,6 @@ export default class Signup extends Component {
     }
 
     render() {
-        console.log('Test');
         return (
             <div className={'login-signup'}>
                 <h1>Sign up</h1>
