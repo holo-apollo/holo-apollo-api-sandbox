@@ -41,8 +41,16 @@
   ],
   "environments": {
     "test": {
+      "buildpacks": [
+        {
+          "url": "heroku/python"
+        },
+        {
+          "url": "heroku/nodejs"
+        }
+      ],
       "scripts": {
-         "test": "./scripts/test.sh"
+        "test": "./scripts/test.sh"
       },
       "env": {
         "DJANGO_SETTINGS_MODULE": "config.settings.test",
