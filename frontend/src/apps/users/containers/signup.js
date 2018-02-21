@@ -206,6 +206,12 @@ export default class Signup extends Component {
                                     <Button type={'submit'}>
                                         {gettext('Create account')}
                                     </Button>
+                                    <div>{gettext('or')}</div>
+                                    <a href={window.django_data.urls.facebook}>
+                                        <Button color={'blue'}>
+                                            {gettext('Sign up with Facebook')}
+                                        </Button>
+                                    </a>
                                 </div>
                             </form>
                         );

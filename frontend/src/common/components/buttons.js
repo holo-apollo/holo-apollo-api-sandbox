@@ -12,13 +12,19 @@ export class Button extends Component {
     };
 
     render() {
+        const classes = cx('btn', this.props.size, this.props.color, this.props.hover);
+        if (this.props.type === 'submit') {
+            return (
+                <button
+                    type={this.props.type}
+                    className={classes}
+                >
+                    {this.props.children}
+                </button>
+            );
+        }
         return (
-            <button
-                type={this.props.type}
-                className={cx(this.props.size, this.props.color, this.props.hover)}
-            >
-                {this.props.children}
-            </button>
+            <div className={classes}>{this.props.children}</div>
         );
     }
 }

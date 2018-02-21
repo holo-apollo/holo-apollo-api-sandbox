@@ -18,6 +18,7 @@ function copyProps(src, target) {
 }
 
 global.window = window;
+global.window.django_data = {urls: {}};
 global.document = window.document;
 global.navigator = {
   userAgent: 'node.js'

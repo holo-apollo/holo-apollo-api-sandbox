@@ -39,6 +39,13 @@
 
 {% block content %}{% endblock %}
 
+<script>
+   window.django_data = {
+        urls: {
+            facebook: "{% url 'social:begin' 'facebook' %}"
+        }
+    };
+</script>
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 <script src="{% static 'js/commons.js' %}"></script>
 

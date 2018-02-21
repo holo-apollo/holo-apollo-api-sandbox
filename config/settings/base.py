@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # third-party
     'raven.contrib.django.raven_compat',
     'rest_framework',
+    'social_django',
     'storages',
 
     # local
@@ -74,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -89,6 +91,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
                 'config.context_processors.settings_vars',
             ],
             'debug': DEBUG,
@@ -126,11 +130,24 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.HoloUser'
 AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
     'users.login_backend.HoloModelBackend',
 ]
 LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
+
+# Social auth
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'last_name', 'email', 'phone']
+
+SOCIAL_AUTH_FACEBOOK_KEY = dotenv.get('SOCIAL_AUTH_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = dotenv.get('SOCIAL_AUTH_FACEBOOK_SECRET')
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, email, first_name, last_name, locale'
+}
+SOCIAL_AUTH_USER_MODEL = AUTH_USER_MODEL
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
