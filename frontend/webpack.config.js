@@ -9,9 +9,9 @@ let commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
 module.exports = {
     devtool: 'eval',
     entry: {
-        landing: './src/landing.js',
-        login: './src/login.js',
-        signup: './src/signup.js'
+        landing: './frontend/src/landing.js',
+        login: './frontend/src/login.js',
+        signup: './frontend/src/signup.js'
     },
     output: {
         path: __dirname + '/dist',
@@ -20,7 +20,7 @@ module.exports = {
     plugins: [commonsPlugin],
     resolve: {
         modules: [
-            path.resolve('./src'),
+            path.resolve('./frontend/src'),
             path.resolve('./node_modules')
         ]
     },

@@ -2,11 +2,10 @@
   "name": "holo-apollo",
   "version": "1.0.0",
   "description": "Craft Art Marketplace",
-  "main": "index.js",
   "scripts": {
-    "test": "env NODE_ENV=test NODE_PATH=./src mocha --require babel-register --require ./test/setup.js --require ignore-styles --recursive",
-    "start": "webpack --progress -w --config webpack.config.js",
-    "build": "webpack --config webpack.prod.config.js"
+    "test": "env NODE_ENV=test NODE_PATH=./frontend/src mocha --require babel-register --require ./frontend/test/setup.js --require ignore-styles --recursive",
+    "start": "webpack --progress -w --config frontend/webpack.config.js",
+    "build": "webpack --config frontend/webpack.prod.config.js"
   },
   "keywords": [],
   "author": "Valerii Kovalchuk",

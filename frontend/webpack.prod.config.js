@@ -16,9 +16,9 @@ let uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin();
 
 module.exports = {
     entry: {
-        landing: './src/landing.js',
-        login: './src/login.js',
-        signup: './src/signup.js'
+        landing: './frontend/src/landing.js',
+        login: './frontend/src/login.js',
+        signup: './frontend/src/signup.js'
     },
     output: {
         path: __dirname + '/build',
@@ -27,7 +27,7 @@ module.exports = {
     plugins: [commonsPlugin, definePlugin, uglifyJsPlugin],
     resolve: {
         modules: [
-            path.resolve('./src'),
+            path.resolve('./frontend/src'),
             path.resolve('./node_modules')
         ]
     },
