@@ -89,6 +89,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'config.context_processors.settings_vars',
             ],
             'debug': DEBUG,
         },
@@ -166,8 +167,11 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'frontend', 'dist')
 ]
+if PRODUCTION:
+    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'build')]
+else:
+    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
 STATICFILES_LOCATION = 'static'
 
 # Simplified static file serving.

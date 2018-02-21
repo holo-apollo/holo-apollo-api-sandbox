@@ -7,5 +7,4 @@ def index(request):
 
 
 def about(request):
-    context = {'production': settings.PRODUCTION}
-    return render(request, 'common/landing.html', context)
+    return render(request, 'common/landing.html')
