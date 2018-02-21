@@ -1,9 +1,10 @@
 import 'styles/login_signup.less';
 import React, {Component} from 'react';
-import {Form, Text} from 'react-form';
+import {Form} from 'react-form';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 
+import {TextInput} from 'common/components/inputs';
 import {Button} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
 import {validateEmail, validatePhone} from 'helpers/validators';
@@ -51,7 +52,7 @@ export default class Login extends Component {
                 }
                 this.setState({
                     submitPending: false,
-                    submitError: message
+                    submitError: '* ' + message
                 });
             });
     }
@@ -68,38 +69,28 @@ export default class Login extends Component {
                     {formApi => {
                         return (
                             <form onSubmit={formApi.submitForm}>
+                                <div className={'error'}>
+                                    {this.state.submitError}
+                                </div>
                                 <div className={'inputs'}>
-                                    <div className={'error'}>
-                                        {formApi.errors.username}
-                                    </div>
-                                    <Text
+                                    <TextInput
                                         field="username"
-                                        name={'username'}
-                                        className={'grow'}
-                                        placeholder={gettext('Email or phone')}
+                                        hintText={gettext('Email or phone')}
                                     />
-                                    <div className={'error'}>
-                                        {formApi.errors.password}
-                                    </div>
-                                    <Text
+                                    <TextInput
                                         field="password"
                                         type={'password'}
-                                        name={'password'}
-                                        className={'grow'}
-                                        placeholder={gettext('Password')}
+                                        hintText={gettext('Password')}
                                     />
                                     <Button type={'submit'}>
                                         {gettext('Log in')}
                                     </Button>
-                                    <div>{gettext('or')}</div>
+                                    <div className={'btn-separator'}>{gettext('or')}</div>
                                     <a href={window.django_data.urls.facebook}>
                                         <Button color={'blue'}>
                                             {gettext('Log in with Facebook')}
                                         </Button>
                                     </a>
-                                </div>
-                                <div className={'error'}>
-                                    {this.state.submitError}
                                 </div>
                             </form>
                         );
@@ -113,7 +104,7 @@ export default class Login extends Component {
         return (
             <div className={'login-signup'}>
                 <h1>Log in</h1>
-                <div>Don't have an account? <a href="/signup/">Sign up</a></div>
+                <div className={'subtitle'}>Don't have an account? <a href="/signup/">Sign up</a></div>
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm()}
             </div>

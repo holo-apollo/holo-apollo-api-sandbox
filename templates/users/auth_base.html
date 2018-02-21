@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="content">
+            <div class="wrapper">
+                {% block react %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

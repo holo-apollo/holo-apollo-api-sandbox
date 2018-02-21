@@ -1,9 +1,10 @@
 import 'styles/login_signup.less';
 import React, {Component} from 'react';
-import {Form, Text} from 'react-form';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
+import {Form} from 'react-form';
 
+import {TextInput} from 'common/components/inputs';
 import {Button} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
@@ -19,6 +20,7 @@ export default class Signup extends Component {
             submitErrors: {
                 email: null,
                 password: null,
+                password2: null,
                 first_name: null,
                 last_name: null,
                 username: null,
@@ -45,6 +47,7 @@ export default class Signup extends Component {
         this.setState({submitErrors: {
             email: null,
             password: null,
+            password2: null,
             first_name: null,
             last_name: null,
             username: null,
@@ -63,7 +66,7 @@ export default class Signup extends Component {
         if (!values.password || !values.password2) {
             errors.password = gettext('Please type your password twice.');
         } else if (values.password !== values.password2) {
-            errors.password = gettext('Oops... Passwords didn\'t match');
+            errors.password2 = gettext('Oops... Passwords didn\'t match');
         }
         return errors;
     }
@@ -72,6 +75,7 @@ export default class Signup extends Component {
         this.setState({submitErrors: {
             email: null,
             password: null,
+            password2: null,
             first_name: null,
             last_name: null,
             username: null,
@@ -157,21 +161,6 @@ export default class Signup extends Component {
             });
     }
 
-    renderTextInput(error, fieldName, placeholder) {
-        return [
-            <div className={'error'} key={`error-${fieldName}`}>
-                {error ? error : this.state.submitErrors[fieldName]}
-            </div>,
-            <Text
-                key={`field-${fieldName}`}
-                field={fieldName}
-                name={fieldName}
-                className={'grow'}
-                placeholder={placeholder}
-            />
-        ];
-    }
-
     renderForm1() {
         return (
             <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 1})}>
@@ -185,28 +174,25 @@ export default class Signup extends Component {
                         return (
                             <form onSubmit={formApi.submitForm}>
                                 <div className={'inputs'}>
-                                    {this.renderTextInput(formApi.errors.email, 'email', gettext('Email'))}
-                                    <div className={'error'}>
-                                        {formApi.errors.password}
-                                    </div>
-                                    <Text
+                                    <TextInput
+                                        field={'email'}
+                                        hintText={gettext('Your email')}
+                                        submitError={this.state.submitErrors.email}
+                                    />
+                                    <TextInput
                                         field="password"
                                         type={'password'}
-                                        name={'password'}
-                                        className={'grow'}
-                                        placeholder={gettext('Make up password')}
+                                        hintText={gettext('Make up password')}
                                     />
-                                    <Text
+                                    <TextInput
                                         field="password2"
                                         type={'password'}
-                                        name={'password2'}
-                                        className={'grow'}
-                                        placeholder={gettext('Retype password')}
+                                        hintText={gettext('Retype password')}
                                     />
                                     <Button type={'submit'}>
                                         {gettext('Create account')}
                                     </Button>
-                                    <div>{gettext('or')}</div>
+                                    <div className={'btn-separator'}>{gettext('or')}</div>
                                     <a href={window.django_data.urls.facebook}>
                                         <Button color={'blue'}>
                                             {gettext('Sign up with Facebook')}
@@ -224,7 +210,6 @@ export default class Signup extends Component {
     renderForm2() {
         return (
             <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 2})}>
-                <div onClick={this.goBack}>Go back</div>
                 <Form
                     onSubmit={this.onSubmit2}
                     validateError={this.validateError2}
@@ -240,15 +225,21 @@ export default class Signup extends Component {
                         };
                         return (
                             <form onSubmit={formApi.submitForm}>
+                                <div className={'error'}>{this.state.submitErrors.email}</div>
+                                <div className={'error'}>{this.state.submitErrors.common}</div>
                                 <div className={'inputs'}>
                                     {Object.keys(fields).map(item => {
-                                        return this.renderTextInput(formApi.errors[item], item, fields[item]);
+                                        return (
+                                            <TextInput
+                                                key={item}
+                                                field={item}
+                                                hintText={fields[item]}
+                                                submitError={this.state.submitErrors[item]}
+                                            />
+                                        );
                                     })}
                                     <Button type={'submit'}>{gettext('Save')}</Button>
                                 </div>
-
-                                <div className={'error'}>{this.state.submitErrors.email}</div>
-                                <div className={'error'}>{this.state.submitErrors.common}</div>
                             </form>
                         );
                     }}
@@ -260,8 +251,14 @@ export default class Signup extends Component {
     render() {
         return (
             <div className={'login-signup'}>
+                <div
+                    className={'arrow-back'}
+                    onClick={this.goBack}
+                >
+                    <img src={`${window.django_data.urls.staticRoot}img/arrow-back.svg`}/>
+                </div>
                 <h1>Sign up</h1>
-                <div>Already a member? <a href="/login/">Log in</a></div>
+                <div className={'subtitle'}>Already a member? <a href="/login/">Log in</a></div>
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm1()}
                 {this.renderForm2()}
