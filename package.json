@@ -7,7 +7,8 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "test": "env NODE_ENV=test NODE_PATH=./frontend/src nyc mocha --require babel-register --require ./frontend/test/setup.js --require ignore-styles --recursive ./frontend/test",
+    "test": "env NODE_ENV=test NODE_PATH=./frontend/src mocha --require babel-register --require ./frontend/test/setup.js --require ignore-styles --recursive ./frontend/test",
+    "test-coverage": "nyc npm test",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
     "build": "webpack --config frontend/webpack.prod.config.js"
   },
@@ -58,5 +59,8 @@
     "react-autobind": "^1.0.6",
     "react-dom": "^16.2.0",
     "react-form": "^2.16.2"
+  },
+  "nyc": {
+    "include": ["frontend/src/**/*.js"]
   }
 }
