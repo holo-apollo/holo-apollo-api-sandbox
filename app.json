@@ -20,6 +20,12 @@
     },
     "AWS_SECRET_ACCESS_KEY": {
       "required": true
+    },
+    "SOCIAL_AUTH_FACEBOOK_KEY": {
+      "required": true
+    },
+    "SOCIAL_AUTH_FACEBOOK_SECRET": {
+      "required": true
     }
   },
   "formation": {
