@@ -19,7 +19,8 @@
         "new-cap": [2, {
             "capIsNewExceptions": ["List", "Map", "Record", "Set", "OrderedSet"]
         }],
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "no-console": 1
     },
     "plugins": [
         "babel",
