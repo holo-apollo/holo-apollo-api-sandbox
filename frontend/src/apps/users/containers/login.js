@@ -83,10 +83,15 @@ class Login extends Component {
                                         type={'password'}
                                         hintText={gettext('Password')}
                                     />
+                                    <div className={'subtitle'}>
+                                        <a href={window.django_data.urls.passwordReset}>
+                                            {gettext('Oops! I forgot my password')}
+                                        </a>
+                                    </div>
                                     <Button type={'submit'}>
                                         {gettext('Log in')}
                                     </Button>
-                                    <div className={'btn-separator'}>{gettext('or')}</div>
+                                    <div className={'subtitle'}>{gettext('or')}</div>
                                     <a href={window.django_data.urls.facebook}>
                                         <Button color={'blue'}>
                                             {gettext('Log in with Facebook')}

@@ -42,8 +42,8 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     email_confirmed = models.BooleanField(default=False)
     email_confirm_token = models.UUIDField(default=uuid.uuid4, editable=False)
     phone = PhoneField(
+        null=True,
         blank=True,
-        default='',
         unique=True,
         error_messages={
             'unique': _('That phone number is already taken.')
