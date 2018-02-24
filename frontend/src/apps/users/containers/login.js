@@ -1,4 +1,3 @@
-import 'styles/login_signup.less';
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Form} from 'react-form';

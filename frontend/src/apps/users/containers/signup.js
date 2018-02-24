@@ -1,4 +1,3 @@
-import 'styles/login_signup.less';
 import React, {Component} from 'react';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
@@ -70,11 +69,11 @@ class Signup extends Component {
         if (!values.password || !values.password2) {
             errors.password = gettext('Please type your password twice.');
         } else if (values.password !== values.password2) {
-            errors.password2 = gettext('Oops... Passwords didn\'t match');
+            errors.password2 = gettext('Oops... Passwords didn\'t match.');
         }
 
         if (!values.terms_agree) {
-            errors.terms_agree = gettext('You must accept Terms of Use to sign up');
+            errors.terms_agree = gettext('You must accept Terms of Use to sign up.');
         }
         return errors;
     }
@@ -124,7 +123,7 @@ class Signup extends Component {
                     this.setState({
                         submitErrors: {
                             ...this.state.submitErrors,
-                            email: gettext('That email already exists')
+                            email: gettext('That email already exists.')
                         }
                     });
                 } else {
@@ -219,7 +218,7 @@ class Signup extends Component {
                                         </a>
                                         :
                                         <span onClick={() => {
-                                            formApi.setError('terms_agree', gettext('You must accept Terms of Use to sign up'));
+                                            formApi.setError('terms_agree', gettext('You must accept Terms of Use to sign up.'));
                                         }}>
                                             <FacebookButton signup={true}/>
                                         </span>
