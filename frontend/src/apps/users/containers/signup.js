@@ -25,8 +25,7 @@ class Signup extends Component {
                 first_name: null,
                 last_name: null,
                 username: null,
-                phone: null,
-
+                phone: null
             },
             signupStep: 1,
             formValues: {}
