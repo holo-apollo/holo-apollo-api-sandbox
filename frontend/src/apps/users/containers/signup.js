@@ -276,7 +276,7 @@ class Signup extends Component {
     render() {
         return (
             <div className={'login-signup'}>
-                <h1>Sign up</h1>
+                <h1>{gettext('Sign up')}</h1>
                 <div className={'subtitle'}>
                     {gettext('Already a member? ')}
                     <a href={window.django_data.urls.login}>{gettext('Log in')}</a>

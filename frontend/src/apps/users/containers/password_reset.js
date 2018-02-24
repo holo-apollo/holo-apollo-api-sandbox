@@ -5,19 +5,20 @@ import autoBind from 'react-autobind';
 import cx from 'classnames';
 
 import {TextInput} from 'common/components/inputs';
-import {Button, FacebookButton} from 'common/components/buttons';
+import {Button} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
-import {validateEmail, validatePhone} from 'helpers/validators';
+import {validateEmail} from 'helpers/validators';
 import {post} from 'helpers/rest';
 
 
-class Login extends Component {
+class PasswordReset extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
         this.state = {
             submitPending: false,
+            submitSuccess: false,
             submitError: null
         };
     }
@@ -25,16 +26,12 @@ class Login extends Component {
     validateError(values) {
         this.setState({submitError: null});
         const errors = {
-            username: null,
-            password: null
+            email: null
         };
-        if (!values.username) {
-            errors.username = gettext('Please type your email or phone.');
-        } else if (!validateEmail(values.username) && !validatePhone(values.username)) {
-            errors.username = gettext('Oops... There\'s a mistake. Please type a valid email or phone.');
-        }
-        if (!values.password) {
-            errors.password = gettext('Please type your password.');
+        if (!values.email) {
+            errors.email = gettext('Please type your email.');
+        } else if (!validateEmail(values.email)) {
+            errors.email = gettext('Oops... There\'s a mistake. Please type a valid email.');
         }
         return errors;
     }
@@ -43,9 +40,12 @@ class Login extends Component {
         this.setState({
             submitPending: true
         });
-        post('users/login/', values)
+        post(window.django_data.urls.passwordResetAPI, values)
             .then(() => {
-                window.location = '/';  // TODO: this should be value of 'next' query param
+                this.setState({
+                    submitPending: false,
+                    submitSuccess: true
+                });
             }).catch(error => {
                 let message = gettext('Oops! Something went wrong. Please try again in a moment.');
                 if (error.response && error.response.data.detail) {
@@ -53,6 +53,7 @@ class Login extends Component {
                 }
                 this.setState({
                     submitPending: false,
+                    submitSuccess: false,
                     submitError: '* ' + message
                 });
             });
@@ -60,7 +61,7 @@ class Login extends Component {
 
     renderForm() {
         return (
-            <div className={cx('login-form', {'hidden': this.state.submitPending})}>
+            <div className={cx('password-reset-form', {'hidden': this.state.submitPending || this.state.submitSuccess})}>
                 <Form
                     onSubmit={this.onSubmit}
                     validateError={this.validateError}
@@ -75,26 +76,12 @@ class Login extends Component {
                                 </div>
                                 <div className={'inputs'}>
                                     <TextInput
-                                        field="username"
-                                        hintText={gettext('Email or phone')}
+                                        field="email"
+                                        hintText={gettext('Your email')}
                                     />
-                                    <TextInput
-                                        field="password"
-                                        type={'password'}
-                                        hintText={gettext('Password')}
-                                    />
-                                    <div className={'subtitle'}>
-                                        <a href={window.django_data.urls.passwordReset}>
-                                            {gettext('Oops! I forgot my password')}
-                                        </a>
-                                    </div>
                                     <Button type={'submit'}>
-                                        {gettext('Log in')}
+                                        {gettext('Send me info')}
                                     </Button>
-                                    <div className={'btn-separator'}>{gettext('or')}</div>
-                                    <a href={window.django_data.urls.facebook}>
-                                        <FacebookButton/>
-                                    </a>
                                 </div>
                             </form>
                         );
@@ -107,11 +94,20 @@ class Login extends Component {
     render() {
         return (
             <div className={'login-signup'}>
-                <h1>{gettext('Log in')}</h1>
+                <h1>{gettext('Password reset')}</h1>
+                {this.state.submitSuccess &&
                 <div className={'subtitle'}>
-                    {gettext('Don\'t have an account? ')}
-                    <a href={window.django_data.urls.signup}>{gettext('Sign up')}</a>
-                </div>
+                    <p>
+                        {gettext('We\'ve emailed you instructions for setting your password, ' +
+                            'if an account exists with the email you entered. ' +
+                            'You should receive them shortly.')}
+                    </p>
+                    <p>
+                        {gettext('If you don\'t receive an email, ' +
+                            'please make sure you\'ve entered the address you registered with, ' +
+                            'and check your spam folder.')}
+                    </p>
+                </div>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm()}
                 <ArrowBack />
@@ -121,7 +117,7 @@ class Login extends Component {
 }
 
 
-const LoginWrapper = () => <MuiThemeProvider><Login/></MuiThemeProvider>;
+const PasswordResetWrapper = () => <MuiThemeProvider><PasswordReset/></MuiThemeProvider>;
 
 
-export default LoginWrapper;
+export default PasswordResetWrapper;

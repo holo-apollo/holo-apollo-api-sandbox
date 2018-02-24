@@ -57,7 +57,9 @@ INSTALLED_APPS = [
     # third-party
     'raven.contrib.django.raven_compat',
     'rest_framework',
+    'rest_framework.authtoken',
     'social_django',
+    'rest_auth',
     'storages',
 
     # local
