@@ -20,7 +20,7 @@ class TextFieldWrapper extends Component {
         } = fieldApi;
 
         const error = getError() || submitError;
-        const errorStyle = {fontSize: 16, textAlign: 'center'};
+        const errorStyle = {fontSize: 12, textAlign: 'center'};
 
         return (
             <TextField

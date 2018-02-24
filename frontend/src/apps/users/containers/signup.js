@@ -25,7 +25,8 @@ class Signup extends Component {
                 first_name: null,
                 last_name: null,
                 username: null,
-                phone: null
+                phone: null,
+
             },
             signupStep: 1,
             formValues: {}
@@ -138,9 +139,10 @@ class Signup extends Component {
             })
             .catch(() => {
                 this.setState({
+                    submitPending: false,
                     submitErrors: {
                         ...this.state.submitErrors,
-                        email: gettext('\'Oops! Something went wrong. Please try again in a moment.')
+                        common: gettext('Oops! Something went wrong. Please try again in a moment.')
                     }
                 });
             });
@@ -180,6 +182,7 @@ class Signup extends Component {
                     {formApi => {
                         return (
                             <form onSubmit={formApi.submitForm}>
+                                <div className={'error'}>{this.state.submitErrors.common}</div>
                                 <div className={'inputs'}>
                                     <TextInput
                                         field={'email'}
