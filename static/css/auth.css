@@ -13,13 +13,45 @@
     max-width: 605px;
     min-height: calc(100% - 110px);
     background-color: #ffffff;
-    padding: 55px 0 55px 50px;
+    padding: 30px;
 }
 
 
 .wrapper {
     max-width: 415px;
     margin: 0 auto;
+}
+
+
+.arrow-back {
+    width: 16px;
+    cursor: pointer;
+    float: left;
+}
+
+
+.logo-block {
+    display: flex;
+    margin: 0 auto 30px auto;
+    width: 140px;
+}
+
+
+.logo-block span {
+    width: 50px;
+    font-size: 18px;
+}
+
+
+.logo-block img {
+    width: 85px;
+    height: 85px;
+}
+
+
+.facebook-icon {
+    width: 15px;
+    margin-right: 12px;
 }
 
 

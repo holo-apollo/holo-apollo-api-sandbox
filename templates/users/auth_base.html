@@ -8,7 +8,14 @@
 {% block content %}
     <div class="container">
         <div class="content">
+            <div id="react-arrow-back">
+                {# Render by React portal#}
+            </div>
             <div class="wrapper">
+                <div class="logo-block">
+                    <span>Holo Apollo Art</span>
+                    <img src="{% static 'img/holo-logo.png' %}">
+                </div>
                 {% block react %}{% endblock %}
             </div>
         </div>

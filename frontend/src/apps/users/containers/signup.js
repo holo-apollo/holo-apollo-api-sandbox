@@ -5,9 +5,10 @@ import cx from 'classnames';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Form} from 'react-form';
 
-import {TextInput} from 'common/components/inputs';
-import {Button} from 'common/components/buttons';
+import {TextInput, CheckboxInline} from 'common/components/inputs';
+import {Button, FacebookButton} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
+import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
 import {get, post} from 'helpers/rest';
 
@@ -56,7 +57,9 @@ class Signup extends Component {
         }});
         const errors = {
             email: null,
-            password: null
+            password: null,
+            password2: null,
+            terms_agree: null
         };
         if (!values.email) {
             errors.email = gettext('Please type your email.');
@@ -68,6 +71,10 @@ class Signup extends Component {
             errors.password = gettext('Please type your password twice.');
         } else if (values.password !== values.password2) {
             errors.password2 = gettext('Oops... Passwords didn\'t match');
+        }
+
+        if (!values.terms_agree) {
+            errors.terms_agree = gettext('You must accept Terms of Use to sign up');
         }
         return errors;
     }
@@ -190,15 +197,33 @@ class Signup extends Component {
                                         type={'password'}
                                         hintText={gettext('Retype password')}
                                     />
+                                    <CheckboxInline
+                                        field={'terms_agree'}
+                                        labelText={(
+                                            <span>
+                                                {gettext('I agree with ')}
+                                                <a href={window.django_data.urls.tou}>
+                                                    {gettext('Terms of Use')}
+                                                </a>
+                                            </span>
+                                        )}
+                                        errorText={formApi.errors.terms_agree ? `* ${formApi.errors.terms_agree}` : null}
+                                    />
                                     <Button type={'submit'}>
                                         {gettext('Create account')}
                                     </Button>
                                     <div className={'btn-separator'}>{gettext('or')}</div>
-                                    <a href={window.django_data.urls.facebook}>
-                                        <Button color={'blue'}>
-                                            {gettext('Sign up with Facebook')}
-                                        </Button>
-                                    </a>
+                                    {formApi.values.terms_agree ?
+                                        <a href={window.django_data.urls.facebook}>
+                                            <FacebookButton signup={true}/>
+                                        </a>
+                                        :
+                                        <span onClick={() => {
+                                            formApi.setError('terms_agree', gettext('You must accept Terms of Use to sign up'));
+                                        }}>
+                                            <FacebookButton signup={true}/>
+                                        </span>
+                                    }
                                 </div>
                             </form>
                         );
@@ -252,17 +277,18 @@ class Signup extends Component {
     render() {
         return (
             <div className={'login-signup'}>
-                <div
-                    className={'arrow-back'}
-                    onClick={this.goBack}
-                >
-                    <img src={`${window.django_data.urls.staticRoot}img/arrow-back.svg`}/>
-                </div>
                 <h1>Sign up</h1>
-                <div className={'subtitle'}>Already a member? <a href="/login/">Log in</a></div>
+                <div className={'subtitle'}>
+                    {gettext('Already a member? ')}
+                    <a href={window.django_data.urls.login}>{gettext('Log in')}</a>
+                </div>
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm1()}
                 {this.renderForm2()}
+                {this.state.signupStep === 1 ?
+                    <ArrowBack/> :
+                    <ArrowBack clickHandler={this.goBack}/>
+                }
             </div>
         );
     }

@@ -6,8 +6,9 @@ import autoBind from 'react-autobind';
 import cx from 'classnames';
 
 import {TextInput} from 'common/components/inputs';
-import {Button} from 'common/components/buttons';
+import {Button, FacebookButton} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
+import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone} from 'helpers/validators';
 import {post} from 'helpers/rest';
 
@@ -91,11 +92,9 @@ class Login extends Component {
                                     <Button type={'submit'}>
                                         {gettext('Log in')}
                                     </Button>
-                                    <div className={'subtitle'}>{gettext('or')}</div>
+                                    <div className={'btn-separator'}>{gettext('or')}</div>
                                     <a href={window.django_data.urls.facebook}>
-                                        <Button color={'blue'}>
-                                            {gettext('Log in with Facebook')}
-                                        </Button>
+                                        <FacebookButton/>
                                     </a>
                                 </div>
                             </form>
@@ -110,9 +109,12 @@ class Login extends Component {
         return (
             <div className={'login-signup'}>
                 <h1>Log in</h1>
-                <div className={'subtitle'}>Don't have an account? <a href="/signup/">Sign up</a></div>
+                <div className={'subtitle'}>
+                    {gettext('Don\'t have an account? ')}
+                    <a href={window.django_data.urls.signup}>{gettext('Sign up')}</a></div>
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm()}
+                <ArrowBack />
             </div>
         );
     }

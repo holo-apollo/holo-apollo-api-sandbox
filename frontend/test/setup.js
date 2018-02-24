@@ -4,7 +4,11 @@ import {JSDOM} from 'jsdom';
 
 Enzyme.configure({adapter: new Adapter()});
 
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const jsdom = new JSDOM(
+    '<!doctype html><html><body>' +
+    '<div id="react-arrow-back"></div>' +
+    '</body></html>'
+);
 const {window} = jsdom;
 
 function copyProps(src, target) {

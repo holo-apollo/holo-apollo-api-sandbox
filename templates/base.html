@@ -44,7 +44,10 @@
         urls: {
             staticRoot: "{% static '/' %}",
             facebook: "{% url 'social:begin' 'facebook' %}",
-            passwordReset: "{% url 'password_reset' %}"
+            login: "{% url 'login' %}",
+            signup: "{% url 'signup' %}",
+            passwordReset: "{% url 'password_reset' %}",
+            tou: "/tou/"
         }
     };
 </script>
