@@ -28,4 +28,5 @@ global.navigator = {
   userAgent: 'node.js'
 };
 global.gettext = (val) => val;
+global.pgettext = (val) => val;
 copyProps(window, global);
