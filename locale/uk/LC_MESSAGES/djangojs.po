@@ -354,7 +354,7 @@ msgstr "Реєстрація"
 
 #: frontend/src/apps/users/containers/signup.js:283
 msgid "Let's start"
-msgstr "Давайте знайомитись"
+msgstr "Познайомимось?"
 
 #: frontend/src/apps/users/containers/signup.js:287
 msgid "Already a member? "
