@@ -2,6 +2,7 @@ import uuid
 
 from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX
 from django.db import models
 from django.template.loader import get_template
 from django.urls import reverse
@@ -80,6 +81,15 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
                 _('Holo-Apollo Email Confirmation'),
                 text_content,
             )
+
+    def has_usable_password(self):
+        """
+        Allows resetting password for users without real password.
+        Those are signed up with Facebook.
+        """
+        if self.password is None or self.password.startswith(UNUSABLE_PASSWORD_PREFIX):
+            return True
+        return super(HoloUser, self).has_usable_password()
 
 
 class Subscription(TimeStampedModel):

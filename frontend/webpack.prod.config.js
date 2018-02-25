@@ -19,7 +19,8 @@ module.exports = {
         landing: './frontend/src/landing.js',
         login: './frontend/src/login.js',
         signup: './frontend/src/signup.js',
-        password_reset: './frontend/src/password_reset.js'
+        password_reset: './frontend/src/password_reset.js',
+        password_reset_confirm: './frontend/src/password_reset_confirm.js'
     },
     output: {
         path: __dirname + '/build',
