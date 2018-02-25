@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+
+  redis:
+    image: redis
+
+  web:
+    build: .
+    command: ./scripts/run.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.docker
+      - REDIS_URL=redis://redis:6379
+      - PY_AUTORELOAD=1
+
+  worker:
+    build: .
+    command: /bin/bash -c "pip install -r requirements.txt && celery worker --app=config.celery.app"
+    volumes:
+      - .:/code
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.docker
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    links:
+      - redis
+      - db
+      - web
+
+  client:
+    image: node:6.12.3
+    volumes:
+      - .:/code
+    working_dir: /code
+    command: /bin/bash -c "npm install && npm start"
