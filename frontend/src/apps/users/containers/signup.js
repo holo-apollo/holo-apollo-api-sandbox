@@ -265,7 +265,7 @@ class Signup extends Component {
                                             />
                                         );
                                     })}
-                                    <Button type={'submit'}>{gettext('Save')}</Button>
+                                    <Button type={'submit'} classes={'btn-margin'}>{gettext('Save')}</Button>
                                 </div>
                             </form>
                         );
@@ -278,11 +278,15 @@ class Signup extends Component {
     render() {
         return (
             <div className={'login-signup'}>
-                <h1>{gettext('Sign up')}</h1>
+                <h1>
+                    {this.state.signupStep === 1 ?
+                        pgettext('noun', 'Sign up') : gettext('Let\'s start')}
+                </h1>
+                {this.state.signupStep === 1 &&
                 <div className={'subtitle'}>
                     {gettext('Already a member? ')}
                     <a href={window.django_data.urls.login}>{gettext('Log in')}</a>
-                </div>
+                </div>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm1()}
                 {this.renderForm2()}

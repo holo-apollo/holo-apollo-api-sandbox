@@ -79,7 +79,7 @@ class PasswordReset extends Component {
                                         field="email"
                                         hintText={gettext('Your email')}
                                     />
-                                    <Button type={'submit'} classes={'btn-reset-password'}>
+                                    <Button type={'submit'} classes={'btn-margin'}>
                                         {gettext('Send me info')}
                                     </Button>
                                 </div>

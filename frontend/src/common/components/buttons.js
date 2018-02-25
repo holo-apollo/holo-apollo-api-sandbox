@@ -40,7 +40,7 @@ export class FacebookButton extends Component {
                     type="image/svg+xml"
                     data={`${window.django_data.urls.staticRoot}img/facebook.svg`}
                 />
-                {this.props.signup ? gettext('Sign up') : gettext('Log in')}
+                {this.props.signup ? pgettext('noun', 'Sign up') : gettext('Log in')}
                 {gettext(' with Facebook')}
             </Button>
         );

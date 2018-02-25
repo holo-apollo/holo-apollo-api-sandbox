@@ -97,13 +97,23 @@ class PasswordResetConfirm extends Component {
                                         field="new_password1"
                                         type={'password'}
                                         hintText={gettext('New password')}
+                                        submitError={
+                                            this.state.submitErrors.new_password1 ?
+                                                this.state.submitErrors.new_password1.join(' ') :
+                                                null
+                                        }
                                     />
                                     <TextInput
                                         field="new_password2"
                                         type={'password'}
                                         hintText={gettext('Retype password')}
+                                        submitError={
+                                            this.state.submitErrors.new_password2 ?
+                                                this.state.submitErrors.new_password2.join(' ') :
+                                                null
+                                        }
                                     />
-                                    <Button type={'submit'} classes={'btn-reset-password'}>
+                                    <Button type={'submit'} classes={'btn-margin'}>
                                         {gettext('Save')}
                                     </Button>
                                 </div>

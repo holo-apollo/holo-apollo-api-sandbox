@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-17 14:13+0000\n"
+"POT-Creation-Date: 2018-02-25 12:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,53 +32,93 @@ msgstr "Введите действительный номер телефона"
 msgid "The given email must be set"
 msgstr "Адрес почты должен быть установлен."
 
-#: apps/users/models.py:28
+#: apps/users/models.py:30
 msgid "That username is already taken."
 msgstr "Это имя пользователя уже занято."
 
-#: apps/users/models.py:38
+#: apps/users/models.py:40
 msgid "That email address is already taken."
 msgstr "Этот адрес уже занят."
 
-#: apps/users/models.py:44
+#: apps/users/models.py:50
 msgid "That phone number is already taken."
 msgstr "Этот телефон уже занят."
 
-#: apps/users/models.py:65
+#: apps/users/models.py:71
 msgid "Full name"
 msgstr "Полное имя"
 
-#: apps/users/models.py:73
+#: apps/users/models.py:77
+#, python-format
+msgid "To confirm your email address, follow the link: %s"
+msgstr "Чтобы подтвердить ваш имейл, перейдите по ссылке: %s"
+
+#: apps/users/models.py:81
+msgid "Holo-Apollo Email Confirmation"
+msgstr "Подтверждение имейла на Holo-Apollo"
+
+#: apps/users/models.py:100
 msgid "That email address is already subscribed."
 msgstr "Этот адрес уже подписан."
 
-#: apps/users/models.py:95
+#: apps/users/models.py:122
 msgid "Holo-Apollo Subscription"
 msgstr "Подписка на Holo-Apollo"
 
-#: apps/users/views.py:45 apps/users/views.py:52
+#: apps/users/views/django_views.py:75
+msgid ""
+"We were unable to verify your email. Make sure that you're logged in as a "
+"correct user and follow the link again"
+msgstr "Нам не удалось подтвердить Ваш имейл. Убедитесь что Вы вошли на сайт как правильный пользователь и перейдите по ссылке еще раз"
+
+#: apps/users/views/django_views.py:81
+msgid "Your email was verified successfully!"
+msgstr "Ваш имейл подтвержден успешно!"
+
+#: apps/users/views/django_views.py:83
+msgid "Your email is already verified"
+msgstr "Этот адрес уже подтвержден."
+
+#: apps/users/views/subscription_api.py:45
+#: apps/users/views/subscription_api.py:52
 msgid "Sorry, subscription not found."
 msgstr "Извините, подписка не найдена"
 
-#: config/settings/base.py:139
+#: config/settings/base.py:163
 msgid "Russian"
 msgstr "Русский"
 
-#: config/settings/base.py:140
+#: config/settings/base.py:164
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: config/settings/base.py:141
+#: config/settings/base.py:165
 msgid "English"
 msgstr "Английский"
 
-#: templates/base.html:24
+#: templates/base.html:26
 msgid ""
 "Unique marketplace of design products will be here soon. In a meantime, "
 "subscribe for updates"
 msgstr ""
 "Скоро здесь будет уникальная торговая площадка дизайнерских изделий. А пока, "
 "подписывайтесь на обновления"
+
+#: templates/common/index.html:9
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/common/index.html:11
+msgid "Log in"
+msgstr "Войти"
+
+#: templates/common/index.html:12
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: templates/common/index.html:26
+msgid "About us"
+msgstr "О нас"
 
 #: templates/common/landing.html:11
 msgid "Coming soon"
@@ -139,3 +179,13 @@ msgstr ""
 #: templates/emails/subscription.html:95
 msgid "Unsubscribe"
 msgstr "Отписаться"
+
+#: templates/registration/password_reset_confirm.html:9
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used."
+msgstr "Ссылка для сброса пароля не работает, возможно потому что она уже была использована."
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Please request a new password reset."
+msgstr "Пожалуйста сделайте новый запрос на сброс пароля."
