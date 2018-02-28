@@ -18,6 +18,13 @@ class TestHoloUser(TestCase):
     def test_repr(self):
         self.assertEqual(str(self.user), f'Jane Doe {self.user.email}')
 
+    def test_usable_password(self):
+        self.assertTrue(self.user.has_usable_password())
+
+    def test_unusable_password(self):
+        user = HoloUserFactory(password='12345')
+        self.assertFalse(user.has_usable_password())
+
 
 class TestSubscription(TestCase):
     def test_repr(self):

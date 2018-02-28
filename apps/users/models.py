@@ -87,7 +87,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         Allows resetting password for users without real password.
         Those are signed up with Facebook.
         """
-        if self.password is None or self.password.startswith(UNUSABLE_PASSWORD_PREFIX):
+        if not self.password or self.password.startswith(UNUSABLE_PASSWORD_PREFIX):
             return True
         return super(HoloUser, self).has_usable_password()
 
