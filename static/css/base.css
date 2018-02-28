@@ -16,9 +16,27 @@ body {
     font-family: MyFutura, Arial, sans-serif;
     color: #404040;
     margin: 0;
+    overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 
 .hidden {
     display: none;
+}
+
+
+.grow {
+    flex-grow: 1;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url('../img/checkbox.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 13px;
+    background-color: #ffffff;
 }

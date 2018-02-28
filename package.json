@@ -55,12 +55,15 @@
   "dependencies": {
     "axios": "^0.17.1",
     "classnames": "^2.2.5",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-autobind": "^1.0.6",
     "react-dom": "^16.2.0",
     "react-form": "^2.16.2"
   },
   "nyc": {
-    "include": ["frontend/src/**/*.js"]
+    "include": [
+      "frontend/src/**/*.js"
+    ]
   }
 }

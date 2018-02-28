@@ -1,16 +1,18 @@
-import 'styles/login_signup.less';
 import React, {Component} from 'react';
-import {Form, Text} from 'react-form';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {Form} from 'react-form';
 
-import {Button} from 'common/components/buttons';
+import {TextInput, CheckboxInline} from 'common/components/inputs';
+import {Button, FacebookButton} from 'common/components/buttons';
 import {DoubleBounceSpinner} from 'common/components/spinners';
+import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
 import {get, post} from 'helpers/rest';
 
 
-export default class Signup extends Component {
+class Signup extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
@@ -19,6 +21,7 @@ export default class Signup extends Component {
             submitErrors: {
                 email: null,
                 password: null,
+                password2: null,
                 first_name: null,
                 last_name: null,
                 username: null,
@@ -45,6 +48,7 @@ export default class Signup extends Component {
         this.setState({submitErrors: {
             email: null,
             password: null,
+            password2: null,
             first_name: null,
             last_name: null,
             username: null,
@@ -52,7 +56,9 @@ export default class Signup extends Component {
         }});
         const errors = {
             email: null,
-            password: null
+            password: null,
+            password2: null,
+            terms_agree: null
         };
         if (!values.email) {
             errors.email = gettext('Please type your email.');
@@ -63,7 +69,11 @@ export default class Signup extends Component {
         if (!values.password || !values.password2) {
             errors.password = gettext('Please type your password twice.');
         } else if (values.password !== values.password2) {
-            errors.password = gettext('Oops... Passwords didn\'t match');
+            errors.password2 = gettext('Oops... Passwords didn\'t match.');
+        }
+
+        if (!values.terms_agree) {
+            errors.terms_agree = gettext('You must accept Terms of Use to sign up.');
         }
         return errors;
     }
@@ -72,6 +82,7 @@ export default class Signup extends Component {
         this.setState({submitErrors: {
             email: null,
             password: null,
+            password2: null,
             first_name: null,
             last_name: null,
             username: null,
@@ -112,7 +123,7 @@ export default class Signup extends Component {
                     this.setState({
                         submitErrors: {
                             ...this.state.submitErrors,
-                            email: gettext('That email already exists')
+                            email: gettext('That email already exists.')
                         }
                     });
                 } else {
@@ -127,9 +138,10 @@ export default class Signup extends Component {
             })
             .catch(() => {
                 this.setState({
+                    submitPending: false,
                     submitErrors: {
                         ...this.state.submitErrors,
-                        email: gettext('\'Oops! Something went wrong. Please try again in a moment.')
+                        common: gettext('Oops! Something went wrong. Please try again in a moment.')
                     }
                 });
             });
@@ -157,21 +169,6 @@ export default class Signup extends Component {
             });
     }
 
-    renderTextInput(error, fieldName, placeholder) {
-        return [
-            <div className={'error'} key={`error-${fieldName}`}>
-                {error ? error : this.state.submitErrors[fieldName]}
-            </div>,
-            <Text
-                key={`field-${fieldName}`}
-                field={fieldName}
-                name={fieldName}
-                className={'grow'}
-                placeholder={placeholder}
-            />
-        ];
-    }
-
     renderForm1() {
         return (
             <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 1})}>
@@ -184,34 +181,50 @@ export default class Signup extends Component {
                     {formApi => {
                         return (
                             <form onSubmit={formApi.submitForm}>
+                                <div className={'error'}>{this.state.submitErrors.common}</div>
                                 <div className={'inputs'}>
-                                    {this.renderTextInput(formApi.errors.email, 'email', gettext('Email'))}
-                                    <div className={'error'}>
-                                        {formApi.errors.password}
-                                    </div>
-                                    <Text
+                                    <TextInput
+                                        field={'email'}
+                                        hintText={gettext('Your email')}
+                                        submitError={this.state.submitErrors.email}
+                                    />
+                                    <TextInput
                                         field="password"
                                         type={'password'}
-                                        name={'password'}
-                                        className={'grow'}
-                                        placeholder={gettext('Make up password')}
+                                        hintText={gettext('Make up password')}
                                     />
-                                    <Text
+                                    <TextInput
                                         field="password2"
                                         type={'password'}
-                                        name={'password2'}
-                                        className={'grow'}
-                                        placeholder={gettext('Retype password')}
+                                        hintText={gettext('Retype password')}
+                                    />
+                                    <CheckboxInline
+                                        field={'terms_agree'}
+                                        labelText={(
+                                            <span>
+                                                {gettext('I agree with ')}
+                                                <a href={window.django_data.urls.tou}>
+                                                    {gettext('Terms of Use')}
+                                                </a>
+                                            </span>
+                                        )}
+                                        errorText={formApi.errors.terms_agree ? `* ${formApi.errors.terms_agree}` : null}
                                     />
                                     <Button type={'submit'}>
                                         {gettext('Create account')}
                                     </Button>
-                                    <div>{gettext('or')}</div>
-                                    <a href={window.django_data.urls.facebook}>
-                                        <Button color={'blue'}>
-                                            {gettext('Sign up with Facebook')}
-                                        </Button>
-                                    </a>
+                                    <div className={'btn-separator'}>{gettext('or')}</div>
+                                    {formApi.values.terms_agree ?
+                                        <a href={window.django_data.urls.facebook}>
+                                            <FacebookButton signup={true}/>
+                                        </a>
+                                        :
+                                        <span onClick={() => {
+                                            formApi.setError('terms_agree', gettext('You must accept Terms of Use to sign up.'));
+                                        }}>
+                                            <FacebookButton signup={true}/>
+                                        </span>
+                                    }
                                 </div>
                             </form>
                         );
@@ -224,7 +237,6 @@ export default class Signup extends Component {
     renderForm2() {
         return (
             <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 2})}>
-                <div onClick={this.goBack}>Go back</div>
                 <Form
                     onSubmit={this.onSubmit2}
                     validateError={this.validateError2}
@@ -240,15 +252,21 @@ export default class Signup extends Component {
                         };
                         return (
                             <form onSubmit={formApi.submitForm}>
-                                <div className={'inputs'}>
-                                    {Object.keys(fields).map(item => {
-                                        return this.renderTextInput(formApi.errors[item], item, fields[item]);
-                                    })}
-                                    <Button type={'submit'}>{gettext('Save')}</Button>
-                                </div>
-
                                 <div className={'error'}>{this.state.submitErrors.email}</div>
                                 <div className={'error'}>{this.state.submitErrors.common}</div>
+                                <div className={'inputs'}>
+                                    {Object.keys(fields).map(item => {
+                                        return (
+                                            <TextInput
+                                                key={item}
+                                                field={item}
+                                                hintText={fields[item]}
+                                                submitError={this.state.submitErrors[item]}
+                                            />
+                                        );
+                                    })}
+                                    <Button type={'submit'} classes={'btn-margin'}>{gettext('Save')}</Button>
+                                </div>
                             </form>
                         );
                     }}
@@ -260,12 +278,29 @@ export default class Signup extends Component {
     render() {
         return (
             <div className={'login-signup'}>
-                <h1>Sign up</h1>
-                <div>Already a member? <a href="/login/">Log in</a></div>
+                <h1>
+                    {this.state.signupStep === 1 ?
+                        pgettext('noun', 'Sign up') : gettext('Let\'s start')}
+                </h1>
+                {this.state.signupStep === 1 &&
+                <div className={'subtitle'}>
+                    {gettext('Already a member? ')}
+                    <a href={window.django_data.urls.login}>{gettext('Log in')}</a>
+                </div>}
                 {this.state.submitPending && <DoubleBounceSpinner/>}
                 {this.renderForm1()}
                 {this.renderForm2()}
+                {this.state.signupStep === 1 ?
+                    <ArrowBack/> :
+                    <ArrowBack clickHandler={this.goBack}/>
+                }
             </div>
         );
     }
 }
+
+
+const SignupWrapper = () => <MuiThemeProvider><Signup/></MuiThemeProvider>;
+
+
+export default SignupWrapper;

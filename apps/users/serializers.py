@@ -1,5 +1,7 @@
+from rest_auth.serializers import PasswordResetSerializer
 from rest_framework import serializers
 
+from .forms import PasswordResetDelayForm
 from .models import HoloUser, Subscription
 
 
@@ -26,3 +28,7 @@ class HoloUserSerializer(serializers.ModelSerializer):
             phone=validated_data.get('phone')
         )
         return user
+
+
+class CustomPasswordResetSerializer(PasswordResetSerializer):
+    password_reset_form_class = PasswordResetDelayForm

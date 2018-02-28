@@ -1,12 +1,18 @@
 import uuid
 
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth.views import INTERNAL_RESET_SESSION_TOKEN, INTERNAL_RESET_URL_TOKEN
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.utils.http import urlsafe_base64_decode
 from django.utils.translation import ugettext as _
 from django.views import View
 from django.views.generic import TemplateView
+
+UserModel = get_user_model()
 
 
 class LoginView(TemplateView):
@@ -25,6 +31,34 @@ class SignupView(TemplateView):
         if request.user.is_authenticated:
             return HttpResponseRedirect(reverse('index'))
         return super(SignupView, self).get(request, *args, **kwargs)
+
+
+class PasswordResetView(TemplateView):
+    template_name = 'registration/password_reset_form.html'
+
+
+class PasswordResetConfirmView(TemplateView):
+    template_name = 'registration/password_reset_confirm.html'
+
+    def get_user(self, uidb64):
+        try:
+            # urlsafe_base64_decode() decodes to bytestring
+            uid = urlsafe_base64_decode(uidb64).decode()
+            user = UserModel._default_manager.get(pk=uid)
+        except (TypeError, ValueError, OverflowError, UserModel.DoesNotExist):
+            user = None
+        return user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        validlink = False
+        user = self.get_user(self.request.GET.get('uid'))
+        if user is not None:
+            token = self.request.GET.get('token')
+            if default_token_generator.check_token(user, token):
+                validlink = True
+        context['validlink'] = validlink
+        return context
 
 
 class ConfirmEmail(LoginRequiredMixin, View):
