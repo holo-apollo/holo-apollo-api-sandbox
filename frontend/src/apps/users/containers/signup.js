@@ -10,6 +10,7 @@ import {DoubleBounceSpinner} from 'common/components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
 import {get, post} from 'helpers/rest';
+import {redirect} from 'helpers/utils';
 
 
 class Signup extends Component {
@@ -154,7 +155,7 @@ class Signup extends Component {
         values = {...this.state.formValues, ...values};
         post('users/', values)
             .then(() => {
-                window.location = '/';  // TODO: change it to profile page
+                redirect('/');  // TODO: change it to profile page
             }).catch(error => {
                 let messages = {
                     common: gettext('Oops! Something went wrong. Please try again in a moment.')

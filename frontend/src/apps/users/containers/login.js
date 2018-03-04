@@ -10,9 +10,10 @@ import {DoubleBounceSpinner} from 'common/components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone} from 'helpers/validators';
 import {post} from 'helpers/rest';
+import {redirect} from 'helpers/utils';
 
 
-class Login extends Component {
+export class Login extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
@@ -45,7 +46,7 @@ class Login extends Component {
         });
         post('users/login/', values)
             .then(() => {
-                window.location = '/';  // TODO: this should be value of 'next' query param
+                redirect('/');  // TODO: this should be value of 'next' query param
             }).catch(error => {
                 let message = gettext('Oops! Something went wrong. Please try again in a moment.');
                 if (error.response && error.response.data.detail) {
@@ -77,11 +78,13 @@ class Login extends Component {
                                     <TextInput
                                         field="username"
                                         hintText={gettext('Email or phone')}
+                                        id={'username'}
                                     />
                                     <TextInput
                                         field="password"
                                         type={'password'}
                                         hintText={gettext('Password')}
+                                        id={'password'}
                                     />
                                     <div className={'subtitle'}>
                                         <a href={window.django_data.urls.passwordReset}>
