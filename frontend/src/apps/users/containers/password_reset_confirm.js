@@ -11,7 +11,7 @@ import {getQueryParams} from 'helpers/utils';
 import {post} from 'helpers/rest';
 
 
-class PasswordResetConfirm extends Component {
+export class PasswordResetConfirm extends Component {
     constructor(props) {
         super(props);
         autoBind(this);

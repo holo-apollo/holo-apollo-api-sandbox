@@ -12,7 +12,7 @@ import * as rest from 'helpers/rest';
 window.django_data.urls.passwordResetAPI = 'rest-auth/password/reset/';
 
 
-describe('Login component', function() {
+describe('PasswordReset component', function() {
   beforeEach(function() {
     this.wrapper = shallow(<PasswordReset />);
   });
@@ -46,6 +46,11 @@ describe('Login component', function() {
 
   it('should hide form when pending', function() {
     this.wrapper.setState({submitPending: true});
+    expect(this.wrapper.find('.password-reset-form .hidden').exists()).to.equal(true);
+  });
+
+  it('should hide form on success', function() {
+    this.wrapper.setState({submitSuccess: true});
     expect(this.wrapper.find('.password-reset-form .hidden').exists()).to.equal(true);
   });
 
