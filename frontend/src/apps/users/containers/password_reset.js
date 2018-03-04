@@ -12,7 +12,7 @@ import {validateEmail} from 'helpers/validators';
 import {post} from 'helpers/rest';
 
 
-class PasswordReset extends Component {
+export class PasswordReset extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
