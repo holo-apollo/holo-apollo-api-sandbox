@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default class ArrowBack extends Component {
+export class ArrowBack extends Component {
     static defaultProps = {
         clickHandler: () => {
             window.history.back();
@@ -10,10 +10,19 @@ export default class ArrowBack extends Component {
     };
 
     render() {
-        return ReactDOM.createPortal(
+        return (
             <div className={'arrow-back'} onClick={this.props.clickHandler}>
                 <img src={`${window.django_data.urls.staticRoot}img/arrow-back.svg`} />
-            </div>,
+            </div>
+        );
+    }
+}
+
+
+export default class ArrowBackWrapper extends Component {
+    render() {
+        return ReactDOM.createPortal(
+            <ArrowBack {...this.props}/>,
             document.getElementById('react-arrow-back')
         );
     }

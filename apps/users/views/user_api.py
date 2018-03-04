@@ -18,7 +18,7 @@ class HoloUserViewSet(mixins.CreateModelMixin,
 
     def perform_create(self, serializer):
         super(HoloUserViewSet, self).perform_create(serializer)
-        login(self.request, serializer.instance)
+        login(self.request, serializer.instance, backend='users.login_backend.HoloModelBackend')
 
     @list_route(methods=['POST'])
     def login(self, request):

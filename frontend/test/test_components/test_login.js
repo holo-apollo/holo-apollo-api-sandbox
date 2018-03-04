@@ -5,8 +5,12 @@ import sinon from 'sinon';
 
 import {Login} from 'apps/users/containers/login';
 import {DoubleBounceSpinner} from 'common/components/spinners';
+import ArrowBack from 'apps/users/components/arrow_back';
 import * as rest from 'helpers/rest';
 import * as utils from 'helpers/utils';
+
+
+window.django_data.urls.loginAPI = 'users/login/';
 
 
 describe('Login component', function() {
@@ -34,6 +38,10 @@ describe('Login component', function() {
   it('should hide form when pending', function() {
     this.wrapper.setState({submitPending: true});
     expect(this.wrapper.find('.login-form .hidden').exists()).to.equal(true);
+  });
+
+  it('should render ArrowBack', function() {
+    expect(this.wrapper.find(ArrowBack).exists()).to.equal(true);
   });
 
   it('should not validate empty values', function() {
@@ -85,37 +93,40 @@ describe('Login form submit', function() {
   beforeEach(function() {
     this.wrapper = shallow(<Login />);
     this.fakePost = sinon.stub(rest, 'post');
+    this.fakeRedirect = sinon.stub(utils, 'redirect');
   });
 
   afterEach(function() {
     this.fakePost.restore();
+    this.fakeRedirect.restore();
   });
 
   it('should submit form successfully', function(done) {
-    const fakeRedirect = sinon.stub(utils, 'redirect');
-    const promise = Promise.resolve({});
-    this.fakePost.returns(promise);
-    this.wrapper.instance().onSubmit({
+    const values = {
         username: '+380991234567',
         password: 'P@ssw0rd'
-    });
+    };
+    const promise = Promise.resolve({});
+    this.fakePost.returns(promise);
+    this.wrapper.instance().onSubmit(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.called).to.equal(true);
+    expect(this.fakePost.calledWith('users/login/', values)).to.equal(true);
     promise.then(() => {
-      expect(fakeRedirect.calledWith('/')).to.equal(true);
+      expect(this.fakeRedirect.calledWith('/')).to.equal(true);
       done();
     });
   });
 
   it('should handle unknown submit error', function(done) {
     const promise = Promise.reject({response: {data: 'error'}});
-    this.fakePost.returns(promise);
-    this.wrapper.instance().onSubmit({
+    const values = {
         username: '+380991234567',
         password: 'P@ssw0rd'
-    });
+    };
+    this.fakePost.returns(promise);
+    this.wrapper.instance().onSubmit(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.called).to.equal(true);
+    expect(this.fakePost.calledWith('users/login/', values)).to.equal(true);
     promise.then(() => {}).catch(() => {
       expect(this.wrapper.state('submitPending')).to.equal(false);
       expect(this.wrapper.state('submitError')).to.equal('* Oops! Something went wrong. Please try again in a moment.');
@@ -125,13 +136,14 @@ describe('Login form submit', function() {
 
   it('should handle known submit error', function(done) {
     const promise = Promise.reject({response: {data: {detail: 'Known error'}}});
-    this.fakePost.returns(promise);
-    this.wrapper.instance().onSubmit({
+    const values = {
         username: '+380991234567',
         password: 'P@ssw0rd'
-    });
+    };
+    this.fakePost.returns(promise);
+    this.wrapper.instance().onSubmit(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.called).to.equal(true);
+    expect(this.fakePost.calledWith('users/login/', values)).to.equal(true);
     promise.then(() => {}).catch(() => {
       expect(this.wrapper.state('submitPending')).to.equal(false);
       expect(this.wrapper.state('submitError')).to.equal('* Known error');

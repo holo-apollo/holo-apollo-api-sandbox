@@ -13,7 +13,7 @@ import {get, post} from 'helpers/rest';
 import {redirect} from 'helpers/utils';
 
 
-class Signup extends Component {
+export class Signup extends Component {
     constructor(props) {
         super(props);
         autoBind(this);
@@ -99,7 +99,7 @@ class Signup extends Component {
             errors.first_name = gettext('Please type your first name 2-30 characters long.');
         }
         if (!validateLength(values.last_name, 30)) {
-            errors.first_name = gettext('Max length of last name is 30 characters.');
+            errors.last_name = gettext('Max length of last name is 30 characters.');
         }
         if (!validateLength(values.username, 30, 2)) {
             errors.username = gettext('Please type your name on the site 2-30 characters long.');
@@ -114,7 +114,7 @@ class Signup extends Component {
         this.setState({
             submitPending: true
         });
-        get(`users/check_email/?email=${values.email}`)
+        get(`${window.django_data.urls.checkEmailAPI}?email=${values.email}`)
             .then(response => {
                 this.setState({
                     submitPending: false
@@ -153,7 +153,7 @@ class Signup extends Component {
             submitPending: true
         });
         values = {...this.state.formValues, ...values};
-        post('users/', values)
+        post(window.django_data.urls.signupAPI, values)
             .then(() => {
                 redirect('/');  // TODO: change it to profile page
             }).catch(error => {
@@ -172,7 +172,7 @@ class Signup extends Component {
 
     renderForm1() {
         return (
-            <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 1})}>
+            <div className={cx('signup-form', 'signup1', {'hidden': this.state.submitPending || this.state.signupStep !== 1})}>
                 <Form
                     onSubmit={this.onSubmit1}
                     validateError={this.validateError1}
@@ -182,7 +182,7 @@ class Signup extends Component {
                     {formApi => {
                         return (
                             <form onSubmit={formApi.submitForm}>
-                                <div className={'error'}>{this.state.submitErrors.common}</div>
+                                <div className={'error'}>* {this.state.submitErrors.common}</div>
                                 <div className={'inputs'}>
                                     <TextInput
                                         field={'email'}
@@ -237,7 +237,7 @@ class Signup extends Component {
 
     renderForm2() {
         return (
-            <div className={cx('signup-form', {'hidden': this.state.submitPending || this.state.signupStep !== 2})}>
+            <div className={cx('signup-form', 'signup2', {'hidden': this.state.submitPending || this.state.signupStep !== 2})}>
                 <Form
                     onSubmit={this.onSubmit2}
                     validateError={this.validateError2}

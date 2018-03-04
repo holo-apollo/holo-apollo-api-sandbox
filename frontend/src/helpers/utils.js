@@ -14,8 +14,8 @@ export function getQueryParams(qs = document.location.search) {
 
 
 export function redirect(path, _blank) {
-    if(path) {
-        if(_blank) {
+    if (path) {
+        if (_blank) {
             return window.open(path);
         }
         return window.location = path;

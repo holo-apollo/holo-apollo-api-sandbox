@@ -44,7 +44,7 @@ export class Login extends Component {
         this.setState({
             submitPending: true
         });
-        post('users/login/', values)
+        post(window.django_data.urls.loginAPI, values)
             .then(() => {
                 redirect('/');  // TODO: this should be value of 'next' query param
             }).catch(error => {
