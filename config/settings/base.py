@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third-party
+    'django_elasticsearch_dsl',
     'raven.contrib.django.raven_compat',
     'rest_framework',
     'rest_framework.authtoken',
@@ -65,6 +66,7 @@ INSTALLED_APPS = [
     # local
     'buyers',
     'common',
+    'goods',
     'stores',
     'users',
 ]
@@ -256,6 +258,15 @@ CELERY_RESULT_BACKEND = REDIS_URL
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
+
+
+# Elasticsearch
+# TODO: configure via .env
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
 
 
 # Emails
