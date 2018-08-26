@@ -257,6 +257,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 
 
 # Emails
+# TODO: use mailgun
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')

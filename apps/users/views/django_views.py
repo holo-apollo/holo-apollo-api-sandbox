@@ -3,7 +3,6 @@ import uuid
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.tokens import default_token_generator
-from django.contrib.auth.views import INTERNAL_RESET_SESSION_TOKEN, INTERNAL_RESET_URL_TOKEN
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
