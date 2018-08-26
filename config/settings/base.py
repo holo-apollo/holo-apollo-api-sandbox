@@ -63,7 +63,9 @@ INSTALLED_APPS = [
     'storages',
 
     # local
+    'buyers',
     'common',
+    'stores',
     'users',
 ]
 

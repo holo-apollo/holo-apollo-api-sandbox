@@ -91,6 +91,22 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             return True
         return super(HoloUser, self).has_usable_password()
 
+    @property
+    def buyer(self):
+        from buyers.models import Buyer
+        try:
+            return self._buyer
+        except Buyer.DoesNotExist:
+            return None
+
+    @property
+    def store(self):
+        from stores.models import Store
+        try:
+            return self._store
+        except Store.DoesNotExist:
+            return None
+
 
 class Subscription(TimeStampedModel):
     email = models.EmailField(
