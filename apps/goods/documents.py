@@ -26,6 +26,8 @@ class GoodDocument(DocType):
         'email': fields.TextField(attr='user.email'),
         'phone': fields.TextField(attr='user.phone')
     })
+    created = fields.DateField()
+    modified = fields.DateField()
 
     class Meta:
         model = Good
