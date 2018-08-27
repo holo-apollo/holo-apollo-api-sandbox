@@ -1,6 +1,7 @@
 import factory
 
 from goods.models import Good, GoodsCategory
+from stores.tests.factories import StoreFactory
 
 
 class GoodsCategoryFactory(factory.DjangoModelFactory):
@@ -16,3 +17,4 @@ class GoodFactory(factory.DjangoModelFactory):
 
     name = factory.Sequence(lambda n: f'Good {n}')
     category = factory.SubFactory(GoodsCategoryFactory)
+    seller = factory.SubFactory(StoreFactory)

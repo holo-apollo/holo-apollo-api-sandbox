@@ -20,6 +20,5 @@ class GoodsCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Good)
 class GoodAdmin(admin.ModelAdmin):
-    fields = ['name', 'description', 'category', 'categories_names']
     readonly_fields = ['categories_names']
-    list_display = ['name', 'categories_names']
+    list_display = ['name', 'categories_names', 'seller']

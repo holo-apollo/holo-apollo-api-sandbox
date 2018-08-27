@@ -3,6 +3,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
+from stores.models import Store
+
 
 class GoodsCategory(TimeStampedModel):
     class Meta:
@@ -41,6 +43,7 @@ class Good(TimeStampedModel):
     name = models.CharField(max_length=30, null=False, blank=False)
     description = models.TextField(blank=True, default='')
     category = models.ForeignKey(GoodsCategory, related_name='goods', on_delete=models.PROTECT)
+    seller = models.ForeignKey(Store, related_name='goods', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.name} ({self.category})'

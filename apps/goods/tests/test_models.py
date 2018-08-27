@@ -49,3 +49,14 @@ class TestGoodsCategory(TestCase):
             list(subsubcategory11.all_goods().values_list('id', flat=True)),
             [good5.id]
         )
+
+
+class TestGood(TestCase):
+    def test_categories(self):
+        category = GoodsCategoryFactory()
+        subcategory = GoodsCategoryFactory(parent_category=category)
+        subsubcategory = GoodsCategoryFactory(parent_category=subcategory)
+
+        good = GoodFactory(category=subsubcategory)
+
+        self.assertTupleEqual(good.categories(), (category, subcategory, subsubcategory))
