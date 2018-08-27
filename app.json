@@ -38,7 +38,8 @@
   },
   "addons": [
     "heroku-postgresql",
-    "heroku-redis"
+    "heroku-redis",
+    "bonsai"
   ],
   "buildpacks": [
     {

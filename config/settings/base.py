@@ -261,10 +261,9 @@ CELERY_ACCEPT_CONTENT = ['json']
 
 
 # Elasticsearch
-# TODO: configure via .env
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'localhost:9200'
+        'hosts': dotenv.get('BONSAI_URL', default='localhost:9200')
     },
 }
 
