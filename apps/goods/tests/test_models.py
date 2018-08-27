@@ -1,9 +1,11 @@
 from django.test import TestCase
 
+from django_elasticsearch_dsl.test import ESTestCase
+
 from .factories import GoodsCategoryFactory, GoodFactory
 
 
-class TestGoodsCategory(TestCase):
+class TestGoodsCategory(ESTestCase, TestCase):
     def test_categories_chain(self):
         category = GoodsCategoryFactory()
         subcategory1 = GoodsCategoryFactory(parent_category=category)
@@ -51,7 +53,7 @@ class TestGoodsCategory(TestCase):
         )
 
 
-class TestGood(TestCase):
+class TestGood(ESTestCase, TestCase):
     def test_categories(self):
         category = GoodsCategoryFactory()
         subcategory = GoodsCategoryFactory(parent_category=category)
