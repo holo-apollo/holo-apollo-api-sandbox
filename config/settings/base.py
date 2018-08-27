@@ -243,7 +243,7 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        'holo': {
+        '': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
         },

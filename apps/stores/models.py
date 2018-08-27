@@ -7,6 +7,7 @@ UserModel = get_user_model()
 
 
 class Store(TimeStampedModel):
+    store_name = models.CharField(max_length=30, unique=True)
     user = models.OneToOneField(UserModel, related_name='_store', on_delete=models.CASCADE)
 
     def __str__(self):

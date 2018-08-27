@@ -53,3 +53,7 @@ class Good(TimeStampedModel):
 
     def categories_names(self):
         return ' > '.join([str(category) for category in self.categories()])
+
+    @property
+    def categories_ids(self):
+        return [category.id for category in self.categories()]

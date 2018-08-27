@@ -9,3 +9,4 @@ class StoreFactory(factory.DjangoModelFactory):
         model = Store
 
     user = factory.SubFactory(HoloUserFactory)
+    store_name = factory.Sequence(lambda n: f'Store {n}')
