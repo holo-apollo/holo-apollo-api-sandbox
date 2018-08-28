@@ -10,6 +10,7 @@
     "test": "env NODE_ENV=test NODE_PATH=./frontend/src mocha --reporter tap --require babel-register --require ./frontend/test/setup.js --require ignore-styles --recursive ./frontend/test",
     "test-coverage": "nyc npm test",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
+    "build-dev": "webpack --config frontend/webpack.config.js",
     "build": "webpack --config frontend/webpack.prod.config.js"
   },
   "keywords": [],

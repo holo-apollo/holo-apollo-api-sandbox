@@ -10,6 +10,7 @@
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
     "USE_AWS_STATIC": "True",
+    "DISABLE_COLLECTSTATIC": "1",
     "STAGING_DATABASE_URL": {
       "required": true
     },
