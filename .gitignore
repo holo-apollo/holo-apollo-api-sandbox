@@ -13,4 +13,3 @@ htmlcov
 node_modules
 frontend/build
 frontend/dist
-webpack-stats.json

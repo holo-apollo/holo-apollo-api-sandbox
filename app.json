@@ -62,7 +62,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "python manage.py collectstatic",
+        "test-setup": "./scripts/test-setup.sh",
         "test": "./scripts/test.sh"
       },
       "env": {

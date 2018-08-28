@@ -31,7 +31,7 @@ module.exports = {
         commonsPlugin,
         definePlugin,
         uglifyJsPlugin,
-        new BundleTracker({filename: './webpack-stats.json'})
+        new BundleTracker({filename: './webpack-stats-prod.json'})
     ],
     resolve: {
         modules: [

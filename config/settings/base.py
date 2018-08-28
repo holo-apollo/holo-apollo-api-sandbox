@@ -198,13 +198,12 @@ else:
     STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
 STATICFILES_LOCATION = 'static'
 
-# Default config, but keep it for clarity
+STATS_FILE = 'webpack-stats-prod.json' if PRODUCTION else 'webpack-stats.json'
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
-        'POLL_INTERVAL': 0.1,
+        'STATS_FILE': os.path.join(BASE_DIR, STATS_FILE),
         'TIMEOUT': None,
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
