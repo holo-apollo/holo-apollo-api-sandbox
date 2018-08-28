@@ -62,7 +62,6 @@
         }
       ],
       "scripts": {
-        "test-setup": "./scripts/test-setup.sh",
         "test": "./scripts/test.sh"
       },
       "env": {
