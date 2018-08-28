@@ -38,7 +38,8 @@
   },
   "addons": [
     "heroku-postgresql",
-    "heroku-redis"
+    "heroku-redis",
+    "bonsai"
   ],
   "buildpacks": [
     {
@@ -56,6 +57,7 @@
         }
       ],
       "scripts": {
+        "test-setup": "python manage.py collectstatic",
         "test": "./scripts/test.sh"
       },
       "env": {

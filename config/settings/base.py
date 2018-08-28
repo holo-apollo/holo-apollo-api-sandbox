@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third-party
+    'django_elasticsearch_dsl',
     'raven.contrib.django.raven_compat',
     'rest_framework',
     'rest_framework.authtoken',
@@ -63,7 +64,10 @@ INSTALLED_APPS = [
     'storages',
 
     # local
+    'buyers',
     'common',
+    'goods',
+    'stores',
     'users',
 ]
 
@@ -239,7 +243,7 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        'holo': {
+        '': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
         },
@@ -254,6 +258,14 @@ CELERY_RESULT_BACKEND = REDIS_URL
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
+
+
+# Elasticsearch
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': dotenv.get('BONSAI_URL', default='localhost:9200')
+    },
+}
 
 
 # Emails
