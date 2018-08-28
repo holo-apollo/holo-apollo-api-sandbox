@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'social_django',
     'rest_auth',
     'storages',
+    'webpack_loader',
 
     # local
     'buyers',
@@ -197,6 +198,17 @@ else:
     STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
 STATICFILES_LOCATION = 'static'
 
+STATS_FILE = 'webpack-stats-prod.json' if PRODUCTION else 'webpack-stats.json'
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, STATS_FILE),
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    }
+}
+
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -209,6 +221,11 @@ AWS_SECRET_ACCESS_KEY = dotenv.get('AWS_SECRET_ACCESS_KEY')
 AWS_S3_CUSTOM_DOMAIN = f's3.{AWS_S3_REGION_NAME}.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}'
 MEDIAFILES_LOCATION = 'media-local'
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
+
+if dotenv.get('USE_AWS_STATIC'):
+    STATICFILES_STORAGE = 'config.storages.StaticStorage'
+
+STATICFILES_LOCATION = 'static-local'
 
 
 LOGGING = {

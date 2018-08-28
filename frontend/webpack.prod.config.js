@@ -1,9 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+const BundleTracker = require('webpack-bundle-tracker');
 
 let commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
     name: 'commons',
-    filename: 'js/commons.js'
+    filename: 'commons.[hash].js'
 });
 
 let definePlugin = new webpack.DefinePlugin({
@@ -23,10 +24,15 @@ module.exports = {
         password_reset_confirm: './frontend/src/password_reset_confirm.js'
     },
     output: {
-        path: __dirname + '/build',
-        filename: 'js/[name]-bundle.js'
+        path: __dirname + '/build/webpack_bundles/',
+        filename: '[name]-bundle.[hash].js'
     },
-    plugins: [commonsPlugin, definePlugin, uglifyJsPlugin],
+    plugins: [
+        commonsPlugin,
+        definePlugin,
+        uglifyJsPlugin,
+        new BundleTracker({filename: './webpack-stats-prod.json'})
+    ],
     resolve: {
         modules: [
             path.resolve('./frontend/src'),

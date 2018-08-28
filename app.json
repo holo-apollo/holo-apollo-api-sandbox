@@ -9,6 +9,8 @@
       "generator": "secret"
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
+    "USE_AWS_STATIC": "True",
+    "DISABLE_COLLECTSTATIC": "1",
     "STAGING_DATABASE_URL": {
       "required": true
     },
@@ -44,20 +46,15 @@
   "buildpacks": [
     {
       "url": "heroku/python"
+    },
+    {
+      "url": "heroku/nodejs"
     }
   ],
   "environments": {
     "test": {
-      "buildpacks": [
-        {
-          "url": "heroku/python"
-        },
-        {
-          "url": "heroku/nodejs"
-        }
-      ],
       "scripts": {
-        "test-setup": "python manage.py collectstatic",
+        "test-setup": "./scripts/test-setup.sh",
         "test": "./scripts/test.sh"
       },
       "env": {

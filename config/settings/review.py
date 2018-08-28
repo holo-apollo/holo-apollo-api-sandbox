@@ -1,3 +1,4 @@
 from .base import *
 
-MEDIAFILES_LOCATION = 'media-staging'
+STATICFILES_LOCATION = 'static-review'
+MEDIAFILES_LOCATION = 'media-review'
