@@ -9,6 +9,7 @@
       "generator": "secret"
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
+    "USE_AWS_STATIC": "True",
     "STAGING_DATABASE_URL": {
       "required": true
     },

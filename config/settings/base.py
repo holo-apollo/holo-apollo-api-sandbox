@@ -223,6 +223,11 @@ AWS_S3_CUSTOM_DOMAIN = f's3.{AWS_S3_REGION_NAME}.amazonaws.com/{AWS_STORAGE_BUCK
 MEDIAFILES_LOCATION = 'media-local'
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
 
+if dotenv.get('USE_AWS_STATIC'):
+    STATICFILES_STORAGE = 'config.storages.StaticStorage'
+
+STATICFILES_LOCATION = 'static-local'
+
 
 LOGGING = {
     'version': 1,
