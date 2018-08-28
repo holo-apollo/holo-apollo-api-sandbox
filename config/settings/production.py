@@ -1,7 +1,6 @@
 from .staging import *
 
 DEBUG = False
-PRODUCTION = True
 ALLOWED_HOSTS = [
     'holo-apollo.art',
     'www.holo-apollo.art',

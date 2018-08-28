@@ -31,7 +31,7 @@ SECRET_KEY = dotenv.get('SECRET_KEY', default='1e5_tvt+a34)w0u7w)jyma@#it+*s4#xy
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-PRODUCTION = False
+PRODUCTION = True if dotenv.get('PRODUCTION') else False
 
 ADMINS = [
     ('Valerii', 'kovvalole@gmail.com'),
