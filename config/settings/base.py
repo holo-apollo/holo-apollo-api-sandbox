@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'social_django',
     'rest_auth',
     'storages',
+    'webpack_loader',
 
     # local
     'buyers',
@@ -196,6 +197,18 @@ if PRODUCTION:
 else:
     STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
 STATICFILES_LOCATION = 'static'
+
+# Default config, but keep it for clarity
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    }
+}
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/

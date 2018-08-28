@@ -1,5 +1,5 @@
 {% extends 'users/auth_base.html' %}
-{% load static %}
+{% load render_bundle from webpack_loader %}
 
 {% block react %}
     <div id="react-login">
@@ -8,5 +8,5 @@
 {% endblock %}
 
 {% block extrascripts %}
-    <script src="{% static 'js/login-bundle.js' %}"></script>
+   {% render_bundle 'login' %}
 {% endblock %}

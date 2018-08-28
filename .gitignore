@@ -11,3 +11,6 @@ staticfiles
 htmlcov
 .DS_Store
 node_modules
+frontend/build
+frontend/dist
+webpack-stats.json
