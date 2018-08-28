@@ -53,14 +53,6 @@
   ],
   "environments": {
     "test": {
-      "buildpacks": [
-        {
-          "url": "heroku/python"
-        },
-        {
-          "url": "heroku/nodejs"
-        }
-      ],
       "scripts": {
         "test-setup": "./scripts/test-setup.sh",
         "test": "./scripts/test.sh"
