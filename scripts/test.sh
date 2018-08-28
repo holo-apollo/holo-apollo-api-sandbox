@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-python manage.py collectstatic
-
 python manage.py test
 ret_code_django=$?
 
