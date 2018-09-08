@@ -33,6 +33,9 @@ urlpatterns = [
     path('api-auth/', include(drf_urls)),
     path('api/', include(router.urls)),
 
+    # Libs
+    path('select2/', include('select2.urls')),
+
     # Custom
     path('about/', about, name='about'),
     path('confirm-email/', ConfirmEmail.as_view(), name='confirm-email'),
