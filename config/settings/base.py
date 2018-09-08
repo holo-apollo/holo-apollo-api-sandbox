@@ -43,6 +43,7 @@ ADMINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',  # must be put before admin for integration
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -172,6 +173,8 @@ LANGUAGES = [
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
+MODELTRANSLATION_DEBUG = DEBUG
+MODELTRANSLATION_FALLBACK_LANGUAGES = [lang[0] for lang in LANGUAGES]
 
 # Change 'default' database configuration with $DATABASE_URL.
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
@@ -262,7 +265,7 @@ LOGGING = {
         },
         '': {
             'handlers': ['file', 'console'],
-            'level': 'DEBUG',
+            'level': 'INFO',
         },
     },
 }
