@@ -7,6 +7,8 @@ botocore==1.8.44
 celery==4.1.0
 certifi==2018.1.18
 chardet==3.0.4
+coreapi==2.3.3
+coreschema==0.0.4
 coverage==4.5.1
 decorator==4.2.1
 defusedxml==0.5.0
@@ -22,7 +24,7 @@ django-select2-forms==2.0.2
 django-sortedm2m==1.5.0
 django-storages==1.6.5
 django-webpack-loader==0.6.0
-djangorestframework==3.7.7
+djangorestframework==3.8.2
 docutils==0.14
 elasticsearch==6.3.1
 elasticsearch-dsl==6.1.0
@@ -38,10 +40,13 @@ ipaddress==1.0.22
 ipython==6.2.1
 ipython-genutils==0.2.0
 isort==4.3.4
+itypes==1.1.0
 jedi==0.11.1
+Jinja2==2.10
 jmespath==0.9.3
 kombu==4.1.0
 Markdown==2.6.11
+MarkupSafe==1.0
 mccabe==0.6.1
 oauthlib==2.0.6
 parso==0.1.1
@@ -77,6 +82,7 @@ tap.py==2.4
 testfixtures==6.3.0
 text-unidecode==1.1
 traitlets==4.3.2
+uritemplate==3.0.0
 urllib3==1.22
 vine==1.1.4
 wcwidth==0.1.7

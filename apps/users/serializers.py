@@ -6,9 +6,22 @@ from .models import HoloUser, Subscription
 
 
 class SubscriptionSerializer(serializers.ModelSerializer):
+    # override field to disable unique validation
+    email = serializers.EmailField(required=True)
+
     class Meta:
         model = Subscription
-        fields = ('email', 'subscribed',)
+        fields = ('email',)
+
+
+class UnsubscribeSerializer(serializers.ModelSerializer):
+    token = serializers.UUIDField(required=True, write_only=True)
+    email = serializers.EmailField(read_only=True)
+    subscribed = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = Subscription
+        fields = ('token', 'email', 'subscribed',)
 
 
 class HoloUserSerializer(serializers.ModelSerializer):

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 
     # third-party
     'django_elasticsearch_dsl',
+    'django_filters',
     'raven.contrib.django.raven_compat',
     'rest_framework',
     'rest_framework.authtoken',
@@ -315,7 +316,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 20,
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ]
 }
 
 
