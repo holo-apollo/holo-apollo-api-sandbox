@@ -29,6 +29,9 @@ class HoloUserManager(BaseUserManager):
 
         return user
 
+
+
+
     def create_user(self, email, password=None, **extra_fields):
         is_staff = extra_fields.pop("is_staff", False)
 
