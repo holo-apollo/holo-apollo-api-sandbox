@@ -4,7 +4,6 @@ from goods.models import Good, GoodsCategory
 from stores.models import Store
 from users.models import HoloUser
 
-
 good = Index('goods')
 good.settings(
     number_of_shards=1,

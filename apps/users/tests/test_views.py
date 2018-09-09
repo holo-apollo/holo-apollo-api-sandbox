@@ -1,10 +1,10 @@
 import json
 from unittest.mock import patch
 
-from django.test import TestCase, RequestFactory
+from django.test import RequestFactory, TestCase
 from django.urls import reverse
 
-from rest_framework.test import APITestCase, APIClient
+from rest_framework.test import APIClient, APITestCase
 
 from users.models import HoloUser
 from users.views import ConfirmEmail

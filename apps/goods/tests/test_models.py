@@ -2,7 +2,7 @@ from django.test import TestCase
 
 from django_elasticsearch_dsl.test import ESTestCase
 
-from .factories import GoodsCategoryFactory, GoodFactory
+from .factories import GoodFactory, GoodsCategoryFactory
 
 
 class TestGoodsCategory(ESTestCase, TestCase):

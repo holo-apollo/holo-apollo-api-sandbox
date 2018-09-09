@@ -2,9 +2,9 @@ import uuid
 
 from django.utils.translation import ugettext as _
 
+from rest_framework import mixins, viewsets
 from rest_framework.decorators import list_route
 from rest_framework.exceptions import NotFound
-from rest_framework import mixins, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 

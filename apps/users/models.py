@@ -1,8 +1,8 @@
 import uuid
 
 from django.conf import settings
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.template.loader import get_template
 from django.urls import reverse
