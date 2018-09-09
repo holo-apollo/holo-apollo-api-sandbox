@@ -11,7 +11,7 @@ from users.models import HoloUser
 from users.serializers import HoloUserSerializer
 
 
-class HoloUserViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMixin, mixins.ListModelMixin,
+class HoloUserViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMixin,
                       viewsets.GenericViewSet):
     """
     create:
