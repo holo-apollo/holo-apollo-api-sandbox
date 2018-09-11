@@ -157,6 +157,7 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   'fields': 'id, name, email, first_name, last_name, locale'
 }
+SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.12'
 SOCIAL_AUTH_USER_MODEL = AUTH_USER_MODEL
 
 # Internationalization
