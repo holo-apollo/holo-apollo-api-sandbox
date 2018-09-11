@@ -100,7 +100,7 @@ while making changes locally.
   celery worker --app=config.celery.app
   ```
 
-Site should now be available at [localhost:8000](localhost:8000).
+Site should now be available at [http://localhost:8000](http://localhost:8000).
 
 
 ### Running all services in Docker
@@ -127,4 +127,4 @@ functionality locally.
   ./manage.py migrate
   ```
 
-Site should now be available at [localhost:8000](localhost:8000).
+Site should now be available at [http://localhost:8000](http://localhost:8000).
