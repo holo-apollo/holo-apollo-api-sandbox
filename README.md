@@ -28,45 +28,45 @@ while making changes locally.
 
 - Install Docker and Docker-compose and add current user to `docker` group:
 
-[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+  [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 - Bring up storage services:
 
-```
-make db_up
-```
+  ```
+  make db_up
+  ```
 
-This will pull services images and run them in background. Pulling images may take a while.
-To check services status, run:
+  This will pull services images and run them in background. Pulling images may take a while.
+  To check services status, run:
 
-```
-make db_status
-```
+  ```
+  make db_status
+  ```
 
-To stop the services:
+  To stop the services:
 
-```
-make db_stop
-```
+  ```
+  make db_stop
+  ```
 
 - Add `.env` file to project root to configure some environment variables. Use `.env.local.example`
   as a basis.
 
 - Create virtual environment for the project and activate it (with Python 3.6):
 
-[https://virtualenvwrapper.readthedocs.io/en/latest/install.html](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+  [https://virtualenvwrapper.readthedocs.io/en/latest/install.html](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 
 - Install requirements:
 
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
 - Install frontend requirements:
 
-```
-npm install
-```
+  ```
+  npm install
+  ```
 
 - Build frontend assets:
 
@@ -84,23 +84,23 @@ npm install
 
 - Apply migrations:
 
-```
-./manage.py migrate
-```
+  ```
+  ./manage.py migrate
+  ```
 
 - Run Django development server:
 
-```
-./manage.py runserver
-```
+  ```
+  ./manage.py runserver
+  ```
 
 - Run Celery worker if you need:
 
-```
-celery worker --app=config.celery.app
-```
+  ```
+  celery worker --app=config.celery.app
+  ```
 
-Site should now be available at localhost:8000.
+Site should now be available at [localhost:8000](localhost:8000).
 
 
 ### Running all services in Docker
@@ -110,19 +110,21 @@ functionality locally.
 
 - Install Docker and Docker-compose and add current user to `docker` group:
 
-[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+  [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
-```
-make all_up
-```
+- Bring up all services in Docker:
 
-It will create storage services in the same way as in previous section, and also build web, worker
-and client containers with mapping to local folders.
+  ```
+  make all_up
+  ```
+
+  It will create storage services in the same way as in previous section, and also build web, worker
+  and client containers with mapping to local folders.
 
 - Apply migrations:
 
-```
-./manage.py migrate
-```
+  ```
+  ./manage.py migrate
+  ```
 
-Site should now be available at localhost:8000.
+Site should now be available at [localhost:8000](localhost:8000).
