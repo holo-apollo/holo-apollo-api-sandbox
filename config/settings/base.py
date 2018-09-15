@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django_elasticsearch_dsl',
     'django_elasticsearch_dsl_drf',
     'django_filters',
+    'djmoney',
     'raven.contrib.django.raven_compat',
     'rest_framework',
     'rest_framework.authtoken',
@@ -329,3 +330,5 @@ REST_FRAMEWORK = {
 REST_AUTH_SERIALIZERS = {
     'PASSWORD_RESET_SERIALIZER': 'users.api.v1.serializers.CustomPasswordResetSerializer',
 }
+
+CURRENCIES = ('UAH', 'USD', 'EUR', 'GBP',)

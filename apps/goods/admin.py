@@ -22,4 +22,4 @@ class GoodsCategoryAdmin(Select2ModelAdmin):
 @admin.register(Good)
 class GoodAdmin(Select2ModelAdmin):
     readonly_fields = ['categories_names']
-    list_display = ['name', 'categories_names', 'seller']
+    list_display = ['name', 'categories_names', 'seller', 'price']

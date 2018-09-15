@@ -1,4 +1,6 @@
-from django_elasticsearch_dsl_drf.constants import LOOKUP_QUERY_IN
+from django_elasticsearch_dsl_drf.constants import (LOOKUP_FILTER_RANGE, LOOKUP_QUERY_GT,
+                                                    LOOKUP_QUERY_GTE, LOOKUP_QUERY_IN,
+                                                    LOOKUP_QUERY_LT, LOOKUP_QUERY_LTE)
 from django_elasticsearch_dsl_drf.filter_backends import (DefaultOrderingFilterBackend,
                                                           FilteringFilterBackend,
                                                           OrderingFilterBackend,
@@ -24,6 +26,19 @@ class GoodDocumentViewSet(BaseDocumentViewSet):
         'category': {
             'field': 'categories_ids',
             'lookups': [LOOKUP_QUERY_IN]
+        },
+        'price': {
+            'field': 'price',
+            'lookups': [
+                LOOKUP_FILTER_RANGE,
+                LOOKUP_QUERY_GT,
+                LOOKUP_QUERY_GTE,
+                LOOKUP_QUERY_LT,
+                LOOKUP_QUERY_LTE,
+            ],
+        },
+        'price_currency': {
+            'field': 'price_currency'
         }
     }
     ordering_fields = {
