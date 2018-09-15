@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 
     # third-party
     'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
     'django_filters',
     'raven.contrib.django.raven_compat',
     'rest_framework',

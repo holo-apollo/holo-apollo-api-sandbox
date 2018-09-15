@@ -8,11 +8,13 @@ from rest_framework.documentation import include_docs_urls
 from rest_framework import routers
 
 from common.views import index, about
+from goods.api.v1.urls import router as goods_app_router_v1
 from users.api.v1.urls import router as users_app_router_v1
 from users.views import (ConfirmEmail, LoginView, SignupView, PasswordResetConfirmView,
                          PasswordResetView)
 
 router_v1 = routers.DefaultRouter()
+router_v1.registry.extend(goods_app_router_v1.registry)
 router_v1.registry.extend(users_app_router_v1.registry)
 
 api_patterns = [

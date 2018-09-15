@@ -13,6 +13,13 @@ good.settings(
 
 @good.doc_type
 class GoodDocument(DocType):
+    id = fields.IntegerField(attr='id')
+    name = fields.StringField(fields={
+        'raw': fields.KeywordField()
+    })
+    description = fields.StringField(fields={
+        'raw': fields.KeywordField()
+    })
     categories_ids = fields.IntegerField()
     categories = fields.NestedField(properties={
         'id': fields.IntegerField(),
@@ -30,7 +37,6 @@ class GoodDocument(DocType):
 
     class Meta:
         model = Good
-        fields = ['id', 'name', 'description']
         related_models = [
             GoodsCategory,
             HoloUser,
