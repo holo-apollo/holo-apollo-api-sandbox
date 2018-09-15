@@ -40,17 +40,17 @@ describe('PasswordResetConfirm component', function() {
 
   it('should render form', function() {
     expect(this.wrapper.find('.password-reset-confirm-form').exists()).to.equal(true);
-    expect(this.wrapper.find('.password-reset-confirm-form .hidden').exists()).to.equal(false);
+    expect(this.wrapper.find('.password-reset-confirm-form.hidden').exists()).to.equal(false);
   });
 
   it('should hide form when pending', function() {
     this.wrapper.setState({submitPending: true});
-    expect(this.wrapper.find('.password-reset-confirm-form .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.password-reset-confirm-form.hidden').exists()).to.equal(true);
   });
 
   it('should hide form on success', function() {
     this.wrapper.setState({submitSuccess: true});
-    expect(this.wrapper.find('.password-reset-confirm-form .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.password-reset-confirm-form.hidden').exists()).to.equal(true);
   });
 
   it('should not validate empty values', function() {

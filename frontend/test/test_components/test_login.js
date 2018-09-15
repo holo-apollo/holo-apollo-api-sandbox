@@ -37,7 +37,7 @@ describe('Login component', function() {
 
   it('should hide form when pending', function() {
     this.wrapper.setState({submitPending: true});
-    expect(this.wrapper.find('.login-form .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.login-form.hidden').exists()).to.equal(true);
   });
 
   it('should render ArrowBack', function() {

@@ -33,33 +33,33 @@ describe('Signup component', function() {
   });
 
   it('should render form on step 1', function() {
-    expect(this.wrapper.find('.signup-form .signup1').exists()).to.equal(true);
-    expect(this.wrapper.find('.signup-form .signup1 .hidden').exists()).to.equal(false);
+    expect(this.wrapper.find('.signup-form.signup1').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(false);
   });
 
   it('should hide form step 1 when pending', function() {
     this.wrapper.setState({submitPending: true});
-    expect(this.wrapper.find('.signup-form .signup1 .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(true);
   });
 
   it('should hide form step 1 on step 2', function() {
     this.wrapper.setState({signupStep: 2});
-    expect(this.wrapper.find('.signup-form .signup1 .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(true);
   });
 
   it('should render form on step 2', function() {
     this.wrapper.setState({signupStep: 2});
-    expect(this.wrapper.find('.signup-form .signup2').exists()).to.equal(true);
-    expect(this.wrapper.find('.signup-form .signup2 .hidden').exists()).to.equal(false);
+    expect(this.wrapper.find('.signup-form.signup2').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(false);
   });
 
   it('should hide form step 2 when pending', function() {
     this.wrapper.setState({signupStep: 2, submitPending: true});
-    expect(this.wrapper.find('.signup-form .signup2 .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(true);
   });
 
   it('should hide form step 2 on step 1', function() {
-    expect(this.wrapper.find('.signup-form .signup2 .hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(true);
   });
 
   it('should render ArrowBack', function() {
