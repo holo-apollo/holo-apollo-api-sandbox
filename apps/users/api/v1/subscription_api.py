@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 from common.api.views import MultiSerializerViewSetMixin
 from users.models import Subscription
-from users.serializers import SubscriptionSerializer, UnsubscribeSerializer
+from .serializers import SubscriptionSerializer, UnsubscribeSerializer
 
 
 class SubscriptionViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMixin,

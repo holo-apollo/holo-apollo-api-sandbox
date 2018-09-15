@@ -320,10 +320,11 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend',
-    ]
+    ],
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
 }
 
 
 REST_AUTH_SERIALIZERS = {
-    'PASSWORD_RESET_SERIALIZER': 'users.serializers.CustomPasswordResetSerializer',
+    'PASSWORD_RESET_SERIALIZER': 'users.api.v1.serializers.CustomPasswordResetSerializer',
 }

@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 from common.api.views import MultiSerializerViewSetMixin
 from users.models import HoloUser
-from users.serializers import HoloUserSerializer
+from .serializers import HoloUserSerializer
 
 
 class HoloUserViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMixin,

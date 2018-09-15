@@ -5,16 +5,19 @@ from django.views.i18n import JavaScriptCatalog
 
 from rest_framework import urls as drf_urls
 from rest_framework.documentation import include_docs_urls
-from rest_framework.routers import DefaultRouter
+from rest_framework import routers
 
 from common.views import index, about
-from users.views import SubscriptionViewSet, HoloUserViewSet, ConfirmEmail, LoginView, SignupView,\
-    PasswordResetView, PasswordResetConfirmView
+from users.api.v1.urls import router as users_app_router_v1
+from users.views import (ConfirmEmail, LoginView, SignupView, PasswordResetConfirmView,
+                         PasswordResetView)
 
+router_v1 = routers.DefaultRouter()
+router_v1.registry.extend(users_app_router_v1.registry)
 
-router = DefaultRouter()
-router.register(r'subscriptions', SubscriptionViewSet)
-router.register(r'users', HoloUserViewSet)
+api_patterns = [
+    path('v1/', include((router_v1.urls, 'api_v1'), namespace='v1'))
+]
 
 urlpatterns = [
     # Django
@@ -32,7 +35,7 @@ urlpatterns = [
 
     # DRF
     path('api-auth/', include(drf_urls)),
-    path('api/', include(router.urls)),
+    path('api/', include(api_patterns)),
     path('docs/', include_docs_urls(title='Holo Apollo API', public=False)),
 
     # Libs

@@ -1,8 +1,8 @@
 from rest_auth.serializers import PasswordResetSerializer
 from rest_framework import serializers
 
-from .forms import PasswordResetDelayForm
-from .models import HoloUser, Subscription
+from users.forms import PasswordResetDelayForm
+from users.models import HoloUser, Subscription
 
 
 class SubscriptionSerializer(serializers.ModelSerializer):
