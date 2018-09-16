@@ -37,8 +37,8 @@ urlpatterns = [
 
     # DRF
     path('api-auth/', include(drf_urls)),
+    path('api/docs/', include_docs_urls(title='Holo Apollo API', public=False)),
     path('api/', include(api_patterns)),
-    path('docs/', include_docs_urls(title='Holo Apollo API', public=False)),
 
     # Libs
     path('select2/', include('select2.urls')),

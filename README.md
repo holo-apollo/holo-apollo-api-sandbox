@@ -2,7 +2,9 @@
 
 ## Developers guide
 
-There are three ways to bring up local development environment:
+### Setting up development environment
+
+There are three ways to set up local development environment:
 
 1. Install all services locally and adjust app settings.
 
@@ -12,7 +14,7 @@ There are three ways to bring up local development environment:
 3. Bring up all services in Docker.
 
 
-### Running all services locally
+#### Running all services locally
 
 This way has no real advantages, so take it at your own if you want.
 You'll need to create Postgres database, run Redis server and Elasticsearch server.
@@ -20,7 +22,7 @@ You'll need to create Postgres database, run Redis server and Elasticsearch serv
 Then follow the steps from the next section, skipping Docker-related ones.
 
 
-### Running DBs in Docker and processes locally
+#### Running DBs in Docker and processes locally
 
 This way has the advantage of quickly bringing up static services like storages (Postgres database,
 Redis and Elasticsearch) and ability to debug dynamic services (web server, Celery worker, webpack)
@@ -103,7 +105,7 @@ while making changes locally.
 Site should now be available at [http://localhost:8000](http://localhost:8000).
 
 
-### Running all services in Docker
+#### Running all services in Docker
 
 This way is useful if you don't plan to heavily debug and find bugs in the code but rather check
 functionality locally.
@@ -128,3 +130,11 @@ functionality locally.
   ```
 
 Site should now be available at [http://localhost:8000](http://localhost:8000).
+
+
+### Development
+
+API docs are available at [http://localhost:8000/api/docs](http://localhost:8000/api/docs).
+
+Note that API docs show available operations for current user which may vary depending on user's
+permissions.
