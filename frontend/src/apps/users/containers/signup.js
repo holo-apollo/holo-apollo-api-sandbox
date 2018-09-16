@@ -23,8 +23,8 @@ export class Signup extends Component {
                 email: null,
                 password: null,
                 password2: null,
-                first_name: null,
-                last_name: null,
+                firstName: null,
+                lastName: null,
                 username: null,
                 phone: null
             },
@@ -50,8 +50,8 @@ export class Signup extends Component {
             email: null,
             password: null,
             password2: null,
-            first_name: null,
-            last_name: null,
+            firstName: null,
+            lastName: null,
             username: null,
             phone: null
         }});
@@ -84,22 +84,22 @@ export class Signup extends Component {
             email: null,
             password: null,
             password2: null,
-            first_name: null,
-            last_name: null,
+            firstName: null,
+            lastName: null,
             username: null,
             phone: null
         }});
         const errors = {
-            first_name: null,
-            last_name: null,
+            firstName: null,
+            lastName: null,
             username: null,
             phone: null
         };
-        if (!validateLength(values.first_name, 30, 2)) {
-            errors.first_name = gettext('Please type your first name 2-30 characters long.');
+        if (!validateLength(values.firstName, 30, 2)) {
+            errors.firstName = gettext('Please type your first name 2-30 characters long.');
         }
-        if (!validateLength(values.last_name, 30)) {
-            errors.last_name = gettext('Max length of last name is 30 characters.');
+        if (!validateLength(values.lastName, 30)) {
+            errors.lastName = gettext('Max length of last name is 30 characters.');
         }
         if (!validateLength(values.username, 30, 2)) {
             errors.username = gettext('Please type your name on the site 2-30 characters long.');
@@ -246,8 +246,8 @@ export class Signup extends Component {
                 >
                     {formApi => {
                         const fields = {
-                            first_name: gettext('Your first name *'),
-                            last_name: gettext('Your last name'),
+                            firstName: gettext('Your first name *'),
+                            lastName: gettext('Your last name'),
                             username: gettext('Name on the site *'),
                             phone: gettext('Phone *')
                         };
