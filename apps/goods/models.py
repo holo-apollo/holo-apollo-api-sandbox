@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from djmoney.models.fields import MoneyField
+from djmoney.models.validators import MinMoneyValidator
 from model_utils.models import TimeStampedModel
 
 from stores.models import Store
@@ -45,7 +46,8 @@ class Good(TimeStampedModel):
     description = models.TextField(blank=True, default='')
     category = models.ForeignKey(GoodsCategory, related_name='goods', on_delete=models.PROTECT)
     seller = models.ForeignKey(Store, related_name='goods', on_delete=models.CASCADE)
-    price = MoneyField(max_digits=14, decimal_places=2, default_currency='UAH')
+    price = MoneyField(max_digits=14, decimal_places=2, default_currency='UAH',
+                       validators=[MinMoneyValidator(0)])
 
     def __str__(self):
         return f'{self.name} ({self.category})'

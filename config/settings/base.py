@@ -331,4 +331,4 @@ REST_AUTH_SERIALIZERS = {
     'PASSWORD_RESET_SERIALIZER': 'users.api.v1.serializers.CustomPasswordResetSerializer',
 }
 
-CURRENCIES = ('UAH', 'USD', 'EUR', 'GBP',)
+CURRENCIES = ('UAH',)
