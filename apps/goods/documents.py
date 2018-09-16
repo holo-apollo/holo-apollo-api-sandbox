@@ -33,7 +33,7 @@ class GoodDocument(DocType):
         'phone': fields.TextField(attr='user.phone')
     })
     price = fields.FloatField(attr='price.amount')
-    price_currency = fields.StringField()
+    price_currency = fields.KeywordField()
     created = fields.DateField()
     modified = fields.DateField()
 

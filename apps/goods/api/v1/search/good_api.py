@@ -39,12 +39,17 @@ class GoodDocumentViewSet(BaseDocumentViewSet):
         },
         'price_currency': {
             'field': 'price_currency'
+        },
+        'seller': {
+            'field': 'seller.store_id'
         }
     }
     ordering_fields = {
         'id': 'id',
         'name': 'name.raw',
         'created': 'created',
-        'modified': 'modified'
+        'modified': 'modified',
+        'price': 'price',
+        'price_currency': 'price_currency'
     }
     ordering = ('id',)
