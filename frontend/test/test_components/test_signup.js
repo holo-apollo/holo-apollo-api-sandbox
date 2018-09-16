@@ -126,35 +126,35 @@ describe('Signup component', function() {
 
   it('should not validate empty values on step 2', function() {
     const errors = this.wrapper.instance().validateError2({
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       username: '',
       phone: ''
     });
-    expect(errors.firstName).to.equal('Please type your first name 2-30 characters long.');
+    expect(errors.first_name).to.equal('Please type your first name 2-30 characters long.');
     expect(errors.username).to.equal('Please type your name on the site 2-30 characters long.');
     expect(errors.phone).to.equal('Please type a valid phone number.');
   });
 
   it('should not validate empty too long last name on step 2', function() {
     const errors = this.wrapper.instance().validateError2({
-      firstName: 'Useriy',
-      lastName: 'UserenkoUserenkoUserenkoUserenko',
+      first_name: 'Useriy',
+      last_name: 'UserenkoUserenkoUserenkoUserenko',
       username: 'username',
       phone: '+380980123456'
     });
-    expect(errors.lastName).to.equal('Max length of last name is 30 characters.');
+    expect(errors.last_name).to.equal('Max length of last name is 30 characters.');
   });
 
   it('should validate correct values on step 2', function() {
     const errors = this.wrapper.instance().validateError2({
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     });
-    expect(errors.firstName).to.equal(null);
-    expect(errors.lastName).to.equal(null);
+    expect(errors.first_name).to.equal(null);
+    expect(errors.last_name).to.equal(null);
     expect(errors.username).to.equal(null);
     expect(errors.phone).to.equal(null);
   });
@@ -254,8 +254,8 @@ describe('Signup form submit 2', function() {
 
   it('should submit form successfully', function(done) {
     const values = {
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     };
@@ -268,8 +268,8 @@ describe('Signup form submit 2', function() {
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
       terms_agree: true,
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     })).to.equal(true);
@@ -282,8 +282,8 @@ describe('Signup form submit 2', function() {
   it('should handle unknown submit error', function(done) {
     const promise = Promise.reject({response: {data: 'error'}});
     const values = {
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     };
@@ -295,8 +295,8 @@ describe('Signup form submit 2', function() {
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
       terms_agree: true,
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     })).to.equal(true);
@@ -310,8 +310,8 @@ describe('Signup form submit 2', function() {
   it('should handle known submit error', function(done) {
     const promise = Promise.reject({response: {data: {username: 'Username error'}}});
     const values = {
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     };
@@ -323,8 +323,8 @@ describe('Signup form submit 2', function() {
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
       terms_agree: true,
-      firstName: 'Useriy',
-      lastName: 'Userenko',
+      first_name: 'Useriy',
+      last_name: 'Userenko',
       username: 'username',
       phone: '+380980123456'
     })).to.equal(true);

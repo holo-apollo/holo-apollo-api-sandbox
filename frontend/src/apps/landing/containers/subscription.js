@@ -46,7 +46,7 @@ export default class Subscription extends Component {
                 this.setState({
                     submitSuccess: true,
                     submitPending: false,
-                    alreadySubscribed: response.data.alreadySubscribed
+                    alreadySubscribed: response.data.already_subscribed
                 });
             })
             .catch(error => {
