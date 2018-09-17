@@ -9,6 +9,7 @@
       "generator": "secret"
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
+    "NPM_CONFIG_PRODUCTION": "false",
     "USE_AWS_STATIC": "True",
     "DISABLE_COLLECTSTATIC": "1",
     "STAGING_DATABASE_URL": {

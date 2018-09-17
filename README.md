@@ -70,19 +70,13 @@ while making changes locally.
   npm install
   ```
 
-- Build frontend assets:
+  It will also build dev and prod frontend bundles.
 
-  + One-time build (if you work on backend):
+  If you work on frontend and want to run webpack in watch mode, run:
 
-    ```
-    npm run build-dev
-    ```
-
-  + Watch mode (if you work on frontend):
-
-    ```
-    npm start
-    ```
+  ```
+  npm start
+  ```
 
 - Apply migrations:
 
