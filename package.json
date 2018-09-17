@@ -11,7 +11,8 @@
     "test-coverage": "nyc npm test",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
     "build-dev": "webpack --config frontend/webpack.config.js",
-    "build": "webpack --config frontend/webpack.prod.config.js"
+    "build": "webpack --config frontend/webpack.prod.config.js",
+    "postinstall": "npm run build-dev && npm run build"
   },
   "keywords": [],
   "author": "Valerii Kovalchuk",
