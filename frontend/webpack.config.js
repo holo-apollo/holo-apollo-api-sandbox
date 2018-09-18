@@ -1,11 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
 const BundleTracker = require('webpack-bundle-tracker');
-
-let commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
-    name: 'commons',
-    filename: 'commons.[hash].js'
-});
 
 module.exports = {
     devtool: 'eval',
@@ -21,9 +15,14 @@ module.exports = {
         filename: '[name]-bundle.[hash].js'
     },
     plugins: [
-        commonsPlugin,
         new BundleTracker({filename: './webpack-stats.json'})
     ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        name: 'commons'
+      }
+    },
     resolve: {
         modules: [
             path.resolve('./frontend/src'),
@@ -31,7 +30,7 @@ module.exports = {
         ]
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -51,5 +50,6 @@ module.exports = {
                 loader: 'url-loader'
             }
         ]
-    }
+    },
+    mode: 'development'
 };
