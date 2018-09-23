@@ -62,24 +62,28 @@
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-  }
+}
 
 
 .inputs .btn {
     width: 100%;
 }
 
+.inputs label {
+    font-size: 14px;
+}
+
 .error {
     color: #f14b4b;
     text-align: center;
     margin-top: 17px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
 h1 {
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -91,7 +95,7 @@ a {
 
 
 .subtitle {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -101,12 +105,17 @@ a {
 .inp {
     width: 100% !important;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 14px !important;
     font-family: inherit !important;
+}
+
+.inp > div:last-child {
+    font-size: 10px !important;
 }
 
 
 .btn-separator {
+    font-size: 14px;
     margin: 10px auto;
 }
 
