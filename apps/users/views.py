@@ -1,52 +1,84 @@
 import uuid
 
+from django.contrib import messages
+from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.tokens import default_token_generator
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.utils.http import urlsafe_base64_decode
 from django.utils.translation import ugettext as _
+from django.views import View
+from django.views.generic import TemplateView
 
-from rest_framework.decorators import list_route
-from rest_framework.exceptions import NotFound
-from rest_framework import mixins, viewsets
-from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
-
-from .models import Subscription
-from .serializers import SubscriptionSerializer
+UserModel = get_user_model()
 
 
-class SubscriptionViewSet(mixins.CreateModelMixin,
-                          viewsets.GenericViewSet):
-    queryset = Subscription.objects.all()
-    serializer_class = SubscriptionSerializer
-    permission_classes = [AllowAny]
+class LoginView(TemplateView):
+    template_name = 'users/login.html'
 
-    def create(self, request, *args, **kwargs):
-        # Allow updating subscription
-        email = request.data.get('email')
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(reverse('index'))
+        return super(LoginView, self).get(request, *args, **kwargs)
+
+
+class SignupView(TemplateView):
+    template_name = 'users/signup.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(reverse('index'))
+        return super(SignupView, self).get(request, *args, **kwargs)
+
+
+class PasswordResetView(TemplateView):
+    template_name = 'registration/password_reset_form.html'
+
+
+class PasswordResetConfirmView(TemplateView):
+    template_name = 'registration/password_reset_confirm.html'
+
+    def get_user(self, uidb64):
         try:
-            sub = Subscription.objects.get(email=email)
-            subscribe = request.data.get('subscribed', True)
-            already_subscribed = False
-            if subscribe:
-                if not sub.subscribed:
-                    sub.subscribed = True
-                    sub.save()
-                else:
-                    already_subscribed = True
-            data = self.get_serializer(sub).data
-            data['already_subscribed'] = already_subscribed
-            return Response(data)
-        except Subscription.DoesNotExist:
-            return super(SubscriptionViewSet, self).create(request, *args, **kwargs)
+            # urlsafe_base64_decode() decodes to bytestring
+            uid = urlsafe_base64_decode(uidb64).decode()
+            user = UserModel._default_manager.get(pk=uid)
+        except (TypeError, ValueError, OverflowError, UserModel.DoesNotExist):
+            user = None
+        return user
 
-    @list_route(methods=['POST'])
-    def unsubscribe(self, request):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        validlink = False
+        user = self.get_user(self.request.GET.get('uid'))
+        if user is not None:
+            token = self.request.GET.get('token')
+            if default_token_generator.check_token(user, token):
+                validlink = True
+        context['validlink'] = validlink
+        return context
+
+
+class ConfirmEmail(LoginRequiredMixin, View):
+    def get(self, request):
+        instance = request.user
         try:
-            token = request.data.get('token')
-            if not token:
-                raise NotFound(_('Sorry, subscription not found.'))
-            sub = Subscription.objects.get(edit_token=uuid.UUID(token))
-            sub.subscribed = False
-            sub.save()
-            serializer = self.get_serializer(sub)
-            return Response(serializer.data)
-        except (Subscription.DoesNotExist, ValueError):
-            raise NotFound(_('Sorry, subscription not found.'))
+            token = uuid.UUID(self.request.GET.get('token'))
+        except (ValueError, TypeError):
+            token = None
+
+        if token != instance.email_confirm_token:
+            messages.warning(
+                request,
+                _('We were unable to verify your email. '
+                  'Make sure that you\'re logged in as a correct user and follow the link again')
+            )
+        elif not instance.email_confirmed:
+            instance.email_confirmed = True
+            instance.save()
+            messages.success(request, _('Your email was verified successfully!'))
+        else:
+            messages.info(request, _('Your email is already verified'))
+
+        return HttpResponseRedirect(reverse('index'))

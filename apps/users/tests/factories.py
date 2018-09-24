@@ -11,7 +11,7 @@ class HoloUserFactory(factory.django.DjangoModelFactory):
     first_name = 'Jane'
     last_name = 'Doe'
     email = factory.Sequence(lambda n: f'holouser{n}@holo-apollo.art')
-    phone = '+3800991234567'
+    phone = factory.Sequence(lambda n: f'+380099{n}')
 
 
 class SubscriptionFactory(factory.django.DjangoModelFactory):

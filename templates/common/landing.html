@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static i18n %}
+{% load render_bundle from webpack_loader %}
 
 {% block extrastyle %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing1.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -38,5 +39,8 @@
             </a>
         </div>
     </div>
+{% endblock %}
 
+{% block extrascripts %}
+     {% render_bundle 'landing' %}
 {% endblock %}

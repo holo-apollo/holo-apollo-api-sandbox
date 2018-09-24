@@ -1,9 +1,11 @@
 import uuid
 
 from django.conf import settings
+from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.template.loader import get_template
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
@@ -38,7 +40,11 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
             'unique': _('That email address is already taken.')
         }
     )
+    email_confirmed = models.BooleanField(default=False)
+    email_confirm_token = models.UUIDField(default=uuid.uuid4, editable=False)
     phone = PhoneField(
+        null=True,
+        blank=True,
         unique=True,
         error_messages={
             'unique': _('That phone number is already taken.')
@@ -63,6 +69,43 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
     get_full_name.short_description = _('Full name')
+
+    def save(self, *args, **kwargs):
+        is_new = not self.pk
+        super(HoloUser, self).save(*args, **kwargs)
+        if is_new:
+            text_content = _('To confirm your email address, follow the link: %s') % \
+                settings.SITE_URL + reverse('confirm-email') + f'?token={self.email_confirm_token}'
+            send_email.delay(
+                self.email,
+                _('Holo-Apollo Email Confirmation'),
+                text_content,
+            )
+
+    def has_usable_password(self):
+        """
+        Allows resetting password for users without real password.
+        Those are signed up with Facebook.
+        """
+        if not self.password or self.password.startswith(UNUSABLE_PASSWORD_PREFIX):
+            return True
+        return super(HoloUser, self).has_usable_password()
+
+    @property
+    def buyer(self):
+        from buyers.models import Buyer
+        try:
+            return self._buyer
+        except Buyer.DoesNotExist:
+            return None
+
+    @property
+    def store(self):
+        from stores.models import Store
+        try:
+            return self._store
+        except Store.DoesNotExist:
+            return None
 
 
 class Subscription(TimeStampedModel):

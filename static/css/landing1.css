@@ -1,0 +1,66 @@
+.container {
+    margin: 0 20px;
+}
+
+
+.content {
+    text-align: center;
+    margin: 75px auto;
+}
+
+
+.content h1 {
+	font-size: 72px;
+	font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+
+.content h3 {
+	font-size: 60px;
+	font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.content h4 {
+	font-size: 36px;
+	font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.content h5 {
+	font-size: 16px;
+	font-weight: 300;
+    margin: 10px 0;
+}
+
+
+.instaicon {
+    margin-top: 35px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        margin: 40px auto;
+    }
+
+    .content h1, .content h3, .content h4 {
+        font-size: 30px;
+    }
+
+    .content h5 {
+        font-size: 14px;
+    }
+
+    img.image-holo {
+        width: 125px;
+    }
+
+    .instaicon {
+        margin-top: 20px;
+    }
+}

@@ -1,11 +1,17 @@
+import logging
+
 import django
 from django.conf import settings
 from django.core.management import call_command
 from django.db.utils import ConnectionHandler
 from django.test.runner import DiscoverRunner
 
+from tap import TAPTestRunner
+
 
 class HerokuTestSuiteRunner(DiscoverRunner):
+    test_runner = TAPTestRunner
+
     def setup_databases(self, **kwargs):
         ###
         # WARNING: NOT handling 'TEST_MIRROR', 'TEST_DEPENDENCIES'
@@ -55,3 +61,13 @@ class HerokuTestSuiteRunner(DiscoverRunner):
 
     def teardown_databases(self, *args, **kwargs):
         pass
+
+    def run_tests(self, test_labels, extra_tests=None, **kwargs):
+        logging.disable(logging.CRITICAL)
+        return super().run_tests(test_labels, extra_tests, **kwargs)
+
+    def run_suite(self, suite, **kwargs):
+        kwargs = self.get_test_runner_kwargs()
+        runner = self.test_runner(**kwargs)
+        runner.set_stream(streaming=True)
+        return runner.run(suite)

@@ -9,6 +9,8 @@
       "generator": "secret"
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
+    "NPM_CONFIG_PRODUCTION": "false",
+    "USE_AWS_STATIC": "True",
     "STAGING_DATABASE_URL": {
       "required": true
     },
@@ -19,6 +21,12 @@
       "required": true
     },
     "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "SOCIAL_AUTH_FACEBOOK_KEY": {
+      "required": true
+    },
+    "SOCIAL_AUTH_FACEBOOK_SECRET": {
       "required": true
     }
   },
@@ -32,9 +40,13 @@
   },
   "addons": [
     "heroku-postgresql",
-    "heroku-redis"
+    "heroku-redis",
+    "bonsai"
   ],
   "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
     {
       "url": "heroku/python"
     }
@@ -42,7 +54,7 @@
   "environments": {
     "test": {
       "scripts": {
-         "test": "python manage.py collectstatic && coverage run --source=apps manage.py test"
+        "test": "./scripts/test.sh"
       },
       "env": {
         "DJANGO_SETTINGS_MODULE": "config.settings.test",

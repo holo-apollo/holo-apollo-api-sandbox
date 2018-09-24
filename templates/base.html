@@ -1,11 +1,12 @@
 {% load static i18n %}
+{% load render_bundle from webpack_loader %}
 
 {% get_current_language as LANGUAGE_CODE %}
 
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-    {% if production %}
+    {% if PRODUCTION %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113883637-1"></script>
     <script>
@@ -31,14 +32,36 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}" />
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base1.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/hover.css' %}">
     {% block extrastyle %}{% endblock %}
 </head>
 <body>
+
 {% block content %}{% endblock %}
 
+<script>
+   window.django_data = {
+        urls: {
+            staticRoot: "{% static '' %}",
+            facebook: "{% url 'social:begin' 'facebook' %}",
+            login: "{% url 'login' %}",
+            signup: "{% url 'signup' %}",
+            passwordReset: "{% url 'password_reset' %}",
+            tou: "/tou/",
+
+            loginAPI: "users/login/",
+            checkEmailAPI: "users/check_email/",
+            signupAPI: "users/",
+            passwordResetAPI: "rest-auth/password/reset/",
+            passwordResetConfirmAPI: "rest-auth/password/reset/confirm/",
+        }
+    };
+</script>
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-<script src='{% static 'js/bundle.js' %}'></script>
+{% render_bundle 'commons' %}
+
+{% block extrascripts %}{% endblock %}
+
 </body>
 </html>
