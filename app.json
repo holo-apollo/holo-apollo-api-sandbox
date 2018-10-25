@@ -36,9 +36,6 @@
     },
     "worker": {
       "quantity": 1
-    },
-    "storybook": {
-      "quantity": 1
     }
   },
   "addons": [
