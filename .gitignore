@@ -2,6 +2,7 @@
 staticfiles
 .env
 .idea
+.cache
 *.sqlite3
 *.log
 *.rdb
