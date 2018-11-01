@@ -20,6 +20,16 @@ function loadStories() {
   customStoriesReq.keys().forEach(filename => customStoriesReq(filename));
 }
 
+const djangoDataDecorator = story => {
+  window.django_data = {
+    urls: {}
+  };
+  window.gettext = text => text;
+  window.pgettext = (context, text) => text;
+  return story();
+};
+
+addDecorator(djangoDataDecorator);
 addDecorator(withKnobs);
 
 configure(loadStories, module);
