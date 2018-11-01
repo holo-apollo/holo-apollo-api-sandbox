@@ -3,14 +3,14 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 // automatically import all components stories
 const componentsReq = require.context(
-  '../src/',
+  '../../src/',
   true,
   /stories\/.*\.stories\.js$/
 );
 
 // automatically import all custom stories
 const customStoriesReq = require.context(
-  './stories',
+  '../stories',
   true,
   /.*\.stories\.js$/
 );

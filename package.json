@@ -13,7 +13,7 @@
     "build-dev": "webpack --config frontend/webpack.config.js",
     "build": "webpack --config frontend/webpack.prod.config.js",
     "postinstall": "npm run build-dev && npm run build",
-    "storybook": "start-storybook -p 9001 -c frontend/storybook"
+    "storybook": "start-storybook -p 9001 -c frontend/storybook/config"
   },
   "keywords": [],
   "author": "Valerii Kovalchuk",

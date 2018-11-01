@@ -48,14 +48,14 @@
     font-family: 'Montserrat';
     font-weight: 600;
     font-style: normal;
-    src: url('../fonts/Montserrat-Semibold.ttf') format('truetype');
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-weight: 600;
     font-style: italic;
-    src: url('../fonts/Montserrat-SemiboldItalic.ttf') format('truetype');
+    src: url('../fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
 }
 
 
