@@ -12,19 +12,19 @@ class TestLoginBackend(TestCase):
         self.backend = HoloModelBackend()
 
     def test_login_with_email(self):
-        authenticated = self.backend.authenticate(self.user.email, '12345')
+        authenticated = self.backend.authenticate(None, self.user.email, '12345')
         self.assertEqual(authenticated, self.user)
 
     def test_login_with_phone(self):
-        authenticated = self.backend.authenticate(self.user.phone, '12345')
+        authenticated = self.backend.authenticate(None, self.user.phone, '12345')
         self.assertEqual(authenticated, self.user)
 
     def test_wrong_password(self):
-        authenticated = self.backend.authenticate(self.user.email, 'abcde')
+        authenticated = self.backend.authenticate(None, self.user.email, 'abcde')
         self.assertIsNone(authenticated)
 
     def test_wrong_user(self):
-        authenticated = self.backend.authenticate('foo@holo-apollo.art', '12345')
+        authenticated = self.backend.authenticate(None, 'foo@holo-apollo.art', '12345')
         self.assertIsNone(authenticated)
 
     def test_get_user_success(self):
