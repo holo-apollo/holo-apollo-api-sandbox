@@ -4,7 +4,7 @@ UserModel = get_user_model()
 
 
 class HoloModelBackend:
-    def authenticate(self, username=None, password=None):
+    def authenticate(self, request, username=None, password=None, **kwargs):
         if '@' in username:
             kwargs = {'email__iexact': username}
         else:

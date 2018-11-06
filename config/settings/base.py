@@ -142,7 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.HoloUser'
 AUTHENTICATION_BACKENDS = [
-    'social_core.backends.facebook.FacebookOAuth2',
+    # 'social_core.backends.facebook.FacebookOAuth2',
     'users.login_backend.HoloModelBackend',
 ]
 LOGIN_URL = reverse_lazy('login')

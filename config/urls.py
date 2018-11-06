@@ -29,11 +29,11 @@ urlpatterns = [
     # Auth
     path('login/', LoginView.as_view(), name='login'),
     path('signup/', SignupView.as_view(), name='signup'),
-    path('logout/', auth_views.logout, name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
     path('reset/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('oauth/', include('social_django.urls', namespace='social')),
-    path('api/rest-auth/', include('rest_auth.urls')),
+    path('api/v1/rest-auth/', include('rest_auth.urls')),
 
     # DRF
     path('api-auth/', include(drf_urls)),
