@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
@@ -26,15 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 
-    # Auth
-    path('login/', LoginView.as_view(), name='login'),
-    path('signup/', SignupView.as_view(), name='signup'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
-    path('reset/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('oauth/', include('social_django.urls', namespace='social')),
-    path('api/v1/rest-auth/', include('rest_auth.urls')),
-
     # DRF
     path('api-auth/', include(drf_urls)),
     path('api/docs/', include_docs_urls(title='Holo Apollo API', public=False)),
@@ -42,9 +34,25 @@ urlpatterns = [
 
     # Libs
     path('select2/', include('select2.urls')),
-
-    # Custom
-    path('about/', about, name='about'),
-    path('confirm-email/', ConfirmEmail.as_view(), name='confirm-email'),
-    path('', index, name='index'),
 ]
+
+if settings.PRODUCTION:
+    urlpatterns += [
+        path('', about, name='index'),
+    ]
+else:
+    urlpatterns += [
+        # Auth
+        path('login/', LoginView.as_view(), name='login'),
+        path('signup/', SignupView.as_view(), name='signup'),
+        path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+        path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
+        path('reset/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+        path('oauth/', include('social_django.urls', namespace='social')),
+        path('api/v1/rest-auth/', include('rest_auth.urls')),
+
+        # Custom
+        path('about/', about, name='about'),
+        path('confirm-email/', ConfirmEmail.as_view(), name='confirm-email'),
+        path('', index, name='index'),
+    ]

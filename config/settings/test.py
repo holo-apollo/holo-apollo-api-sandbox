@@ -1,5 +1,7 @@
 from .base import *
 
+PRODUCTION = False
+
 CELERY_TASK_ALWAYS_EAGER = True
 
 TEST_RUNNER = 'config.test_runner.HerokuTestSuiteRunner'

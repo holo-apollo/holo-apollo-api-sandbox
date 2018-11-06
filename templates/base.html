@@ -40,6 +40,7 @@
 
 {% block content %}{% endblock %}
 
+{% if not PRODUCTION %}
 <script>
    window.django_data = {
         urls: {
@@ -58,6 +59,7 @@
         }
     };
 </script>
+{% endif %}
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 {% render_bundle 'commons' %}
 
