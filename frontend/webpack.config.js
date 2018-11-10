@@ -1,21 +1,36 @@
-var path = require('path');
+const path = require('path');
+const BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
-    entry: [
-        './src/index.js'
-    ],
+    devtool: 'eval',
+    entry: {
+        landing: './frontend/src/landing.js',
+        login: './frontend/src/login.js',
+        signup: './frontend/src/signup.js',
+        password_reset: './frontend/src/password_reset.js',
+        password_reset_confirm: './frontend/src/password_reset_confirm.js'
+    },
     output: {
-        path: __dirname + '/dist',
-        filename: 'js/bundle.js'
+        path: __dirname + '/dist/webpack_bundles/',
+        filename: '[name]-bundle.[hash].js'
+    },
+    plugins: [
+        new BundleTracker({filename: './webpack-stats.json'})
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        name: 'commons'
+      }
     },
     resolve: {
         modules: [
-            path.resolve('./src'),
+            path.resolve('./frontend/src'),
             path.resolve('./node_modules')
         ]
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -35,5 +50,6 @@ module.exports = {
                 loader: 'url-loader'
             }
         ]
-    }
+    },
+    mode: 'development'
 };

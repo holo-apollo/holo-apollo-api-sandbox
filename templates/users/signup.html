@@ -1,0 +1,12 @@
+{% extends 'users/auth_base.html' %}
+{% load render_bundle from webpack_loader %}
+
+{% block react %}
+    <div id="react-signup">
+        {#Rendered by React#}
+    </div>
+{% endblock %}
+
+{% block extrascripts %}
+    {% render_bundle 'signup' %}
+{% endblock %}

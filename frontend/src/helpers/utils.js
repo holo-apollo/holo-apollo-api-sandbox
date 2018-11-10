@@ -11,3 +11,13 @@ export function getQueryParams(qs = document.location.search) {
 
     return params;
 }
+
+
+export function redirect(path, _blank) {
+    if (path) {
+        if (_blank) {
+            return window.open(path);
+        }
+        return window.location = path;
+    }
+}
