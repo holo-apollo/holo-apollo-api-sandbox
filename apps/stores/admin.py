@@ -18,10 +18,6 @@ class StoreApplicationImageInline(admin.TabularInline):
     formfield_overrides = {
         ImageField: {'widget': ImageWidget}
     }
-    extra = 0
-
-    def has_add_permission(self, request, obj):
-        return False
 
 
 @admin.register(StoreApplication)
