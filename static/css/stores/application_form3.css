@@ -25,6 +25,10 @@ input[type='text'], input[type='email'], textarea, select {
     -webkit-border-radius: 0;
 }
 
+textarea {
+    resize: none;
+}
+
 textarea:focus {
     height: 63px;
 }

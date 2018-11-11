@@ -38,7 +38,7 @@ urlpatterns = [
     path('select2/', include('select2.urls')),
 
     # Apps
-    path('stores/', include('stores.urls', namespace='stores')),
+    path('', include('stores.urls', namespace='stores')),
 ]
 
 if settings.PRODUCTION:
