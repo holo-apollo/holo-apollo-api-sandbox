@@ -12,6 +12,7 @@ class StoreApplication(TimeStampedModel):
     ACCESSORIES = 'accessories'
     HOME_DECOR = 'home_decor'
     SHOES = 'shoes'
+    OTHER = 'other'
 
     CATEGORY_CHOICES = (
         ('', _('Category')),
@@ -20,6 +21,7 @@ class StoreApplication(TimeStampedModel):
         (ACCESSORIES, _('Accessories')),
         (HOME_DECOR, _('Home decor')),
         (SHOES, _('Shoes')),
+        (OTHER, _('Other')),
     )
 
     name = models.CharField(
