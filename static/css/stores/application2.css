@@ -58,11 +58,12 @@
 
 .emoji {
     margin: 16px 0 8px 0;
+    font-size: 30px;
 }
 
 .divider {
     max-width: 420px;
-    height: 3px;
+    height: 2px;
     background-color: #a7a7a7;
     margin: 70px auto 53px auto;
 }
