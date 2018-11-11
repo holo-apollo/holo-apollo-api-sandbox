@@ -61,7 +61,7 @@
 }
 
 .divider {
-    width: 420px;
+    max-width: 420px;
     height: 3px;
     background-color: #a7a7a7;
     margin: 70px auto 53px auto;
