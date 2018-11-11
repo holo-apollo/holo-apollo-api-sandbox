@@ -14,15 +14,8 @@
     <h4>{% trans 'Greetings at your store registration stage on Holo-Apollo.art' %}</h4>
 
     <div class="form-container">
-        <noscript>
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" name="_submit" class="btn">
-                    {% trans 'Create application' %}
-                </button>
-            </form>
-        </noscript>
+        {# TODO: include it on noscript #}
+        {% include 'stores/application_form.html' %}
     </div>
 
 {% endblock %}

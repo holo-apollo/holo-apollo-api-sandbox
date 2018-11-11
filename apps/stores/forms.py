@@ -29,14 +29,15 @@ class StoreApplicationForm(forms.ModelForm):
         hide_labels = kwargs.pop('hide_labels', False)
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
-            if isinstance(field, (forms.CharField, forms.EmailField)):
+            if isinstance(field.widget, (forms.TextInput, forms.EmailInput, forms.Textarea)):
                 field.widget.attrs['placeholder'] = field.help_text
                 field.help_text = ''
                 if hide_labels:
                     field.label = ''
-            if isinstance(field, forms.BooleanField):
-                if hide_labels:
-                    field.label = ''
+            if isinstance(field.widget, forms.Select):
+                field.empty_label = field.label
+            if hide_labels and not isinstance(field.widget, forms.FileInput):
+                field.label = ''
 
     def save(self, *args, **kwargs):
         instance = super().save(*args, **kwargs)

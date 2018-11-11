@@ -13,6 +13,7 @@ class StoreApplication(TimeStampedModel):
     SHOES = 'shoes'
 
     CATEGORY_CHOICES = (
+        ('', _('Category')),
         (CLOTHES, _('Clothes')),
         (JEWELRY, _('Jewelry')),
         (ACCESSORIES, _('Accessories')),

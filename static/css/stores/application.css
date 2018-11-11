@@ -52,6 +52,9 @@
 
 .form-container {
     margin-top: 83px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
 }
 
 
@@ -65,5 +68,9 @@
 
     .block-left {
         display: none;
+    }
+
+    .form-container {
+        width: 100%;
     }
 }
