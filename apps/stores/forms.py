@@ -11,12 +11,32 @@ MAX_SIZE = MAX_SIZE_MB * 1024 * 1024  # 150Mb
 
 
 class StoreApplicationForm(forms.ModelForm):
-    images = forms.ImageField(widget=forms.FileInput(attrs={'multiple': True}), required=True)
+    images = forms.ImageField(
+        widget=forms.FileInput(attrs={'multiple': True}),
+        required=True,
+        label=_('Upload photos of your goods in good quality'),
+        help_text=_('At least 5 and at most 30 photos, total size up to 150MB. '
+                    'Photos will be used in a collage, therefore some of them should have minimal,'
+                    ' neutral background.')
+    )
 
     class Meta:
         model = StoreApplication
         fields = ['name', 'email', 'instagram_name', 'category', 'selling_goods',
                   'goods_description', 'philosophy', 'images', 'data_usage_agreement']
+
+    def __init__(self, *args, **kwargs):
+        hide_labels = kwargs.pop('hide_labels', False)
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            if isinstance(field, (forms.CharField, forms.EmailField)):
+                field.widget.attrs['placeholder'] = field.help_text
+                field.help_text = ''
+                if hide_labels:
+                    field.label = ''
+            if isinstance(field, forms.BooleanField):
+                if hide_labels:
+                    field.label = ''
 
     def save(self, *args, **kwargs):
         instance = super().save(*args, **kwargs)
@@ -47,5 +67,5 @@ class StoreApplicationForm(forms.ModelForm):
     def clean_data_usage_agreement(self):
         data = self.cleaned_data['data_usage_agreement']
         if data is False:
-            raise forms.ValidationError(_('You must agree to your data usage'))
+            raise forms.ValidationError(_('You must allow your data usage to create application'))
         return data

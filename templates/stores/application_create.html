@@ -3,9 +3,14 @@
 {% load static i18n %}
 
 {% block content %}
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" name="_submit" class="btn">Submit</button>
-    </form>
+    <noscript>
+        <p>{% trans 'Please enable JavaScript in your browser for better user experience.' %}</p>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="_submit" class="btn">
+                {% trans 'Create application' %}
+            </button>
+        </form>
+    </noscript>
 {% endblock %}

@@ -11,6 +11,11 @@ class ApplicationCreateView(CreateView):
     template_name = 'stores/application_create.html'
     success_url = reverse_lazy('stores:application-success')
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['hide_labels'] = True
+        return kwargs
+
 
 class ApplicationSuccessView(TemplateView):
     template_name = 'stores/application_success.html'
