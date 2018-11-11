@@ -4,7 +4,9 @@ from django.db.models import ImageField
 from common.admin import Select2ModelAdmin
 from common.forms import ImageWidget
 from .forms import StoreApplicationForm
-from .models import Store, StoreApplication, StoreApplicationImage
+from .models.store import Store
+from .models.store_application import StoreApplication
+from .models.store_application_image import StoreApplicationImage
 
 
 @admin.register(Store)

@@ -1,7 +1,7 @@
 from django_elasticsearch_dsl import DocType, Index, fields
 
 from goods.models import Good, GoodsCategory
-from stores.models import Store
+from stores.models.store import Store
 from users.models import HoloUser
 
 good = Index('goods')

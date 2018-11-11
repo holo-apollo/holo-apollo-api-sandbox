@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, TemplateView
 
 from .forms import StoreApplicationForm
-from .models import StoreApplication
+from .models.store_application import StoreApplication
 
 
 class ApplicationCreateView(CreateView):

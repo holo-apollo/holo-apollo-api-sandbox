@@ -1,7 +1,8 @@
 from django import forms
 from django.utils.translation import ugettext as _
 
-from .models import StoreApplication, StoreApplicationImage
+from .models.store_application import StoreApplication
+from .models.store_application_image import StoreApplicationImage
 
 MIN_FILES = 5
 MAX_FILES = 30
