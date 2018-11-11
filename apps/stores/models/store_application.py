@@ -1,5 +1,6 @@
 from django.core.validators import MinLengthValidator
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
@@ -71,6 +72,19 @@ class StoreApplication(TimeStampedModel):
         default=False,
         help_text=_('I allow usage of data I provided')
     )
+    pub_date = models.DateField(
+        verbose_name=_('Publication date'),
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return f'Application: {self.email} {self.instagram_name}'
+
+    def save(self, *args, **kwargs):
+        if not self.pub_date:
+            last_publication = StoreApplication.objects.aggregate(
+                models.Max('pub_date'))['pub_date__max']
+            if last_publication:
+                self.pub_date = last_publication + timezone.timedelta(days=2)
+        return super().save(*args, **kwargs)

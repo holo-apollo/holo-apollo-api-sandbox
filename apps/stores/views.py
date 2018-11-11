@@ -9,7 +9,10 @@ class ApplicationCreateView(CreateView):
     model = StoreApplication
     form_class = StoreApplicationForm
     template_name = 'stores/application_create.html'
-    success_url = reverse_lazy('stores:application-success')
+
+    def get_success_url(self):
+        base_url = reverse_lazy("stores:application-success")
+        return f'{base_url}?pub_date={self.object.pub_date}'
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
