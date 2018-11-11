@@ -21,6 +21,8 @@ input[type='text'], input[type='email'], textarea, select {
     border-bottom: 2px solid #a7a7a7;
     border-radius: 0;
     font-family: inherit;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
 
 textarea:focus {
