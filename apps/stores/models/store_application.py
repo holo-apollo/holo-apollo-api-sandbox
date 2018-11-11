@@ -80,6 +80,10 @@ class StoreApplication(TimeStampedModel):
         blank=True
     )
 
+    class Meta:
+        verbose_name = _('Store application')
+        verbose_name_plural = _('Store applications')
+
     def __str__(self):
         return f'Application: {self.email} {self.instagram_name}'
 

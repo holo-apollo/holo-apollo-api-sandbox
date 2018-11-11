@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-25 12:22+0000\n"
+"POT-Creation-Date: 2018-11-11 19:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,75 +28,272 @@ msgstr "Номер телефона"
 msgid "Enter a valid phone number"
 msgstr "Введите действительный номер телефона"
 
-#: apps/users/managers.py:13
+#: apps/goods/admin.py:10
+msgid "subcategory"
+msgstr "подкатегория"
+
+#: apps/goods/admin.py:11
+msgid "subcategories"
+msgstr "подкатегории"
+
+#: apps/goods/models.py:13
+msgid "goods categories"
+msgstr "категории товаров"
+
+#: apps/stores/api/v1/serializers.py:30 apps/stores/forms.py:71
+msgid "You must allow your data usage to create application"
+msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
+
+#: apps/stores/apps.py:7 apps/stores/models/store.py:24
+msgid "Stores"
+msgstr "Магазины"
+
+#: apps/stores/forms.py:17
+msgid "Upload photos of your goods in good quality"
+msgstr "Добавьте качественные фото ваших изделий"
+
+#: apps/stores/forms.py:18
+msgid ""
+"At least 5 and at most 30 photos, total size up to 150MB. Photos will be "
+"used in a collage, therefore some of them should have minimal, neutral "
+"background."
+msgstr ""
+"Не меньше 5 и не больше 30 фотографий. Общим размером файлов  до 150МБ. Фото "
+"будут использованы в коллаже, поэтому некоторые из них должны быть с "
+"минимальным, нейтральным фоном."
+
+#: apps/stores/forms.py:57
+#, python-format
+msgid "Choose at least %d files"
+msgstr "Выберите не меньше %d файлов"
+
+#: apps/stores/forms.py:59
+#, python-format
+msgid "Choose at most %d files"
+msgstr "Выберите не больше %d файлов"
+
+#: apps/stores/forms.py:63
+#, python-format
+msgid "Maximum total size is %d MB. You uploaded %d MB"
+msgstr "Максимальный общий размер - %d МБ. Вы загрузили %d МБ"
+
+#: apps/stores/models/store.py:12
+msgid "Store name"
+msgstr "Имя магазина"
+
+#: apps/stores/models/store.py:17
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/stores/models/store.py:23
+msgid "Store"
+msgstr "Магазин"
+
+#: apps/stores/models/store_application.py:18
+#: apps/stores/models/store_application.py:51
+msgid "Category"
+msgstr "Категория"
+
+#: apps/stores/models/store_application.py:19
+msgid "Clothes"
+msgstr "Одежда"
+
+#: apps/stores/models/store_application.py:20
+msgid "Jewelry"
+msgstr "Украшения"
+
+#: apps/stores/models/store_application.py:21
+msgid "Accessories"
+msgstr "Аксессуары"
+
+#: apps/stores/models/store_application.py:22
+msgid "Home decor"
+msgstr "Домашний декор"
+
+#: apps/stores/models/store_application.py:23
+msgid "Shoes"
+msgstr "Обувь"
+
+#: apps/stores/models/store_application.py:24
+msgid "Other"
+msgstr "Другое"
+
+#: apps/stores/models/store_application.py:28
+msgid "Name"
+msgstr "Имя"
+
+#: apps/stores/models/store_application.py:30
+msgid "What is your name?"
+msgstr "Как Вас зовут?"
+
+#: apps/stores/models/store_application.py:33
+msgid "Email"
+msgstr "Email"
+
+#: apps/stores/models/store_application.py:36
+msgid "Email to reach you out"
+msgstr "Email для связи"
+
+#: apps/stores/models/store_application.py:38
+msgid "That email address is already used."
+msgstr "Этот адрес уже использован."
+
+#: apps/stores/models/store_application.py:42
+msgid "Instagram name"
+msgstr "Имя в Instagram"
+
+#: apps/stores/models/store_application.py:45
+msgid "@Name in Instagram"
+msgstr "@Имя в Instagram"
+
+#: apps/stores/models/store_application.py:47
+msgid "That Instagram name is already used."
+msgstr "Это Instagram-имя уже занято."
+
+#: apps/stores/models/store_application.py:56
+msgid "Selling goods"
+msgstr "Продающиеся товары"
+
+#: apps/stores/models/store_application.py:58
+msgid "What's being sold in your store?"
+msgstr "Что продается в вашем магазине?"
+
+#: apps/stores/models/store_application.py:61
+msgid "Goods description"
+msgstr "Описание товаров"
+
+#: apps/stores/models/store_application.py:64
+msgid "Describe your goods (materials, technology, prices...)"
+msgstr "Опишите ваши изделия (материалы, технология, размеры, цены...)"
+
+#: apps/stores/models/store_application.py:67
+msgid "Philosophy"
+msgstr "Философия"
+
+#: apps/stores/models/store_application.py:70
+msgid "Philosophy behind your store"
+msgstr "Философский смысл вашего магазина"
+
+#: apps/stores/models/store_application.py:73
+msgid "Data usage agreement"
+msgstr "Согласие на использование данных"
+
+#: apps/stores/models/store_application.py:75
+msgid "I allow usage of data I provided"
+msgstr "Я соглашаюсь на использование оставленных мной данных"
+
+#: apps/stores/models/store_application.py:78
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: apps/stores/models/store_application.py:84
+msgid "Store application"
+msgstr "Заявка магазина"
+
+#: apps/stores/models/store_application.py:85
+msgid "Store applications"
+msgstr "Заявки магазинов"
+
+#: apps/stores/models/store_application_image.py:14
+msgid "Application"
+msgstr "Заявка"
+
+#: apps/stores/models/store_application_image.py:19
+msgid "Image"
+msgstr "Изображение"
+
+#: apps/stores/models/store_application_image.py:24
+msgid "Store application image"
+msgstr "Изображение заявки магазина"
+
+#: apps/stores/models/store_application_image.py:25
+#, fuzzy
+#| msgid "Create application"
+msgid "Store application images"
+msgstr "Изображение заявок магазинов"
+
+#: apps/users/admin.py:15
+msgid "Personal info"
+msgstr ""
+
+#: apps/users/admin.py:19
+msgid "Permissions"
+msgstr ""
+
+#: apps/users/admin.py:20
+msgid "Important dates"
+msgstr ""
+
+#: apps/users/api/v1/subscription_api.py:71
+msgid "Sorry, subscription not found."
+msgstr "Извините, подписка не найдена"
+
+#: apps/users/managers.py:12
 msgid "The given email must be set"
 msgstr "Адрес почты должен быть установлен."
 
-#: apps/users/models.py:30
+#: apps/users/models.py:29
 msgid "That username is already taken."
 msgstr "Это имя пользователя уже занято."
 
-#: apps/users/models.py:40
+#: apps/users/models.py:39
 msgid "That email address is already taken."
 msgstr "Этот адрес уже занят."
 
-#: apps/users/models.py:50
+#: apps/users/models.py:49
 msgid "That phone number is already taken."
 msgstr "Этот телефон уже занят."
 
-#: apps/users/models.py:71
+#: apps/users/models.py:70
 msgid "Full name"
 msgstr "Полное имя"
 
-#: apps/users/models.py:77
+#: apps/users/models.py:76
 #, python-format
 msgid "To confirm your email address, follow the link: %s"
 msgstr "Чтобы подтвердить ваш имейл, перейдите по ссылке: %s"
 
-#: apps/users/models.py:81
+#: apps/users/models.py:80
 msgid "Holo-Apollo Email Confirmation"
 msgstr "Подтверждение имейла на Holo-Apollo"
 
-#: apps/users/models.py:100
+#: apps/users/models.py:106
 msgid "That email address is already subscribed."
 msgstr "Этот адрес уже подписан."
 
-#: apps/users/models.py:122
+#: apps/users/models.py:128
 msgid "Holo-Apollo Subscription"
 msgstr "Подписка на Holo-Apollo"
 
-#: apps/users/views/django_views.py:75
+#: apps/users/views.py:74
 msgid ""
 "We were unable to verify your email. Make sure that you're logged in as a "
 "correct user and follow the link again"
-msgstr "Нам не удалось подтвердить Ваш имейл. Убедитесь что Вы вошли на сайт как правильный пользователь и перейдите по ссылке еще раз"
+msgstr ""
+"Нам не удалось подтвердить Ваш имейл. Убедитесь что Вы вошли на сайт как "
+"правильный пользователь и перейдите по ссылке еще раз"
 
-#: apps/users/views/django_views.py:81
+#: apps/users/views.py:80
 msgid "Your email was verified successfully!"
 msgstr "Ваш имейл подтвержден успешно!"
 
-#: apps/users/views/django_views.py:83
+#: apps/users/views.py:82
 msgid "Your email is already verified"
 msgstr "Этот адрес уже подтвержден."
 
-#: apps/users/views/subscription_api.py:45
-#: apps/users/views/subscription_api.py:52
-msgid "Sorry, subscription not found."
-msgstr "Извините, подписка не найдена"
-
-#: config/settings/base.py:163
+#: config/settings/base.py:174
 msgid "Russian"
 msgstr "Русский"
 
-#: config/settings/base.py:164
+#: config/settings/base.py:175
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: config/settings/base.py:165
+#: config/settings/base.py:176
 msgid "English"
 msgstr "Английский"
 
-#: templates/base.html:26
+#: templates/base.html:27
 msgid ""
 "Unique marketplace of design products will be here soon. In a meantime, "
 "subscribe for updates"
@@ -120,32 +317,32 @@ msgstr "Регистрация"
 msgid "About us"
 msgstr "О нас"
 
-#: templates/common/landing.html:11
+#: templates/common/landing.html:12
 msgid "Coming soon"
 msgstr "Уже скоро"
 
-#: templates/common/landing.html:15
+#: templates/common/landing.html:16
 msgid "Welcome back"
 msgstr "С возвращением"
 
-#: templates/common/landing.html:17
+#: templates/common/landing.html:18
 msgid "Hello"
 msgstr "Привет"
 
-#: templates/common/landing.html:22
+#: templates/common/landing.html:23
 msgid "Welcome "
 msgstr "Добро пожаловать"
 
-#: templates/common/landing.html:24
+#: templates/common/landing.html:25
 msgid "to Holo-Apollo.art"
 msgstr "на Holo-Apollo.art"
 
-#: templates/common/landing.html:27
+#: templates/common/landing.html:28
 msgctxt "welcome back"
 msgid "The best marketplace of DECOR & DESIGN"
 msgstr "Лучшую торговую площадку ДЕКОРА и ДИЗАЙНА"
 
-#: templates/common/landing.html:29
+#: templates/common/landing.html:30
 msgctxt "welcome"
 msgid "The best marketplace of DECOR & DESIGN"
 msgstr "Лучшую торговую площадку ДЕКОРА и ДИЗАЙНА"
@@ -180,12 +377,53 @@ msgstr ""
 msgid "Unsubscribe"
 msgstr "Отписаться"
 
-#: templates/registration/password_reset_confirm.html:9
+#: templates/registration/password_reset_confirm.html:10
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used."
-msgstr "Ссылка для сброса пароля не работает, возможно потому что она уже была использована."
+msgstr ""
+"Ссылка для сброса пароля не работает, возможно потому что она уже была "
+"использована."
 
-#: templates/registration/password_reset_confirm.html:10
+#: templates/registration/password_reset_confirm.html:11
 msgid "Please request a new password reset."
 msgstr "Пожалуйста сделайте новый запрос на сброс пароля."
+
+#: templates/stores/application_base.html:16
+msgid "Online showroom Design Made in UA"
+msgstr "Онлайн-шоурум Design Made in UA"
+
+#: templates/stores/application_create.html:9
+msgid "Please enable JavaScript in your browser for better user experience."
+msgstr ""
+"Пожалуйста включите JavaScript в браузере для более удобного использования."
+
+#: templates/stores/application_create.html:13
+msgid "Participant application"
+msgstr "Заявка участника"
+
+#: templates/stores/application_create.html:14
+msgid "Greetings at your store registration stage on Holo-Apollo.art"
+msgstr ""
+"Рады вас приветствовать на этапе регистрации вашего магазина на Holo-Apollo."
+"art"
+
+#: templates/stores/application_form.html:10
+msgid "Create application"
+msgstr "Оставить заявку"
+
+#: templates/stores/application_success.html:5
+msgid "Cool!"
+msgstr "Класс!"
+
+#: templates/stores/application_success.html:7
+msgid "Your application has been submitted successfully."
+msgstr "Ваша заявка успешно отправлена."
+
+#: templates/stores/application_success.html:8
+msgid "You will receive publication confirmation on your email very soon."
+msgstr "Совсем скоро вам на почту придет подтвержение публикации."
+
+#: templates/stores/application_success.html:13
+msgid "This is a preliminary date of publication about you on our instapage."
+msgstr "Это предварительная дата публикации о вас на нашей инста-страничке."

@@ -1,5 +1,5 @@
 from django import forms
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from .models.store_application import StoreApplication
 from .models.store_application_image import StoreApplicationImage
