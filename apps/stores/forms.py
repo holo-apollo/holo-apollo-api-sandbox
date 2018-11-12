@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
+from common.forms import TextAreaWithCounter
 from .models.store_application import StoreApplication
 from .models.store_application_image import StoreApplicationImage
 
@@ -11,6 +12,53 @@ MAX_SIZE = MAX_SIZE_MB * 1024 * 1024  # 150Mb
 
 
 class StoreApplicationForm(forms.ModelForm):
+    name = forms.CharField(
+        max_length=61,
+        label=_('What is your name?'),
+        widget=forms.TextInput(attrs={
+            'placeholder': _('What is your name?')
+        })
+    )
+    email = forms.EmailField(
+        max_length=254,
+        label=_('Email to reach you out'),
+        widget=forms.EmailInput(attrs={
+            'placeholder': _('Email to reach you out')
+        })
+    )
+    instagram_name = forms.CharField(
+        max_length=254,
+        label=_('@Name in Instagram'),
+        widget=forms.TextInput(attrs={
+            'placeholder': _('@Name in Instagram')
+        })
+    )
+    selling_goods = forms.CharField(
+        max_length=500,
+        label=_("What's being sold in your store?"),
+        widget=TextAreaWithCounter(attrs={
+            'rows': 1,
+            'placeholder': _("What's being sold in your store?")
+        })
+    )
+    goods_description = forms.CharField(
+        min_length=500,
+        max_length=1000,
+        label=_('Describe your goods (materials, technology, prices...)'),
+        widget=TextAreaWithCounter(attrs={
+            'rows': 1,
+            'placeholder': _('Describe your goods (materials, technology, prices...)')
+        })
+    )
+    philosophy = forms.CharField(
+        min_length=500,
+        max_length=1000,
+        label=_('Philosophy behind your store'),
+        widget=TextAreaWithCounter(attrs={
+            'rows': 1,
+            'placeholder': _('Philosophy behind your store')
+        })
+    )
     images = forms.ImageField(
         widget=forms.FileInput(attrs={'multiple': True}),
         required=True,
@@ -24,20 +72,6 @@ class StoreApplicationForm(forms.ModelForm):
         model = StoreApplication
         fields = ['name', 'email', 'instagram_name', 'category', 'selling_goods',
                   'goods_description', 'philosophy', 'images', 'data_usage_agreement']
-
-    def __init__(self, *args, **kwargs):
-        hide_labels = kwargs.pop('hide_labels', False)
-        super().__init__(*args, **kwargs)
-        for field in self.fields.values():
-            if isinstance(field.widget, (forms.TextInput, forms.EmailInput, forms.Textarea)):
-                field.widget.attrs['placeholder'] = field.help_text
-                field.help_text = ''
-                if hide_labels:
-                    field.label = ''
-            if isinstance(field.widget, forms.Select):
-                field.empty_label = field.label
-            if hide_labels and not isinstance(field.widget, forms.FileInput):
-                field.label = ''
 
     def save(self, *args, **kwargs):
         instance = super().save(*args, **kwargs)
@@ -70,3 +104,12 @@ class StoreApplicationForm(forms.ModelForm):
         if data is False:
             raise forms.ValidationError(_('You must allow your data usage to create application'))
         return data
+
+    def as_p(self):
+        return self._html_output(
+            normal_row='<p%(html_class_attr)s>%(field)s %(label)s%(help_text)s</p>',
+            error_row='%s',
+            row_ender='</p>',
+            help_text_html=' <span class="helptext">%s</span>',
+            errors_on_separate_row=True,
+        )

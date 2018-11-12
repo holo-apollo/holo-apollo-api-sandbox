@@ -11,9 +11,9 @@
 
 .block-center h1 {
     font-size: 48px;
-    line-height: 80px;
     font-weight: normal;
     color: #424242;
+    margin-bottom: 40px;
 }
 
 .block-center h4 {
@@ -83,7 +83,7 @@
     width: 45px;
 }
 
-@media screen and (max-width: 1319px) {
+@media screen and (max-width: 1279px) {
     .block-center {
         width: 100%;
         padding: 0 20px;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-11 19:38+0000\n"
+"POT-Creation-Date: 2018-11-12 23:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "підкатегорії"
 msgid "goods categories"
 msgstr "категорії товарів"
 
-#: apps/stores/api/v1/serializers.py:30 apps/stores/forms.py:71
+#: apps/stores/api/v1/serializers.py:30 apps/stores/forms.py:105
 msgid "You must allow your data usage to create application"
 msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
 
@@ -47,30 +47,61 @@ msgstr "Ви повинні дозволити використовувати в
 msgid "Stores"
 msgstr "Магазини"
 
-#: apps/stores/forms.py:17
+#: apps/stores/forms.py:17 apps/stores/forms.py:19
+#: apps/stores/models/store_application.py:30
+msgid "What is your name?"
+msgstr "Як Вас звати?"
+
+#: apps/stores/forms.py:24 apps/stores/forms.py:26
+#: apps/stores/models/store_application.py:36
+msgid "Email to reach you out"
+msgstr "Email для зв'язку"
+
+#: apps/stores/forms.py:31 apps/stores/forms.py:33
+#: apps/stores/models/store_application.py:45
+msgid "@Name in Instagram"
+msgstr "@Ім'я в Instagram"
+
+#: apps/stores/forms.py:38 apps/stores/forms.py:41
+#: apps/stores/models/store_application.py:58
+msgid "What's being sold in your store?"
+msgstr "Що продається у вашому магазині?"
+
+#: apps/stores/forms.py:47 apps/stores/forms.py:50
+#: apps/stores/models/store_application.py:64
+msgid "Describe your goods (materials, technology, prices...)"
+msgstr "Опишіть ваші вироби (матеріали, технологія, ціни...)"
+
+#: apps/stores/forms.py:56 apps/stores/forms.py:59
+#: apps/stores/models/store_application.py:70
+msgid "Philosophy behind your store"
+msgstr "Філософський сенс вашого магазину"
+
+#: apps/stores/forms.py:65
 msgid "Upload photos of your goods in good quality"
 msgstr "Додайте якісні фото ваших виробів"
 
-#: apps/stores/forms.py:18
+#: apps/stores/forms.py:66
 msgid ""
 "At least 5 and at most 30 photos, total size up to 150MB. Photos will be "
 "used in a collage, therefore some of them should have minimal, neutral "
 "background."
 msgstr ""
-"Не менше 5 і не більше 30 фотографій, загальним розміром файлів до 150 МБ. Фото будуть "
-"використані в колажі, тому деякі з них повинні бути з мінімальним, нейтральним фоном."
+"Не менше 5 і не більше 30 фотографій, загальним розміром файлів до 150 МБ. "
+"Фото будуть використані в колажі, тому деякі з них повинні бути з "
+"мінімальним, нейтральним фоном."
 
-#: apps/stores/forms.py:57
+#: apps/stores/forms.py:91
 #, python-format
 msgid "Choose at least %d files"
 msgstr "Виберіть не менше %d файлів"
 
-#: apps/stores/forms.py:59
+#: apps/stores/forms.py:93
 #, python-format
 msgid "Choose at most %d files"
 msgstr "Виберіть не більше %d файлів"
 
-#: apps/stores/forms.py:63
+#: apps/stores/forms.py:97
 #, python-format
 msgid "Maximum total size is %d MB. You uploaded %d MB"
 msgstr "Максимальний загальний розмір - %d МБ. Ви завантажили %d МБ"
@@ -120,17 +151,9 @@ msgstr "Інше"
 msgid "Name"
 msgstr "Ім'я"
 
-#: apps/stores/models/store_application.py:30
-msgid "What is your name?"
-msgstr "Як Вас звати?"
-
 #: apps/stores/models/store_application.py:33
 msgid "Email"
 msgstr "Email"
-
-#: apps/stores/models/store_application.py:36
-msgid "Email to reach you out"
-msgstr "Email для зв'язку"
 
 #: apps/stores/models/store_application.py:38
 msgid "That email address is already used."
@@ -140,10 +163,6 @@ msgstr "Ця адреса пошти вже використана."
 msgid "Instagram name"
 msgstr "Ім'я в Instagram"
 
-#: apps/stores/models/store_application.py:45
-msgid "@Name in Instagram"
-msgstr "@Ім'я в Instagram"
-
 #: apps/stores/models/store_application.py:47
 msgid "That Instagram name is already used."
 msgstr "Це Instagram ім'я вже зайнято."
@@ -152,25 +171,13 @@ msgstr "Це Instagram ім'я вже зайнято."
 msgid "Selling goods"
 msgstr "Товари на продаж"
 
-#: apps/stores/models/store_application.py:58
-msgid "What's being sold in your store?"
-msgstr "Що продається у вашому магазині?"
-
 #: apps/stores/models/store_application.py:61
 msgid "Goods description"
 msgstr "Опис товарів"
 
-#: apps/stores/models/store_application.py:64
-msgid "Describe your goods (materials, technology, prices...)"
-msgstr "Опишіть ваші вироби (матеріали, технологія, ціни...)"
-
 #: apps/stores/models/store_application.py:67
 msgid "Philosophy"
 msgstr "Філософія"
-
-#: apps/stores/models/store_application.py:70
-msgid "Philosophy behind your store"
-msgstr "Філософський сенс вашого магазину"
 
 #: apps/stores/models/store_application.py:73
 msgid "Data usage agreement"
@@ -277,15 +284,15 @@ msgstr "Ваш імейл підтверджено успішно!"
 msgid "Your email is already verified"
 msgstr "Ця адреса пошти вже підтверджена"
 
-#: config/settings/base.py:174
+#: config/settings/base.py:177
 msgid "Russian"
 msgstr "Російська"
 
-#: config/settings/base.py:175
+#: config/settings/base.py:178
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: config/settings/base.py:176
+#: config/settings/base.py:179
 msgid "English"
 msgstr "Англійська"
 
@@ -391,7 +398,9 @@ msgstr "Онлайн-шоурум Design Made in UA"
 
 #: templates/stores/application_create.html:9
 msgid "Please enable JavaScript in your browser for better user experience."
-msgstr "Будь ласка активуйте JavaScript у вашому браузері для більш зручного користування."
+msgstr ""
+"Будь ласка активуйте JavaScript у вашому браузері для більш зручного "
+"користування."
 
 #: templates/stores/application_create.html:13
 msgid "Participant application"
