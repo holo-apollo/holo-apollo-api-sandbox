@@ -158,3 +158,9 @@ textarea:focus ~ label {
     float: right;
     font-size: 8px;
 }
+
+@media screen and (max-width: 767px) {
+    input[type='text'], input[type='email'], textarea, select {
+        font-size: 16px;
+    }
+}
