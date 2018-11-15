@@ -9,13 +9,13 @@ import '../../../../../../static/css/hover.css';
 import { Button, FacebookButton } from '../index';
 
 
-storiesOf('Common', module).add('Button', () => (
+storiesOf('Old components', module).add('Button', () => (
   <Button
     children={text('Text', 'Button text')}
     color={select('Color', ['black', 'blue'])}
   />
 ));
 
-storiesOf('Common', module).add('FacebookButton', () => (
+storiesOf('Old components', module).add('FacebookButton', () => (
   <FacebookButton signup={boolean('Signup', false)}/>
 ));

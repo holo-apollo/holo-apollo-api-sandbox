@@ -4,8 +4,8 @@ import {Form, Text} from 'react-form';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 
-import {Button} from 'common/components/buttons';
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import {Button} from 'common/old_components/buttons';
+import {DoubleBounceSpinner} from 'common/old_components/spinners';
 import {validateEmail} from 'helpers/validators';
 import {post} from 'helpers/rest';
 import {getQueryParams} from 'helpers/utils';

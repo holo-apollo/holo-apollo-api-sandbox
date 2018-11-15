@@ -4,9 +4,9 @@ import {Form} from 'react-form';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 
-import {TextInput} from 'common/components/inputs';
-import {Button, FacebookButton} from 'common/components/buttons';
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import {TextInput} from 'common/old_components/inputs';
+import {Button, FacebookButton} from 'common/old_components/buttons';
+import {DoubleBounceSpinner} from 'common/old_components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone} from 'helpers/validators';
 import {post} from 'helpers/rest';

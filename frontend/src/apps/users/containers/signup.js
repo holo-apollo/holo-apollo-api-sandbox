@@ -4,9 +4,9 @@ import cx from 'classnames';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Form} from 'react-form';
 
-import {TextInput, CheckboxInline} from 'common/components/inputs';
-import {Button, FacebookButton} from 'common/components/buttons';
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import {TextInput, CheckboxInline} from 'common/old_components/inputs';
+import {Button, FacebookButton} from 'common/old_components/buttons';
+import {DoubleBounceSpinner} from 'common/old_components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
 import {validateEmail, validatePhone, validateLength} from 'helpers/validators';
 import {get, post} from 'helpers/rest';
