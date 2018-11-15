@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import CheckIcon from './checkbox.svg';
 
@@ -11,17 +11,24 @@ const FieldCont = styled.div`
   align-items: center;
 `;
 
+const getCheckboxStyles = ({ size }) => css`
+  width: ${size}px;
+  height: ${size}px;
+
+  &:checked {
+    background-size: ${size * 2 / 3}px ${size * 2 / 3}px;
+  }
+`;
+
 const StyledCheckbox = styled.input`
   -webkit-appearance: none;
-  width: 30px;
-  height: 30px;
   border: solid 1px #c6c6c6;
   margin-right: 8px;
 
   &:focus, &:active {
     outline: none;
   }
-  
+
   &:checked {
     background-image: url(${CheckIcon});
     background-repeat: no-repeat;
@@ -29,6 +36,8 @@ const StyledCheckbox = styled.input`
     background-size: 18px 13px;
     background-color: #ffffff;
   }
+
+  ${getCheckboxStyles};
 `;
 
 const ErrorCont = styled.div`
@@ -39,10 +48,10 @@ const ErrorCont = styled.div`
 `;
 
 
-const Checkbox = ({ field, labelText, errorText }) => (
+const Checkbox = ({ field, labelText, errorText, size }) => (
   <Cont>
     <FieldCont>
-      <StyledCheckbox type="checkbox" id={field} name={field} />
+      <StyledCheckbox size={size} type="checkbox" id={field} name={field} />
       <label htmlFor={field}>{labelText}</label>
     </FieldCont>
     {errorText && <ErrorCont>* {errorText}</ErrorCont>}
