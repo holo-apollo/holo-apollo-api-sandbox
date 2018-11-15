@@ -53,7 +53,10 @@ const StyledButton = styled.button`
   color: #ffffff;
   cursor: pointer;
   padding: 0;
+  margin: 0;
   border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
   
   &:focus {
     outline: none;

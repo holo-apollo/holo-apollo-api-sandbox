@@ -5,7 +5,7 @@ import { text, color } from '@storybook/addon-knobs';
 import { Button } from '../index';
 
 
-storiesOf('Components', module).add('Button', () => (
+storiesOf('Buttons', module).add('Button', () => (
   <Button
     width={250}
     type={'button'}
