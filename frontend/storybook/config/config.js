@@ -1,6 +1,8 @@
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
+import '../../../static/css/base2.css';
+
 // automatically import all components stories
 const componentsReq = require.context(
   '../../src/',

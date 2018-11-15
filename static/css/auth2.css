@@ -133,6 +133,15 @@ a {
 }
 
 
+input[type="checkbox"]:checked {
+    background-image: url('../img/checkbox.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 13px;
+    background-color: #ffffff;
+}
+
+
 @media screen and (min-width: 1320px) {
     .content {
         max-width: 40%;
