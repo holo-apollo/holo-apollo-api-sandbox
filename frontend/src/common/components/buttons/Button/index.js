@@ -49,7 +49,7 @@ const getHoverProps = ({ hoverColor }) => css`
 const StyledButton = styled.button`
   height: 35px;
   line-height: 35px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
   color: ${palette.white};

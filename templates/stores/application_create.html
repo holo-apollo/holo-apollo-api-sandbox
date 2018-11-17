@@ -1,6 +1,7 @@
 {% extends 'stores/application_base.html' %}
 
 {% load i18n %}
+{% load render_bundle from webpack_loader %}
 
 {% block center %}
 
@@ -17,6 +18,13 @@
         <noscript>
             {% include 'stores/application_form.html' %}
         </noscript>
+        <div id="react-application-form">
+            {#Rendered by React#}
+        </div>
     </div>
 
+{% endblock %}
+
+{% block extrascripts %}
+    {% render_bundle 'application_form' %}
 {% endblock %}

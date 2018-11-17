@@ -12,10 +12,11 @@ let definePlugin = new webpack.DefinePlugin({
 module.exports = {
   entry: {
     landing: './frontend/src/landing.js',
-    login: './frontend/src/login.js',
-    signup: './frontend/src/signup.js',
-    password_reset: './frontend/src/password_reset.js',
-    password_reset_confirm: './frontend/src/password_reset_confirm.js',
+    // login: './frontend/src/login.js',
+    // signup: './frontend/src/signup.js',
+    // password_reset: './frontend/src/password_reset.js',
+    // password_reset_confirm: './frontend/src/password_reset_confirm.js',
+    application_form: './frontend/src/apps/stores/roots/application_form.js',
   },
   output: {
     path: __dirname + '/build/webpack_bundles/',
