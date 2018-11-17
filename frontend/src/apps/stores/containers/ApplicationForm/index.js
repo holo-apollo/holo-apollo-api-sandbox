@@ -3,6 +3,7 @@ import autoBind from 'react-autobind';
 import { Formik } from 'formik';
 
 import TextField from 'common/components/inputs/TextField';
+import Select from 'common/components/inputs/Select';
 import TextFieldWithCounter from 'common/components/inputs/TextFieldWithCounter';
 import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
 import Checkbox from 'common/components/inputs/Checkbox';
@@ -36,6 +37,15 @@ class ApplicationForm extends React.PureComponent {
       </Fragment>
     );
 
+    const categoryOptions = [
+      { value: 'clothes', label: 'Clothes' },
+      { value: 'jewelry', label: 'Jewelry' },
+      { value: 'accessories', label: 'Accessories' },
+      { value: 'home_decor', label: 'Home decor' },
+      { value: 'shoes', label: 'Shoes' },
+      { value: 'other', label: 'Other' },
+    ];
+
     return (
       <Formik onSubmit={this.onSubmit}>
         {({
@@ -65,6 +75,14 @@ class ApplicationForm extends React.PureComponent {
               <TextField
                 name="instagram_name"
                 label={gettext('@Name in Instagram')}
+                onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <Select
+                name="category"
+                label={gettext('Category')}
+                options={categoryOptions}
                 onChange={handleChange}
               />
             </FieldCont>
