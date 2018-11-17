@@ -4,7 +4,6 @@ import { text, boolean } from '@storybook/addon-knobs';
 
 import TextField from '../index';
 
-
 storiesOf('Inputs', module).add('TextField', () => (
   <div style={{ width: '420px' }}>
     <TextField

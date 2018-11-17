@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-
 const getButtonProps = ({ width, color }) => css`
   width: ${width}px;
   background-color: ${color};
@@ -15,9 +14,9 @@ const getHoverProps = ({ hoverColor }) => css`
   position: relative;
   transition-property: background-color;
   transition-duration: 0.5s;
-  
+
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -31,18 +30,19 @@ const getHoverProps = ({ hoverColor }) => css`
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
   }
-  
-  &:hover, &:focus, &:active {
+
+  &:hover,
+  &:focus,
+  &:active {
     color: white;
     border: none;
-    
+
     &:before {
       transform: scaleX(1);
       transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
   }
 `;
-
 
 const StyledButton = styled.button`
   height: 35px;
@@ -57,23 +57,20 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  
+
   &:focus {
     outline: none;
   }
-  
+
   ${getButtonProps};
   ${getHoverProps};
 `;
 
-
-const Button = (props) => (
-  <StyledButton {...props} />
-);
+const Button = props => <StyledButton {...props} />;
 
 Button.defaultProps = {
   color: '#424242',
-  hoverColor: '#1bc9de'
+  hoverColor: '#1bc9de',
 };
 
 export default Button;

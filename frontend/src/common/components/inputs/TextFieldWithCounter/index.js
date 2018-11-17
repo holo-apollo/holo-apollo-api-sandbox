@@ -3,7 +3,6 @@ import TextFieldMaterial from '@material-ui/core/TextField';
 import styled from 'styled-components';
 import autoBind from 'react-autobind';
 
-
 const CounterCont = styled.div`
   width: 100%;
   text-align: right;
@@ -12,13 +11,12 @@ const CounterCont = styled.div`
   margin-top: 10px;
 `;
 
-
 class TextFieldWithCounter extends React.PureComponent {
   constructor(props) {
     super(props);
     autoBind(this);
     this.state = {
-      value: ''
+      value: '',
     };
   }
 
@@ -36,7 +34,9 @@ class TextFieldWithCounter extends React.PureComponent {
           fullWidth={true}
           inputProps={{ maxLength: this.props.maxLength }}
         />
-        <CounterCont>{this.state.value.length}/{this.props.maxLength}</CounterCont>
+        <CounterCont>
+          {this.state.value.length}/{this.props.maxLength}
+        </CounterCont>
       </Fragment>
     );
   }

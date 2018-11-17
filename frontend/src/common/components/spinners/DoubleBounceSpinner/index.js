@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-
 const skBounce = keyframes`
   0%, 100% { transform: scale(0.0); }
   50% { transform: scale(1.0); }
@@ -32,11 +31,10 @@ const DoubleBounce = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  animation: ${skBounce} 2.0s infinite ease-in-out;
+  animation: ${skBounce} 2s infinite ease-in-out;
 
   ${getDoubleBounceStyles};
 `;
-
 
 const DoubleBounceSpinner = ({ color, size }) => (
   <Spinner size={size}>
@@ -47,7 +45,7 @@ const DoubleBounceSpinner = ({ color, size }) => (
 
 DoubleBounceSpinner.defaultProps = {
   color: '#1bc9de',
-  size: 40
+  size: 40,
 };
 
 export default DoubleBounceSpinner;

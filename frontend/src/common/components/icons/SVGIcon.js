@@ -5,9 +5,9 @@ const StyledSVG = styled.svg`
   display: block;
 `;
 
-const getSrcWidth = (vBox) => vBox.width;
+const getSrcWidth = vBox => vBox.width;
 
-const getSrcHeight = (vBox) => vBox.height;
+const getSrcHeight = vBox => vBox.height;
 
 const calcWidth = (vBox, width, height) => {
   if (width !== undefined) return width;
