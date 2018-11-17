@@ -1,9 +1,13 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import lightBlue from '@material-ui/core/colors/lightBlue';
+
+import palette from 'common/palette';
 
 const theme = createMuiTheme({
   palette: {
-    primary: lightBlue,
+    primary: {
+      main: palette.blue,
+      dark: palette.blue,
+    },
   },
   typography: {
     useNextVariants: true,
