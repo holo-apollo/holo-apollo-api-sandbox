@@ -9,10 +9,8 @@ import ArrowBack from 'apps/users/components/arrow_back';
 import * as rest from 'helpers/rest';
 import * as utils from 'helpers/utils';
 
-
 window.django_data.urls.checkEmailAPI = 'users/check_email/';
 window.django_data.urls.signupAPI = 'users/';
-
 
 describe('Signup component', function() {
   beforeEach(function() {
@@ -28,38 +26,50 @@ describe('Signup component', function() {
   });
 
   it('should show spinner when pending', function() {
-    this.wrapper.setState({submitPending: true});
+    this.wrapper.setState({ submitPending: true });
     expect(this.wrapper.find(DoubleBounceSpinner).exists()).to.equal(true);
   });
 
   it('should render form on step 1', function() {
     expect(this.wrapper.find('.signup-form.signup1').exists()).to.equal(true);
-    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(false);
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(
+      false
+    );
   });
 
   it('should hide form step 1 when pending', function() {
-    this.wrapper.setState({submitPending: true});
-    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(true);
+    this.wrapper.setState({ submitPending: true });
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(
+      true
+    );
   });
 
   it('should hide form step 1 on step 2', function() {
-    this.wrapper.setState({signupStep: 2});
-    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(true);
+    this.wrapper.setState({ signupStep: 2 });
+    expect(this.wrapper.find('.signup-form.signup1.hidden').exists()).to.equal(
+      true
+    );
   });
 
   it('should render form on step 2', function() {
-    this.wrapper.setState({signupStep: 2});
+    this.wrapper.setState({ signupStep: 2 });
     expect(this.wrapper.find('.signup-form.signup2').exists()).to.equal(true);
-    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(false);
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(
+      false
+    );
   });
 
   it('should hide form step 2 when pending', function() {
-    this.wrapper.setState({signupStep: 2, submitPending: true});
-    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(true);
+    this.wrapper.setState({ signupStep: 2, submitPending: true });
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(
+      true
+    );
   });
 
   it('should hide form step 2 on step 1', function() {
-    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(true);
+    expect(this.wrapper.find('.signup-form.signup2.hidden').exists()).to.equal(
+      true
+    );
   });
 
   it('should render ArrowBack', function() {
@@ -67,14 +77,14 @@ describe('Signup component', function() {
   });
 
   it('should render ArrowBack with custom clickHandler on step 2', function() {
-    this.wrapper.setState({signupStep: 2});
+    this.wrapper.setState({ signupStep: 2 });
     const arrow = this.wrapper.find(ArrowBack);
     expect(arrow.exists()).to.equal(true);
     expect(arrow.prop('clickHandler')).to.equal(this.wrapper.instance().goBack);
   });
 
   it('should set step 1 on goBack()', function() {
-    this.wrapper.setState({signupStep: 2});
+    this.wrapper.setState({ signupStep: 2 });
     this.wrapper.instance().goBack();
     expect(this.wrapper.state('signupStep')).to.equal(1);
   });
@@ -84,31 +94,35 @@ describe('Signup component', function() {
       email: '',
       password: '',
       password2: '',
-      terms_agree: false
+      terms_agree: false,
     });
     expect(errors.email).to.equal('Please type your email.');
     expect(errors.password).to.equal('Please type your password twice.');
-    expect(errors.terms_agree).to.equal('You must accept Terms of Use to sign up.');
+    expect(errors.terms_agree).to.equal(
+      'You must accept Terms of Use to sign up.'
+    );
   });
 
   it('should not validate non-email on step 1', function() {
     const errors = this.wrapper.instance().validateError1({
-        email: 'username',
-        password: 'P@ssw0rd',
-        password2: 'P@ssw0rd',
-        terms_agree: true
+      email: 'username',
+      password: 'P@ssw0rd',
+      password2: 'P@ssw0rd',
+      terms_agree: true,
     });
-    expect(errors.email).to.equal('Oops... There\'s a mistake. Please type a valid email.');
+    expect(errors.email).to.equal(
+      "Oops... There's a mistake. Please type a valid email."
+    );
   });
 
   it('should not validate not matching passwords on step 1', function() {
     const errors = this.wrapper.instance().validateError1({
-        email: 'user@example.com',
-        password: 'P@ssw0rd',
-        password2: 'Password',
-        terms_agree: true
+      email: 'user@example.com',
+      password: 'P@ssw0rd',
+      password2: 'Password',
+      terms_agree: true,
     });
-    expect(errors.password2).to.equal('Oops... Passwords didn\'t match.');
+    expect(errors.password2).to.equal("Oops... Passwords didn't match.");
   });
 
   it('should validate correct values on step 1', function() {
@@ -116,7 +130,7 @@ describe('Signup component', function() {
       email: 'user@example.com',
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
-      terms_agree: true
+      terms_agree: true,
     });
     expect(errors.email).to.equal(null);
     expect(errors.password).to.equal(null);
@@ -129,10 +143,14 @@ describe('Signup component', function() {
       first_name: '',
       last_name: '',
       username: '',
-      phone: ''
+      phone: '',
     });
-    expect(errors.first_name).to.equal('Please type your first name 2-30 characters long.');
-    expect(errors.username).to.equal('Please type your name on the site 2-30 characters long.');
+    expect(errors.first_name).to.equal(
+      'Please type your first name 2-30 characters long.'
+    );
+    expect(errors.username).to.equal(
+      'Please type your name on the site 2-30 characters long.'
+    );
     expect(errors.phone).to.equal('Please type a valid phone number.');
   });
 
@@ -141,9 +159,11 @@ describe('Signup component', function() {
       first_name: 'Useriy',
       last_name: 'UserenkoUserenkoUserenkoUserenko',
       username: 'username',
-      phone: '+380980123456'
+      phone: '+380980123456',
     });
-    expect(errors.last_name).to.equal('Max length of last name is 30 characters.');
+    expect(errors.last_name).to.equal(
+      'Max length of last name is 30 characters.'
+    );
   });
 
   it('should validate correct values on step 2', function() {
@@ -151,7 +171,7 @@ describe('Signup component', function() {
       first_name: 'Useriy',
       last_name: 'Userenko',
       username: 'username',
-      phone: '+380980123456'
+      phone: '+380980123456',
     });
     expect(errors.first_name).to.equal(null);
     expect(errors.last_name).to.equal(null);
@@ -159,7 +179,6 @@ describe('Signup component', function() {
     expect(errors.phone).to.equal(null);
   });
 });
-
 
 describe('Signup form submit 1', function() {
   beforeEach(function() {
@@ -176,18 +195,20 @@ describe('Signup form submit 1', function() {
       email: 'user@example.com',
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
-      terms_agree: true
+      terms_agree: true,
     };
-    const promise = Promise.resolve({data: {email_exists: false}});
+    const promise = Promise.resolve({ data: { email_exists: false } });
     this.fakeGet.returns(promise);
     this.wrapper.instance().onSubmit1(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakeGet.calledWith('users/check_email/?email=user@example.com')).to.equal(true);
+    expect(
+      this.fakeGet.calledWith('users/check_email/?email=user@example.com')
+    ).to.equal(true);
     promise.then(() => {
       expect(this.wrapper.state('submitPending')).to.equal(false);
       expect(this.wrapper.state('formValues')).to.deep.equal({
-          email: 'user@example.com',
-          password: 'P@ssw0rd'
+        email: 'user@example.com',
+        password: 'P@ssw0rd',
       });
       expect(this.wrapper.state('signupStep')).to.equal(2);
       done();
@@ -199,50 +220,62 @@ describe('Signup form submit 1', function() {
       email: 'user@example.com',
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
-      terms_agree: true
+      terms_agree: true,
     };
-    const promise = Promise.resolve({data: {email_exists: true}});
+    const promise = Promise.resolve({ data: { email_exists: true } });
     this.fakeGet.returns(promise);
     this.wrapper.instance().onSubmit1(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakeGet.calledWith('users/check_email/?email=user@example.com')).to.equal(true);
+    expect(
+      this.fakeGet.calledWith('users/check_email/?email=user@example.com')
+    ).to.equal(true);
     promise.then(() => {
       expect(this.wrapper.state('submitPending')).to.equal(false);
-      expect(this.wrapper.state('submitErrors').email).to.equal('That email already exists.');
+      expect(this.wrapper.state('submitErrors').email).to.equal(
+        'That email already exists.'
+      );
       done();
     });
   });
 
   it('should handle submit error', function(done) {
-    const promise = Promise.reject({response: {data: 'error'}});
+    const promise = Promise.reject({ response: { data: 'error' } });
     const values = {
       email: 'user@example.com',
       password: 'P@ssw0rd',
       password2: 'P@ssw0rd',
-      terms_agree: true
+      terms_agree: true,
     };
     this.fakeGet.returns(promise);
     this.wrapper.instance().onSubmit1(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakeGet.calledWith('users/check_email/?email=user@example.com')).to.equal(true);
-    promise.then(() => {}).catch(() => {
-      expect(this.wrapper.state('submitPending')).to.equal(false);
-      expect(this.wrapper.state('submitErrors').common).to.equal('Oops! Something went wrong. Please try again in a moment.');
-      done();
-    });
+    expect(
+      this.fakeGet.calledWith('users/check_email/?email=user@example.com')
+    ).to.equal(true);
+    promise
+      .then(() => {})
+      .catch(() => {
+        expect(this.wrapper.state('submitPending')).to.equal(false);
+        expect(this.wrapper.state('submitErrors').common).to.equal(
+          'Oops! Something went wrong. Please try again in a moment.'
+        );
+        done();
+      });
   });
 });
-
 
 describe('Signup form submit 2', function() {
   beforeEach(function() {
     this.wrapper = shallow(<Signup />);
-    this.wrapper.setState({signupStep: 2, formValues: {
-      email: 'user@example.com',
-      password: 'P@ssw0rd',
-      password2: 'P@ssw0rd',
-      terms_agree: true
-    }});
+    this.wrapper.setState({
+      signupStep: 2,
+      formValues: {
+        email: 'user@example.com',
+        password: 'P@ssw0rd',
+        password2: 'P@ssw0rd',
+        terms_agree: true,
+      },
+    });
     this.fakePost = sinon.stub(rest, 'post');
     this.fakeRedirect = sinon.stub(utils, 'redirect');
   });
@@ -257,22 +290,24 @@ describe('Signup form submit 2', function() {
       first_name: 'Useriy',
       last_name: 'Userenko',
       username: 'username',
-      phone: '+380980123456'
+      phone: '+380980123456',
     };
     const promise = Promise.resolve({});
     this.fakePost.returns(promise);
     this.wrapper.instance().onSubmit2(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.calledWith('users/', {
-      email: 'user@example.com',
-      password: 'P@ssw0rd',
-      password2: 'P@ssw0rd',
-      terms_agree: true,
-      first_name: 'Useriy',
-      last_name: 'Userenko',
-      username: 'username',
-      phone: '+380980123456'
-    })).to.equal(true);
+    expect(
+      this.fakePost.calledWith('users/', {
+        email: 'user@example.com',
+        password: 'P@ssw0rd',
+        password2: 'P@ssw0rd',
+        terms_agree: true,
+        first_name: 'Useriy',
+        last_name: 'Userenko',
+        username: 'username',
+        phone: '+380980123456',
+      })
+    ).to.equal(true);
     promise.then(() => {
       expect(this.fakeRedirect.calledWith('/')).to.equal(true);
       done();
@@ -280,58 +315,72 @@ describe('Signup form submit 2', function() {
   });
 
   it('should handle unknown submit error', function(done) {
-    const promise = Promise.reject({response: {data: 'error'}});
+    const promise = Promise.reject({ response: { data: 'error' } });
     const values = {
       first_name: 'Useriy',
       last_name: 'Userenko',
       username: 'username',
-      phone: '+380980123456'
+      phone: '+380980123456',
     };
     this.fakePost.returns(promise);
     this.wrapper.instance().onSubmit2(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.calledWith('users/', {
-      email: 'user@example.com',
-      password: 'P@ssw0rd',
-      password2: 'P@ssw0rd',
-      terms_agree: true,
-      first_name: 'Useriy',
-      last_name: 'Userenko',
-      username: 'username',
-      phone: '+380980123456'
-    })).to.equal(true);
-    promise.then(() => {}).catch(() => {
-      expect(this.wrapper.state('submitPending')).to.equal(false);
-      expect(this.wrapper.state('submitErrors').common).to.equal('Oops! Something went wrong. Please try again in a moment.');
-      done();
-    });
+    expect(
+      this.fakePost.calledWith('users/', {
+        email: 'user@example.com',
+        password: 'P@ssw0rd',
+        password2: 'P@ssw0rd',
+        terms_agree: true,
+        first_name: 'Useriy',
+        last_name: 'Userenko',
+        username: 'username',
+        phone: '+380980123456',
+      })
+    ).to.equal(true);
+    promise
+      .then(() => {})
+      .catch(() => {
+        expect(this.wrapper.state('submitPending')).to.equal(false);
+        expect(this.wrapper.state('submitErrors').common).to.equal(
+          'Oops! Something went wrong. Please try again in a moment.'
+        );
+        done();
+      });
   });
 
   it('should handle known submit error', function(done) {
-    const promise = Promise.reject({response: {data: {username: 'Username error'}}});
+    const promise = Promise.reject({
+      response: { data: { username: 'Username error' } },
+    });
     const values = {
       first_name: 'Useriy',
       last_name: 'Userenko',
       username: 'username',
-      phone: '+380980123456'
+      phone: '+380980123456',
     };
     this.fakePost.returns(promise);
     this.wrapper.instance().onSubmit2(values);
     expect(this.wrapper.state('submitPending')).to.equal(true);
-    expect(this.fakePost.calledWith('users/', {
-      email: 'user@example.com',
-      password: 'P@ssw0rd',
-      password2: 'P@ssw0rd',
-      terms_agree: true,
-      first_name: 'Useriy',
-      last_name: 'Userenko',
-      username: 'username',
-      phone: '+380980123456'
-    })).to.equal(true);
-    promise.then(() => {}).catch(() => {
-      expect(this.wrapper.state('submitPending')).to.equal(false);
-      expect(this.wrapper.state('submitErrors').username).to.equal('Username error');
-      done();
-    });
+    expect(
+      this.fakePost.calledWith('users/', {
+        email: 'user@example.com',
+        password: 'P@ssw0rd',
+        password2: 'P@ssw0rd',
+        terms_agree: true,
+        first_name: 'Useriy',
+        last_name: 'Userenko',
+        username: 'username',
+        phone: '+380980123456',
+      })
+    ).to.equal(true);
+    promise
+      .then(() => {})
+      .catch(() => {
+        expect(this.wrapper.state('submitPending')).to.equal(false);
+        expect(this.wrapper.state('submitErrors').username).to.equal(
+          'Username error'
+        );
+        done();
+      });
   });
 });
