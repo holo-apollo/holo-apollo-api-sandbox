@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import palette from 'common/palette';
+
 const getButtonProps = ({ width, color }) => css`
   width: ${width}px;
   background-color: ${color};
@@ -50,7 +52,7 @@ const StyledButton = styled.button`
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  color: #ffffff;
+  color: ${palette.white};
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -69,8 +71,8 @@ const StyledButton = styled.button`
 const Button = props => <StyledButton {...props} />;
 
 Button.defaultProps = {
-  color: '#424242',
-  hoverColor: '#1bc9de',
+  color: palette.extraDarkGrey,
+  hoverColor: palette.blue,
 };
 
 export default Button;

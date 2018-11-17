@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import palette from 'common/palette';
 import CheckIcon from './checkbox.svg';
 
 const Cont = styled.div``;
@@ -21,7 +22,7 @@ const getCheckboxStyles = ({ size }) => css`
 
 const StyledCheckbox = styled.input`
   -webkit-appearance: none;
-  border: solid 1px #c6c6c6;
+  border: solid 1px ${palette.lightGrey};
   margin-right: 8px;
 
   &:focus,
@@ -34,7 +35,7 @@ const StyledCheckbox = styled.input`
     background-repeat: no-repeat;
     background-position: center;
     background-size: 18px 13px;
-    background-color: #ffffff;
+    background-color: ${palette.white};
   }
 
   ${getCheckboxStyles};
@@ -42,7 +43,7 @@ const StyledCheckbox = styled.input`
 
 const ErrorCont = styled.div`
   margin-top: 17px;
-  color: #f57575;
+  color: ${palette.red};
   text-align: center;
   font-size: 10px;
 `;

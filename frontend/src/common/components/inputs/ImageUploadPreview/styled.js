@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
+import palette from 'common/palette';
+
 export const Cont = styled.div``;
 
 export const StyledLabel = styled.label`
-  color: #0288d1;
+  color: ${palette.blue};
   cursor: pointer;
 `;
 
@@ -21,7 +23,7 @@ export const ButtonTextCont = styled.div`
 
 export const HelpTextCont = styled.div`
   font-size: 10px;
-  color: #747474;
+  color: ${palette.grey};
 `;
 
 export const ImagesCont = styled.div`
@@ -44,7 +46,7 @@ export const StyledImg = styled.img`
   width: 88px;
   height: 88px;
   object-fit: cover;
-  border: 1px solid #424242;
+  border: 1px solid ${palette.extraDarkGrey};
 `;
 
 export const CloseCont = styled.span`

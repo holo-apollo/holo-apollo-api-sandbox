@@ -3,11 +3,13 @@ import TextFieldMaterial from '@material-ui/core/TextField';
 import styled from 'styled-components';
 import autoBind from 'react-autobind';
 
+import palette from 'common/palette';
+
 const CounterCont = styled.div`
   width: 100%;
   text-align: right;
   font-size: 10px;
-  color: #747474;
+  color: ${palette.grey};
   margin-top: 10px;
 `;
 

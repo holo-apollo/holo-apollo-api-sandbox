@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+import palette from 'common/palette';
+
 const skBounce = keyframes`
   0%, 100% { transform: scale(0.0); }
   50% { transform: scale(1.0); }
@@ -13,7 +15,6 @@ const getSpinnerStyles = ({ size }) => css`
 
 const Spinner = styled.div`
   position: relative;
-  margin: auto;
 
   ${getSpinnerStyles};
 `;
@@ -44,7 +45,7 @@ const DoubleBounceSpinner = ({ color, size }) => (
 );
 
 DoubleBounceSpinner.defaultProps = {
-  color: '#1bc9de',
+  color: palette.blue,
   size: 40,
 };
 

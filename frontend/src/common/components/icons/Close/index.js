@@ -1,5 +1,6 @@
 import React from 'react';
 
+import palette from 'common/palette';
 import SVGIcon from '../SVGIcon';
 
 const Close = ({ height, color }) => (
@@ -20,7 +21,7 @@ const Close = ({ height, color }) => (
 );
 
 Close.defaultProps = {
-  color: '#424242',
+  color: palette.extraDarkGrey,
 };
 
 export default Close;

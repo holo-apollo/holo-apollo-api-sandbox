@@ -1,5 +1,6 @@
 import React from 'react';
 
+import palette from 'common/palette';
 import SVGIcon from '../SVGIcon';
 
 const Attach = ({ height, color }) => (
@@ -20,7 +21,7 @@ const Attach = ({ height, color }) => (
 );
 
 Attach.defaultProps = {
-  color: '#0288d1',
+  color: palette.blue,
 };
 
 export default Attach;
