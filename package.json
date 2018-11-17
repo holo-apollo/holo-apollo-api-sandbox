@@ -14,6 +14,7 @@
     "build": "webpack --config frontend/webpack.prod.config.js",
     "postinstall": "npm run build-dev && npm run build",
     "storybook": "start-storybook -p 9001 -c frontend/storybook/config",
+    "storybook:build": "build-storybook -c frontend/storybook/config -o docs",
     "flow": "flow"
   },
   "keywords": [],
