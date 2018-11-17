@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 
 import CheckIcon from './checkbox.svg';
 
-
 const Cont = styled.div``;
 
 const FieldCont = styled.div`
@@ -16,7 +15,7 @@ const getCheckboxStyles = ({ size }) => css`
   height: ${size}px;
 
   &:checked {
-    background-size: ${size * 2 / 3}px ${size * 2 / 3}px;
+    background-size: ${(size * 2) / 3}px ${(size * 2) / 3}px;
   }
 `;
 
@@ -25,7 +24,8 @@ const StyledCheckbox = styled.input`
   border: solid 1px #c6c6c6;
   margin-right: 8px;
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     outline: none;
   }
 
@@ -46,7 +46,6 @@ const ErrorCont = styled.div`
   text-align: center;
   font-size: 10px;
 `;
-
 
 const Checkbox = ({ field, labelText, errorText, size }) => (
   <Cont>

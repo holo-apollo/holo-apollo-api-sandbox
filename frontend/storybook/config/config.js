@@ -14,21 +14,13 @@ const componentsReq = require.context(
   /stories\/.*\.stories\.js$/
 );
 
-// automatically import all custom stories
-const customStoriesReq = require.context(
-  '../stories',
-  true,
-  /.*\.stories\.js$/
-);
-
 function loadStories() {
   componentsReq.keys().forEach(filename => componentsReq(filename));
-  customStoriesReq.keys().forEach(filename => customStoriesReq(filename));
 }
 
 const djangoDataDecorator = story => {
   window.django_data = {
-    urls: {}
+    urls: {},
   };
   window.gettext = text => text;
   window.pgettext = (context, text) => text;

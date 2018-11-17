@@ -3,11 +3,12 @@ import lightBlue from '@material-ui/core/colors/lightBlue';
 
 const theme = createMuiTheme({
   palette: {
-    primary: lightBlue
+    primary: lightBlue,
   },
   typography: {
-    fontFamily: 'Montserrat, Arial, sans-serif'
-  }
+    useNextVariants: true,
+    fontFamily: 'Montserrat, Arial, sans-serif',
+  },
 });
 
 export default theme;

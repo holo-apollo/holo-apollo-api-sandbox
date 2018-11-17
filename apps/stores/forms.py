@@ -38,7 +38,7 @@ class StoreApplicationForm(forms.ModelForm):
         label=_("What's being sold in your store?"),
         widget=TextAreaWithCounter(attrs={
             'rows': 1,
-            'placeholder': _("What's being sold in your store?")
+            'placeholder': _("What is being sold in your store?")
         })
     )
     goods_description = forms.CharField(
