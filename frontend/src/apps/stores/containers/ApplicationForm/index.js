@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import autoBind from 'react-autobind';
 import { Formik } from 'formik';
 
 import TextField from 'common/components/inputs/TextField';
+import TextFieldWithCounter from 'common/components/inputs/TextFieldWithCounter';
+import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
+import Checkbox from 'common/components/inputs/Checkbox';
 import Button from 'common/components/buttons/Button';
 import { FieldCont } from './styled';
 
@@ -20,9 +23,22 @@ class ApplicationForm extends React.PureComponent {
   }
 
   render() {
+    const uploadHelpText = (
+      <Fragment>
+        <p>
+          {gettext('At least 5 and at most 30 photos, total size up to 150MB.')}
+        </p>
+        <p>
+          {gettext(
+            'Photos will be used in a collage, therefore some of them should have minimal, neutral background.'
+          )}
+        </p>
+      </Fragment>
+    );
+
     return (
       <Formik onSubmit={this.onSubmit}>
-        {({ handleChange, handleSubmit, isSubmitting }) => (
+        {({ errors, handleChange, handleSubmit, isSubmitting }) => (
           <form onSubmit={handleSubmit}>
             <FieldCont>
               <TextField
@@ -37,6 +53,56 @@ class ApplicationForm extends React.PureComponent {
                 type="email"
                 label={gettext('Email to reach you out')}
                 onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <TextField
+                name="instagram_name"
+                label={gettext('@Name in Instagram')}
+                onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <TextFieldWithCounter
+                name="selling_goods"
+                label={gettext("What's being sold in your store?")}
+                multiline={true}
+                maxLength={500}
+                onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <TextFieldWithCounter
+                name="goods_description"
+                label={gettext(
+                  'Describe your goods (materials, technology, prices...)'
+                )}
+                multiline={true}
+                maxLength={1000}
+                onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <TextFieldWithCounter
+                name="philosophy"
+                label={gettext('Philosophy behind your store')}
+                multiline={true}
+                maxLength={1000}
+                onChange={handleChange}
+              />
+            </FieldCont>
+            <FieldCont>
+              <ImageUploadPreview
+                name="images"
+                buttonText={gettext('Upload photos')}
+                helpText={uploadHelpText}
+              />
+            </FieldCont>
+            <FieldCont>
+              <Checkbox
+                name="data_usage_agreement"
+                labelText={gettext('I allow usage of data I provided')}
+                errorText={errors.data_usage_agreement}
               />
             </FieldCont>
             <Button type="submit" width={250} disabled={isSubmitting}>

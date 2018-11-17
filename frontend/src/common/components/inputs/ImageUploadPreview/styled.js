@@ -7,6 +7,18 @@ export const Cont = styled.div``;
 export const StyledLabel = styled.label`
   color: ${palette.blue};
   cursor: pointer;
+
+  &:hover {
+    color: ${palette.darkerBlue};
+
+    svg {
+      fill: ${palette.darkerBlue};
+
+      g {
+        fill: ${palette.darkerBlue};
+      }
+    }
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -24,6 +36,7 @@ export const ButtonTextCont = styled.div`
 export const HelpTextCont = styled.div`
   font-size: 10px;
   color: ${palette.grey};
+  text-align: left;
 `;
 
 export const ImagesCont = styled.div`

@@ -6,9 +6,10 @@ import CheckIcon from './checkbox.svg';
 
 const Cont = styled.div``;
 
-const FieldCont = styled.div`
+const StyledLabel = styled.label`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const getCheckboxStyles = ({ size }) => css`
@@ -24,6 +25,7 @@ const StyledCheckbox = styled.input`
   -webkit-appearance: none;
   border: solid 1px ${palette.lightGrey};
   margin-right: 8px;
+  cursor: pointer;
 
   &:focus,
   &:active {
@@ -48,14 +50,18 @@ const ErrorCont = styled.div`
   font-size: 10px;
 `;
 
-const Checkbox = ({ field, labelText, errorText, size }) => (
+const Checkbox = ({ name, labelText, errorText, size }) => (
   <Cont>
-    <FieldCont>
-      <StyledCheckbox size={size} type="checkbox" id={field} name={field} />
-      <label htmlFor={field}>{labelText}</label>
-    </FieldCont>
+    <StyledLabel>
+      <StyledCheckbox size={size} type="checkbox" name={name} />
+      {labelText}
+    </StyledLabel>
     {errorText && <ErrorCont>* {errorText}</ErrorCont>}
   </Cont>
 );
+
+Checkbox.defaultProps = {
+  size: 20,
+};
 
 export default Checkbox;

@@ -9,7 +9,7 @@ storiesOf('Inputs', module).add('Checkbox', () => (
     <Checkbox
       labelText={text('Label text', 'I agree to something')}
       errorText={text('Error text', 'Something went wrong')}
-      size={number('Size', 30)}
+      size={number('Size', 20)}
     />
   </div>
 ));
