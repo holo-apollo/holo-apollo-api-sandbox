@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
-import TextFieldMaterial from '@material-ui/core/TextField';
 import styled from 'styled-components';
 import autoBind from 'react-autobind';
 
 import palette from 'common/palette';
+import TextField from 'common/components/inputs/TextField';
 
 const CounterCont = styled.div`
   width: 100%;
   text-align: right;
-  font-size: 10px;
+  font-size: 8px;
   color: ${palette.grey};
   margin-top: 10px;
 `;
@@ -30,10 +30,9 @@ class TextFieldWithCounter extends React.PureComponent {
   render() {
     return (
       <Fragment>
-        <TextFieldMaterial
+        <TextField
           {...this.props}
           onChange={this.onChange}
-          fullWidth={true}
           inputProps={{ maxLength: this.props.maxLength }}
         />
         <CounterCont>

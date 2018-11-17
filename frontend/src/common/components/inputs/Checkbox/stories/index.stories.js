@@ -7,7 +7,7 @@ import Checkbox from '../index';
 storiesOf('Inputs', module).add('Checkbox', () => (
   <div style={{ width: '420px' }}>
     <Checkbox
-      labelText={text('Label text', 'I agree to something')}
+      label={text('Label text', 'I agree to something')}
       errorText={text('Error text', 'Something went wrong')}
       size={number('Size', 20)}
     />

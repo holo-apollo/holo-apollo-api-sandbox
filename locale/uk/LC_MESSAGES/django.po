@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-17 23:33+0200\n"
+"POT-Creation-Date: 2018-11-18 00:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,8 +67,6 @@ msgid "What's being sold in your store?"
 msgstr "Що продається у вашому магазині?"
 
 #: apps/stores/forms.py:41
-#, fuzzy
-#| msgid "What's being sold in your store?"
 msgid "What is being sold in your store?"
 msgstr "Що продається у вашому магазині?"
 

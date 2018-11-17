@@ -38,7 +38,13 @@ class ApplicationForm extends React.PureComponent {
 
     return (
       <Formik onSubmit={this.onSubmit}>
-        {({ errors, handleChange, handleSubmit, isSubmitting }) => (
+        {({
+          errors,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          setFieldValue,
+        }) => (
           <form onSubmit={handleSubmit}>
             <FieldCont>
               <TextField
@@ -94,6 +100,7 @@ class ApplicationForm extends React.PureComponent {
             <FieldCont>
               <ImageUploadPreview
                 name="images"
+                label={gettext('Upload photos of your goods in good quality')}
                 buttonText={gettext('Upload photos')}
                 helpText={uploadHelpText}
               />
@@ -101,8 +108,11 @@ class ApplicationForm extends React.PureComponent {
             <FieldCont>
               <Checkbox
                 name="data_usage_agreement"
-                labelText={gettext('I allow usage of data I provided')}
+                label={gettext('I allow usage of data I provided')}
                 errorText={errors.data_usage_agreement}
+                onChange={e =>
+                  setFieldValue('data_usage_agreement', e.target.checked)
+                }
               />
             </FieldCont>
             <Button type="submit" width={250} disabled={isSubmitting}>

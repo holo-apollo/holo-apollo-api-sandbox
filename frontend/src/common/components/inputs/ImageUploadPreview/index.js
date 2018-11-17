@@ -6,6 +6,7 @@ import Attach from 'common/components/icons/Attach';
 import Close from 'common/components/icons/Close';
 import {
   Cont,
+  LabelTextCont,
   StyledLabel,
   StyledInput,
   ButtonTextCont,
@@ -20,6 +21,7 @@ type FileChoiceEvent = SyntheticInputEvent<HTMLInputElement>;
 
 type Props = {
   name: string,
+  label: string,
   buttonText: string,
   helpText: string | React.Node,
   onChange?: FileChoiceEvent => void,
@@ -85,6 +87,7 @@ class ImageUploadPreview extends React.PureComponent<Props, State> {
   render() {
     return (
       <Cont>
+        <LabelTextCont>{this.props.label}</LabelTextCont>
         <StyledLabel>
           <StyledInput
             type="file"

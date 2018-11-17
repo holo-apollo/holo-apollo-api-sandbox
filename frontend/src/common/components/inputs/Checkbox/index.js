@@ -10,6 +10,7 @@ const StyledLabel = styled.label`
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: 12px;
 `;
 
 const getCheckboxStyles = ({ size }) => css`
@@ -50,11 +51,11 @@ const ErrorCont = styled.div`
   font-size: 10px;
 `;
 
-const Checkbox = ({ name, labelText, errorText, size }) => (
+const Checkbox = ({ name, label, errorText, size, ...rest }) => (
   <Cont>
     <StyledLabel>
-      <StyledCheckbox size={size} type="checkbox" name={name} />
-      {labelText}
+      <StyledCheckbox size={size} type="checkbox" name={name} {...rest} />
+      {label}
     </StyledLabel>
     {errorText && <ErrorCont>* {errorText}</ErrorCont>}
   </Cont>

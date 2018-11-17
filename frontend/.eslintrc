@@ -10,7 +10,7 @@
     },
     "parser": "babel-eslint",
     "rules": {
-        "prettier/prettier": ["error", {
+        "prettier/prettier": [1, {
             "singleQuote": true,
             "trailingComma": "es5"
         }],

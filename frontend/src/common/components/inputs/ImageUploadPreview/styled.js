@@ -4,6 +4,13 @@ import palette from 'common/palette';
 
 export const Cont = styled.div``;
 
+export const LabelTextCont = styled.div`
+  color: ${palette.grey};
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+`;
+
 export const StyledLabel = styled.label`
   color: ${palette.blue};
   cursor: pointer;
@@ -27,6 +34,7 @@ export const StyledInput = styled.input`
 
 export const ButtonTextCont = styled.div`
   display: flex;
+  font-size: 12px;
 
   svg {
     margin-right: 5px;
@@ -34,7 +42,7 @@ export const ButtonTextCont = styled.div`
 `;
 
 export const HelpTextCont = styled.div`
-  font-size: 10px;
+  font-size: 8px;
   color: ${palette.grey};
   text-align: left;
 `;

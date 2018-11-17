@@ -17,6 +17,7 @@ const helpText = (
 storiesOf('Inputs', module).add('ImageUploadPreview', () => (
   <div style={{ width: '420px' }}>
     <ImageUploadPreview
+      label={text('Label text', 'Upload photos of your goods in good quality')}
       buttonText={text('Button text', 'Upload photos')}
       name="images"
       helpText={helpText}
