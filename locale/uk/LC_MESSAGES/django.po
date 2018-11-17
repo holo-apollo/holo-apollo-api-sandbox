@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-12 23:04+0200\n"
+"POT-Creation-Date: 2018-11-17 23:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,9 +62,14 @@ msgstr "Email для зв'язку"
 msgid "@Name in Instagram"
 msgstr "@Ім'я в Instagram"
 
-#: apps/stores/forms.py:38 apps/stores/forms.py:41
-#: apps/stores/models/store_application.py:58
+#: apps/stores/forms.py:38 apps/stores/models/store_application.py:58
 msgid "What's being sold in your store?"
+msgstr "Що продається у вашому магазині?"
+
+#: apps/stores/forms.py:41
+#, fuzzy
+#| msgid "What's being sold in your store?"
+msgid "What is being sold in your store?"
 msgstr "Що продається у вашому магазині?"
 
 #: apps/stores/forms.py:47 apps/stores/forms.py:50
@@ -396,17 +401,17 @@ msgstr "Будь ласка створіть новий запит на скид
 msgid "Online showroom Design Made in UA"
 msgstr "Онлайн-шоурум Design Made in UA"
 
-#: templates/stores/application_create.html:9
+#: templates/stores/application_create.html:10
 msgid "Please enable JavaScript in your browser for better user experience."
 msgstr ""
 "Будь ласка активуйте JavaScript у вашому браузері для більш зручного "
 "користування."
 
-#: templates/stores/application_create.html:13
+#: templates/stores/application_create.html:14
 msgid "Participant application"
 msgstr "Заявка учасника"
 
-#: templates/stores/application_create.html:14
+#: templates/stores/application_create.html:15
 msgid "Greetings at your store registration stage on Holo-Apollo.art"
 msgstr "Вітаємо вас на етапі реєстрації вашого магазину на Holo-Apollo.art"
 

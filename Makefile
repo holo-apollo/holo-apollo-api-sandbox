@@ -12,3 +12,7 @@ db_status:
 
 all_status:
 	docker-compose -f docker-compose.db.yml -f docker-compose.processes.yml ps
+
+messages:
+	python manage.py makemessages -a
+	python manage.py makemessages -d djangojs -a
