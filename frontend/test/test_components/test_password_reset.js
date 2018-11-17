@@ -1,10 +1,10 @@
 import React from 'react';
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import {PasswordReset} from 'apps/users/containers/password_reset';
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import { PasswordReset } from 'apps/users/containers/password_reset';
+import { DoubleBounceSpinner } from 'common/old_components/spinners';
 import ArrowBack from 'apps/users/components/arrow_back';
 import * as rest from 'helpers/rest';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import {expect} from 'chai';
-import {mount} from 'enzyme';
+import { expect } from 'chai';
+import { mount } from 'enzyme';
 
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import { DoubleBounceSpinner } from 'common/old_components/spinners';
 
 
 describe('DoubleBounceSpinner component', function() {

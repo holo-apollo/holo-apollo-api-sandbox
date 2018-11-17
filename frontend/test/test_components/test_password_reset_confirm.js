@@ -3,8 +3,8 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-import {PasswordResetConfirm} from 'apps/users/containers/password_reset_confirm';
-import {DoubleBounceSpinner} from 'common/components/spinners';
+import { PasswordResetConfirm } from 'apps/users/containers/password_reset_confirm';
+import { DoubleBounceSpinner } from 'common/old_components/spinners';
 import * as rest from 'helpers/rest';
 
 

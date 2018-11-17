@@ -1,8 +1,8 @@
 import React from 'react';
-import {expect} from 'chai';
-import {mount} from 'enzyme';
+import { expect } from 'chai';
+import { mount } from 'enzyme';
 
-import {Button} from 'common/components/buttons';
+import { Button } from 'common/old_components/buttons';
 
 
 describe('Button component', function() {

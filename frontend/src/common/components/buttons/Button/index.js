@@ -76,4 +76,4 @@ Button.defaultProps = {
   hoverColor: '#1bc9de'
 };
 
-export { Button };
+export default Button;
