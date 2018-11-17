@@ -14,8 +14,9 @@
     <h4>{% trans 'Greetings at your store registration stage on Holo-Apollo.art' %}</h4>
 
     <div class="form-container">
-        {# TODO: include it on noscript #}
-        {% include 'stores/application_form.html' %}
+        <noscript>
+            {% include 'stores/application_form.html' %}
+        </noscript>
     </div>
 
 {% endblock %}

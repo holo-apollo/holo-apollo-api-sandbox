@@ -13,7 +13,7 @@ input[type='text'], input[type='email'], textarea, select {
     width: 100%;
     height: 25px;
     line-height: 25px;
-    font-size: 14px;
+    font-size: 16px;
     color: #424242;
     background: #ffffff;
     border-top: none;
@@ -61,7 +61,7 @@ input[type='text']:focus,
 input[type='email']:focus,
 textarea:focus, select:focus {
     outline: none;
-    border-bottom: 2px solid #4caad0;
+    border-bottom: 2px solid #0288d1;
 }
 
 input[type='file'] {
@@ -90,7 +90,7 @@ input[type='file'] {
 
 ul.errorlist {
     list-style: none;
-    color: #f14b4b;
+    color: #f44336;
     font-size: 10px;
     padding: 0;
     text-align: center;
@@ -101,7 +101,7 @@ ul.errorlist li:before {
 }
 
 .helptext {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 input[type="file"] ~ .helptext {
@@ -109,7 +109,8 @@ input[type="file"] ~ .helptext {
 }
 
 label {
-    font-size: 8px;
+    font-size: 10px;
+    color: #0288d1;
     position: absolute;
     top: -15px;
     opacity: 1;
@@ -118,7 +119,8 @@ label {
 }
 
 input[type="file"] ~ label {
-    font-size: 12px;
+    font-size: 14px;
+    color: #424242;
     top: 5px;
 }
 
@@ -155,50 +157,10 @@ textarea:focus ~ label {
 }
 
 ::placeholder {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .counter {
     float: right;
-    font-size: 8px;
-}
-
-.images-preview {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.images-preview .image-wrapper {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.images-preview .image-wrapper:nth-child(4n) {
-    margin-right: 0;
-}
-
-.images-preview .image-wrapper img {
-    width: 88px;
-    height: 88px;
-    object-fit: cover;
-    border: 1px solid #424242;
-}
-
-.images-preview .close {
-    height: 13px;
-    width: 13px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-size: cover;
-    background: url('../../img/delete.svg') no-repeat center center;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 767px) {
-    input[type='text'], input[type='email'], textarea, select {
-        font-size: 16px;
-    }
+    font-size: 10px;
 }
