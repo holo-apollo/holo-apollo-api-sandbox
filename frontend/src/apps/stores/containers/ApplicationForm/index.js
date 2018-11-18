@@ -38,12 +38,12 @@ class ApplicationForm extends React.PureComponent {
     );
 
     const categoryOptions = [
-      { value: 'clothes', label: 'Clothes' },
-      { value: 'jewelry', label: 'Jewelry' },
-      { value: 'accessories', label: 'Accessories' },
-      { value: 'home_decor', label: 'Home decor' },
-      { value: 'shoes', label: 'Shoes' },
-      { value: 'other', label: 'Other' },
+      { value: 'clothes', label: gettext('Clothes') },
+      { value: 'jewelry', label: gettext('Jewelry') },
+      { value: 'accessories', label: gettext('Accessories') },
+      { value: 'home_decor', label: gettext('Home decor') },
+      { value: 'shoes', label: gettext('Shoes') },
+      { value: 'other', label: gettext('Other') },
     ];
 
     return (
