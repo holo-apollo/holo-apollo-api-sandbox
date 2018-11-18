@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-18 18:45+0200\n"
+"POT-Creation-Date: 2018-11-19 00:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,28 +22,63 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:99
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:42
+msgid ""
+"Unknown error. Please contact us via email ira@holo-apollo.art or Instagram "
+"@holo.apollo.art"
+msgstr""
+"Неизвестная ошибка. Пожалуйста напишите нам на почту ira@holo-apollo.art или в Instagram"
+"@holo.apollo.art"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:64
+msgid "This field is required"
+msgstr "Это поле обязательно для заполнения"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:68
+msgid "Please enter a valid email address"
+msgstr "Пожалуйста введите правильный email"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:72
+msgid "You must allow your data usage to create application"
+msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:78
+msgid "Please write at least 500 symbols, but not more than 1000"
+msgstr "Пожалуйста, напишите не меньше 500 и не больше 1000 символов"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:89
+msgid "Following files are not images: "
+msgstr "Следующие файлы не являются изображениями: "
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:98
+msgid "Please choose at least 5 images"
+msgstr "Пожалуйста выберите хотя бы 5 фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:100
+msgid "Please choose at most 30 images"
+msgstr "Пожалуйста выберите не более 30 фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:105
+msgid "Total size of images is too big. Maximum size is 150 MB, you uploaded "
+msgstr "Общий размер файлов слишком большой. Максимальный размер 150 МБ, вы загрузили "
+
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:141
 msgid "At least 5 and at most 30 photos, total size up to 150MB."
 msgstr ""
 "Не меньше 5 и не больше 30 фотографий. Общим размером файлов  до 150МБ."
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:103
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:145
 msgid ""
 "Photos will be used in a collage, therefore some of them should have "
 "minimal, neutral background."
@@ -51,406 +86,111 @@ msgstr ""
 "Фото будут использованы в коллаже, поэтому некоторые из них должны быть с "
 "минимальным, нейтральным фоном."
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:110
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:152
 msgid "Clothes"
 msgstr "Одежда"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:111
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:153
 msgid "Jewelry"
 msgstr "Украшения"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:112
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:154
 msgid "Accessories"
 msgstr "Аксессуары"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:113
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:155
 msgid "Home decor"
 msgstr "Домашний декор"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:114
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:156
 msgid "Shoes"
 msgstr "Обувь"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:115
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:157
 msgid "Other"
 msgstr "Другое"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:136
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:171
 msgid "What is your name?"
 msgstr "Как вас зовут?"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:146
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:181
 msgid "Email to reach you out"
 msgstr "Email для связи"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:155
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:190
 msgid "@Name in Instagram"
 msgstr "@Имя в Instagram"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:164
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:199
 msgid "Category"
 msgstr "Категория"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:173
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:208
 msgid "What's being sold in your store?"
 msgstr "Что продается в вашем магазине?"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:183
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:218
 msgid "Describe your goods"
 msgstr "Опишите ваши изделия"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:184
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:219
 msgid "materials, technology, prices..."
 msgstr "материалы, технология, размеры, цены..."
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:194
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:229
 msgid "Philosophy behind your store"
 msgstr "Философский смысл вашего магазина"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:204
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:239
 msgid "Upload photos of your goods in good quality"
 msgstr "Добавьте качественные фото ваших изделий"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:205
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:240
 msgid "Upload photos"
 msgstr "Загрузить фото"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:215
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:250
 msgid "I allow usage of data I provided"
 msgstr "Я соглашаюсь на использование оставленных мной данных"
 
-#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:223
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:258
 msgid "Create application"
 msgstr "Оставить заявку"
 
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-msgid "Describe your goods (materials, technology, prices...)"
-msgstr "Опишите ваши изделия (материалы, технология, размеры, цены...)"
-
-#: frontend/build/webpack_bundles/commons-bundle.003219adf88e8c5e784b.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adf857648ec63d061cbe.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adfd2dfa8a9f63ab5d59.js:12
-#: frontend/build/webpack_bundles/commons-bundle.b6ee5bd337450dc2d615.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c0e1621fe9dd5c52ecf0.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c1594526233ef386731e.js:12
-#: frontend/build/webpack_bundles/commons-bundle.df9563f0cbd52a398de5.js:12
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/src/apps/users/containers/signup.js:325
-msgctxt "noun"
-msgid "Sign up"
-msgstr "Регистрация"
-
-#: frontend/build/webpack_bundles/commons-bundle.003219adf88e8c5e784b.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adf857648ec63d061cbe.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adfd2dfa8a9f63ab5d59.js:12
-#: frontend/build/webpack_bundles/commons-bundle.b6ee5bd337450dc2d615.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c0e1621fe9dd5c52ecf0.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c1594526233ef386731e.js:12
-#: frontend/build/webpack_bundles/commons-bundle.df9563f0cbd52a398de5.js:12
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/src/apps/users/containers/login.js:99
-#: frontend/src/apps/users/containers/login.js:116
-#: frontend/src/apps/users/containers/signup.js:331
-msgid "Log in"
-msgstr "Войти"
-
-#: frontend/build/webpack_bundles/commons-bundle.003219adf88e8c5e784b.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adf857648ec63d061cbe.js:12
-#: frontend/build/webpack_bundles/commons-bundle.adfd2dfa8a9f63ab5d59.js:12
-#: frontend/build/webpack_bundles/commons-bundle.b6ee5bd337450dc2d615.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c0e1621fe9dd5c52ecf0.js:12
-#: frontend/build/webpack_bundles/commons-bundle.c1594526233ef386731e.js:12
-#: frontend/build/webpack_bundles/commons-bundle.df9563f0cbd52a398de5.js:12
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-msgid " with Facebook"
-msgstr " с помощью Facebook"
-
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:34
 #: frontend/src/apps/users/containers/password_reset.js:34
 #: frontend/src/apps/users/containers/signup.js:73
 msgid "Oops... There's a mistake. Please type a valid email."
 msgstr "Ой... Произошла ошибка. Пожалуйста введите правильный имейл."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:31
 #: frontend/src/apps/users/containers/password_reset.js:31
 #: frontend/src/apps/users/containers/signup.js:70
 msgid "Please type your email."
 msgstr "Пожалуйста введите ваш имейл."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:55
 #: frontend/src/apps/landing/containers/subscription.js:78
 #: frontend/src/apps/users/containers/login.js:57
@@ -461,420 +201,119 @@ msgstr "Пожалуйста введите ваш имейл."
 msgid "Oops! Something went wrong. Please try again in a moment."
 msgstr "Ой! Что-то пошло не так. Пожалуйста попробуйте через минутку."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:97
 msgid "Get notified when it's ready"
 msgstr "Получите уведомление когда она заработает"
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:114
 msgid "Subscribe"
 msgstr "Подписаться"
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:138
 msgid "Are you sure that you want to unsubscribe?"
 msgstr "Вы уверены, что хотите отписаться?"
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:140
 msgid "Yes, I'm sure"
 msgstr "Да, я уверен."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:151
 msgid "You were subscribed successfully!"
 msgstr "Спасибо за подписку!"
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:153
 msgid "See ya!"
 msgstr "Теперь мы на связи."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:158
 msgid "Looks like you are already subscribed."
 msgstr "Судя по всему, Вы уже подписаны."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:159
 msgid "Thank you for being with us!"
 msgstr "Спасибо, что Вы с нами!"
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:164
 msgid "You were unsubscribed."
 msgstr "Вы отписались."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:165
 msgid "Hope to see you again."
 msgstr "Надеемся еще увидеться."
 
-#: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
-#: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
-#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/landing/containers/subscription.js:172
 msgid "We promise to never spam you or share your personal information!"
 msgstr ""
 "Мы обещаем никогда не спамить и не распространять вашу личную информацию!"
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/src/apps/users/containers/login.js:32
+msgid "Please type your email or phone."
+msgstr "Пожалуйста введите ваш имейл или телефон."
+
 #: frontend/src/apps/users/containers/login.js:38
 msgid "Oops... There's a mistake. Please type a valid email or phone."
 msgstr ""
 "Ой... Произошла ошибка. Пожалуйста введите правильный имейл или телефон."
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/src/apps/users/containers/login.js:32
-msgid "Please type your email or phone."
-msgstr "Пожалуйста введите ваш имейл или телефон."
-
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:42
 msgid "Please type your password."
 msgstr "Пожалуйста введите ваш пароль."
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:85
 msgid "Email or phone"
 msgstr "Ваш Email или Телефон"
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:91
 msgid "Password"
 msgstr "Пароль"
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:96
 msgid "Oops! I forgot my password"
 msgstr "Ой! Кажется я забыл пароль"
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/src/apps/users/containers/login.js:99
+#: frontend/src/apps/users/containers/login.js:116
+#: frontend/src/apps/users/containers/signup.js:331
+msgid "Log in"
+msgstr "Войти"
+
 #: frontend/src/apps/users/containers/login.js:100
 #: frontend/src/apps/users/containers/signup.js:247
 msgid "or"
 msgstr "или"
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:118
 msgid "Don't have an account? "
 msgstr "Еще не с нами? "
 
-#: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/login-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/login-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/login-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/login-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/login-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/login.js:119
 msgid "Sign up"
 msgstr "Зарегистрироваться"
 
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset.js:84
 #: frontend/src/apps/users/containers/signup.js:217
 msgid "Your email"
 msgstr "Ваш Email"
 
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset.js:86
 msgid "Send me info"
 msgstr "Прислать мне ссылку"
 
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset.js:100
 msgid "Password reset"
 msgstr "Сброс пароля"
 
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset.js:105
 msgid ""
 "We've emailed you instructions for setting your password, if an account "
@@ -883,14 +322,6 @@ msgstr ""
 "Мы отправили Вам на почту инструкции по восстановлению пароля, если "
 "существует аккаунт с введенным Вами имейлом. Вы должны их скоро получить."
 
-#: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset.js:112
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
@@ -899,56 +330,16 @@ msgstr ""
 "Если Вы не получили письмо, пожалуйста убедитесь что Вы ввели правильный "
 "адрес регистрации и проверьте папку спам."
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/src/apps/users/containers/password_reset_confirm.js:47
-#: frontend/src/apps/users/containers/signup.js:80
-msgid "Oops... Passwords didn't match."
-msgstr "Ой... Пароли не совпадают."
-
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:45
 #: frontend/src/apps/users/containers/signup.js:78
 msgid "Please type your password twice."
 msgstr "Пожалуйста введите Ваш пароль дважды."
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/src/apps/users/containers/password_reset_confirm.js:47
+#: frontend/src/apps/users/containers/signup.js:80
+msgid "Oops... Passwords didn't match."
+msgstr "Ой... Пароли не совпадают."
+
 #: frontend/src/apps/users/containers/password_reset_confirm.js:105
 msgid ""
 "* The password reset link was invalid. Please request a new password reset."
@@ -956,328 +347,140 @@ msgstr ""
 "* Ссылка на восстановление пароля не работает. Пожалуйста сделайте новый "
 "запрос на восстановление пароля."
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:113
 msgid "New password"
 msgstr "Новый пароль"
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:123
 #: frontend/src/apps/users/containers/signup.js:228
 msgid "Retype password"
 msgstr "Повторите пароль"
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:131
 #: frontend/src/apps/users/containers/signup.js:309
 msgid "Save"
 msgstr "Сохранить"
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:145
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:148
 msgid "Your password has been set. You may go ahead and "
 msgstr "Ваш пароль установлен. Теперь Вы можете "
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:149
 msgid "log in"
 msgstr "войти"
 
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/password_reset_confirm-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/password_reset_confirm.js:150
 msgid " now"
 msgstr " на сайт"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:84
 #: frontend/src/apps/users/containers/signup.js:257
 msgid "You must accept Terms of Use to sign up."
 msgstr "Вы должны принять Правила Использования."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:109
 msgid "Please type your first name 2-30 characters long."
 msgstr "Пожалуйста введите Ваше имя длиной 2-30 символов."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:113
 msgid "Max length of last name is 30 characters."
 msgstr "Максимальная длина фамилии - 30 символов."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:117
 msgid "Please type your name on the site 2-30 characters long."
 msgstr "Пожалуйста введине Ваше имя на сайте длиной 2-30 символов."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:121
 msgid "Please type a valid phone number."
 msgstr "Пожалуйста введите правильный номер телефона."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:140
 msgid "That email already exists."
 msgstr "Этот имейл уже существует."
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:223
 msgid "Make up password"
 msgstr "Придумайте пароль"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:234
 msgid "I agree with "
 msgstr "Я согласен (согласна) с "
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:236
 msgid "Terms of Use"
 msgstr "Правилами Использования"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:246
 msgid "Create account"
 msgstr "Создать Аккаунт"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:288
 msgid "Your first name *"
 msgstr "Ваше имя *"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:289
 msgid "Your last name"
 msgstr "Ваша фамилия"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:290
 msgid "Name on the site *"
 msgstr "Имя на сайте *"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:291
 msgid "Phone *"
 msgstr "Ваш Телефон *"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
+#: frontend/src/apps/users/containers/signup.js:325
+msgctxt "noun"
+msgid "Sign up"
+msgstr "Регистрация"
+
 #: frontend/src/apps/users/containers/signup.js:326
 msgid "Let's start"
 msgstr "Познакомимся?"
 
-#: frontend/build/webpack_bundles/signup-bundle.003219adf88e8c5e784b.js:1
-#: frontend/build/webpack_bundles/signup-bundle.3b9e11cd521797690a33.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adf857648ec63d061cbe.js:1
-#: frontend/build/webpack_bundles/signup-bundle.adfd2dfa8a9f63ab5d59.js:1
-#: frontend/build/webpack_bundles/signup-bundle.b6ee5bd337450dc2d615.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c0e1621fe9dd5c52ecf0.js:1
-#: frontend/build/webpack_bundles/signup-bundle.c1594526233ef386731e.js:1
-#: frontend/build/webpack_bundles/signup-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/src/apps/users/containers/signup.js:330
 msgid "Already a member? "
 msgstr "Уже есть аккаунт? "
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:45
-msgid "This field is required"
-msgstr "Это поле обязательно для заполнения"
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
+msgid "delete"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:49
-msgid "Please enter a valid email address"
-msgstr "Пожалуйста введите правильный email"
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
+msgid "has"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:53
-msgid "You must allow your data usage to create application"
-msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
+msgid "get"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:59
-msgid "Please write at least 500 symbols, but not more than 1000"
-msgstr "Пожалуйста, напишите не меньше 500 и не больше 1000 символов"
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Wrong offset!"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:69
-msgid "Please choose at least 5 images"
-msgstr "Пожалуйста выберите хотя бы 5 фото"
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Wrong length!"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:71
-msgid "Please choose at most 30 images"
-msgstr "Пожалуйста выберите не более 30 фото"
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Promise-chain cycle"
+msgstr ""
 
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:74
-msgid "Total size of images is too big"
-msgstr "Общий размер файлов слишком большой"
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Promise can't be resolved itself"
+msgstr ""
 
 #: node_modules/prettier/parser-typescript.js:1
 msgid "Elapsed:: "
@@ -1487,6 +690,12 @@ msgstr ""
 #: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
 msgid "./iframe-bootstrap"
 msgstr ""
+
+#~ msgid "Describe your goods (materials, technology, prices...)"
+#~ msgstr "Опишите ваши изделия (материалы, технология, размеры, цены...)"
+
+#~ msgid " with Facebook"
+#~ msgstr " с помощью Facebook"
 
 #~ msgid "Oops... Passwords didn't match"
 #~ msgstr "Ой... Пароли не совпадают"
