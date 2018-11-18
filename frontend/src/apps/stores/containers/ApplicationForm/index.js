@@ -8,12 +8,16 @@ import TextFieldWithCounter from 'common/components/inputs/TextFieldWithCounter'
 import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
 import Checkbox from 'common/components/inputs/Checkbox';
 import Button from 'common/components/buttons/Button';
+import { validateEmail, validateLength } from 'helpers/validators';
 import { FieldCont } from './styled';
 
 class ApplicationForm extends React.PureComponent {
   constructor(props) {
     super(props);
     autoBind(this);
+    this.state = {
+      submitAttempted: false,
+    };
   }
 
   onSubmit(values, { setSubmitting }) {
@@ -21,6 +25,41 @@ class ApplicationForm extends React.PureComponent {
       alert(JSON.stringify(values));
       setSubmitting(false);
     }, 400);
+  }
+
+  validate(values) {
+    this.setState({ submitAttempted: true });
+    const errors = {};
+    const requiredFields = [
+      'name',
+      'email',
+      'instagram_name',
+      'category',
+      'selling_goods',
+      'goods_description',
+      'philosophy',
+    ];
+    requiredFields.forEach(field => {
+      if (!values[field]) {
+        errors[field] = gettext('This field is required');
+      }
+    });
+    if (!validateEmail(values.email)) {
+      errors.email = gettext('Please enter a valid email address');
+    }
+    if (!values.data_usage_agreement) {
+      errors.data_usage_agreement = gettext(
+        'You must allow your data usage to create application'
+      );
+    }
+    ['goods_description', 'philosophy'].forEach(field => {
+      if (!validateLength(values[field], 1000, 500)) {
+        errors[field] = gettext(
+          'Please write at least 500 symbols, but not more than 1000.'
+        );
+      }
+    });
+    return errors;
   }
 
   render() {
@@ -47,7 +86,12 @@ class ApplicationForm extends React.PureComponent {
     ];
 
     return (
-      <Formik onSubmit={this.onSubmit}>
+      <Formik
+        onSubmit={this.onSubmit}
+        validate={this.validate}
+        validateOnChange={this.state.submitAttempted}
+        validateOnBlur={false}
+      >
         {({
           errors,
           handleChange,
@@ -62,6 +106,7 @@ class ApplicationForm extends React.PureComponent {
                 label={gettext('What is your name?')}
                 onChange={handleChange}
                 maxLength={61}
+                errorText={errors.name}
               />
             </FieldCont>
             <FieldCont>
@@ -71,6 +116,7 @@ class ApplicationForm extends React.PureComponent {
                 label={gettext('Email to reach you out')}
                 onChange={handleChange}
                 maxLength={254}
+                errorText={errors.email}
               />
             </FieldCont>
             <FieldCont>
@@ -79,6 +125,7 @@ class ApplicationForm extends React.PureComponent {
                 label={gettext('@Name in Instagram')}
                 onChange={handleChange}
                 maxLength={254}
+                errorText={errors.instagram_name}
               />
             </FieldCont>
             <FieldCont>
@@ -87,6 +134,7 @@ class ApplicationForm extends React.PureComponent {
                 label={gettext('Category')}
                 options={categoryOptions}
                 onChange={handleChange}
+                errorText={errors.category}
               />
             </FieldCont>
             <FieldCont>
@@ -96,6 +144,7 @@ class ApplicationForm extends React.PureComponent {
                 multiline={true}
                 maxLength={500}
                 onChange={handleChange}
+                errorText={errors.selling_goods}
               />
             </FieldCont>
             <FieldCont>
@@ -106,6 +155,7 @@ class ApplicationForm extends React.PureComponent {
                 multiline={true}
                 maxLength={1000}
                 onChange={handleChange}
+                errorText={errors.goods_description}
               />
             </FieldCont>
             <FieldCont>
@@ -115,6 +165,7 @@ class ApplicationForm extends React.PureComponent {
                 multiline={true}
                 maxLength={1000}
                 onChange={handleChange}
+                errorText={errors.philosophy}
               />
             </FieldCont>
             <FieldCont>
@@ -123,6 +174,7 @@ class ApplicationForm extends React.PureComponent {
                 label={gettext('Upload photos of your goods in good quality')}
                 buttonText={gettext('Upload photos')}
                 helperText={uploadHelpText}
+                errorText={errors.images}
               />
             </FieldCont>
             <FieldCont>
