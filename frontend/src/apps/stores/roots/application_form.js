@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 
-import 'axios_defaults';
 import addTheme from 'helpers/addTheme';
 import ApplicationForm from '../containers/ApplicationForm';
 

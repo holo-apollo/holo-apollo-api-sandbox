@@ -53,15 +53,17 @@ class ImageUploadPreview extends React.PureComponent<Props, State> {
     const files = event.target.files;
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const image = {
-          file,
-          previewUrl: reader.result,
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const image = {
+            file,
+            previewUrl: reader.result,
+          };
+          this.setState({ images: [...this.state.images, image] });
         };
-        this.setState({ images: [...this.state.images, image] });
-      };
-      reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
+      }
     }
 
     this.props.onChange && this.props.onChange(event);

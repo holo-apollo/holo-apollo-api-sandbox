@@ -8,8 +8,10 @@ import TextFieldWithCounter from 'common/components/inputs/TextFieldWithCounter'
 import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
 import Checkbox from 'common/components/inputs/Checkbox';
 import Button from 'common/components/buttons/Button';
+import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 import { validateEmail, validateLength } from 'helpers/validators';
-import { FieldCont } from './styled';
+import { postWithFiles } from 'helpers/rest';
+import { StyledForm, FieldCont, SpinnerCont } from './styled';
 
 class ApplicationForm extends React.PureComponent {
   constructor(props) {
@@ -21,11 +23,28 @@ class ApplicationForm extends React.PureComponent {
     };
   }
 
-  onSubmit(values, { setSubmitting }) {
-    setTimeout(() => {
-      alert(JSON.stringify(values));
+  async onSubmit(values, { setSubmitting, setFieldError }) {
+    const resp = await postWithFiles('stores/applications/', values, {
+      images: this.state.images,
+    });
+    if (resp.status === 201) {
+      window.location.replace(
+        `/application/success?pub_date=${resp.data.pub_date}`
+      );
+    } else {
+      if (resp.data) {
+        Object.keys(resp.data).forEach(field => {
+          setFieldError(field, resp.data[field][0]);
+        });
+      } else {
+        alert(
+          gettext(
+            'Unknown error. Please contact us via email ira@holo-apollo.art or Instagram @holo.apollo.art'
+          )
+        );
+      }
       setSubmitting(false);
-    }, 400);
+    }
   }
 
   validate(values) {
@@ -60,18 +79,35 @@ class ApplicationForm extends React.PureComponent {
         );
       }
     });
+    const imagesErrors = [];
+    const nonImages = this.state.images.filter(
+      item => !item.type.startsWith('image/')
+    );
+    if (nonImages.length) {
+      const nonImagesNames = nonImages.map(item => item.name).join(', ');
+      imagesErrors.push(
+        gettext('Following files are not images: ') + nonImagesNames
+      );
+    }
     const imagesCount = this.state.images.length;
     const imagesSize = this.state.images.reduce(
       (acc, curr) => acc + curr.size,
       0
     );
     if (imagesCount < 5) {
-      errors.images = gettext('Please choose at least 5 images');
+      imagesErrors.push(gettext('Please choose at least 5 images'));
     } else if (imagesCount > 30) {
-      errors.images = gettext('Please choose at most 30 images');
+      imagesErrors.push(gettext('Please choose at most 30 images'));
     }
     if (imagesSize > 150 * 1024 * 1024) {
-      errors.images = gettext('Total size of images is too big');
+      imagesErrors.push(
+        gettext(
+          'Total size of images is too big. Maximum size is 150 MB, you uploaded '
+        ) + `${Math.round(imagesSize / 1024 / 1024)}`
+      );
+    }
+    if (imagesErrors.length) {
+      errors.images = imagesErrors.join('. ');
     }
     return errors;
   }
@@ -92,7 +128,13 @@ class ApplicationForm extends React.PureComponent {
     });
   }
 
-  render() {
+  formRenderer({
+    errors,
+    handleChange,
+    handleSubmit,
+    isSubmitting,
+    setFieldValue,
+  }) {
     const uploadHelpText = (
       <Fragment>
         <p>
@@ -116,114 +158,119 @@ class ApplicationForm extends React.PureComponent {
     ];
 
     return (
+      <Fragment>
+        {isSubmitting && (
+          <SpinnerCont>
+            <DoubleBounceSpinner />
+          </SpinnerCont>
+        )}
+        <StyledForm onSubmit={handleSubmit} isSubmitting={isSubmitting}>
+          <FieldCont>
+            <TextField
+              name="name"
+              label={gettext('What is your name?')}
+              onChange={handleChange}
+              maxLength={61}
+              errorText={errors.name}
+            />
+          </FieldCont>
+          <FieldCont>
+            <TextField
+              name="email"
+              type="email"
+              label={gettext('Email to reach you out')}
+              onChange={handleChange}
+              maxLength={254}
+              errorText={errors.email}
+            />
+          </FieldCont>
+          <FieldCont>
+            <TextField
+              name="instagram_name"
+              label={gettext('@Name in Instagram')}
+              onChange={handleChange}
+              maxLength={254}
+              errorText={errors.instagram_name}
+            />
+          </FieldCont>
+          <FieldCont>
+            <Select
+              name="category"
+              label={gettext('Category')}
+              options={categoryOptions}
+              onChange={handleChange}
+              errorText={errors.category}
+            />
+          </FieldCont>
+          <FieldCont>
+            <TextFieldWithCounter
+              name="selling_goods"
+              label={gettext("What's being sold in your store?")}
+              multiline={true}
+              maxLength={500}
+              onChange={handleChange}
+              errorText={errors.selling_goods}
+            />
+          </FieldCont>
+          <FieldCont>
+            <TextFieldWithCounter
+              name="goods_description"
+              label={gettext('Describe your goods')}
+              helperText={gettext('materials, technology, prices...')}
+              multiline={true}
+              maxLength={1000}
+              onChange={handleChange}
+              errorText={errors.goods_description}
+            />
+          </FieldCont>
+          <FieldCont>
+            <TextFieldWithCounter
+              name="philosophy"
+              label={gettext('Philosophy behind your store')}
+              multiline={true}
+              maxLength={1000}
+              onChange={handleChange}
+              errorText={errors.philosophy}
+            />
+          </FieldCont>
+          <FieldCont>
+            <ImageUploadPreview
+              name="images"
+              label={gettext('Upload photos of your goods in good quality')}
+              buttonText={gettext('Upload photos')}
+              helperText={uploadHelpText}
+              errorText={errors.images}
+              onChange={this.handleImagesChange}
+              onRemove={this.handleImageRemove}
+            />
+          </FieldCont>
+          <FieldCont>
+            <Checkbox
+              name="data_usage_agreement"
+              label={gettext('I allow usage of data I provided')}
+              errorText={errors.data_usage_agreement}
+              onChange={e =>
+                setFieldValue('data_usage_agreement', e.target.checked)
+              }
+            />
+          </FieldCont>
+          <Button type="submit" width={250} disabled={isSubmitting}>
+            {gettext('Create application')}
+          </Button>
+        </StyledForm>
+      </Fragment>
+    );
+  }
+
+  render() {
+    return (
       <Formik
         onSubmit={this.onSubmit}
         validate={this.validate}
         validateOnChange={this.state.submitAttempted}
         validateOnBlur={false}
       >
-        {({
-          errors,
-          handleChange,
-          handleSubmit,
-          isSubmitting,
-          setFieldValue,
-        }) => (
-          <form onSubmit={handleSubmit}>
-            <FieldCont>
-              <TextField
-                name="name"
-                label={gettext('What is your name?')}
-                onChange={handleChange}
-                maxLength={61}
-                errorText={errors.name}
-              />
-            </FieldCont>
-            <FieldCont>
-              <TextField
-                name="email"
-                type="email"
-                label={gettext('Email to reach you out')}
-                onChange={handleChange}
-                maxLength={254}
-                errorText={errors.email}
-              />
-            </FieldCont>
-            <FieldCont>
-              <TextField
-                name="instagram_name"
-                label={gettext('@Name in Instagram')}
-                onChange={handleChange}
-                maxLength={254}
-                errorText={errors.instagram_name}
-              />
-            </FieldCont>
-            <FieldCont>
-              <Select
-                name="category"
-                label={gettext('Category')}
-                options={categoryOptions}
-                onChange={handleChange}
-                errorText={errors.category}
-              />
-            </FieldCont>
-            <FieldCont>
-              <TextFieldWithCounter
-                name="selling_goods"
-                label={gettext("What's being sold in your store?")}
-                multiline={true}
-                maxLength={500}
-                onChange={handleChange}
-                errorText={errors.selling_goods}
-              />
-            </FieldCont>
-            <FieldCont>
-              <TextFieldWithCounter
-                name="goods_description"
-                label={gettext('Describe your goods')}
-                helperText={gettext('materials, technology, prices...')}
-                multiline={true}
-                maxLength={1000}
-                onChange={handleChange}
-                errorText={errors.goods_description}
-              />
-            </FieldCont>
-            <FieldCont>
-              <TextFieldWithCounter
-                name="philosophy"
-                label={gettext('Philosophy behind your store')}
-                multiline={true}
-                maxLength={1000}
-                onChange={handleChange}
-                errorText={errors.philosophy}
-              />
-            </FieldCont>
-            <FieldCont>
-              <ImageUploadPreview
-                name="images"
-                label={gettext('Upload photos of your goods in good quality')}
-                buttonText={gettext('Upload photos')}
-                helperText={uploadHelpText}
-                errorText={errors.images}
-                onChange={this.handleImagesChange}
-                onRemove={this.handleImageRemove}
-              />
-            </FieldCont>
-            <FieldCont>
-              <Checkbox
-                name="data_usage_agreement"
-                label={gettext('I allow usage of data I provided')}
-                errorText={errors.data_usage_agreement}
-                onChange={e =>
-                  setFieldValue('data_usage_agreement', e.target.checked)
-                }
-              />
-            </FieldCont>
-            <Button type="submit" width={250} disabled={isSubmitting}>
-              {gettext('Create application')}
-            </Button>
-          </form>
-        )}
+        {this.formRenderer}
       </Formik>
     );
   }
