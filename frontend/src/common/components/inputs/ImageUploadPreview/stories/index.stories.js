@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 
 import ImageUploadPreview from '../index';
 
-const helpText = (
+const helperText = (
   <Fragment>
     <p>At least 5 and at most 30 photos, total size up to 150MB.</p>
     <p>
@@ -20,7 +20,7 @@ storiesOf('Inputs', module).add('ImageUploadPreview', () => (
       label={text('Label text', 'Upload photos of your goods in good quality')}
       buttonText={text('Button text', 'Upload photos')}
       name="images"
-      helpText={helpText}
+      helperText={helperText}
     />
   </div>
 ));

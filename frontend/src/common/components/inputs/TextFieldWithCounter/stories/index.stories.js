@@ -8,6 +8,7 @@ storiesOf('Inputs', module).add('TextFieldWithCounter', () => (
   <div style={{ width: '420px' }}>
     <TextFieldWithCounter
       label={text('Label text', 'What is being sold in your store?')}
+      helperText={text('Helper text', 'Some help text')}
       error={boolean('Error', false)}
       multiline={boolean('Multiline', true)}
       name="name"

@@ -6,6 +6,7 @@ const TextField = props => (
     {...props}
     fullWidth={true}
     InputLabelProps={{ style: { fontSize: '12px' } }}
+    FormHelperTextProps={{ style: { fontSize: '10px' } }}
   />
 );
 

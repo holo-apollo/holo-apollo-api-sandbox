@@ -98,9 +98,8 @@ class ApplicationForm extends React.PureComponent {
             <FieldCont>
               <TextFieldWithCounter
                 name="goods_description"
-                label={gettext(
-                  'Describe your goods (materials, technology, prices...)'
-                )}
+                label={gettext('Describe your goods')}
+                helperText={gettext('materials, technology, prices...')}
                 multiline={true}
                 maxLength={1000}
                 onChange={handleChange}
@@ -120,7 +119,7 @@ class ApplicationForm extends React.PureComponent {
                 name="images"
                 label={gettext('Upload photos of your goods in good quality')}
                 buttonText={gettext('Upload photos')}
-                helpText={uploadHelpText}
+                helperText={uploadHelpText}
               />
             </FieldCont>
             <FieldCont>

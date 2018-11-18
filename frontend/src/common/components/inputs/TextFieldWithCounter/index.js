@@ -1,20 +1,22 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
+// @flow
+import * as React from 'react';
 import autoBind from 'react-autobind';
 
-import palette from 'common/palette';
 import TextField from 'common/components/inputs/TextField';
+import { HelperCont, CounterCont } from './styled';
 
-const CounterCont = styled.div`
-  width: 100%;
-  text-align: right;
-  font-size: 8px;
-  color: ${palette.grey};
-  margin-top: 10px;
-`;
+type Props = {
+  onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
+  maxLength: number,
+  helperText?: React.Node,
+};
 
-class TextFieldWithCounter extends React.PureComponent {
-  constructor(props) {
+type State = {
+  value: string,
+};
+
+class TextFieldWithCounter extends React.PureComponent<Props, State> {
+  constructor(props: Props) {
     super(props);
     autoBind(this);
     this.state = {
@@ -22,23 +24,28 @@ class TextFieldWithCounter extends React.PureComponent {
     };
   }
 
-  onChange(event) {
+  onChange(event: SyntheticInputEvent<HTMLInputElement>) {
     this.setState({ value: event.target.value });
     this.props.onChange && this.props.onChange(event);
   }
 
   render() {
-    return (
-      <Fragment>
-        <TextField
-          {...this.props}
-          onChange={this.onChange}
-          inputProps={{ maxLength: this.props.maxLength }}
-        />
+    const helperText = (
+      <HelperCont hasHelperText={Boolean(this.props.helperText)}>
+        {this.props.helperText}
         <CounterCont>
           {this.state.value.length}/{this.props.maxLength}
         </CounterCont>
-      </Fragment>
+      </HelperCont>
+    );
+
+    return (
+      <TextField
+        {...this.props}
+        onChange={this.onChange}
+        inputProps={{ maxLength: this.props.maxLength }}
+        helperText={helperText}
+      />
     );
   }
 }

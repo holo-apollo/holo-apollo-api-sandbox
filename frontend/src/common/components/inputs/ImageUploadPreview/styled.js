@@ -42,7 +42,7 @@ export const ButtonTextCont = styled.div`
 `;
 
 export const HelpTextCont = styled.div`
-  font-size: 8px;
+  font-size: 10px;
   color: ${palette.grey};
   text-align: left;
 `;

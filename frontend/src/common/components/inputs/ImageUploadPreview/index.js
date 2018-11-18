@@ -23,7 +23,7 @@ type Props = {
   name: string,
   label: string,
   buttonText: string,
-  helpText: string | React.Node,
+  helperText: string | React.Node,
   onChange?: FileChoiceEvent => void,
   onRemove?: File => void,
 };
@@ -100,7 +100,7 @@ class ImageUploadPreview extends React.PureComponent<Props, State> {
             {this.props.buttonText}
           </ButtonTextCont>
         </StyledLabel>
-        <HelpTextCont>{this.props.helpText}</HelpTextCont>
+        <HelpTextCont>{this.props.helperText}</HelpTextCont>
         <ImagesCont>
           {this.state.images.map(this.renderImagePreview)}
         </ImagesCont>
