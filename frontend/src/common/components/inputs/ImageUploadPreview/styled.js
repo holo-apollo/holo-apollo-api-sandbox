@@ -61,8 +61,22 @@ export const ImageCont = styled.div`
   margin-bottom: 20px;
   position: relative;
 
-  &:nth-child(4n) {
-    margin-right: 0;
+  @media (min-width: 460px) {
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 350px) and (max-width: 459px) {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 349px) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 `;
 

@@ -13,6 +13,7 @@ export const StyledLabel = styled.label`
   align-items: center;
   cursor: pointer;
   font-size: 12px;
+  text-align: left;
 
   ${getLabelStyles};
 `;
@@ -20,6 +21,8 @@ export const StyledLabel = styled.label`
 const getCheckboxStyles = ({ size }) => css`
   width: ${size}px;
   height: ${size}px;
+  min-width: ${size}px;
+  max-width: ${size}px;
 
   &:checked {
     background-size: ${(size * 2) / 3}px ${(size * 2) / 3}px;
@@ -27,9 +30,11 @@ const getCheckboxStyles = ({ size }) => css`
 `;
 
 export const StyledCheckbox = styled.input`
-  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: content-box;
   border: solid 1px ${palette.lightGrey};
-  margin-right: 8px;
+  margin: 0 8px 0 0;
+  padding: 0;
   cursor: pointer;
 
   &:focus,
