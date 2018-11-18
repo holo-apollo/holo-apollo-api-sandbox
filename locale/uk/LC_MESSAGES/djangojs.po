@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 00:18+0200\n"
+"POT-Creation-Date: 2018-11-19 00:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgid ""
 "Unknown error. Please contact us via email ira@holo-apollo.art or Instagram "
 "@holo.apollo.art"
 msgstr ""
-"Невідома помилка. Будь ласка напишіть нам на пошту ira@holo-apollo.art або в Instagram"
-"@holo.apollo.art"
+"Невідома помилка. Будь ласка напишіть нам на пошту ira@holo-apollo.art або в "
+"Instagram@holo.apollo.art"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:64
@@ -68,16 +68,18 @@ msgstr "Будь ласка виберіть не більше 30 фото"
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:105
 msgid "Total size of images is too big. Maximum size is 150 MB, you uploaded "
-msgstr "Загальний розмір файлів надто великий. Максимальний розмір 150 МБ, ви завантажили "
+msgstr ""
+"Загальний розмір файлів надто великий. Максимальний розмір 150 МБ, ви "
+"завантажили "
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:141
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:143
 msgid "At least 5 and at most 30 photos, total size up to 150MB."
 msgstr ""
 "Не менше 5 і не більше 30 фотографій, загальним розміром файлів до 150 МБ."
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:145
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:147
 msgid ""
 "Photos will be used in a collage, therefore some of them should have "
 "minimal, neutral background."
@@ -86,92 +88,92 @@ msgstr ""
 "мінімальним, нейтральним фоном."
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:152
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:154
 msgid "Clothes"
 msgstr "Одяг"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:153
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:155
 msgid "Jewelry"
 msgstr "Прикраси"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:154
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:156
 msgid "Accessories"
 msgstr "Аксесуари"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:155
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:157
 msgid "Home decor"
 msgstr "Домашній декор"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:156
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:158
 msgid "Shoes"
 msgstr "Взуття"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:157
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:159
 msgid "Other"
 msgstr "Інше"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:171
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:173
 msgid "What is your name?"
 msgstr "Як вас звати?"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:181
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:183
 msgid "Email to reach you out"
 msgstr "Email для зв'язку"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:190
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:192
 msgid "@Name in Instagram"
 msgstr "@Ім'я в Instagram"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:199
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:201
 msgid "Category"
 msgstr "Категорія"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:208
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:210
 msgid "What's being sold in your store?"
 msgstr "Що продається у вашому магазині?"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:218
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:220
 msgid "Describe your goods"
 msgstr "Опишіть ваші вироби"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:219
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:221
 msgid "materials, technology, prices..."
 msgstr "матеріали, технологія, ціни..."
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:229
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:231
 msgid "Philosophy behind your store"
 msgstr "Філософський сенс вашого магазину"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:239
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:241
 msgid "Upload photos of your goods in good quality"
 msgstr "Додайте якісні фото ваших виробів"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:240
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:242
 msgid "Upload photos"
 msgstr "Завантажити фото"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:250
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:252
 msgid "I allow usage of data I provided"
 msgstr "Я погоджуюсь на використання залишених мною даних"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:258
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:260
 msgid "Create application"
 msgstr "Подати заявку"
 

@@ -117,7 +117,9 @@ class ApplicationForm extends React.PureComponent {
     const newFiles = [];
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      newFiles.push(file);
+      if (file.type.startsWith('image/')) {
+        newFiles.push(file);
+      }
     }
     this.setState({ images: [...this.state.images, ...newFiles] });
   }
