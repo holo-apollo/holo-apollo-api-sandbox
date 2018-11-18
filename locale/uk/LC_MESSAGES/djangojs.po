@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-18 14:59+0200\n"
+"POT-Creation-Date: 2018-11-18 18:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,54 +21,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:62
-msgid "What is your name?"
-msgstr "Як вас звати?"
-
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:70
-msgid "Email to reach you out"
-msgstr "Email для зв'язку"
-
-#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:136
-msgid "Create application"
-msgstr "Подати заявку"
-
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:30
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:99
 msgid "At least 5 and at most 30 photos, total size up to 150MB."
 msgstr ""
 "Не менше 5 і не більше 30 фотографій, загальним розміром файлів до 150 МБ."
 
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:34
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:103
 msgid ""
 "Photos will be used in a collage, therefore some of them should have "
 "minimal, neutral background."
@@ -76,23 +50,197 @@ msgstr ""
 "Фото будуть використані в колажі, тому деякі з них повинні бути з "
 "мінімальним, нейтральним фоном."
 
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:110
+msgid "Clothes"
+msgstr "Одяг"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:111
+msgid "Jewelry"
+msgstr "Прикраси"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:112
+msgid "Accessories"
+msgstr "Аксесуари"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:113
+msgid "Home decor"
+msgstr "Домашній декор"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:114
+msgid "Shoes"
+msgstr "Взуття"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:115
+msgid "Other"
+msgstr "Інше"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:77
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:136
+msgid "What is your name?"
+msgstr "Як вас звати?"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:146
+msgid "Email to reach you out"
+msgstr "Email для зв'язку"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:155
 msgid "@Name in Instagram"
 msgstr "@Ім'я в Instagram"
 
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:164
+msgid "Category"
+msgstr "Категорія"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:92
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:173
 msgid "What's being sold in your store?"
 msgstr "Що продається у вашому магазині?"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:183
+msgid "Describe your goods"
+msgstr "Опишіть ваші вироби"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:184
+msgid "materials, technology, prices..."
+msgstr "матеріали, технологія, ціни..."
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:194
+msgid "Philosophy behind your store"
+msgstr "Філософський сенс вашого магазину"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:204
+msgid "Upload photos of your goods in good quality"
+msgstr "Додайте якісні фото ваших виробів"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:205
+msgid "Upload photos"
+msgstr "Завантажити фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:215
+msgid "I allow usage of data I provided"
+msgstr "Я погоджуюсь на використання залишених мною даних"
+
+#: frontend/build/webpack_bundles/application_form-bundle.1b8f900e8b9a6cfd41ea.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.58bd475c9bc8f4ceb350.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.8250b909db8e0af9547e.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b19be7fb86f088f09f90.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fdc6e2fb597c73228503.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:223
+msgid "Create application"
+msgstr "Подати заявку"
 
 #: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
@@ -100,94 +248,6 @@ msgstr "Що продається у вашому магазині?"
 #: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
 msgid "Describe your goods (materials, technology, prices...)"
 msgstr "Опишіть ваші вироби (матеріали, технологія, ціни...)"
-
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:111
-msgid "Philosophy behind your store"
-msgstr "Філософський сенс вашого магазину"
-
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:121
-msgid "Upload photos"
-msgstr "Завантажити фото"
-
-#: frontend/build/webpack_bundles/application_form-bundle.84418478fcdbe83f9218.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:128
-msgid "I allow usage of data I provided"
-msgstr "Я погоджуюсь на використання залишених мною даних"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:41
-msgid "Clothes"
-msgstr "Одяг"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:42
-msgid "Jewelry"
-msgstr "Прикраси"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:43
-msgid "Accessories"
-msgstr "Аксесуари"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:44
-msgid "Home decor"
-msgstr "Домашній декор"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:45
-msgid "Shoes"
-msgstr "Взуття"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:46
-msgid "Other"
-msgstr "Інше"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:84
-msgid "Category"
-msgstr "Категорія"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:101
-msgid "Describe your goods"
-msgstr "Опишіть ваші вироби"
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:102
-msgid "materials, technology, prices..."
-msgstr "матеріали, технологія, ціни..."
-
-#: frontend/build/webpack_bundles/application_form-bundle.91ce7e9aaafbd32b6b75.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.b78bb3c81abe5ae90b12.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.c13da64d93b0cf06a32c.js:1
-#: frontend/build/webpack_bundles/application_form-bundle.e89596d00eea45296d9d.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:120
-msgid "Upload photos of your goods in good quality"
-msgstr "Додайте якісні фото ваших виробів"
 
 #: frontend/build/webpack_bundles/commons-bundle.003219adf88e8c5e784b.js:12
 #: frontend/build/webpack_bundles/commons-bundle.adf857648ec63d061cbe.js:12
@@ -261,6 +321,7 @@ msgid " with Facebook"
 msgstr " через Facebook"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -268,6 +329,7 @@ msgstr " через Facebook"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -275,6 +337,7 @@ msgstr " через Facebook"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
@@ -298,6 +361,7 @@ msgid "Oops... There's a mistake. Please type a valid email."
 msgstr "Ой... Виникла помилка. Будь ласка введіть правильний імейл."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -305,6 +369,7 @@ msgstr "Ой... Виникла помилка. Будь ласка введіт�
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -312,6 +377,7 @@ msgstr "Ой... Виникла помилка. Будь ласка введіт�
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.003219adf88e8c5e784b.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/password_reset-bundle.adf857648ec63d061cbe.js:1
@@ -335,6 +401,7 @@ msgid "Please type your email."
 msgstr "Будь ласка введіть Ваш імейл."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -342,6 +409,7 @@ msgstr "Будь ласка введіть Ваш імейл."
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -349,6 +417,7 @@ msgstr "Будь ласка введіть Ваш імейл."
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/build/webpack_bundles/login-bundle.003219adf88e8c5e784b.js:1
 #: frontend/build/webpack_bundles/login-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/login-bundle.adf857648ec63d061cbe.js:1
@@ -392,6 +461,7 @@ msgid "Oops! Something went wrong. Please try again in a moment."
 msgstr "Ой! Щось не так. Будь ласка, спробуйте ще за мить."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -399,6 +469,7 @@ msgstr "Ой! Щось не так. Будь ласка, спробуйте ще
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -406,11 +477,13 @@ msgstr "Ой! Щось не так. Будь ласка, спробуйте ще
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:97
 msgid "Get notified when it's ready"
 msgstr "Отримайте сповіщення коли він буде готовий"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -418,6 +491,7 @@ msgstr "Отримайте сповіщення коли він буде гот�
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -425,11 +499,13 @@ msgstr "Отримайте сповіщення коли він буде гот�
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:114
 msgid "Subscribe"
 msgstr "Підписатися"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -437,6 +513,7 @@ msgstr "Підписатися"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -444,11 +521,13 @@ msgstr "Підписатися"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:138
 msgid "Are you sure that you want to unsubscribe?"
 msgstr "Ви впевнені, що хочете відписатися?"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -456,6 +535,7 @@ msgstr "Ви впевнені, що хочете відписатися?"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -463,11 +543,13 @@ msgstr "Ви впевнені, що хочете відписатися?"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:140
 msgid "Yes, I'm sure"
 msgstr "Так, впевнений"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -475,6 +557,7 @@ msgstr "Так, впевнений"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -482,11 +565,13 @@ msgstr "Так, впевнений"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:151
 msgid "You were subscribed successfully!"
 msgstr "Ви підписалися успішно!"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -494,6 +579,7 @@ msgstr "Ви підписалися успішно!"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -501,11 +587,13 @@ msgstr "Ви підписалися успішно!"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:153
 msgid "See ya!"
 msgstr "Тепер ми на зв'язку."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -513,6 +601,7 @@ msgstr "Тепер ми на зв'язку."
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -520,11 +609,13 @@ msgstr "Тепер ми на зв'язку."
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:158
 msgid "Looks like you are already subscribed."
 msgstr "Здається Ви вже підписані."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -532,6 +623,7 @@ msgstr "Здається Ви вже підписані."
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -539,11 +631,13 @@ msgstr "Здається Ви вже підписані."
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:159
 msgid "Thank you for being with us!"
 msgstr "Дякуємо, що Ви з нами!"
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -551,6 +645,7 @@ msgstr "Дякуємо, що Ви з нами!"
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -558,11 +653,13 @@ msgstr "Дякуємо, що Ви з нами!"
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:164
 msgid "You were unsubscribed."
 msgstr "Ви відписалися."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -570,6 +667,7 @@ msgstr "Ви відписалися."
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -577,11 +675,13 @@ msgstr "Ви відписалися."
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:165
 msgid "Hope to see you again."
 msgstr "Сподіваємося побачитися знову."
 
 #: frontend/build/webpack_bundles/landing-bundle.003219adf88e8c5e784b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.1b8f900e8b9a6cfd41ea.js:1
 #: frontend/build/webpack_bundles/landing-bundle.3b9e11cd521797690a33.js:1
 #: frontend/build/webpack_bundles/landing-bundle.58bd475c9bc8f4ceb350.js:1
 #: frontend/build/webpack_bundles/landing-bundle.8250b909db8e0af9547e.js:1
@@ -589,6 +689,7 @@ msgstr "Сподіваємося побачитися знову."
 #: frontend/build/webpack_bundles/landing-bundle.91ce7e9aaafbd32b6b75.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adf857648ec63d061cbe.js:1
 #: frontend/build/webpack_bundles/landing-bundle.adfd2dfa8a9f63ab5d59.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b19be7fb86f088f09f90.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b6ee5bd337450dc2d615.js:1
 #: frontend/build/webpack_bundles/landing-bundle.b78bb3c81abe5ae90b12.js:1
 #: frontend/build/webpack_bundles/landing-bundle.c0e1621fe9dd5c52ecf0.js:1
@@ -596,6 +697,7 @@ msgstr "Сподіваємося побачитися знову."
 #: frontend/build/webpack_bundles/landing-bundle.c1594526233ef386731e.js:1
 #: frontend/build/webpack_bundles/landing-bundle.df9563f0cbd52a398de5.js:1
 #: frontend/build/webpack_bundles/landing-bundle.e89596d00eea45296d9d.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fdc6e2fb597c73228503.js:1
 #: frontend/src/apps/landing/containers/subscription.js:172
 msgid "We promise to never spam you or share your personal information!"
 msgstr "Обіцяємо ніколи не спамити та не поширювати Вашу особисту інформацію!"
@@ -1145,6 +1247,34 @@ msgstr "Познайомимось?"
 #: frontend/src/apps/users/containers/signup.js:330
 msgid "Already a member? "
 msgstr "Вже є аккаунт? "
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:45
+msgid "This field is required"
+msgstr "Це поле обов'язкове для заповнення"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:49
+msgid "Please enter a valid email address"
+msgstr "Будь ласка введіть правильний email"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:53
+msgid "You must allow your data usage to create application"
+msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:59
+msgid "Please write at least 500 symbols, but not more than 1000"
+msgstr "Будь ласка, напишіть від 500 до 1000 символів"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:69
+msgid "Please choose at least 5 images"
+msgstr "Будь ласка виберіть хоча б 5 фото"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:71
+msgid "Please choose at most 30 images"
+msgstr "Будь ласка виберіть не більше 30 фото"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:74
+msgid "Total size of images is too big"
+msgstr "Загальний розмір файлів надто великий"
 
 #: node_modules/prettier/parser-typescript.js:1
 msgid "Elapsed:: "
