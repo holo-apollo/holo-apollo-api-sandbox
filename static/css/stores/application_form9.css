@@ -61,7 +61,7 @@ input[type='text']:focus,
 input[type='email']:focus,
 textarea:focus, select:focus {
     outline: none;
-    border-bottom: 2px solid #0288d1;
+    border-bottom: 2px solid #4caad0;
 }
 
 input[type='file'] {
@@ -110,7 +110,7 @@ input[type="file"] ~ .helptext {
 
 label {
     font-size: 10px;
-    color: #0288d1;
+    color: #4caad0;
     position: absolute;
     top: -15px;
     opacity: 1;

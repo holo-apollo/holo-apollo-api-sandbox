@@ -1,11 +1,13 @@
 .container {
     display: flex;
+    width: 985px;
+    margin: 68px auto;
+    padding: 0 40px;
+    overflow-x: hidden;
 }
 
 .block-center {
-    width: 668px;
-    flex-basis: 668px;
-    margin: 68px 0;
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -23,15 +25,12 @@
 }
 
 .block-left {
-    width: calc(50% - 334px);
-    margin-top: 68px;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 35px;
+    margin-right: 35px;
 }
 
 .logo-container img {
-    width: 282px;
+    height: 384px;
 }
 
 .logo-container h2 {
@@ -53,7 +52,7 @@
     margin-top: 83px;
     margin-left: auto;
     margin-right: auto;
-    width: 420px;
+    max-width: 420px;
 }
 
 .emoji {
@@ -83,19 +82,37 @@
     width: 45px;
 }
 
-@media screen and (max-width: 1279px) {
-    .block-center {
+@media screen and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .block-left {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .block-center {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .block-left {
-        display: none;
+    .form-container {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        margin: 30px auto;
+        padding: 0 20px;
     }
 
-    .form-container {
-        width: 100%;
+    .logo-container img {
+        height: 200px;
     }
 }
