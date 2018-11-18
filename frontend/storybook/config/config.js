@@ -5,7 +5,7 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 import theme from 'common/theme';
 
-import '../../../static/css/base2.css';
+import '../../../static/css/base3.css';
 
 // automatically import all components stories
 const componentsReq = require.context(
