@@ -7,7 +7,7 @@ const getHelperStyles = ({ hasHelperText }: { hasHelperText: boolean }) => css`
   justify-content: ${hasHelperText ? 'space-between' : 'flex-end'};
 `;
 
-export const HelperCont = styled.div`
+export const HelperCont = styled.span`
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,6 +15,6 @@ export const HelperCont = styled.div`
   ${getHelperStyles};
 `;
 
-export const CounterCont = styled.div`
+export const CounterCont = styled.span`
   color: ${palette.grey};
 `;

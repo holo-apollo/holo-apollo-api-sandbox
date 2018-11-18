@@ -17,6 +17,7 @@ class ApplicationForm extends React.PureComponent {
     autoBind(this);
     this.state = {
       submitAttempted: false,
+      images: [],
     };
   }
 
@@ -55,11 +56,40 @@ class ApplicationForm extends React.PureComponent {
     ['goods_description', 'philosophy'].forEach(field => {
       if (!validateLength(values[field], 1000, 500)) {
         errors[field] = gettext(
-          'Please write at least 500 symbols, but not more than 1000.'
+          'Please write at least 500 symbols, but not more than 1000'
         );
       }
     });
+    const imagesCount = this.state.images.length;
+    const imagesSize = this.state.images.reduce(
+      (acc, curr) => acc + curr.size,
+      0
+    );
+    if (imagesCount < 5) {
+      errors.images = gettext('Please choose at least 5 images');
+    } else if (imagesCount > 30) {
+      errors.images = gettext('Please choose at most 30 images');
+    }
+    if (imagesSize > 150 * 1024 * 1024) {
+      errors.images = gettext('Total size of images is too big');
+    }
     return errors;
+  }
+
+  handleImagesChange(event) {
+    const files = event.target.files;
+    const newFiles = [];
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      newFiles.push(file);
+    }
+    this.setState({ images: [...this.state.images, ...newFiles] });
+  }
+
+  handleImageRemove(file) {
+    this.setState({
+      images: this.state.images.filter(image => image !== file),
+    });
   }
 
   render() {
@@ -175,6 +205,8 @@ class ApplicationForm extends React.PureComponent {
                 buttonText={gettext('Upload photos')}
                 helperText={uploadHelpText}
                 errorText={errors.images}
+                onChange={this.handleImagesChange}
+                onRemove={this.handleImageRemove}
               />
             </FieldCont>
             <FieldCont>
