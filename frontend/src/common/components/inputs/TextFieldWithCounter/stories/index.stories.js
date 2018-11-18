@@ -9,7 +9,7 @@ storiesOf('Inputs', module).add('TextFieldWithCounter', () => (
     <TextFieldWithCounter
       label={text('Label text', 'What is being sold in your store?')}
       helperText={text('Helper text', 'Some help text')}
-      error={boolean('Error', false)}
+      errorText={text('Error text', '')}
       multiline={boolean('Multiline', true)}
       name="name"
       maxLength={100}

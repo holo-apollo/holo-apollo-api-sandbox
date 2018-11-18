@@ -61,6 +61,7 @@ class ApplicationForm extends React.PureComponent {
                 name="name"
                 label={gettext('What is your name?')}
                 onChange={handleChange}
+                maxLength={61}
               />
             </FieldCont>
             <FieldCont>
@@ -69,6 +70,7 @@ class ApplicationForm extends React.PureComponent {
                 type="email"
                 label={gettext('Email to reach you out')}
                 onChange={handleChange}
+                maxLength={254}
               />
             </FieldCont>
             <FieldCont>
@@ -76,6 +78,7 @@ class ApplicationForm extends React.PureComponent {
                 name="instagram_name"
                 label={gettext('@Name in Instagram')}
                 onChange={handleChange}
+                maxLength={254}
               />
             </FieldCont>
             <FieldCont>

@@ -1,18 +1,19 @@
 import React from 'react';
 import TextFieldMaterial from '@material-ui/core/TextField';
 
-const TextField = props => (
-  <TextFieldMaterial
-    {...props}
-    fullWidth={true}
-    InputLabelProps={{ style: { fontSize: '12px' } }}
-    FormHelperTextProps={{ style: { fontSize: '10px' } }}
-  />
-);
+import FieldWithError from '../FieldWithError';
 
-TextField.defaultProps = {
-  error: false,
-  multiline: false,
-};
+const TextField = ({ errorText, ...rest }) => (
+  <FieldWithError errorText={errorText}>
+    <TextFieldMaterial
+      {...rest}
+      fullWidth={true}
+      error={Boolean(errorText)}
+      inputProps={{ maxLength: rest.maxLength }}
+      InputLabelProps={{ style: { fontSize: '12px' } }}
+      FormHelperTextProps={{ style: { fontSize: '10px' } }}
+    />
+  </FieldWithError>
+);
 
 export default TextField;

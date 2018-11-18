@@ -8,7 +8,7 @@ storiesOf('Inputs', module).add('TextField', () => (
   <div style={{ width: '420px' }}>
     <TextField
       label={text('Label text', 'What is your name?')}
-      error={boolean('Error', false)}
+      errorText={text('Error text', '')}
       multiline={boolean('Multiline', false)}
       name="name"
     />

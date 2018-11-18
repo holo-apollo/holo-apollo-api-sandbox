@@ -43,7 +43,6 @@ class TextFieldWithCounter extends React.PureComponent<Props, State> {
       <TextField
         {...this.props}
         onChange={this.onChange}
-        inputProps={{ maxLength: this.props.maxLength }}
         helperText={helperText}
       />
     );

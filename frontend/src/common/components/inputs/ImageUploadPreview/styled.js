@@ -1,14 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
-export const Cont = styled.div``;
+const getLabelStyles = ({ error }) => css`
+  color: ${error ? palette.red : palette.grey};
+`;
 
 export const LabelTextCont = styled.div`
-  color: ${palette.grey};
   font-size: 12px;
   margin-bottom: 10px;
   text-align: left;
+
+  ${getLabelStyles};
 `;
 
 export const StyledLabel = styled.label`

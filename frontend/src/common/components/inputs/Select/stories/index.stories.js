@@ -14,6 +14,7 @@ storiesOf('Inputs', module).add('Select', () => (
   <div style={{ width: '420px' }}>
     <Select
       label={text('Label text', 'Choose option')}
+      errorText={text('Error text', '')}
       name="name"
       options={options}
     />

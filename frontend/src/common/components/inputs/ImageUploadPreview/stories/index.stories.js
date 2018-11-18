@@ -19,6 +19,7 @@ storiesOf('Inputs', module).add('ImageUploadPreview', () => (
     <ImageUploadPreview
       label={text('Label text', 'Upload photos of your goods in good quality')}
       buttonText={text('Button text', 'Upload photos')}
+      errorText={text('Error text', '')}
       name="images"
       helperText={helperText}
     />

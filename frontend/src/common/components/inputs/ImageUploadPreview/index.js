@@ -4,8 +4,8 @@ import autoBind from 'react-autobind';
 
 import Attach from 'common/components/icons/Attach';
 import Close from 'common/components/icons/Close';
+import FieldWithError from '../FieldWithError';
 import {
-  Cont,
   LabelTextCont,
   StyledLabel,
   StyledInput,
@@ -24,6 +24,7 @@ type Props = {
   label: string,
   buttonText: string,
   helperText: string | React.Node,
+  errorText?: string,
   onChange?: FileChoiceEvent => void,
   onRemove?: File => void,
 };
@@ -86,8 +87,10 @@ class ImageUploadPreview extends React.PureComponent<Props, State> {
 
   render() {
     return (
-      <Cont>
-        <LabelTextCont>{this.props.label}</LabelTextCont>
+      <FieldWithError errorText={this.props.errorText}>
+        <LabelTextCont error={Boolean(this.props.errorText)}>
+          {this.props.label}
+        </LabelTextCont>
         <StyledLabel>
           <StyledInput
             type="file"
@@ -104,7 +107,7 @@ class ImageUploadPreview extends React.PureComponent<Props, State> {
         <ImagesCont>
           {this.state.images.map(this.renderImagePreview)}
         </ImagesCont>
-      </Cont>
+      </FieldWithError>
     );
   }
 }
