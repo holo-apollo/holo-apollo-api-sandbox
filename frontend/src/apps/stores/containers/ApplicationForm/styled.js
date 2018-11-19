@@ -21,7 +21,7 @@ export const SpinnerCont = styled.div`
 
 export const LoadingTextCont = styled.div`
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 `;
 
 export const ErrorCont = styled.div`

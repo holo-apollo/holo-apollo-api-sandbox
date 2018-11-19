@@ -11,7 +11,13 @@ import Button from 'common/components/buttons/Button';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 import { validateEmail, validateLength } from 'helpers/validators';
 import { postWithFiles } from 'helpers/rest';
-import { StyledForm, FieldCont, SpinnerCont, ErrorCont, LoadingTextCont } from './styled';
+import {
+  StyledForm,
+  FieldCont,
+  SpinnerCont,
+  ErrorCont,
+  LoadingTextCont,
+} from './styled';
 
 class ApplicationForm extends React.PureComponent {
   constructor(props) {
@@ -164,12 +170,10 @@ class ApplicationForm extends React.PureComponent {
       <Fragment>
         {isSubmitting && (
           <SpinnerCont>
-            <LoadingTextCont>
-              {gettext(
-                'Please wait. Uploading your photos may take some time.'
-              )}
-            </LoadingTextCont>
             <DoubleBounceSpinner />
+            <LoadingTextCont>
+              {gettext('We are loading your photos. Please wait a moment.')}
+            </LoadingTextCont>
           </SpinnerCont>
         )}
         <StyledForm onSubmit={handleSubmit} isSubmitting={isSubmitting}>

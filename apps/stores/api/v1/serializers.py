@@ -44,7 +44,10 @@ class StoreApplicationSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         images = self.context.get('view').request.FILES.getlist('images')
         application = super().create(validated_data)
-        application_images = [StoreApplicationImage(application=application, image=image) for image in images]
+        application_images = [
+            StoreApplicationImage(application=application, image=image)
+            for image in images
+        ]
         StoreApplicationImage.objects.bulk_create(application_images)
         return application
 
