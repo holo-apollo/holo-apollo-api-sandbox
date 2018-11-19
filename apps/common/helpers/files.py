@@ -1,5 +1,4 @@
 import logging
-
 from tempfile import NamedTemporaryFile
 
 logger = logging.getLogger(__name__)
