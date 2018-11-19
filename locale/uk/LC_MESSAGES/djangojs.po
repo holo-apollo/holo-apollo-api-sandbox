@@ -28,7 +28,7 @@ msgid ""
 "@holo.apollo.art"
 msgstr ""
 "Невідома помилка. Будь ласка напишіть нам на пошту ira@holo-apollo.art або в "
-"Instagram@holo.apollo.art"
+"Instagram @holo.apollo.art"
 
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:64
