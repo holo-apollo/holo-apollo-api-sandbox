@@ -19,6 +19,7 @@ class StoreApplicationImageInline(admin.TabularInline):
     formfield_overrides = {
         ImageField: {'widget': ImageWidget}
     }
+    extra = 0
 
 
 @admin.register(StoreApplication)

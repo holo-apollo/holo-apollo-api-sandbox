@@ -1,12 +1,13 @@
-from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
 
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
+from common.helpers.files import save_uploaded_file
 from stores.models.store import Store
 from stores.models.store_application import StoreApplication
 from stores.models.store_application_image import StoreApplicationImage
+from stores.tasks import save_application_image
 
 
 class StoreSerializer(serializers.ModelSerializer):
@@ -40,12 +41,12 @@ class StoreApplicationSerializer(serializers.ModelSerializer):
         fields = ('name', 'email', 'instagram_name', 'category', 'selling_goods',
                   'goods_description', 'philosophy', 'images', 'data_usage_agreement', 'pub_date')
 
-    @transaction.atomic
     def create(self, validated_data):
         images = self.context.get('view').request.FILES.getlist('images')
         application = super().create(validated_data)
         for image in images:
-            StoreApplicationImage.objects.create(application=application, image=image)
+            path = save_uploaded_file(image)
+            save_application_image.delay(application.id, path, image.name)
         return application
 
     def validate_data_usage_agreement(self, value):
