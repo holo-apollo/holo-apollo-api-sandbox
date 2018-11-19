@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 00:36+0200\n"
+"POT-Creation-Date: 2018-11-19 23:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr "Заявка с этим адресом почты уже существ
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка с этим Instagram-именем уже существует"
 
-#: apps/stores/api/v1/serializers.py:54 apps/stores/forms.py:105
+#: apps/stores/api/v1/serializers.py:57 apps/stores/forms.py:105
 msgid "You must allow your data usage to create application"
 msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
 
@@ -76,8 +76,6 @@ msgid "What's being sold in your store?"
 msgstr "Что продается в вашем магазине?"
 
 #: apps/stores/forms.py:41
-#, fuzzy
-#| msgid "What's being sold in your store?"
 msgid "What is being sold in your store?"
 msgstr "Что продается в вашем магазине?"
 
@@ -226,8 +224,6 @@ msgid "Store application image"
 msgstr "Изображение заявки магазина"
 
 #: apps/stores/models/store_application_image.py:25
-#, fuzzy
-#| msgid "Create application"
 msgid "Store application images"
 msgstr "Изображение заявок магазинов"
 

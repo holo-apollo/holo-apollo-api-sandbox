@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 00:36+0200\n"
+"POT-Creation-Date: 2018-11-19 23:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgstr "Заявка з цією адресою пошти вже існує"
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка з цим іменем Instagram вже існує"
 
-#: apps/stores/api/v1/serializers.py:54 apps/stores/forms.py:105
+#: apps/stores/api/v1/serializers.py:57 apps/stores/forms.py:105
 msgid "You must allow your data usage to create application"
 msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
 
