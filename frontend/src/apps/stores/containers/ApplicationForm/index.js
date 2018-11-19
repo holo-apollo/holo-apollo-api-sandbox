@@ -11,7 +11,7 @@ import Button from 'common/components/buttons/Button';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 import { validateEmail, validateLength } from 'helpers/validators';
 import { postWithFiles } from 'helpers/rest';
-import { StyledForm, FieldCont, SpinnerCont, ErrorCont } from './styled';
+import { StyledForm, FieldCont, SpinnerCont, ErrorCont, LoadingTextCont } from './styled';
 
 class ApplicationForm extends React.PureComponent {
   constructor(props) {
@@ -97,13 +97,13 @@ class ApplicationForm extends React.PureComponent {
     );
     if (imagesCount < 5) {
       imagesErrors.push(gettext('Please choose at least 5 images'));
-    } else if (imagesCount > 30) {
-      imagesErrors.push(gettext('Please choose at most 30 images'));
+    } else if (imagesCount > 12) {
+      imagesErrors.push(gettext('Please choose at most 12 images'));
     }
-    if (imagesSize > 150 * 1024 * 1024) {
+    if (imagesSize > 60 * 1024 * 1024) {
       imagesErrors.push(
         gettext(
-          'Total size of images is too big. Maximum size is 150 MB, you uploaded '
+          'Total size of images is too big. Maximum size is 60 MB, you uploaded '
         ) + `${Math.round(imagesSize / 1024 / 1024)}`
       );
     }
@@ -141,7 +141,7 @@ class ApplicationForm extends React.PureComponent {
     const uploadHelpText = (
       <Fragment>
         <p>
-          {gettext('At least 5 and at most 30 photos, total size up to 150MB.')}
+          {gettext('At least 5 and at most 12 photos, total size up to 60 MB.')}
         </p>
         <p>
           {gettext(
@@ -164,6 +164,11 @@ class ApplicationForm extends React.PureComponent {
       <Fragment>
         {isSubmitting && (
           <SpinnerCont>
+            <LoadingTextCont>
+              {gettext(
+                'Please wait. Uploading your photos may take some time.'
+              )}
+            </LoadingTextCont>
             <DoubleBounceSpinner />
           </SpinnerCont>
         )}

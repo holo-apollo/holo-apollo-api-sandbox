@@ -15,7 +15,13 @@ export const FieldCont = styled.div`
 
 export const SpinnerCont = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const LoadingTextCont = styled.div`
+  font-size: 14px;
+  margin-bottom: 20px;
 `;
 
 export const ErrorCont = styled.div`

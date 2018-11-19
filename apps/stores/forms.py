@@ -6,9 +6,9 @@ from .models.store_application import StoreApplication
 from .models.store_application_image import StoreApplicationImage
 
 MIN_FILES = 5
-MAX_FILES = 30
-MAX_SIZE_MB = 150
-MAX_SIZE = MAX_SIZE_MB * 1024 * 1024  # 150Mb
+MAX_FILES = 12
+MAX_SIZE_MB = 60
+MAX_SIZE = MAX_SIZE_MB * 1024 * 1024
 
 
 class StoreApplicationForm(forms.ModelForm):
