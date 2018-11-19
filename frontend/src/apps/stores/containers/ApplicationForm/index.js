@@ -11,7 +11,7 @@ import Button from 'common/components/buttons/Button';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 import { validateEmail, validateLength } from 'helpers/validators';
 import { postWithFiles } from 'helpers/rest';
-import { StyledForm, FieldCont, SpinnerCont } from './styled';
+import { StyledForm, FieldCont, SpinnerCont, ErrorCont } from './styled';
 
 class ApplicationForm extends React.PureComponent {
   constructor(props) {
@@ -37,7 +37,8 @@ class ApplicationForm extends React.PureComponent {
           setFieldError(field, resp.data[field][0]);
         });
       } else {
-        alert(
+        setFieldError(
+          'nonFieldErrors',
           gettext(
             'Unknown error. Please contact us via email ira@holo-apollo.art or Instagram @holo.apollo.art'
           )
@@ -167,6 +168,9 @@ class ApplicationForm extends React.PureComponent {
           </SpinnerCont>
         )}
         <StyledForm onSubmit={handleSubmit} isSubmitting={isSubmitting}>
+          {errors.nonFieldErrors && (
+            <ErrorCont>{errors.nonFieldErrors}</ErrorCont>
+          )}
           <FieldCont>
             <TextField
               name="name"
