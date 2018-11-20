@@ -1,6 +1,6 @@
 import factory
 
-from stores.models import Store
+from stores.models.store import Store
 from users.tests.factories import HoloUserFactory
 
 

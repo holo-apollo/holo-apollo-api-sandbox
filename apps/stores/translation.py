@@ -1,6 +1,6 @@
 from modeltranslation.translator import TranslationOptions, register
 
-from .models import Store
+from .models.store import Store
 
 
 @register(Store)

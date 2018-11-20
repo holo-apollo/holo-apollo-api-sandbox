@@ -91,7 +91,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
 
     @property
     def store(self):
-        from stores.models import Store
+        from stores.models.store import Store
         try:
             return self._store
         except Store.DoesNotExist:

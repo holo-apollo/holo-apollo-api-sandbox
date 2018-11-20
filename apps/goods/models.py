@@ -5,7 +5,7 @@ from djmoney.models.fields import MoneyField
 from djmoney.models.validators import MinMoneyValidator
 from model_utils.models import TimeStampedModel
 
-from stores.models import Store
+from stores.models.store import Store
 
 
 class GoodsCategory(TimeStampedModel):
