@@ -3,52 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/underscore.string/test/speed.js:85
-#: node_modules/underscore.string/test/strings.js:35
-#: node_modules/underscore.string/test/strings.js:60
-#: node_modules/underscore.string/test/strings.js:88
-#: node_modules/underscore.string/test/strings.js:128
-#: node_modules/underscore.string/test/strings.js:161
-#: node_modules/underscore.string/test/strings.js:173
-#: node_modules/underscore.string/test/strings.js:207
-#: node_modules/underscore.string/test/strings.js:217
-#: node_modules/underscore.string/test/strings.js:239
-#: node_modules/underscore.string/test/strings.js:254
-#: node_modules/underscore.string/test/strings.js:265
-#: node_modules/underscore.string/test/strings.js:282
-#: node_modules/underscore.string/test/strings.js:293
-#: node_modules/underscore.string/test/strings.js:321
-#: node_modules/underscore.string/test/strings.js:330
-#: node_modules/underscore.string/test/strings.js:352
-#: node_modules/underscore.string/test/strings.js:358
-#: node_modules/underscore.string/test/strings.js:364
-#: node_modules/underscore.string/test/strings.js:379
-#: node_modules/underscore.string/test/strings.js:398
-#: node_modules/underscore.string/test/strings.js:412
-#: node_modules/underscore.string/test/strings.js:421
-#: node_modules/underscore.string/test/strings.js:429
-#: node_modules/underscore.string/test/strings.js:438
-#: node_modules/underscore.string/test/strings.js:453
-#: node_modules/underscore.string/test/strings.js:463
-#: node_modules/underscore.string/test/strings.js:474
-#: node_modules/underscore.string/test/strings.js:486
-#: node_modules/underscore.string/test/strings.js:508
-#: node_modules/underscore.string/test/strings.js:539
-#: node_modules/underscore.string/test/strings.js:551
-#: node_modules/underscore.string/test/strings.js:563
-#: node_modules/underscore.string/test/strings.js:575
-#: node_modules/underscore.string/test/strings.js:586
-#: node_modules/underscore.string/test/strings.js:610
+#: node_modules/prettier/parser-html.js:1
+#: node_modules/styled-components/dist/styled-components.min.js:1
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-25 13:54+0000\n"
+"POT-Creation-Date: 2018-11-20 19:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,1051 +21,617 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: frontend/build/js/landing-bundle.js:1 frontend/build/js/signup-bundle.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:49
+msgid ""
+"Unknown error. Please contact us via email ira@holo-apollo.art or Instagram "
+"@holo.apollo.art"
+msgstr ""
+"Невідома помилка. Будь ласка напишіть нам на пошту ira@holo-apollo.art або в "
+"Instagram @holo.apollo.art"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:71
+msgid "This field is required"
+msgstr "Це поле обов'язкове для заповнення"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:75
+msgid "Please enter a valid email address"
+msgstr "Будь ласка введіть правильний email"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:79
+msgid "You must allow your data usage to create application"
+msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+msgid "Please write at least 500 symbols, but not more than 1000"
+msgstr "Будь ласка, напишіть від 500 до 1000 символів"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:96
+msgid "Following files are not images: "
+msgstr "Наступні файли не є зображеннями: "
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:105
+msgid "Please choose at least 5 images"
+msgstr "Будь ласка виберіть хоча б 5 фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+msgid "Please choose at most 30 images"
+msgstr "Будь ласка виберіть не більше 30 фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+msgid "Total size of images is too big. Maximum size is 150 MB, you uploaded "
+msgstr ""
+"Загальний розмір файлів надто великий. Максимальний розмір 150 МБ, ви "
+"завантажили "
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+msgid "At least 5 and at most 30 photos, total size up to 150MB."
+msgstr ""
+"Не менше 5 і не більше 30 фотографій, загальним розміром файлів до 150 МБ."
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:154
+msgid ""
+"Photos will be used in a collage, therefore some of them should have "
+"minimal, neutral background."
+msgstr ""
+"Фото будуть використані в колажі, тому деякі з них повинні бути з "
+"мінімальним, нейтральним фоном."
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:161
+msgid "Clothes"
+msgstr "Одяг"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:162
+msgid "Jewelry"
+msgstr "Прикраси"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:163
+msgid "Accessories"
+msgstr "Аксесуари"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:164
+msgid "Home decor"
+msgstr "Домашній декор"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:165
+msgid "Shoes"
+msgstr "Взуття"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:166
+msgid "Other"
+msgstr "Інше"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:186
+msgid "What is your name?"
+msgstr "Як вас звати?"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:196
+msgid "Email to reach you out"
+msgstr "Email для зв'язку"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:205
+msgid "@Name in Instagram"
+msgstr "@Ім'я в Instagram"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:214
+msgid "Category"
+msgstr "Категорія"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:223
+msgid "What's being sold in your store?"
+msgstr "Що продається у вашому магазині?"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:233
+msgid "Describe your goods"
+msgstr "Опишіть ваші вироби"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:234
+msgid "materials, technology, prices..."
+msgstr "матеріали, технологія, ціни..."
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:244
+msgid "Philosophy behind your store"
+msgstr "Філософський сенс вашого магазину"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:254
+msgid "Upload photos of your goods in good quality"
+msgstr "Додайте якісні фото ваших виробів"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:255
+msgid "Upload photos"
+msgstr "Завантажити фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:265
+msgid "I allow usage of data I provided"
+msgstr "Я погоджуюсь на використання залишених мною даних"
+
+#: frontend/build/webpack_bundles/application_form-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:273
+msgid "Create application"
+msgstr "Подати заявку"
+
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:107
+msgid "Please choose at most 12 images"
+msgstr "Будь ласка виберіть не більше 12 фото"
+
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:112
+msgid "Total size of images is too big. Maximum size is 60 MB, you uploaded "
+msgstr ""
+"Загальний розмір файлів надто великий. Максимальний розмір 60 МБ, ви "
+"завантажили "
+
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:150
+msgid "At least 5 and at most 12 photos, total size up to 60 MB."
+msgstr ""
+"Не менше 5 і не більше 12 фотографій, загальним розміром файлів до 60 МБ."
+
+#: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:175
+msgid "We are loading your photos. Please wait a moment."
+msgstr "Ми завантажуємо ваші фото. Будь ласка, зачекайте хвилинку."
+
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
 #: frontend/src/apps/landing/containers/subscription.js:34
 #: frontend/src/apps/users/containers/password_reset.js:34
-#: frontend/src/apps/users/containers/signup.js:66
+#: frontend/src/apps/users/containers/signup.js:73
 msgid "Oops... There's a mistake. Please type a valid email."
 msgstr "Ой... Виникла помилка. Будь ласка введіть правильний імейл."
 
-#: frontend/build/js/landing-bundle.js:1 frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:32
-#: frontend/src/apps/users/containers/password_reset.js:32
-#: frontend/src/apps/users/containers/signup.js:64
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:31
+#: frontend/src/apps/users/containers/password_reset.js:31
+#: frontend/src/apps/users/containers/signup.js:70
 msgid "Please type your email."
 msgstr "Будь ласка введіть Ваш імейл."
 
-#: frontend/build/js/landing-bundle.js:1 frontend/build/js/login-bundle.js:1
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:53
-#: frontend/src/apps/landing/containers/subscription.js:73
-#: frontend/src/apps/users/containers/login.js:50
-#: frontend/src/apps/users/containers/password_reset.js:50
-#: frontend/src/apps/users/containers/password_reset_confirm.js:64
-#: frontend/src/apps/users/containers/signup.js:144
-#: frontend/src/apps/users/containers/signup.js:160
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:55
+#: frontend/src/apps/landing/containers/subscription.js:78
+#: frontend/src/apps/users/containers/login.js:57
+#: frontend/src/apps/users/containers/password_reset.js:53
+#: frontend/src/apps/users/containers/password_reset_confirm.js:67
+#: frontend/src/apps/users/containers/signup.js:159
+#: frontend/src/apps/users/containers/signup.js:178
 msgid "Oops! Something went wrong. Please try again in a moment."
 msgstr "Ой! Щось не так. Будь ласка, спробуйте ще за мить."
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:88
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:97
 msgid "Get notified when it's ready"
 msgstr "Отримайте сповіщення коли він буде готовий"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:107
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:114
 msgid "Subscribe"
 msgstr "Підписатися"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:128
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:138
 msgid "Are you sure that you want to unsubscribe?"
 msgstr "Ви впевнені, що хочете відписатися?"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:130
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:140
 msgid "Yes, I'm sure"
 msgstr "Так, впевнений"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:140
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:151
 msgid "You were subscribed successfully!"
 msgstr "Ви підписалися успішно!"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:140
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:153
 msgid "See ya!"
 msgstr "Тепер ми на зв'язку."
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:142
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:158
 msgid "Looks like you are already subscribed."
 msgstr "Здається Ви вже підписані."
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:143
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:159
 msgid "Thank you for being with us!"
 msgstr "Дякуємо, що Ви з нами!"
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:145
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:164
 msgid "You were unsubscribed."
 msgstr "Ви відписалися."
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:146
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:165
 msgid "Hope to see you again."
 msgstr "Сподіваємося побачитися знову."
 
-#: frontend/build/js/landing-bundle.js:1
-#: frontend/src/apps/landing/containers/subscription.js:150
+#: frontend/build/webpack_bundles/landing-bundle.191b96dcdf2536e1f99b.js:1
+#: frontend/build/webpack_bundles/landing-bundle.4f336f8dd8d399ad0ce5.js:1
+#: frontend/build/webpack_bundles/landing-bundle.b4a7d2f297bc45eeab64.js:1
+#: frontend/build/webpack_bundles/landing-bundle.fa7acb22dbb7fdec0494.js:1
+#: frontend/src/apps/landing/containers/subscription.js:172
 msgid "We promise to never spam you or share your personal information!"
 msgstr "Обіцяємо ніколи не спамити та не поширювати Вашу особисту інформацію!"
 
-#: frontend/build/js/login-bundle.js:1
-#: frontend/src/apps/users/containers/login.js:34
-msgid "Oops... There's a mistake. Please type a valid email or phone."
-msgstr "Ой... Виникла помилка. Будь ласка введіть правильний імейл або телефон."
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:85
+msgid "Please write at least 100 symbols, but not more than 1000"
+msgstr "Будь ласка, напишіть від 100 до 1000 символів"
 
-#: frontend/build/js/login-bundle.js:1
 #: frontend/src/apps/users/containers/login.js:32
 msgid "Please type your email or phone."
 msgstr "Будь ласка введіть Ваш імейл або телефон."
 
-#: frontend/build/js/login-bundle.js:1
-#: frontend/src/apps/users/containers/login.js:37
+#: frontend/src/apps/users/containers/login.js:38
+msgid "Oops... There's a mistake. Please type a valid email or phone."
+msgstr ""
+"Ой... Виникла помилка. Будь ласка введіть правильний імейл або телефон."
+
+#: frontend/src/apps/users/containers/login.js:42
 msgid "Please type your password."
 msgstr "Будь ласка введіть Ваш пароль."
 
-#: frontend/build/js/login-bundle.js:1
-#: frontend/src/apps/users/containers/login.js:79
+#: frontend/src/apps/users/containers/login.js:85
 msgid "Email or phone"
 msgstr "Ваш Email або телефон"
 
-#: frontend/build/js/login-bundle.js:1
-#: frontend/src/apps/users/containers/login.js:84
+#: frontend/src/apps/users/containers/login.js:91
 msgid "Password"
 msgstr "Пароль"
 
-#: frontend/build/js/login-bundle.js:1
-#: frontend/src/apps/users/containers/login.js:92
-#: frontend/src/apps/users/containers/login.js:110
-#: frontend/src/apps/users/containers/signup.js:288
-#: frontend/src/common/components/buttons.js:43
-msgid "Log in"
-msgstr "Увійти"
-
-#: frontend/build/js/signup-bundle.js:1
-msgid "Oops... Passwords didn't match"
-msgstr "Ой... Паролі не співпадають"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/password_reset_confirm.js:44
-#: frontend/src/apps/users/containers/signup.js:70
-msgid "Please type your password twice."
-msgstr "Будь ласка введіть Ваш пароль двічі."
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:98
-msgid "Please type your first name 2-30 characters long."
-msgstr "Буль ласка введіть Ваше ім'я довжиною 2-30 символів."
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:101
-msgid "Max length of last name is 30 characters."
-msgstr "Максимальна довжина прізвища - 30 символів."
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:104
-msgid "Please type your name on the site 2-30 characters long."
-msgstr "Будь ласка введіть ваше ім'я на сайті довжиною 2-30 символів."
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:107
-msgid "Please type a valid phone number."
-msgstr "Будь ласка введіть правильний номер телефону."
-
-#: frontend/build/js/signup-bundle.js:1
-msgid "That email already exists"
-msgstr "Цей імейл уже існує"
-
-#: frontend/build/js/signup-bundle.js:1
-msgid "'Oops! Something went wrong. Please try again in a moment."
-msgstr "Ой! Щось не так. Будь ласка, спробуйте ще за мить."
-
-#: frontend/build/js/signup-bundle.js:1
-msgid "Email"
-msgstr "Ваш Email"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:194
-msgid "Make up password"
-msgstr "Придумайте пароль"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/password_reset_confirm.js:109
-#: frontend/src/apps/users/containers/signup.js:199
-msgid "Retype password"
-msgstr "Повторіть пароль"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:214
-msgid "Create account"
-msgstr "Створити Аккаунт"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:248
-msgid "Your first name *"
-msgstr "Ваше ім'я *"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:249
-msgid "Your last name"
-msgstr "Ваше прізвище"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:250
-msgid "Name on the site *"
-msgstr "Ім'я на сайті *"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/signup.js:251
-msgid "Phone *"
-msgstr "Телефон *"
-
-#: frontend/build/js/signup-bundle.js:1
-#: frontend/src/apps/users/containers/password_reset_confirm.js:117
-#: frontend/src/apps/users/containers/signup.js:268
-msgid "Save"
-msgstr "Зберегти"
-
-#: frontend/src/apps/users/containers/login.js:88
+#: frontend/src/apps/users/containers/login.js:96
 msgid "Oops! I forgot my password"
 msgstr "Ой! Здається я забув пароль"
 
-#: frontend/src/apps/users/containers/login.js:94
-#: frontend/src/apps/users/containers/signup.js:216
+#: frontend/src/apps/users/containers/login.js:99
+#: frontend/src/apps/users/containers/login.js:116
+#: frontend/src/apps/users/containers/signup.js:331
+msgid "Log in"
+msgstr "Увійти"
+
+#: frontend/src/apps/users/containers/login.js:100
+#: frontend/src/apps/users/containers/signup.js:247
 msgid "or"
 msgstr "або"
 
-#: frontend/src/apps/users/containers/login.js:112
+#: frontend/src/apps/users/containers/login.js:118
 msgid "Don't have an account? "
 msgstr "Ще не з нами? "
 
-#: frontend/src/apps/users/containers/login.js:113
+#: frontend/src/apps/users/containers/login.js:119
 msgid "Sign up"
 msgstr "Зареєструватися"
 
-#: frontend/src/apps/users/containers/password_reset.js:80
-#: frontend/src/apps/users/containers/signup.js:188
+#: frontend/src/apps/users/containers/password_reset.js:84
+#: frontend/src/apps/users/containers/signup.js:217
 msgid "Your email"
 msgstr "Ваш Email"
 
-#: frontend/src/apps/users/containers/password_reset.js:83
+#: frontend/src/apps/users/containers/password_reset.js:86
 msgid "Send me info"
 msgstr "Надіслати"
 
-#: frontend/src/apps/users/containers/password_reset.js:97
+#: frontend/src/apps/users/containers/password_reset.js:100
 msgid "Password reset"
 msgstr "Скидання пароля"
 
-#: frontend/src/apps/users/containers/password_reset.js:101
+#: frontend/src/apps/users/containers/password_reset.js:105
 msgid ""
 "We've emailed you instructions for setting your password, if an account "
 "exists with the email you entered. You should receive them shortly."
-msgstr "Ми надіслали вам інструкції для відновлення пароля, якщо аккаунт з таким імейлом існує. Ви маєте їх скоро отримати."
+msgstr ""
+"Ми надіслали вам інструкції для відновлення пароля, якщо аккаунт з таким "
+"імейлом існує. Ви маєте їх скоро отримати."
 
-#: frontend/src/apps/users/containers/password_reset.js:106
+#: frontend/src/apps/users/containers/password_reset.js:112
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
-msgstr "Якщо ви не отримали листа, переконайтеся що Ви ввели адресу, з якою зареєструвалися, та перевірте папку спам."
+msgstr ""
+"Якщо ви не отримали листа, переконайтеся що Ви ввели адресу, з якою "
+"зареєструвалися, та перевірте папку спам."
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:46
-#: frontend/src/apps/users/containers/signup.js:72
+#: frontend/src/apps/users/containers/password_reset_confirm.js:45
+#: frontend/src/apps/users/containers/signup.js:78
+msgid "Please type your password twice."
+msgstr "Будь ласка введіть Ваш пароль двічі."
+
+#: frontend/src/apps/users/containers/password_reset_confirm.js:47
+#: frontend/src/apps/users/containers/signup.js:80
 msgid "Oops... Passwords didn't match."
 msgstr "Ой... Паролі не співпадають."
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:91
+#: frontend/src/apps/users/containers/password_reset_confirm.js:105
 msgid ""
 "* The password reset link was invalid. Please request a new password reset."
-msgstr "* Посилання для скидання пароля не працює. Будь ласка створіть новий запит."
+msgstr ""
+"* Посилання для скидання пароля не працює. Будь ласка створіть новий запит."
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:99
+#: frontend/src/apps/users/containers/password_reset_confirm.js:113
 msgid "New password"
 msgstr "Новий пароль"
 
+#: frontend/src/apps/users/containers/password_reset_confirm.js:123
+#: frontend/src/apps/users/containers/signup.js:228
+msgid "Retype password"
+msgstr "Повторіть пароль"
+
 #: frontend/src/apps/users/containers/password_reset_confirm.js:131
+#: frontend/src/apps/users/containers/signup.js:309
+msgid "Save"
+msgstr "Зберегти"
+
+#: frontend/src/apps/users/containers/password_reset_confirm.js:145
 msgid "Change password"
 msgstr "Зміна пароля"
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:134
+#: frontend/src/apps/users/containers/password_reset_confirm.js:148
 msgid "Your password has been set. You may go ahead and "
 msgstr "Ваш пароль змінено. Тепер ви можете "
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:135
+#: frontend/src/apps/users/containers/password_reset_confirm.js:149
 msgid "log in"
 msgstr "увійти"
 
-#: frontend/src/apps/users/containers/password_reset_confirm.js:135
+#: frontend/src/apps/users/containers/password_reset_confirm.js:150
 msgid " now"
 msgstr " на сайт"
 
-#: frontend/src/apps/users/containers/signup.js:76
-#: frontend/src/apps/users/containers/signup.js:223
+#: frontend/src/apps/users/containers/signup.js:84
+#: frontend/src/apps/users/containers/signup.js:257
 msgid "You must accept Terms of Use to sign up."
 msgstr "Ви маєте прийняти Правила Користування щоб зареєструватися."
 
-#: frontend/src/apps/users/containers/signup.js:126
+#: frontend/src/apps/users/containers/signup.js:109
+msgid "Please type your first name 2-30 characters long."
+msgstr "Буль ласка введіть Ваше ім'я довжиною 2-30 символів."
+
+#: frontend/src/apps/users/containers/signup.js:113
+msgid "Max length of last name is 30 characters."
+msgstr "Максимальна довжина прізвища - 30 символів."
+
+#: frontend/src/apps/users/containers/signup.js:117
+msgid "Please type your name on the site 2-30 characters long."
+msgstr "Будь ласка введіть ваше ім'я на сайті довжиною 2-30 символів."
+
+#: frontend/src/apps/users/containers/signup.js:121
+msgid "Please type a valid phone number."
+msgstr "Будь ласка введіть правильний номер телефону."
+
+#: frontend/src/apps/users/containers/signup.js:140
 msgid "That email already exists."
 msgstr "Цей імейл уже існує."
 
-#: frontend/src/apps/users/containers/signup.js:205
+#: frontend/src/apps/users/containers/signup.js:223
+msgid "Make up password"
+msgstr "Придумайте пароль"
+
+#: frontend/src/apps/users/containers/signup.js:234
 msgid "I agree with "
 msgstr "Я згоден (згодна) з "
 
-#: frontend/src/apps/users/containers/signup.js:207
+#: frontend/src/apps/users/containers/signup.js:236
 msgid "Terms of Use"
 msgstr "Правилами Користування"
 
-#: frontend/src/apps/users/containers/signup.js:283
-#: frontend/src/common/components/buttons.js:43
+#: frontend/src/apps/users/containers/signup.js:246
+msgid "Create account"
+msgstr "Створити Аккаунт"
+
+#: frontend/src/apps/users/containers/signup.js:288
+msgid "Your first name *"
+msgstr "Ваше ім'я *"
+
+#: frontend/src/apps/users/containers/signup.js:289
+msgid "Your last name"
+msgstr "Ваше прізвище"
+
+#: frontend/src/apps/users/containers/signup.js:290
+msgid "Name on the site *"
+msgstr "Ім'я на сайті *"
+
+#: frontend/src/apps/users/containers/signup.js:291
+msgid "Phone *"
+msgstr "Телефон *"
+
+#: frontend/src/apps/users/containers/signup.js:325
 msgctxt "noun"
 msgid "Sign up"
 msgstr "Реєстрація"
 
-#: frontend/src/apps/users/containers/signup.js:283
+#: frontend/src/apps/users/containers/signup.js:326
 msgid "Let's start"
 msgstr "Познайомимось?"
 
-#: frontend/src/apps/users/containers/signup.js:287
+#: frontend/src/apps/users/containers/signup.js:330
 msgid "Already a member? "
 msgstr "Вже є аккаунт? "
 
-#: frontend/src/common/components/buttons.js:44
-msgid " with Facebook"
-msgstr " через Facebook"
-
-#: node_modules/babel-polyfill/browser.js:1
-#: node_modules/babel-polyfill/dist/polyfill.min.js:1
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
 msgid "delete"
 msgstr ""
 
-#: node_modules/babel-polyfill/browser.js:1
-#: node_modules/babel-polyfill/dist/polyfill.min.js:1
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
 msgid "has"
 msgstr ""
 
-#: node_modules/babel-polyfill/browser.js:1
-#: node_modules/babel-polyfill/dist/polyfill.min.js:1
+#: node_modules/@babel/polyfill/browser.js:1
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:1
 msgid "get"
 msgstr ""
 
-#: node_modules/babel-polyfill/browser.js:2
-#: node_modules/babel-polyfill/dist/polyfill.min.js:2
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
 msgid "Wrong offset!"
 msgstr ""
 
-#: node_modules/babel-polyfill/browser.js:2
-#: node_modules/babel-polyfill/dist/polyfill.min.js:2
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
 msgid "Wrong length!"
 msgstr ""
 
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/underscore.string/test/strings.js:110
-#: node_modules/underscore.string/test/strings.js:359
-msgid " "
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Promise-chain cycle"
 msgstr ""
 
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:25
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "."
+#: node_modules/@babel/polyfill/browser.js:2
+#: node_modules/@babel/polyfill/dist/polyfill.min.js:2
+msgid "Promise can't be resolved itself"
 msgstr ""
 
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "*"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "import"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "{}"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid ", "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "this"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "super"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "null"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid ",\n"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid " = "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/underscore.string/test/strings.js:360
-msgid "\n"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "debugger;"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid ":"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "empty"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "any"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "mixed"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "boolean"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "interface "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid " & "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "number"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "string"
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "typeof "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid " | "
-msgstr ""
-
-#: node_modules/fsevents/node_modules/ajv/dist/regenerator.min.js:26
-#: node_modules/har-validator/node_modules/ajv/dist/regenerator.min.js:26
-msgid "void"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:22
-msgid "  foobar  "
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:46
-#: node_modules/underscore.string/test/strings.js:189
-#: node_modules/underscore.string/test/strings.js:190
-#: node_modules/underscore.string/test/strings.js:191
-msgid "whitespace"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:50
-msgid "Hello worls"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:54
-#: node_modules/underscore.string/test/strings.js:215
-#: node_modules/underscore.string/test/strings.js:216
-msgid "Hello "
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:58
-#: node_modules/underscore.string/test/strings.js:224
-msgid "https://edtsech@bitbucket.org/edtsech/underscore.strings"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:73
-#: node_modules/underscore.string/test/strings.js:237
-msgid "the titleize string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:77
-#: node_modules/underscore.string/test/speed.js:81
-#: node_modules/underscore.string/test/strings.js:203
-#: node_modules/underscore.string/test/strings.js:204
-#: node_modules/underscore.string/test/strings.js:205
-#: node_modules/underscore.string/test/strings.js:327
-#: node_modules/underscore.string/test/strings.js:328
-#: node_modules/underscore.string/test/strings.js:342
-msgid "Hello world"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:89
-msgid "<div>Blah blah blah</div>"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:93
-msgid "&lt;div&gt;Blah blah blah&lt;/div&gt;"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:97
-#: node_modules/underscore.string/test/strings.js:428
-#: node_modules/underscore.string/test/strings.js:436
-msgid "Hello World"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:101
-#: node_modules/underscore.string/test/speed.js:105
-#: node_modules/underscore.string/test/speed.js:109
-#: node_modules/underscore.string/test/speed.js:113
-#: node_modules/underscore.string/test/speed.js:117
-#: node_modules/underscore.string/test/strings.js:450
-#: node_modules/underscore.string/test/strings.js:451
-#: node_modules/underscore.string/test/strings.js:452
-#: node_modules/underscore.string/test/strings.js:472
-#: node_modules/underscore.string/test/strings.js:473
-#: node_modules/underscore.string/test/strings.js:483
-#: node_modules/underscore.string/test/strings.js:484
-#: node_modules/underscore.string/test/strings.js:485
-#: node_modules/underscore.string/test/strings_standalone.js:6
-msgid "foo"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:121
-msgid "10.232323"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:125
-#: node_modules/underscore.string/test/speed.js:129
-#: node_modules/underscore.string/test/speed.js:133
-#: node_modules/underscore.string/test/speed.js:137
-msgid "aaa_bbb_ccc"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:141
-msgid "separator"
-msgstr ""
-
-#: node_modules/underscore.string/test/speed.js:145
-#: node_modules/underscore.string/test/strings.js:607
-msgid "Un éléphant à l'orée du bois"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:16
-#: node_modules/underscore.string/test/strings.js:56
-#: node_modules/underscore.string/test/strings.js:75
-msgid " foo"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:17
-#: node_modules/underscore.string/test/strings.js:58
-#: node_modules/underscore.string/test/strings.js:76
-msgid "foo "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:18
-#: node_modules/underscore.string/test/strings.js:59
-#: node_modules/underscore.string/test/strings.js:79
-msgid " foo "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:19
-#: node_modules/underscore.string/test/strings.js:20
-msgid "    foo     "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:21
-msgid "\t    foo \t  "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:23
-#: node_modules/underscore.string/test/strings.js:64
-#: node_modules/underscore.string/test/strings.js:81
-msgid "ffoo"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:24
-#: node_modules/underscore.string/test/strings.js:65
-#: node_modules/underscore.string/test/strings.js:82
-msgid "ooff"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:25
-#: node_modules/underscore.string/test/strings.js:66
-#: node_modules/underscore.string/test/strings.js:83
-msgid "ffooff"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:28
-#: node_modules/underscore.string/test/strings.js:68
-#: node_modules/underscore.string/test/strings.js:85
-msgid "_-foobar-_"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:30
-#: node_modules/underscore.string/test/strings.js:74
-msgid "http://foo/"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:31
-msgid "c:\\"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:57
-msgid "    foo"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:77
-msgid "foo     "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:78
-msgid "foo  bar     "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:93
-msgid "fabio"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:126
-msgid " foo    bar   "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:137
-#: node_modules/underscore.string/test/strings.js:148
-#, javascript-format
-msgid "Hello %s"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:138
-#: node_modules/underscore.string/test/strings.js:149
-#, javascript-format
-msgid "hello %s"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:157
-#: node_modules/underscore.string/test/strings.js:167
-msgid "foobar"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:158
-msgid "oobar"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:170
-msgid "fooba"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:206
-msgid "x.xx....x.x"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:230
-#: node_modules/underscore.string/test/strings.js:361
-msgid "a"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:231
-msgid "A"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:232
-msgid "+"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:238
-msgid "the titleize string  method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:242
-msgid "let's have some fun"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:243
-msgid "a-dash-separated-string"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:244
-msgid "A-DASH-SEPARATED-STRING"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:249
-msgid "the_camelize_string_method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:250
-msgid "-the-camelize-string-method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:251
-msgid "the camelize string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:252
-msgid " the camelize  string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:253
-msgid "the camelize   string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:261
-msgid "the-underscored-string-method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:262
-msgid "theUnderscoredStringMethod"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:263
-msgid "TheUnderscoredStringMethod"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:264
-msgid " the underscored  string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:272
-msgid "the_dasherize_string_method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:273
-msgid "TheDasherizeStringMethod"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:274
-msgid "thisIsATest"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:275
-msgid "this Is A Test"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:276
-msgid "thisIsATest123"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:277
-msgid "123thisIsATest"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:278
-msgid "the dasherize string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:279
-msgid "the  dasherize string method  "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:280
-msgid "téléphone"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:281
-msgid "foo$bar"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:296
-msgid "_som eWeird---name-"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:308
-msgid "some_class_name"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:309
-msgid "my wonderfull class_name"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:310
-msgid "my wonderfull.class.name"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:314
-msgid "the_humanize_string_method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:315
-msgid "ThehumanizeStringMethod"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:316
-msgid "the humanize string method"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:317
-msgid "the humanize_id string method_id"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:318
-msgid "the  humanize string method  "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:319
-msgid "   capitalize dash-CamelCase_underscore trim  "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:329
-#: node_modules/underscore.string/test/strings.js:419
-msgid "Hello"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:337
-#: node_modules/underscore.string/test/strings.js:341
-msgid "Hello, cruel world"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:338
-#: node_modules/underscore.string/test/strings.js:339
-#: node_modules/underscore.string/test/strings.js:340
-msgid "Hello, world"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:343
-#: node_modules/underscore.string/test/strings.js:347
-msgid "Привет, жестокий мир"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:344
-#: node_modules/underscore.string/test/strings.js:345
-#: node_modules/underscore.string/test/strings.js:346
-#: node_modules/underscore.string/test/strings.js:348
-msgid "Привет, мир"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:349
-msgid "alksjd!!!!!!...."
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:362
-#: node_modules/underscore.string/test/strings.js:494
-msgid "0"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:375
-msgid "<div>Blah & \"blah\" & 'blah'</div>"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:377
-msgid "&lt;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:385
-msgid ""
-"&lt;div&gt;Blah &amp; &quot;blah&quot; &amp; &apos;blah&#39;&lt;/div&gt;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:387
-msgid "&amp;lt;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:388
-msgid "&apos;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:389
-msgid "&#39;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:390
-msgid "&#0039;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:391
-msgid "&#x4a;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:392
-msgid "&#x04A;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:393
-msgid "&#X4A;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:394
-msgid "&_#39;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:395
-msgid "&#39_;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:396
-msgid "&amp;#38;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:397
-msgid "&#38;amp;"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:406
-msgid "I love you!"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:407
-msgid " I    love   you!  "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:408
-msgid "I_love_you!"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:409
-msgid "I-love-you!"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:413
-msgid "   "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:427
-msgid "AaBbCcDdEe"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:435
-msgid ""
-"Hello\n"
-"World"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:444
-#: node_modules/underscore.string/test/strings.js:446
-#: node_modules/underscore.string/test/strings.js:447
-#: node_modules/underscore.string/test/strings.js:448
-#: node_modules/underscore.string/test/strings.js:449
-#: node_modules/underscore.string/test/strings.js:459
-#: node_modules/underscore.string/test/strings.js:461
-#: node_modules/underscore.string/test/strings.js:462
-#: node_modules/underscore.string/test/strings.js:469
-#: node_modules/underscore.string/test/strings.js:471
-#: node_modules/underscore.string/test/strings.js:480
-#: node_modules/underscore.string/test/strings.js:482
-msgid "1"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:492
-msgid "not a number"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:495
-msgid "0.0"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:496
-#: node_modules/underscore.string/test/strings.js:497
-msgid "0.1"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:498
-msgid "  0.1 "
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:499
-msgid "0000"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:500
-#: node_modules/underscore.string/test/strings.js:501
-#: node_modules/underscore.string/test/strings.js:502
-msgid "2.345"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:503
-msgid "2.344"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:504
-msgid "2"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:507
-msgid "-2"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:533
-#: node_modules/underscore.string/test/strings.js:534
-#: node_modules/underscore.string/test/strings.js:535
-#: node_modules/underscore.string/test/strings.js:536
-#: node_modules/underscore.string/test/strings.js:537
-#: node_modules/underscore.string/test/strings.js:538
-#: node_modules/underscore.string/test/strings.js:546
-#: node_modules/underscore.string/test/strings.js:547
-#: node_modules/underscore.string/test/strings.js:548
-#: node_modules/underscore.string/test/strings.js:549
-#: node_modules/underscore.string/test/strings.js:550
-#: node_modules/underscore.string/test/strings.js:558
-#: node_modules/underscore.string/test/strings.js:559
-#: node_modules/underscore.string/test/strings.js:560
-#: node_modules/underscore.string/test/strings.js:561
-#: node_modules/underscore.string/test/strings.js:562
-#: node_modules/underscore.string/test/strings.js:570
-#: node_modules/underscore.string/test/strings.js:571
-#: node_modules/underscore.string/test/strings.js:572
-#: node_modules/underscore.string/test/strings.js:573
-#: node_modules/underscore.string/test/strings.js:574
-msgid "This_is_a_test_string"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:582
-msgid "a <a href=\"#\">link</a>"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:583
-msgid "a <a href=\"#\">link</a><script>alert(\"hello world!\")</script>"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:584
-msgid "<html><body>hello world</body></html>"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:606
-msgid "Jack & Jill like numbers 1,2,3 and 4 and silly characters ?%.$!/"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:608
-msgid "I know latin characters: á í ó ú ç ã õ ñ ü ă ș ț"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:609
-msgid "I am a word too, even though I am but a single letter: i!"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:660
-msgid "false"
-msgstr ""
-
-#: node_modules/underscore.string/test/strings.js:667
-msgid "true"
-msgstr ""
-
-#: node_modules/underscore.string/test/test_underscore/utility.js:51
-msgid "champ"
+#: node_modules/prettier/parser-typescript.js:1
+msgid "Elapsed:: "
 msgstr ""
 
 #: node_modules/webidl-conversions/lib/index.js:105
@@ -1144,77 +672,187 @@ msgid "is not an ArrayBuffer object or a view on one"
 msgstr ""
 
 #: node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "not-basic"
+msgstr ""
+
+#: node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "invalid-input"
+msgstr ""
+
+#: node_modules/webpack-dev-server/client/index.bundle.js:1
+msgid "overflow"
+msgstr ""
+
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "using url"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_receiveInfo"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "info"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid " enabled transports"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "attempt"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "waiting for body"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "using timeout"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "transport url"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_transportTimeout"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_transportMessage"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "heartbeat"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "bad json"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "message"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "empty payload"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_transportClose"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_open"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "connected"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "_close"
 msgstr ""
 
-#: node_modules/webpack-dev-server/client/index.bundle.js:1
+#: node_modules/webpack-dev-server/client/sockjs.bundle.js:1
 msgid "disconnected"
 msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./shims"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "url-parse"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "inherits"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "json3"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/random"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/escape"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/url"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/event"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/transport"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/object"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/browser"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./utils/log"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./event/event"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./event/eventtarget"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./location"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./event/close"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./event/trans-message"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./info-receiver"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./version"
+msgstr ""
+
+#: node_modules/webpack-dev-server/node_modules/sockjs-client/dist/sockjs.min.js:2
+msgid "./iframe-bootstrap"
+msgstr ""
+
+#~ msgid "Describe your goods (materials, technology, prices...)"
+#~ msgstr "Опишіть ваші вироби (матеріали, технологія, ціни...)"
+
+#~ msgid " with Facebook"
+#~ msgstr " через Facebook"
+
+#~ msgid "Oops... Passwords didn't match"
+#~ msgstr "Ой... Паролі не співпадають"
+
+#~ msgid "That email already exists"
+#~ msgstr "Цей імейл уже існує"
+
+#~ msgid "'Oops! Something went wrong. Please try again in a moment."
+#~ msgstr "Ой! Щось не так. Будь ласка, спробуйте ще за мить."
+
+#~ msgid "Email"
+#~ msgstr "Ваш Email"

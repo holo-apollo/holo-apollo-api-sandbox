@@ -1,0 +1,19 @@
+{% extends 'stores/application_base.html' %}
+{% load static i18n extras %}
+
+{% block center %}
+    <h1>{% trans 'Cool!' %}</h1>
+    <div class="emoji">👏</div>
+    <h4>{% trans 'Your application has been submitted successfully.' %}</h4>
+    <h4>{% trans 'You will receive publication confirmation on your email very soon.' %}</h4>
+    <div class="divider"></div>
+    {% if request.GET.pub_date %}
+        <div class="pubdate">{{ request.GET.pub_date|to_date|date }}</div>
+        <div class="pubdate-help">
+            {% trans 'This is a preliminary date of publication about you on our instapage.' %}
+        </div>
+    {% endif %}
+    <a href="https://www.instagram.com/holo.apollo.art/" target="_blank">
+        <img class="instalogo" src="{% static 'img/instagram-logo.png' %}" alt="Instagram logo" />
+    </a>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stores/application4.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="block-left">
+            <div class="logo-container">
+                <img src="{% static 'img/image_holo.png' %}" alt="Image Holo" />
+                <h2>Holo-Apollo.art</h2>
+                <h5>{% trans 'Online showroom Design Made in UA' %}</h5>
+            </div>
+        </div>
+
+        <div class="block-center">
+            {% block center %}{% endblock %}
+        </div>
+    </div>
+
+{% endblock %}
