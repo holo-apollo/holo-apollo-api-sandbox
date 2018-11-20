@@ -80,9 +80,9 @@ class ApplicationForm extends React.PureComponent {
       );
     }
     ['goods_description', 'philosophy'].forEach(field => {
-      if (!validateLength(values[field], 1000, 500)) {
+      if (!validateLength(values[field], 1000, 100)) {
         errors[field] = gettext(
-          'Please write at least 500 symbols, but not more than 1000'
+          'Please write at least 100 symbols, but not more than 1000'
         );
       }
     });

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 23:18+0200\n"
+"POT-Creation-Date: 2018-11-20 19:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,6 @@ msgstr "Ви повинні дозволити використовувати в
 #: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:85
 msgid "Please write at least 500 symbols, but not more than 1000"
 msgstr "Будь ласка, напишіть від 500 до 1000 символів"
 
@@ -402,6 +401,10 @@ msgstr "Сподіваємося побачитися знову."
 #: frontend/src/apps/landing/containers/subscription.js:172
 msgid "We promise to never spam you or share your personal information!"
 msgstr "Обіцяємо ніколи не спамити та не поширювати Вашу особисту інформацію!"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:85
+msgid "Please write at least 100 symbols, but not more than 1000"
+msgstr "Будь ласка, напишіть від 100 до 1000 символів"
 
 #: frontend/src/apps/users/containers/login.js:32
 msgid "Please type your email or phone."

@@ -60,13 +60,13 @@ class StoreApplication(TimeStampedModel):
     goods_description = models.TextField(
         verbose_name=_('Goods description'),
         max_length=1000,
-        validators=[MinLengthValidator(500)],
+        validators=[MinLengthValidator(100)],
         help_text=_('Describe your goods (materials, technology, prices...)')
     )
     philosophy = models.TextField(
         verbose_name=_('Philosophy'),
         max_length=1000,
-        validators=[MinLengthValidator(500)],
+        validators=[MinLengthValidator(100)],
         help_text=_('Philosophy behind your store')
     )
     data_usage_agreement = models.BooleanField(

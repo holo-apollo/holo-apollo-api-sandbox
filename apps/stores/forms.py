@@ -42,7 +42,7 @@ class StoreApplicationForm(forms.ModelForm):
         })
     )
     goods_description = forms.CharField(
-        min_length=500,
+        min_length=100,
         max_length=1000,
         label=_('Describe your goods (materials, technology, prices...)'),
         widget=TextAreaWithCounter(attrs={
@@ -51,7 +51,7 @@ class StoreApplicationForm(forms.ModelForm):
         })
     )
     philosophy = forms.CharField(
-        min_length=500,
+        min_length=100,
         max_length=1000,
         label=_('Philosophy behind your store'),
         widget=TextAreaWithCounter(attrs={

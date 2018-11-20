@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 23:18+0200\n"
+"POT-Creation-Date: 2018-11-20 19:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,6 @@ msgstr "Вы должны разрешить ииспользование Ваш
 #: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.b4a7d2f297bc45eeab64.js:1
 #: frontend/build/webpack_bundles/application_form-bundle.fa7acb22dbb7fdec0494.js:1
-#: frontend/src/apps/stores/containers/ApplicationForm/index.js:85
 msgid "Please write at least 500 symbols, but not more than 1000"
 msgstr "Пожалуйста, напишите не меньше 500 и не больше 1000 символов"
 
@@ -268,14 +267,12 @@ msgstr "Пожалуйста выберите не более 12 фото"
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:112
 msgid "Total size of images is too big. Maximum size is 60 MB, you uploaded "
 msgstr ""
-"Общий размер файлов слишком большой. Максимальный размер 60 МБ, вы "
-"загрузили "
+"Общий размер файлов слишком большой. Максимальный размер 60 МБ, вы загрузили "
 
 #: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:150
 msgid "At least 5 and at most 12 photos, total size up to 60 MB."
-msgstr ""
-"Не меньше 5 и не больше 12 фотографий. Общим размером файлов до 60 МБ."
+msgstr "Не меньше 5 и не больше 12 фотографий. Общим размером файлов до 60 МБ."
 
 #: frontend/build/webpack_bundles/application_form-bundle.4f336f8dd8d399ad0ce5.js:1
 #: frontend/src/apps/stores/containers/ApplicationForm/index.js:175
@@ -404,6 +401,10 @@ msgstr "Надеемся еще увидеться."
 msgid "We promise to never spam you or share your personal information!"
 msgstr ""
 "Мы обещаем никогда не спамить и не распространять вашу личную информацию!"
+
+#: frontend/src/apps/stores/containers/ApplicationForm/index.js:85
+msgid "Please write at least 100 symbols, but not more than 1000"
+msgstr "Пожалуйста, напишите не меньше 100 и не больше 1000 символов"
 
 #: frontend/src/apps/users/containers/login.js:32
 msgid "Please type your email or phone."
