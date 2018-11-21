@@ -1,7 +1,9 @@
-Great!
-Thank You for subscription at Holo-Apollo.art.
+{% load i18n %}
 
-My name is Ira.
-I'm very glad to stay in touch with you and inform you about our updates.
+{% trans 'Great!' %}
+{% trans 'Thank You for subscription at ' %}Holo-Apollo.art.
 
-We promise to never spam you or share your personal information!
+{% trans 'My name is Ira.' %}
+{% trans 'I am very glad to stay in touch with you and inform you about our updates.' %}
+
+{% trans 'We promise to never spam you or share your personal information!' %}

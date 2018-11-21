@@ -1,4 +1,3 @@
-from unittest import skip
 from unittest.mock import patch
 
 from django.test import TestCase
@@ -20,7 +19,6 @@ class TestHoloUser(TestCase):
         self.assertEqual(str(self.user), f'Jane Doe {self.user.email}')
 
 
-@skip("Skipping for now, implement template render mock")
 class TestSubscription(TestCase):
     def test_repr(self):
         sub = SubscriptionFactory(email='jdoe@holo-apollo.art')
@@ -29,33 +27,46 @@ class TestSubscription(TestCase):
         sub.save()
         self.assertEqual(str(sub), 'jdoe@holo-apollo.art: not subscribed')
 
-    @patch('users.models.send_email.delay')
-    def test_email_on_save(self, mock_send):
+    @patch('users.models.send_email_to_managers.delay')
+    @patch('users.models.send_template_email.delay')
+    def test_email_on_save(self, mock_send, mock_send_managers):
         SubscriptionFactory()
         mock_send.assert_called_once()
+        mock_send_managers.assert_called_once()
 
-    @patch('users.models.send_email.delay')
-    def test_no_email_on_next_save(self, mock_send):
+    @patch('users.models.send_email_to_managers.delay')
+    @patch('users.models.send_template_email.delay')
+    def test_no_email_on_next_save(self, mock_send, mock_send_managers):
         sub = SubscriptionFactory()
         mock_send.assert_called_once()
+        mock_send_managers.assert_called_once()
         mock_send.reset_mock()
+        mock_send_managers.reset_mock()
         sub.save()
         self.assertFalse(mock_send.called)
+        self.assertFalse(mock_send_managers.called)
 
-    @patch('users.models.send_email.delay')
-    def test_email_again_on_next_save(self, mock_send):
+    @patch('users.models.send_email_to_managers.delay')
+    @patch('users.models.send_template_email.delay')
+    def test_email_again_on_next_save(self, mock_send, mock_send_managers):
         sub = SubscriptionFactory()
         mock_send.assert_called_once()
+        mock_send_managers.assert_called_once()
         mock_send.reset_mock()
+        mock_send_managers.reset_mock()
         sub.save()
         self.assertFalse(mock_send.called)
+        self.assertFalse(mock_send_managers.called)
         sub.subscribed = False
         sub.save()
         sub.subscribed = True
         sub.save()
         mock_send.assert_called_once()
+        mock_send_managers.assert_called_once()
 
-    @patch('users.models.send_email.delay')
-    def test_no_email_without_subscription(self, mock_send):
+    @patch('users.models.send_email_to_managers.delay')
+    @patch('users.models.send_template_email.delay')
+    def test_no_email_without_subscription(self, mock_send, mock_send_managers):
         SubscriptionFactory(subscribed=False)
         self.assertFalse(mock_send.called)
+        self.assertFalse(mock_send_managers.called)

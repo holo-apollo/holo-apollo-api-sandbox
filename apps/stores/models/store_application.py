@@ -1,9 +1,13 @@
+from django.conf import settings
 from django.core.validators import MinLengthValidator
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
+
+from common.tasks import send_email_to_managers
 
 
 class StoreApplication(TimeStampedModel):
@@ -93,4 +97,11 @@ class StoreApplication(TimeStampedModel):
                 models.Max('pub_date'))['pub_date__max']
             if last_publication:
                 self.pub_date = last_publication + timezone.timedelta(days=2)
-        return super().save(*args, **kwargs)
+        is_new = not self.pk
+        super().save(*args, **kwargs)
+        if is_new:
+            url = reverse('admin:stores_storeapplication_change', kwargs={'object_id': self.id})
+            send_email_to_managers.delay(
+                subject="Новая заявка от магазина",
+                message=f"Поступила новая заявка от магазина: {settings.SITE_URL}{url}"
+            )
