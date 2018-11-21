@@ -11,7 +11,7 @@ from django.utils.translation import ugettext_lazy as _
 from model_utils.models import TimeStampedModel
 
 from common.fields import PhoneField
-from common.tasks import send_email, send_template_email
+from common.tasks import send_email, send_email_to_managers, send_template_email
 from .managers import HoloUserManager
 
 
@@ -126,6 +126,11 @@ class Subscription(TimeStampedModel):
                     'host': settings.SITE_URL
                 },
                 language=get_language()
+            )
+            url = reverse('admin:users_subscription_change', kwargs={'object_id': self.id})
+            send_email_to_managers.delay(
+                subject="Новая подписка",
+                message=f"Появилась новая подписка на сайте: {settings.SITE_URL}{url}"
             )
 
     def __str__(self):
