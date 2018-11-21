@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-20 19:07+0200\n"
+"POT-Creation-Date: 2018-11-21 22:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -275,10 +275,6 @@ msgstr "Підтвердження імейлу на Holo-Apollo"
 msgid "That email address is already subscribed."
 msgstr "Ця адреса пошти вже підписана."
 
-#: apps/users/models.py:128
-msgid "Holo-Apollo Subscription"
-msgstr "Підписка Holo-Apollo"
-
 #: apps/users/views.py:74
 msgid ""
 "We were unable to verify your email. Make sure that you're logged in as a "
@@ -295,15 +291,15 @@ msgstr "Ваш імейл підтверджено успішно!"
 msgid "Your email is already verified"
 msgstr "Ця адреса пошти вже підтверджена"
 
-#: config/settings/base.py:177
+#: config/settings/base.py:178
 msgid "Russian"
 msgstr "Російська"
 
-#: config/settings/base.py:178
+#: config/settings/base.py:179
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: config/settings/base.py:179
+#: config/settings/base.py:180
 msgid "English"
 msgstr "Англійська"
 
@@ -365,31 +361,35 @@ msgstr "Кращому торговому майданчику ДЕКОРУ та
 msgid "Holo-Apollo subscription"
 msgstr "Підписка Holo-Apollo"
 
-#: templates/emails/subscription.html:54
+#: templates/emails/subscription.html:54 templates/emails/subscription.txt:3
 msgid "Great!"
 msgstr "Чудово!"
 
-#: templates/emails/subscription.html:59
+#: templates/emails/subscription.html:59 templates/emails/subscription.txt:4
 msgid "Thank You for subscription at "
 msgstr "Дякуємо за підписку на "
 
-#: templates/emails/subscription.html:70
+#: templates/emails/subscription.html:70 templates/emails/subscription.txt:6
 msgid "My name is Ira."
 msgstr "Мене звати Іра."
 
-#: templates/emails/subscription.html:75
+#: templates/emails/subscription.html:75 templates/emails/subscription.txt:7
 msgid ""
 "I am very glad to stay in touch with you and inform you about our updates."
 msgstr ""
 "Мені дуже приємно бути на зв'язку з Вами та інформувати про наші оновлення."
 
-#: templates/emails/subscription.html:85
+#: templates/emails/subscription.html:85 templates/emails/subscription.txt:9
 msgid "We promise to never spam you or share your personal information!"
 msgstr "Обіцяємо ніколи не спамити та не поширювати Вашу особисту інформацію!"
 
 #: templates/emails/subscription.html:95
 msgid "Unsubscribe"
 msgstr "Відписатися"
+
+#: templates/emails/subscription_subject.txt:3
+msgid "Holo-Apollo Subscription"
+msgstr "Підписка Holo-Apollo"
 
 #: templates/registration/password_reset_confirm.html:10
 msgid ""

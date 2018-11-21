@@ -3,15 +3,14 @@ import uuid
 from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
-from django.template.loader import get_template
 from django.urls import reverse
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import get_language, ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
 from common.fields import PhoneField
-from common.tasks import send_email
+from common.tasks import send_email, send_template_email
 from .managers import HoloUserManager
 
 
@@ -116,18 +115,16 @@ class Subscription(TimeStampedModel):
             previously_subscribed = prev_version.subscribed
         super(Subscription, self).save(**kwargs)
         if not previously_subscribed and self.subscribed:
-            text_template = get_template('emails/subscription.txt')
-            text_content = text_template.render()
-            html_template = get_template('emails/subscription.html')
-            html_content = html_template.render({
-                'token': self.edit_token,
-                'host': settings.SITE_URL
-            })
-            send_email.delay(
-                self.email,
-                _('Holo-Apollo Subscription'),
-                text_content,
-                html_content
+            send_template_email.delay(
+                recipient=self.email,
+                subject_template_name='emails/subscription_subject.txt',
+                email_template_name='emails/subscription.txt',
+                html_email_template_name='emails/subscription.html',
+                context={
+                    'token': self.edit_token,
+                    'host': settings.SITE_URL
+                },
+                language=get_language()
             )
 
     def __str__(self):
