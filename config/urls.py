@@ -43,7 +43,7 @@ urlpatterns = [
 
 if settings.PRODUCTION:
     urlpatterns += [
-        path('', about, name='index'),
+        path('', about, name='about'),
     ]
 else:
     urlpatterns += [
