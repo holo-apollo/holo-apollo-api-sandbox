@@ -34,9 +34,6 @@ urlpatterns = [
     path('api/docs/', include_docs_urls(title='Holo Apollo API', public=False)),
     path('api/', include(api_patterns)),
 
-    # Libs
-    path('select2/', include('select2.urls')),
-
     # Apps
     path('', include('stores.urls', namespace='stores')),
 ]
