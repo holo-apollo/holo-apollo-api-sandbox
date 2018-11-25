@@ -65,18 +65,17 @@ INSTALLED_APPS = [
     'raven.contrib.django.raven_compat',
     'rest_framework',
     'rest_framework.authtoken',
-    'select2',
     'social_django',
     'rest_auth',
     'storages',
     'webpack_loader',
 
     # local
-    'buyers',
-    'common',
-    'goods',
+    'buyers.apps.BuyersConfig',
+    'common.apps.CommonConfig',
+    'goods.apps.GoodsConfig',
     'stores.apps.StoresConfig',
-    'users',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
