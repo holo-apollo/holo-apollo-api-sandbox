@@ -91,6 +91,11 @@ class StoreApplication(TimeStampedModel):
     def __str__(self):
         return f'Application: {self.email} {self.instagram_name}'
 
+    def is_published(self):
+        return self.pub_date < timezone.now().date()
+    is_published.short_description = _('Published')
+    is_published.boolean = True
+
     def save(self, *args, **kwargs):
         if not self.pub_date:
             last_publication = StoreApplication.objects.aggregate(
