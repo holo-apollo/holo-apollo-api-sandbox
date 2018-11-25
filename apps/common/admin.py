@@ -3,9 +3,8 @@ from django.contrib import admin
 from django.db.models import ForeignKey, ManyToManyField, OneToOneField
 
 from rest_framework.authtoken.models import Token
-from social_django.models import Association, Nonce, UserSocialAuth
-
 from select2.forms import Select, SelectMultiple
+from social_django.models import Association, Nonce, UserSocialAuth
 
 
 class Select2ModelAdmin(admin.ModelAdmin):
