@@ -72,11 +72,11 @@ INSTALLED_APPS = [
     'webpack_loader',
 
     # local
-    'buyers',
-    'common',
-    'goods',
+    'buyers.apps.BuyersConfig',
+    'common.apps.CommonConfig',
+    'goods.apps.GoodsConfig',
     'stores.apps.StoresConfig',
-    'users',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
