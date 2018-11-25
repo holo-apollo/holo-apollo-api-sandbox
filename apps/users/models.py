@@ -16,32 +16,48 @@ from .managers import HoloUserManager
 
 
 def avatar_upload_path(self, filename):
-    return f'avatars/{self.id}/{filename}'
+    return f'avatars/{self.username}/{filename}'
 
 
 class HoloUser(AbstractBaseUser, PermissionsMixin):
     objects = HoloUserManager()
 
     username = models.CharField(
+        verbose_name=_('Username'),
         max_length=30,
         unique=True,
         error_messages={
             'unique': _('That username is already taken.')
         }
     )
-    first_name = models.CharField(max_length=30, blank=True, default='')
-    last_name = models.CharField(max_length=30, blank=True, default='')
+    first_name = models.CharField(
+        verbose_name=_('First name'),
+        max_length=30,
+        blank=True,
+        default=''
+    )
+    last_name = models.CharField(
+        verbose_name=_('Last name'),
+        max_length=30,
+        blank=True,
+        default=''
+    )
 
     email = models.EmailField(
+        verbose_name=_('Email'),
         max_length=254,
         unique=True,
         error_messages={
             'unique': _('That email address is already taken.')
         }
     )
-    email_confirmed = models.BooleanField(default=False)
+    email_confirmed = models.BooleanField(
+        verbose_name=_('Email confirmed'),
+        default=False
+    )
     email_confirm_token = models.UUIDField(default=uuid.uuid4, editable=False)
     phone = PhoneField(
+        verbose_name=_('Phone'),
         null=True,
         blank=True,
         unique=True,
@@ -50,14 +66,35 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         }
     )
 
-    is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
-    date_joined = models.DateTimeField(default=timezone.now)
-    last_updated = models.DateTimeField(auto_now=True)
-    avatar = models.ImageField(null=True, blank=True, upload_to=avatar_upload_path)
+    is_staff = models.BooleanField(
+        verbose_name=_('Staff status'),
+        default=False
+    )
+    is_active = models.BooleanField(
+        verbose_name=_('Active status'),
+        default=True
+    )
+    date_joined = models.DateTimeField(
+        verbose_name=_('Date joined'),
+        default=timezone.now
+    )
+    last_updated = models.DateTimeField(
+        verbose_name=_('Last updated'),
+        auto_now=True
+    )
+    avatar = models.ImageField(
+        verbose_name=_('Avatar'),
+        null=True,
+        blank=True,
+        upload_to=avatar_upload_path
+    )
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'phone']
+
+    class Meta:
+        verbose_name = _('User')
+        verbose_name_plural = _('Users')
 
     def __str__(self):
         return f'{self.get_full_name()} {self.email}'
@@ -100,14 +137,22 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
 
 class Subscription(TimeStampedModel):
     email = models.EmailField(
+        verbose_name=_('Email'),
         max_length=254,
         unique=True,
         error_messages={
             'unique': _('That email address is already subscribed.')
         }
     )
-    subscribed = models.BooleanField(default=True)
+    subscribed = models.BooleanField(
+        verbose_name=_('Subscribed'),
+        default=True
+    )
     edit_token = models.UUIDField(default=uuid.uuid4, editable=False)
+
+    class Meta:
+        verbose_name = _('Subscription')
+        verbose_name_plural = _('Subscriptions')
 
     def save(self, **kwargs):
         previously_subscribed = False
