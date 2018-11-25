@@ -24,5 +24,6 @@ class StoreApplicationImageInline(admin.TabularInline):
 
 @admin.register(StoreApplication)
 class StoreApplicationAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'instagram_name', 'category', 'pub_date',)
+    ordering = ('-pub_date',)
+    list_display = ('name', 'email', 'instagram_name', 'category', 'pub_date', 'is_published')
     inlines = [StoreApplicationImageInline]
