@@ -47,7 +47,7 @@ class ApplicationForm extends React.PureComponent {
           'nonFieldErrors',
           gettext(
             'Unknown error. Please contact us via email ira@holo-apollo.art or Instagram @holo.apollo.art'
-          )
+          ) + `. Error code: ${resp.status}`
         );
       }
       setSubmitting(false);
