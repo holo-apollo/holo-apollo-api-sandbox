@@ -9,6 +9,16 @@ export const StyledForm = styled.form`
   ${getFormStyles};
 `;
 
+export const StepsControlsCont = styled.div`
+  display: flex;
+  width: 100%;
+  margin-bottom: 55px;
+
+  & > div {
+    flex: 1 1 0;
+  }
+`;
+
 export const FieldCont = styled.div`
   margin-bottom: 40px;
 `;
@@ -29,4 +39,8 @@ export const ErrorCont = styled.div`
   color: ${palette.red};
   text-align: center;
   font-size: 10px;
+`;
+
+export const StepOneCont = styled.div`
+  display: ${({ visible }) => (visible ? 'initial' : 'none')};
 `;

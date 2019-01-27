@@ -8,10 +8,17 @@ type Props = {
   isDisabled: boolean,
   header: string,
   helpText: string,
+  onClick: () => void,
 };
 
-const FormStep = ({ isCurrent, isDisabled, header, helpText }: Props) => (
-  <Cont isCurrent={isCurrent} isDisabled={isDisabled}>
+const FormStep = ({
+  isCurrent,
+  isDisabled,
+  header,
+  helpText,
+  onClick,
+}: Props) => (
+  <Cont isCurrent={isCurrent} isDisabled={isDisabled} onClick={onClick}>
     <ContentCont>
       <HeaderCont>{header}</HeaderCont>
       <HelpTextCont>{helpText}</HelpTextCont>

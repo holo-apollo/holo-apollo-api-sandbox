@@ -1,4 +1,3 @@
-from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
 
 from rest_framework import serializers
@@ -20,7 +19,7 @@ class StoreSerializer(serializers.ModelSerializer):
 class StoreApplicationImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = StoreApplicationImage
-        fields = ('image', )
+        fields = ('application', 'image',)
 
 
 class StoreApplicationSerializer(serializers.ModelSerializer):
@@ -37,19 +36,8 @@ class StoreApplicationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StoreApplication
-        fields = ('name', 'email', 'instagram_name', 'category', 'selling_goods',
-                  'goods_description', 'philosophy', 'images', 'data_usage_agreement', 'pub_date')
-
-    @transaction.atomic
-    def create(self, validated_data):
-        images = self.context.get('view').request.FILES.getlist('images')
-        application = super().create(validated_data)
-        application_images = [
-            StoreApplicationImage(application=application, image=image)
-            for image in images
-        ]
-        StoreApplicationImage.objects.bulk_create(application_images)
-        return application
+        fields = ('id', 'name', 'email', 'instagram_name', 'category', 'selling_goods',
+                  'goods_description', 'philosophy', 'data_usage_agreement', 'pub_date', 'images')
 
     def validate_data_usage_agreement(self, value):
         if value is False:
