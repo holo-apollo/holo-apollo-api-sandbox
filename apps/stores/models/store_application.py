@@ -16,6 +16,7 @@ class StoreApplication(TimeStampedModel):
     ACCESSORIES = 'accessories'
     HOME_DECOR = 'home_decor'
     SHOES = 'shoes'
+    ART = 'art'
     OTHER = 'other'
 
     CATEGORY_CHOICES = (
@@ -25,6 +26,7 @@ class StoreApplication(TimeStampedModel):
         (ACCESSORIES, _('Accessories')),
         (HOME_DECOR, _('Home decor')),
         (SHOES, _('Shoes')),
+        (ART, _('Art')),
         (OTHER, _('Other')),
     )
 
@@ -99,9 +101,8 @@ class StoreApplication(TimeStampedModel):
     def save(self, *args, **kwargs):
         if not self.pub_date:
             last_publication = StoreApplication.objects.aggregate(
-                models.Max('pub_date'))['pub_date__max']
-            if last_publication:
-                self.pub_date = last_publication + timezone.timedelta(days=2)
+                models.Max('pub_date'))['pub_date__max'] or timezone.now().date()
+            self.pub_date = last_publication + timezone.timedelta(days=2)
         is_new = not self.pk
         super().save(*args, **kwargs)
         if is_new:

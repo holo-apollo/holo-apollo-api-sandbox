@@ -21,7 +21,12 @@ export const api = create({
   withCredentials: true,
 });
 
-export function postWithFiles(url: string, data: Data, files?: FilesMap = {}) {
+export function requestWithFiles(
+  method: 'post' | 'put',
+  url: string,
+  data: Data,
+  files?: FilesMap = {}
+) {
   if (!isNil(files) && !isEmpty(files)) {
     const formData = new FormData();
     Object.keys(files).forEach(key => {
@@ -35,13 +40,13 @@ export function postWithFiles(url: string, data: Data, files?: FilesMap = {}) {
       const dataItem = data[key];
       formData.append(key, dataItem);
     });
-    return api.post(url, formData, {
+    return api[method](url, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
     });
   }
-  return api.post(url, data);
+  return api[method](url, data);
 }
 
 // for backward compatibility for now
@@ -50,7 +55,7 @@ export function get(url: string, data?: Data = {}) {
 }
 
 export function post(url: string, data: Data, files?: FilesMap) {
-  return postWithFiles(url, data, files);
+  return requestWithFiles('post', url, data, files);
 }
 
 export function put(url: string, data: Data) {

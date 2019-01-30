@@ -71,7 +71,7 @@ const StyledButton = styled.button`
 const Button = props => <StyledButton {...props} />;
 
 Button.defaultProps = {
-  color: palette.extraDarkGrey,
+  color: palette.darkGrey,
   hoverColor: palette.blue,
 };
 
