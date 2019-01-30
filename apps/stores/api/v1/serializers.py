@@ -45,3 +45,11 @@ class StoreApplicationSerializer(serializers.ModelSerializer):
                 _('You must allow your data usage to create application')
             )
         return value
+
+
+class StoreApplicationReadOnlySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StoreApplication
+        fields = ('id', 'name', 'email', 'instagram_name', 'category', 'selling_goods',
+                  'goods_description', 'philosophy', 'data_usage_agreement', 'pub_date', 'images')
+        read_only_fields = fields

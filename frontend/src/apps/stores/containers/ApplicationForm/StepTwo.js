@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
 import Button from 'common/components/buttons/Button';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
-import { postWithFiles } from 'helpers/rest';
+import { requestWithFiles } from 'helpers/rest';
 import {
   StyledForm,
   FieldCont,
@@ -25,7 +25,8 @@ class StepTwo extends React.PureComponent {
   }
 
   async onSubmit(values, { setSubmitting, setFieldError }) {
-    const resp = await postWithFiles(
+    const resp = await requestWithFiles(
+      'put',
       `stores/applications/${this.props.applicationId}/images/`,
       values,
       {
