@@ -16,6 +16,7 @@ class StoreApplication(TimeStampedModel):
     ACCESSORIES = 'accessories'
     HOME_DECOR = 'home_decor'
     SHOES = 'shoes'
+    ART = 'art'
     OTHER = 'other'
 
     CATEGORY_CHOICES = (
@@ -25,6 +26,7 @@ class StoreApplication(TimeStampedModel):
         (ACCESSORIES, _('Accessories')),
         (HOME_DECOR, _('Home decor')),
         (SHOES, _('Shoes')),
+        (ART, _('Art')),
         (OTHER, _('Other')),
     )
 
