@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 19:56+0200\n"
+"POT-Creation-Date: 2019-01-30 18:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,8 +95,8 @@ msgstr "Товар"
 msgid "Description"
 msgstr "Описание"
 
-#: apps/goods/models.py:65 apps/stores/models/store_application.py:22
-#: apps/stores/models/store_application.py:55
+#: apps/goods/models.py:65 apps/stores/models/store_application.py:23
+#: apps/stores/models/store_application.py:57
 msgid "Category"
 msgstr "Категория"
 
@@ -112,15 +112,15 @@ msgstr "Цена"
 msgid "Categories names"
 msgstr "Названия категорий"
 
-#: apps/stores/api/v1/serializers.py:29
+#: apps/stores/api/v1/serializers.py:28
 msgid "An application with this email already exists"
 msgstr "Заявка с этим адресом почты уже существует"
 
-#: apps/stores/api/v1/serializers.py:33
+#: apps/stores/api/v1/serializers.py:32
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка с этим Instagram-именем уже существует"
 
-#: apps/stores/api/v1/serializers.py:57 apps/stores/forms.py:105
+#: apps/stores/api/v1/serializers.py:45 apps/stores/forms.py:105
 msgid "You must allow your data usage to create application"
 msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
 
@@ -129,21 +129,21 @@ msgid "Stores"
 msgstr "Магазины"
 
 #: apps/stores/forms.py:17 apps/stores/forms.py:19
-#: apps/stores/models/store_application.py:34
+#: apps/stores/models/store_application.py:36
 msgid "What is your name?"
 msgstr "Как Вас зовут?"
 
 #: apps/stores/forms.py:24 apps/stores/forms.py:26
-#: apps/stores/models/store_application.py:40
+#: apps/stores/models/store_application.py:42
 msgid "Email to reach you out"
 msgstr "Email для связи"
 
 #: apps/stores/forms.py:31 apps/stores/forms.py:33
-#: apps/stores/models/store_application.py:49
+#: apps/stores/models/store_application.py:51
 msgid "@Name in Instagram"
 msgstr "@Имя в Instagram"
 
-#: apps/stores/forms.py:38 apps/stores/models/store_application.py:62
+#: apps/stores/forms.py:38 apps/stores/models/store_application.py:64
 msgid "What's being sold in your store?"
 msgstr "Что продается в вашем магазине?"
 
@@ -152,12 +152,12 @@ msgid "What is being sold in your store?"
 msgstr "Что продается в вашем магазине?"
 
 #: apps/stores/forms.py:47 apps/stores/forms.py:50
-#: apps/stores/models/store_application.py:68
+#: apps/stores/models/store_application.py:70
 msgid "Describe your goods (materials, technology, prices...)"
 msgstr "Опишите ваши изделия (материалы, технология, размеры, цены...)"
 
 #: apps/stores/forms.py:56 apps/stores/forms.py:59
-#: apps/stores/models/store_application.py:74
+#: apps/stores/models/store_application.py:76
 msgid "Philosophy behind your store"
 msgstr "Философский смысл вашего магазина"
 
@@ -198,84 +198,88 @@ msgstr "Имя магазина"
 msgid "Store"
 msgstr "Магазин"
 
-#: apps/stores/models/store_application.py:23
+#: apps/stores/models/store_application.py:24
 msgid "Clothes"
 msgstr "Одежда"
 
-#: apps/stores/models/store_application.py:24
+#: apps/stores/models/store_application.py:25
 msgid "Jewelry"
 msgstr "Украшения"
 
-#: apps/stores/models/store_application.py:25
+#: apps/stores/models/store_application.py:26
 msgid "Accessories"
 msgstr "Аксессуары"
 
-#: apps/stores/models/store_application.py:26
+#: apps/stores/models/store_application.py:27
 msgid "Home decor"
 msgstr "Домашний декор"
 
-#: apps/stores/models/store_application.py:27
+#: apps/stores/models/store_application.py:28
 msgid "Shoes"
 msgstr "Обувь"
 
-#: apps/stores/models/store_application.py:28
+#: apps/stores/models/store_application.py:29
+msgid "Art"
+msgstr "Искусство"
+
+#: apps/stores/models/store_application.py:30
 msgid "Other"
 msgstr "Другое"
 
-#: apps/stores/models/store_application.py:32
+#: apps/stores/models/store_application.py:34
 msgid "Name"
 msgstr "Имя"
 
-#: apps/stores/models/store_application.py:37 apps/users/models.py:47
+#: apps/stores/models/store_application.py:39 apps/users/models.py:47
 #: apps/users/models.py:140
 msgid "Email"
 msgstr "Email"
 
-#: apps/stores/models/store_application.py:42
+#: apps/stores/models/store_application.py:44
 msgid "That email address is already used."
 msgstr "Этот адрес уже использован."
 
-#: apps/stores/models/store_application.py:46
+#: apps/stores/models/store_application.py:48
 msgid "Instagram name"
 msgstr "Имя в Instagram"
 
-#: apps/stores/models/store_application.py:51
+#: apps/stores/models/store_application.py:53
 msgid "That Instagram name is already used."
 msgstr "Это Instagram-имя уже занято."
 
-#: apps/stores/models/store_application.py:60
+#: apps/stores/models/store_application.py:62
 msgid "Selling goods"
 msgstr "Продающиеся товары"
 
-#: apps/stores/models/store_application.py:65
+#: apps/stores/models/store_application.py:67
 msgid "Goods description"
 msgstr "Описание товаров"
 
-#: apps/stores/models/store_application.py:71
+#: apps/stores/models/store_application.py:73
 msgid "Philosophy"
 msgstr "Философия"
 
-#: apps/stores/models/store_application.py:77
+#: apps/stores/models/store_application.py:79
 msgid "Data usage agreement"
 msgstr "Согласие на использование данных"
 
-#: apps/stores/models/store_application.py:79
+#: apps/stores/models/store_application.py:81
 msgid "I allow usage of data I provided"
 msgstr "Я соглашаюсь на использование оставленных мной данных"
 
-#: apps/stores/models/store_application.py:82
+#: apps/stores/models/store_application.py:84
 msgid "Publication date"
 msgstr "Дата публикации"
 
-#: apps/stores/models/store_application.py:88
+#: apps/stores/models/store_application.py:90
 msgid "Store application"
 msgstr "Заявка магазина"
 
-#: apps/stores/models/store_application.py:89
+#: apps/stores/models/store_application.py:91
 msgid "Store applications"
 msgstr "Заявки магазинов"
 
-#: apps/stores/models/store_application.py:96
+#: apps/stores/models/store_application.py:98
 msgid "Published"
 msgstr "Опубликована"
 
@@ -546,6 +550,10 @@ msgid "Greetings at your store registration stage on Holo-Apollo.art"
 msgstr ""
 "Рады вас приветствовать на этапе регистрации вашего магазина на Holo-Apollo."
 "art"
+
+#: templates/stores/application_create.html:17
+msgid "It consists of 2 steps:"
+msgstr "Это состоит из 2 шагов:"
 
 #: templates/stores/application_form.html:10
 msgid "Create application"

@@ -21,7 +21,7 @@ const Close = ({ height, color }) => (
 );
 
 Close.defaultProps = {
-  color: palette.extraDarkGrey,
+  color: palette.darkGrey,
 };
 
 export default Close;

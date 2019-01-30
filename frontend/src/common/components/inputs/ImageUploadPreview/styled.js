@@ -19,13 +19,13 @@ export const StyledLabel = styled.label`
   cursor: pointer;
 
   &:hover {
-    color: ${palette.darkerBlue};
+    color: ${palette.deepBlue};
 
     svg {
-      fill: ${palette.darkerBlue};
+      fill: ${palette.deepBlue};
 
       g {
-        fill: ${palette.darkerBlue};
+        fill: ${palette.deepBlue};
       }
     }
   }
@@ -84,7 +84,7 @@ export const StyledImg = styled.img`
   width: 88px;
   height: 88px;
   object-fit: cover;
-  border: 1px solid ${palette.extraDarkGrey};
+  border: 1px solid ${palette.darkGrey};
 `;
 
 export const CloseCont = styled.span`

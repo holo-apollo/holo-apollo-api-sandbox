@@ -9,7 +9,7 @@ storiesOf('Buttons', module).add('Button', () => (
   <Button
     width={250}
     type={'button'}
-    color={color('Main color', palette.extraDarkGrey)}
+    color={color('Main color', palette.darkGrey)}
     hoverColor={color('Hover color', palette.blue)}
   >
     {text('Text', 'Button text')}

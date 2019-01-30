@@ -8,6 +8,6 @@ import Close from '../index';
 storiesOf('Icons', module).add('Close', () => (
   <Close
     height={number('Height', 30)}
-    color={color('Color', palette.extraDarkGrey)}
+    color={color('Color', palette.darkGrey)}
   />
 ));
