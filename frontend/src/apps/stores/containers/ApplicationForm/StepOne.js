@@ -102,6 +102,7 @@ class StepOne extends React.PureComponent {
       { value: 'accessories', label: gettext('Accessories') },
       { value: 'home_decor', label: gettext('Home decor') },
       { value: 'shoes', label: gettext('Shoes') },
+      { value: 'art', label: gettext('Art') },
       { value: 'other', label: gettext('Other') },
     ];
 
