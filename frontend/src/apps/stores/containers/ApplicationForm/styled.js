@@ -41,6 +41,6 @@ export const ErrorCont = styled.div`
   font-size: 10px;
 `;
 
-export const StepOneCont = styled.div`
+export const StepCont = styled.div`
   display: ${({ visible }) => (visible ? 'initial' : 'none')};
 `;

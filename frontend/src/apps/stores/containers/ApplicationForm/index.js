@@ -37,7 +37,7 @@ class ApplicationForm extends React.PureComponent {
           applicationId={applicationId}
           visible={step === 1}
         />
-        {step === 2 && <StepTwo applicationId={applicationId} />}
+        <StepTwo applicationId={applicationId} visible={step === 2} />
       </Fragment>
     );
   }

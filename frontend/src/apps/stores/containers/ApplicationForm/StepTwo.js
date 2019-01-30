@@ -12,6 +12,7 @@ import {
   SpinnerCont,
   ErrorCont,
   LoadingTextCont,
+  StepCont,
 } from './styled';
 
 class StepTwo extends React.PureComponent {
@@ -148,9 +149,11 @@ class StepTwo extends React.PureComponent {
 
   render() {
     return (
-      <Formik onSubmit={this.onSubmit} validate={this.validate}>
-        {this.formRenderer}
-      </Formik>
+      <StepCont visible={this.props.visible}>
+        <Formik onSubmit={this.onSubmit} validate={this.validate}>
+          {this.formRenderer}
+        </Formik>
+      </StepCont>
     );
   }
 }

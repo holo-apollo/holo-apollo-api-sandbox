@@ -15,7 +15,7 @@ import {
   FieldCont,
   SpinnerCont,
   ErrorCont,
-  StepOneCont,
+  StepCont,
 } from './styled';
 
 class StepOne extends React.PureComponent {
@@ -206,7 +206,7 @@ class StepOne extends React.PureComponent {
 
   render() {
     return (
-      <StepOneCont visible={this.props.visible}>
+      <StepCont visible={this.props.visible}>
         <Formik
           onSubmit={this.onSubmit}
           validate={this.validate}
@@ -215,7 +215,7 @@ class StepOne extends React.PureComponent {
         >
           {this.formRenderer}
         </Formik>
-      </StepOneCont>
+      </StepCont>
     );
   }
 }
