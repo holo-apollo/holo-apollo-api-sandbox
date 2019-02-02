@@ -30,8 +30,17 @@ async function handleSubmit(
   } else {
     resp = await api.post('stores/applications/', values);
   }
-  if (resp.ok) {
-    onSuccess(resp.data.id);
+  if (resp.ok && resp.data) {
+    if (resp.data.id) {
+      onSuccess(resp.data.id);
+    } else {
+      setFieldError(
+        'nonFieldErrors',
+        formatMessage(messages.unknownError, {
+          errorCode: 'No application id in response data',
+        })
+      );
+    }
   } else {
     if (resp.data) {
       Object.keys(resp.data).forEach(field => {

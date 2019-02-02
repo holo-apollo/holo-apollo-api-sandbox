@@ -51,11 +51,13 @@ class ApplicationForm extends React.PureComponent<Props, State> {
           visible={step === 1}
           intl={intl}
         />
-        <StepTwo
-          applicationId={applicationId}
-          visible={step === 2}
-          intl={intl}
-        />
+        {applicationId && (
+          <StepTwo
+            applicationId={applicationId}
+            visible={step === 2}
+            intl={intl}
+          />
+        )}
       </Fragment>
     );
   }

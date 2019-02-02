@@ -7,7 +7,7 @@ import { StepsControlsCont } from './styled';
 import messages from './messages';
 
 type Props = {
-  cuurentStep: number,
+  currentStep: number,
   setStep: number => void,
   applicationCreated: boolean,
   intl: IntlShape,
