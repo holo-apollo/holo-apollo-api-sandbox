@@ -43,6 +43,7 @@ class ApplicationForm extends React.PureComponent<Props, State> {
           currentStep={step}
           setStep={this.setStep}
           applicationCreated={Boolean(applicationId)}
+          intl={intl}
         />
         <StepOne
           onSuccess={this.onStepOneSuccess}
