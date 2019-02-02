@@ -105,6 +105,7 @@
     "react-autobind": "^1.0.6",
     "react-dom": "^16.5.1",
     "react-form": "^2.16.2",
+    "react-intl": "^2.8.0",
     "styled-components": "^4.0.3"
   },
   "nyc": {
