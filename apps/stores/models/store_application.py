@@ -111,3 +111,10 @@ class StoreApplication(TimeStampedModel):
                 subject="Новая заявка от магазина",
                 message=f"Поступила новая заявка от магазина: {settings.SITE_URL}{url}"
             )
+
+    @classmethod
+    def get_category_options(cls):
+        return [{
+            'value': option[0],
+            'label': option[1],
+        } for option in cls.CATEGORY_CHOICES if option[0]]
