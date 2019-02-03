@@ -132,3 +132,48 @@ API docs are available at [http://localhost:8000/api/docs](http://localhost:8000
 
 Note that API docs show available operations for current user which may vary depending on user's
 permissions.
+
+
+#### Internationalization (i18n)
+
+*Backend i18n flow:*
+
+- Mark all user-facing strings in Python code with `gettext()` and in templates with `trans` or `blocktrans` tags
+
+- Grab messages:
+
+  ```
+  ./manage.py makemessages -a
+  ```
+
+- Translate messages in `.po` files for each language (locale) located at `locale` folder
+
+- Compile messages:
+
+  ```
+  ./manage.py compilemessages
+  ```
+
+- Commit the results
+
+Docs: ([https://docs.djangoproject.com/en/2.1/topics/i18n/translation/])
+
+*Frontend i18n flow:*
+
+- Mark all user-facing strings in React code using `react-intl` means ([https://github.com/yahoo/react-intl/wiki#getting-started])
+
+- Build the bundle. You should see messages collected to `.json` files for each module in `frontend/i18n/messages` folder
+
+- Merge messages to single file:
+
+  ```
+  npm run build-langs
+  ```
+
+- Copy new strings for translation from `frontend/i18n/locale/data.json` to each language file and translate them there
+
+- Merge messages again to put translations to single `data.json` file
+
+- Commit the result
+
+This process should perhaps be partially automated.

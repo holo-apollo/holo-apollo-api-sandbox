@@ -8,7 +8,7 @@ const MESSAGES_PATTERN = `${I18N_DIR}/messages/**/*.json`;
 const LANG_DIR = `${I18N_DIR}/locale`;
 const LANG_PATTERN = `${LANG_DIR}/*.json`;
 
-// Try to delete current json files from public/locales
+// Try to delete current data file from locale dir
 try {
   fs.unlinkSync(`${LANG_DIR}/data.json`);
 } catch (error) {
