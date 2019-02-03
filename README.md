@@ -156,11 +156,11 @@ permissions.
 
 - Commit the results
 
-Docs: ([https://docs.djangoproject.com/en/2.1/topics/i18n/translation/])
+[Django docs](https://docs.djangoproject.com/en/2.1/topics/i18n/translation/)
 
 *Frontend i18n flow:*
 
-- Mark all user-facing strings in React code using `react-intl` means ([https://github.com/yahoo/react-intl/wiki#getting-started])
+- Mark all user-facing strings in React code using [react-intl](https://github.com/yahoo/react-intl/wiki#getting-started) means
 
 - Build the bundle. You should see messages collected to `.json` files for each module in `frontend/i18n/messages` folder
 
