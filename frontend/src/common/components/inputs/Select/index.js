@@ -4,15 +4,11 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import SelectMaterial from '@material-ui/core/Select';
 
+import type { SelectOption } from 'common/types';
 import FieldWithError from '../FieldWithError';
 
-type Option = {
-  value: any,
-  label: string,
-};
-
 type Props = {
-  options: Option[],
+  options: SelectOption<any>[],
   label: string,
   errorText?: string,
 };

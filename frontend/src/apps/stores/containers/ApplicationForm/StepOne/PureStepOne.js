@@ -3,6 +3,7 @@ import React from 'react';
 import { type FormikProps } from 'formik';
 import type { IntlShape } from 'react-intl';
 
+import type { SelectOption } from 'common/types';
 import TextField from 'common/components/inputs/TextField';
 import Select from 'common/components/inputs/Select';
 import TextFieldWithCounter from 'common/components/inputs/TextFieldWithCounter';
@@ -20,21 +21,11 @@ import messages from './messages';
 import { TEXTAREAS_MAX_LENGTH } from './constants';
 import type { Values } from './types';
 
-// TODO: fetch from server
-const categoryOptions = [
-  { value: 'clothes', label: 'Clothes' },
-  { value: 'jewelry', label: 'Jewelry' },
-  { value: 'accessories', label: 'Accessories' },
-  { value: 'home_decor', label: 'Home decor' },
-  { value: 'shoes', label: 'Shoes' },
-  { value: 'art', label: 'Art' },
-  { value: 'other', label: 'Other' },
-];
-
 type Props = FormikProps<Values> & {
   applicationId?: number,
   intl: IntlShape,
   visible: boolean,
+  categoryOptions: SelectOption<string>[],
 };
 
 const PureStepOne = ({
@@ -46,6 +37,7 @@ const PureStepOne = ({
   submitCount,
   visible,
   applicationId,
+  categoryOptions,
   intl: { formatMessage },
 }: Props) => (
   <StepCont visible={visible}>

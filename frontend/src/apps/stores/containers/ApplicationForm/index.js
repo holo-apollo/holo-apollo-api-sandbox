@@ -1,11 +1,11 @@
 // @flow
-import React, { Fragment } from 'react';
+import React from 'react';
 import autoBind from 'react-autobind';
 import type { IntlShape } from 'react-intl';
 
-import StepsControls from './StepsControls';
-import StepOne from './StepOne';
-import StepTwo from './StepTwo';
+import type { SelectOption } from 'common/types';
+import { api } from 'helpers/rest';
+import PureApplicationForm from './PureApplicationForm';
 
 type Props = {
   intl: IntlShape,
@@ -14,6 +14,7 @@ type Props = {
 type State = {
   applicationId?: number,
   step: number,
+  categoryOptions: SelectOption<string>[],
 };
 
 class ApplicationForm extends React.PureComponent<Props, State> {
@@ -23,7 +24,19 @@ class ApplicationForm extends React.PureComponent<Props, State> {
     this.state = {
       applicationId: undefined,
       step: 1,
+      categoryOptions: [],
     };
+  }
+
+  componentDidMount() {
+    this.fetchCategoryOptions();
+  }
+
+  async fetchCategoryOptions() {
+    const resp = await api.get('stores/applications/categories/');
+    if (resp.ok && resp.data) {
+      this.setState({ categoryOptions: resp.data });
+    }
   }
 
   onStepOneSuccess(applicationId: number) {
@@ -35,30 +48,13 @@ class ApplicationForm extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { step, applicationId } = this.state;
-    const { intl } = this.props;
     return (
-      <Fragment>
-        <StepsControls
-          currentStep={step}
-          setStep={this.setStep}
-          applicationCreated={Boolean(applicationId)}
-          intl={intl}
-        />
-        <StepOne
-          onSuccess={this.onStepOneSuccess}
-          applicationId={applicationId}
-          visible={step === 1}
-          intl={intl}
-        />
-        {applicationId && (
-          <StepTwo
-            applicationId={applicationId}
-            visible={step === 2}
-            intl={intl}
-          />
-        )}
-      </Fragment>
+      <PureApplicationForm
+        {...this.props}
+        {...this.state}
+        setStep={this.setStep}
+        onStepOneSuccess={this.onStepOneSuccess}
+      />
     );
   }
 }
