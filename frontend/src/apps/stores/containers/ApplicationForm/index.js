@@ -1,44 +1,60 @@
-import React, { Fragment } from 'react';
+// @flow
+import React from 'react';
 import autoBind from 'react-autobind';
+import type { IntlShape } from 'react-intl';
 
-import StepsControls from './StepsControls';
-import StepOne from './StepOne';
-import StepTwo from './StepTwo';
+import type { SelectOption } from 'common/types';
+import { api } from 'helpers/rest';
+import PureApplicationForm from './PureApplicationForm';
 
-class ApplicationForm extends React.PureComponent {
-  constructor(props) {
+type Props = {
+  intl: IntlShape,
+};
+
+type State = {
+  applicationId?: number,
+  step: number,
+  categoryOptions: SelectOption<string>[],
+};
+
+class ApplicationForm extends React.PureComponent<Props, State> {
+  constructor(props: Props) {
     super(props);
     autoBind(this);
     this.state = {
       applicationId: undefined,
       step: 1,
+      categoryOptions: [],
     };
   }
 
-  onStepOneSuccess(applicationId) {
+  componentDidMount() {
+    this.fetchCategoryOptions();
+  }
+
+  async fetchCategoryOptions() {
+    const resp = await api.get('stores/applications/categories/');
+    if (resp.ok && resp.data) {
+      this.setState({ categoryOptions: resp.data });
+    }
+  }
+
+  onStepOneSuccess(applicationId: number) {
     this.setState({ applicationId, step: 2 });
   }
 
-  setStep(step) {
+  setStep(step: number) {
     this.setState({ step });
   }
 
   render() {
-    const { step, applicationId } = this.state;
     return (
-      <Fragment>
-        <StepsControls
-          currentStep={step}
-          setStep={this.setStep}
-          applicationCreated={Boolean(applicationId)}
-        />
-        <StepOne
-          onSuccess={this.onStepOneSuccess}
-          applicationId={applicationId}
-          visible={step === 1}
-        />
-        <StepTwo applicationId={applicationId} visible={step === 2} />
-      </Fragment>
+      <PureApplicationForm
+        {...this.props}
+        {...this.state}
+        setStep={this.setStep}
+        onStepOneSuccess={this.onStepOneSuccess}
+      />
     );
   }
 }

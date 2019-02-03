@@ -1,9 +1,19 @@
+// @flow
 import React, { PureComponent } from 'react';
+import type { IntlShape } from 'react-intl';
 
 import FormStep from 'common/components/navigation/FormStep';
 import { StepsControlsCont } from './styled';
+import messages from './messages';
 
-class StepsControls extends PureComponent {
+type Props = {
+  currentStep: number,
+  setStep: number => void,
+  applicationCreated: boolean,
+  intl: IntlShape,
+};
+
+class StepsControls extends PureComponent<Props> {
   onClickStepOne = () => {
     if (this.props.currentStep !== 1) {
       this.props.setStep(1);
@@ -17,19 +27,23 @@ class StepsControls extends PureComponent {
   };
 
   render() {
-    const { currentStep, applicationCreated } = this.props;
+    const {
+      currentStep,
+      applicationCreated,
+      intl: { formatMessage },
+    } = this.props;
     return (
       <StepsControlsCont>
         <FormStep
-          header={gettext('Step 1')}
-          helpText={gettext('information')}
+          header={formatMessage(messages.stepOneHeader)}
+          helpText={formatMessage(messages.stepOneHelptext)}
           isCurrent={currentStep === 1}
           isDisabled={false}
           onClick={this.onClickStepOne}
         />
         <FormStep
-          header={gettext('Step 2')}
-          helpText={gettext('photos')}
+          header={formatMessage(messages.stepTwoHeader)}
+          helpText={formatMessage(messages.stepTwoHelptext)}
           isCurrent={currentStep === 2}
           isDisabled={currentStep === 1 && !applicationCreated}
           onClick={this.onClickStepTwo}

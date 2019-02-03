@@ -9,6 +9,7 @@
   "scripts": {
     "test": "env NODE_ENV=test NODE_PATH=./frontend/src mocha --reporter tap --require @babel/register --require ./frontend/test/setup.js --require ignore-styles --recursive ./frontend/test",
     "test-coverage": "nyc npm test",
+    "build-langs": "babel-node frontend/scripts/mergeMessages.js",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
     "build-dev": "webpack --config frontend/webpack.config.js",
     "build": "webpack --config frontend/webpack.prod.config.js",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
     "@babel/plugin-proposal-do-expressions": "^7.0.0",
@@ -59,6 +61,7 @@
     "ajv": "^6.5.3",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-react-intl": "^3.0.1",
     "chai": "^4.1.2",
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
@@ -99,12 +102,16 @@
     "classnames": "^2.2.5",
     "core-js": "^2.5.7",
     "formik": "^1.3.2",
+    "glob": "^7.1.3",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1",
     "moment": "^2.22.2",
     "ramda": "^0.26.0",
     "react": "^16.5.1",
     "react-autobind": "^1.0.6",
     "react-dom": "^16.5.1",
     "react-form": "^2.16.2",
+    "react-intl": "^2.8.0",
     "styled-components": "^4.0.3"
   },
   "nyc": {

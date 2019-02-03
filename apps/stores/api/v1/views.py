@@ -21,7 +21,6 @@ class StoreApplicationViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMix
 
     @action(methods=['put'], detail=True)
     def images(self, request, *args, **kwargs):
-        self.get_serializer()
         application_id = self.kwargs['pk']
         images = request.FILES.getlist('images')
         data = [{
@@ -34,3 +33,7 @@ class StoreApplicationViewSet(MultiSerializerViewSetMixin, mixins.CreateModelMix
             serializer = self.get_serializer(self.get_object())
             return Response(serializer.data)
         return Response(images_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    @action(methods=['get'], detail=False)
+    def categories(self, request, *args, **kwargs):
+        return Response(StoreApplication.get_category_options())

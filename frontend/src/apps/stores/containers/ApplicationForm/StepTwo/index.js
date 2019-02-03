@@ -1,11 +1,15 @@
+// @flow
 import React, { Fragment } from 'react';
 import autoBind from 'react-autobind';
-import { Formik } from 'formik';
+import { Formik, type FormikActions, type FormikProps } from 'formik';
+import type { IntlShape } from 'react-intl';
 
 import ImageUploadPreview from 'common/components/inputs/ImageUploadPreview';
 import Button from 'common/components/buttons/Button';
 import DoubleBounceSpinner from 'common/components/spinners/DoubleBounceSpinner';
 import { requestWithFiles } from 'helpers/rest';
+import messages from './messages';
+import { MIN_IMAGES, MAX_IMAGES, MAX_IMAGES_SIZE } from './constants';
 import {
   StyledForm,
   FieldCont,
@@ -13,10 +17,24 @@ import {
   ErrorCont,
   LoadingTextCont,
   StepCont,
-} from './styled';
+} from '../styled';
 
-class StepTwo extends React.PureComponent {
-  constructor(props) {
+type FileChoiceEvent = SyntheticInputEvent<HTMLInputElement>;
+
+type Props = {
+  applicationId: number,
+  visible: boolean,
+  intl: IntlShape,
+};
+
+type State = {
+  images: File[],
+};
+
+type Values = {};
+
+class StepTwo extends React.PureComponent<Props, State> {
+  constructor(props: Props) {
     super(props);
     autoBind(this);
     this.state = {
@@ -24,10 +42,17 @@ class StepTwo extends React.PureComponent {
     };
   }
 
-  async onSubmit(values, { setSubmitting, setFieldError }) {
+  async onSubmit(
+    values: Values,
+    { setSubmitting, setFieldError }: FormikActions<Values>
+  ) {
+    const {
+      applicationId,
+      intl: { formatMessage },
+    } = this.props;
     const resp = await requestWithFiles(
       'put',
-      `stores/applications/${this.props.applicationId}/images/`,
+      `stores/applications/${applicationId}/images/`,
       values,
       {
         images: this.state.images,
@@ -40,15 +65,14 @@ class StepTwo extends React.PureComponent {
     } else {
       setFieldError(
         'nonFieldErrors',
-        gettext(
-          'Unknown error. Please contact us via email ira@holo-apollo.art or Instagram @holo.apollo.art'
-        ) + `. Error code: ${resp.status}`
+        formatMessage(messages.unknownError, { errorCode: resp.status })
       );
       setSubmitting(false);
     }
   }
 
   validate() {
+    const formatMessage = this.props.intl.formatMessage;
     let errors = {};
     const imagesErrors = [];
     const nonImages = this.state.images.filter(
@@ -57,7 +81,7 @@ class StepTwo extends React.PureComponent {
     if (nonImages.length) {
       const nonImagesNames = nonImages.map(item => item.name).join(', ');
       imagesErrors.push(
-        gettext('Following files are not images: ') + nonImagesNames
+        formatMessage(messages.invalidImages, { nonImagesNames })
       );
     }
     const imagesCount = this.state.images.length;
@@ -65,16 +89,21 @@ class StepTwo extends React.PureComponent {
       (acc, curr) => acc + curr.size,
       0
     );
-    if (imagesCount < 5) {
-      imagesErrors.push(gettext('Please choose at least 5 images'));
-    } else if (imagesCount > 12) {
-      imagesErrors.push(gettext('Please choose at most 12 images'));
-    }
-    if (imagesSize > 60 * 1024 * 1024) {
+    if (imagesCount < MIN_IMAGES) {
       imagesErrors.push(
-        gettext(
-          'Total size of images is too big. Maximum size is 60 MB, you uploaded '
-        ) + `${Math.round(imagesSize / 1024 / 1024)}`
+        formatMessage(messages.tooFewImages, { minNumber: MIN_IMAGES })
+      );
+    } else if (imagesCount > MAX_IMAGES) {
+      imagesErrors.push(
+        formatMessage(messages.tooManyImages, { maxNumber: MAX_IMAGES })
+      );
+    }
+    if (imagesSize > MAX_IMAGES_SIZE * 1024 * 1024) {
+      imagesErrors.push(
+        formatMessage(messages.tooBigImages, {
+          maxSize: MAX_IMAGES_SIZE,
+          actualSize: Math.round(imagesSize / 1024 / 1024),
+        })
       );
     }
     if (imagesErrors.length) {
@@ -83,7 +112,7 @@ class StepTwo extends React.PureComponent {
     return errors;
   }
 
-  handleImagesChange(event) {
+  handleImagesChange(event: FileChoiceEvent) {
     const files = event.target.files;
     const newFiles = [];
     for (let i = 0; i < files.length; i++) {
@@ -95,23 +124,25 @@ class StepTwo extends React.PureComponent {
     this.setState({ images: [...this.state.images, ...newFiles] });
   }
 
-  handleImageRemove(file) {
+  handleImageRemove(file: File) {
     this.setState({
       images: this.state.images.filter(image => image !== file),
     });
   }
 
-  formRenderer({ errors, handleSubmit, isSubmitting }) {
+  formRenderer({ errors, handleSubmit, isSubmitting }: FormikProps<Values>) {
+    const formatMessage = this.props.intl.formatMessage;
+
     const uploadHelpText = (
       <Fragment>
         <p>
-          {gettext('At least 5 and at most 12 photos, total size up to 60 MB.')}
+          {formatMessage(messages.imagesHelpText1, {
+            minNumber: MIN_IMAGES,
+            maxNumber: MAX_IMAGES,
+            maxSize: MAX_IMAGES_SIZE,
+          })}
         </p>
-        <p>
-          {gettext(
-            'Photos will be used in a collage, therefore some of them should have minimal, neutral background.'
-          )}
-        </p>
+        <p>{formatMessage(messages.imagesHelpText2)}</p>
       </Fragment>
     );
 
@@ -121,7 +152,7 @@ class StepTwo extends React.PureComponent {
           <SpinnerCont>
             <DoubleBounceSpinner />
             <LoadingTextCont>
-              {gettext('We are loading your photos. Please wait a moment.')}
+              {formatMessage(messages.loadingText)}
             </LoadingTextCont>
           </SpinnerCont>
         )}
@@ -132,8 +163,8 @@ class StepTwo extends React.PureComponent {
           <FieldCont>
             <ImageUploadPreview
               name="images"
-              label={gettext('Upload photos of your goods in good quality')}
-              buttonText={gettext('Upload photos')}
+              label={formatMessage(messages.imagesLabel)}
+              buttonText={formatMessage(messages.imagesButtonText)}
               helperText={uploadHelpText}
               errorText={errors.images}
               onChange={this.handleImagesChange}
@@ -141,7 +172,7 @@ class StepTwo extends React.PureComponent {
             />
           </FieldCont>
           <Button type="submit" width={250} disabled={isSubmitting}>
-            {gettext('Create application')}
+            {formatMessage(messages.submitButtonText)}
           </Button>
         </StyledForm>
       </Fragment>
