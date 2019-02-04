@@ -9,7 +9,7 @@ const TextField = ({ errorText, ...rest }) => (
       {...rest}
       fullWidth={true}
       error={Boolean(errorText)}
-      inputProps={{ maxLength: rest.maxLength }}
+      inputProps={{ ...rest.inputProps, maxLength: rest.maxLength }}
       InputLabelProps={{ style: { fontSize: '12px' } }}
       FormHelperTextProps={{ style: { fontSize: '10px' } }}
     />

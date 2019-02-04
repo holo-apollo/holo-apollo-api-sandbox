@@ -112,6 +112,7 @@
     "react-dom": "^16.5.1",
     "react-form": "^2.16.2",
     "react-intl": "^2.8.0",
+    "recompose": "^0.30.0",
     "styled-components": "^4.0.3"
   },
   "nyc": {

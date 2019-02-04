@@ -4,7 +4,7 @@ const BundleTracker = require('webpack-bundle-tracker');
 module.exports = {
   devtool: 'eval',
   entry: {
-    landing: './frontend/src/landing.js',
+    landing: './frontend/src/apps/landing_/roots/subscription.js',
     // login: './frontend/src/login.js',
     // signup: './frontend/src/signup.js',
     // password_reset: './frontend/src/password_reset.js',
