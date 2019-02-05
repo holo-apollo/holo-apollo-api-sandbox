@@ -4,11 +4,7 @@ import { JSDOM } from 'jsdom';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const jsdom = new JSDOM(
-  '<!doctype html><html><body>' +
-    '<div id="react-arrow-back"></div>' +
-    '</body></html>'
-);
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
 
 function copyProps(src, target) {
@@ -25,11 +21,8 @@ function copyProps(src, target) {
 }
 
 global.window = window;
-global.window.django_data = { urls: {} };
 global.document = window.document;
 global.navigator = {
   userAgent: 'node.js',
 };
-global.gettext = val => val;
-global.pgettext = val => val;
 copyProps(window, global);

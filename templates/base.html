@@ -40,27 +40,6 @@
 
 {% block content %}{% endblock %}
 
-{% if not PRODUCTION %}
-<script>
-   window.django_data = {
-        urls: {
-            staticRoot: "{% static '' %}",
-            facebook: "{% url 'social:begin' 'facebook' %}",
-            login: "{% url 'login' %}",
-            signup: "{% url 'signup' %}",
-            passwordReset: "{% url 'password_reset' %}",
-            tou: "/tou/",
-
-            loginAPI: "users/login/",
-            checkEmailAPI: "users/check_email/",
-            signupAPI: "users/",
-            passwordResetAPI: "rest-auth/password/reset/",
-            passwordResetConfirmAPI: "rest-auth/password/reset/confirm/",
-        }
-    };
-</script>
-{% endif %}
-<script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 {% render_bundle 'commons' %}
 
 {% block extrascripts %}{% endblock %}
