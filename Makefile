@@ -16,4 +16,4 @@ all_status:
 front_clear_build:
 	rm frontend/build/webpack_bundles/*
 	rm frontend/dist/webpack_bundles/*
-	npm install
+	yarn

@@ -35,8 +35,8 @@ services:
       - BONSAI_URL=elasticsearch:9200
 
   client:
-    image: node:10.10
+    image: node:11.9.0
     volumes:
       - .:/code
     working_dir: /code
-    command: /bin/bash -c "npm install && npm start"
+    command: /bin/bash -c "yarn && yarn start"

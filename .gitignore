@@ -8,7 +8,7 @@ staticfiles
 *.rdb
 .pytest_cache
 .coverage
-.nyc_output
+js-coverage
 htmlcov
 .DS_Store
 node_modules

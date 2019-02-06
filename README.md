@@ -64,10 +64,12 @@ while making changes locally.
   pip install -r requirements.txt
   ```
 
+- Make sure to have `node` and `yarn` installed locally with versions specified in `package.json` file
+
 - Install frontend requirements:
 
   ```
-  npm install
+  yarn
   ```
 
   It will also build dev and prod frontend bundles.
@@ -75,7 +77,7 @@ while making changes locally.
   If you work on frontend and want to run webpack in watch mode, run:
 
   ```
-  npm start
+  yarn start
   ```
 
 - Apply migrations:
@@ -167,7 +169,7 @@ permissions.
 - Merge messages to single file:
 
   ```
-  npm run build-langs
+  yarn build-langs
   ```
 
 - Copy new strings for translation from `frontend/i18n/locale/data.json` to each language file and translate them there
