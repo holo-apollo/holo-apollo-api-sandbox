@@ -12,7 +12,3 @@ class ImageWidget(forms.FileInput):
             )
         output.append(super().render(name, value, attrs, renderer))
         return mark_safe(''.join(output))
-
-
-class TextAreaWithCounter(forms.Textarea):
-    template_name = 'widgets/textarea.html'

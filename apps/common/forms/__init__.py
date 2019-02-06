@@ -1,1 +1,1 @@
-from .widgets import ImageWidget, TextAreaWithCounter  # noqa: F401
+from .widgets import ImageWidget  # noqa: F401

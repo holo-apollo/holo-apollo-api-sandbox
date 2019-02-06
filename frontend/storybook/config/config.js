@@ -2,10 +2,9 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { createGlobalStyle } from 'styled-components';
 
 import theme from 'common/theme';
-
-import '../../../static/css/base3.css';
 
 // automatically import all components stories
 const componentsReq = require.context(
@@ -18,22 +17,29 @@ function loadStories() {
   componentsReq.keys().forEach(filename => componentsReq(filename));
 }
 
-const djangoDataDecorator = story => {
-  window.django_data = {
-    urls: {},
-  };
-  window.gettext = text => text;
-  window.pgettext = (context, text) => text;
-  return story();
-};
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #404040;
+    -webkit-text-size-adjust: none;
+  }
+
+  button {
+    font-family: inherit;
+  }
+`;
 
 const themeDecorator = story => (
   <div style={{ padding: '20px', minHeight: '100vh' }}>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <GlobalStyle />
     <MuiThemeProvider theme={theme}>{story()}</MuiThemeProvider>
   </div>
 );
 
-addDecorator(djangoDataDecorator);
 addDecorator(themeDecorator);
 addDecorator(withKnobs);
 

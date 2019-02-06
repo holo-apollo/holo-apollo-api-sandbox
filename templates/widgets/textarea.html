@@ -1,6 +1,0 @@
-<textarea name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-{% if widget.value %}{{ widget.value }}{% endif %}</textarea>
-<span class="counter">
-    <span class="current-count">0</span>/
-    <span class="max-count">{{ widget.attrs.maxlength }}</span>
-</span>

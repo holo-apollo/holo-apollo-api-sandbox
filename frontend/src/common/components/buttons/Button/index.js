@@ -3,9 +3,14 @@ import styled, { css } from 'styled-components';
 
 import palette from 'common/palette';
 
-const getButtonProps = ({ width, color }) => css`
+const getButtonProps = ({ width, height, color, fontSize, fontWeight }) => css`
   width: ${width}px;
+  min-width: ${width}px;
+  height: ${height}px;
+  line-height: ${height}px;
   background-color: ${color};
+  font-size: ${fontSize}px;
+  font-weight: ${fontWeight};
 `;
 
 const getHoverProps = ({ hoverColor }) => css`
@@ -47,9 +52,6 @@ const getHoverProps = ({ hoverColor }) => css`
 `;
 
 const StyledButton = styled.button`
-  height: 35px;
-  line-height: 35px;
-  font-size: 14px;
   font-weight: 500;
   text-align: center;
   color: ${palette.white};
@@ -73,6 +75,9 @@ const Button = props => <StyledButton {...props} />;
 Button.defaultProps = {
   color: palette.darkGrey,
   hoverColor: palette.blue,
+  height: 35,
+  fontSize: 14,
+  fontWeight: '500',
 };
 
 export default Button;
