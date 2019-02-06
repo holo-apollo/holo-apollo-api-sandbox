@@ -1,53 +1,47 @@
-import { expect } from 'chai';
-
-import {
-  validateEmail,
-  validatePhone,
-  validateLength,
-} from 'helpers/validators';
+import { validateEmail, validatePhone, validateLength } from '../validators';
 
 describe('Email validator', function() {
   it('should validate correct email', function() {
-    expect(validateEmail('jdoe@example.com')).to.equal(true);
+    expect(validateEmail('jdoe@example.com')).toBe(true);
   });
 
   it('should not validate email without domain', function() {
-    expect(validateEmail('jdoe@')).to.equal(false);
+    expect(validateEmail('jdoe@')).toBe(false);
   });
 
   it('should not validate email without name', function() {
-    expect(validateEmail('@example.com')).to.equal(false);
+    expect(validateEmail('@example.com')).toBe(false);
   });
 
   it('should not validate email without first level domain', function() {
-    expect(validateEmail('jdoe@example')).to.equal(false);
+    expect(validateEmail('jdoe@example')).toBe(false);
   });
 });
 
 describe('Phone validator', function() {
   it('should validate correct phone', function() {
-    expect(validatePhone('+38(099) 123-45-67')).to.equal(true);
+    expect(validatePhone('+38(099) 123-45-67')).toBe(true);
   });
 
   it('should not validate non-digit phone', function() {
-    expect(validatePhone('fooooo')).to.equal(false);
+    expect(validatePhone('fooooo')).toBe(false);
   });
 });
 
 describe('Length validator', function() {
   it('should validate length correctly', function() {
-    expect(validateLength('jdoe@example.com', 20, 3)).to.equal(true);
+    expect(validateLength('jdoe@example.com', 20, 3)).toBe(true);
   });
 
   it('should not validate too short value', function() {
-    expect(validateLength('12', 20, 3)).to.equal(false);
+    expect(validateLength('12', 20, 3)).toBe(false);
   });
 
   it('should not validate too long value', function() {
-    expect(validateLength('123456789012345678901', 20, 3)).to.equal(false);
+    expect(validateLength('123456789012345678901', 20, 3)).toBe(false);
   });
 
   it('should validate no value if min length is 0', function() {
-    expect(validateLength(null, 20)).to.equal(true);
+    expect(validateLength(null, 20)).toBe(true);
   });
 });

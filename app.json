@@ -10,6 +10,7 @@
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
     "NPM_CONFIG_PRODUCTION": "false",
+    "YARN_PRODUCTION": "false",
     "USE_AWS_STATIC": "True",
     "STAGING_DATABASE_URL": {
       "required": true

@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "Craft Art Marketplace",
   "engines": {
-    "node": "10.10.0",
-    "npm": "6.4.1"
+    "node": "11.9.0",
+    "npm": "6.5.0",
+    "yarn": "1.13.0"
   },
   "scripts": {
-    "test": "env NODE_ENV=test NODE_PATH=./frontend/src mocha --reporter tap --require @babel/register --require ./frontend/test/setup.js --recursive ./frontend/test",
-    "test-coverage": "nyc npm test",
+    "test": "jest --config=jest.config.js",
+    "test:coverage": "yarn test --coverage",
     "build-langs": "babel-node frontend/scripts/mergeMessages.js",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
     "build-dev": "webpack --config frontend/webpack.config.js",
     "build": "webpack --config frontend/webpack.prod.config.js",
-    "postinstall": "npm run build-dev && npm run build",
+    "postinstall": "yarn build-dev && yarn build",
     "storybook": "start-storybook -p 9001 -c frontend/storybook/config",
     "storybook:build": "build-storybook -c frontend/storybook/config -o docs",
     "eslint": "eslint frontend/src -f tap",
@@ -60,9 +61,9 @@
     "@storybook/react": "^4.0.7",
     "ajv": "^6.5.3",
     "babel-eslint": "^9.0.0",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-react-intl": "^3.0.1",
-    "chai": "^4.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.6.0",
@@ -74,13 +75,10 @@
     "eslint-plugin-react": "^7.6.1",
     "file-loader": "^2.0.0",
     "flow-bin": "^0.86.0",
-    "hoek": "^4.2.1",
+    "jest": "^24.1.0",
     "jsdom": "^11.6.2",
-    "mocha": "^5.0.1",
-    "nyc": "^11.4.1",
     "prettier": "1.15.2",
     "react-test-renderer": "^16.5.1",
-    "sinon": "^4.3.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^0.6.2",
     "url-parse": "^1.4.3",
@@ -107,10 +105,5 @@
     "react-intl": "^2.8.0",
     "recompose": "^0.30.0",
     "styled-components": "^4.0.3"
-  },
-  "nyc": {
-    "include": [
-      "frontend/src/**/*.js"
-    ]
   }
 }
