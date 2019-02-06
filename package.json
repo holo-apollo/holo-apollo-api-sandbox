@@ -8,7 +8,7 @@
     "yarn": "1.13.0"
   },
   "scripts": {
-    "test": "jest --config=jest.config.js",
+    "test": "jest --config=frontend/jest.config.js",
     "test:coverage": "yarn test --coverage",
     "build-langs": "babel-node frontend/scripts/mergeMessages.js",
     "start": "webpack --progress -w --config frontend/webpack.config.js",
