@@ -38,6 +38,12 @@
 </head>
 <body>
 
+<noscript>
+    <p style="color: red">
+        {% trans 'Please enable JavaScript in your browser for better user experience.' %}
+    </p>
+</noscript>
+
 {% block content %}{% endblock %}
 
 {% render_bundle 'commons' %}

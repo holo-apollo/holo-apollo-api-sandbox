@@ -21,8 +21,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #404040;
-    margin: 0;
-    overflow-y: auto;
     -webkit-text-size-adjust: none;
   }
 
