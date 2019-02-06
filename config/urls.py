@@ -1,18 +1,18 @@
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import path, include
+from django.urls import include, path
 
+from rest_framework import routers
 from rest_framework import urls as drf_urls
 from rest_framework.documentation import include_docs_urls
-from rest_framework import routers
 
-from common.views import index, about
+from common.views import about, index
 from goods.api.v1.urls import router as goods_app_router_v1
 from stores.api.v1.urls import router as stores_router_v1
 from users.api.v1.urls import router as users_app_router_v1
-from users.views import (ConfirmEmail, LoginView, SignupView, PasswordResetConfirmView,
-                         PasswordResetView)
+from users.views import (ConfirmEmail, LoginView, PasswordResetConfirmView, PasswordResetView,
+                         SignupView)
 
 router_v1 = routers.DefaultRouter()
 router_v1.registry.extend(goods_app_router_v1.registry)
