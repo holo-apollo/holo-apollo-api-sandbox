@@ -1,4 +1,16 @@
-# Craft Art Marketplace
+# Holo Apollo API
+
+This is the project for API and admin interface of https://www.holo-apollo.art.
+
+For UI project see https://github.com/holo-apollo/holo-apollo-ui.
+
+## Main endpoints:
+
+https://www.holo-apollo.art/api/v1 - API root.
+
+https://www.holo-apollo.art/api/docs - API documentation.
+
+https://www.holo-apollo.art/admin - Django admin interface.
 
 ## Developers guide
 
