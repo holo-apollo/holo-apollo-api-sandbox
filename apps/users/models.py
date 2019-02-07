@@ -2,6 +2,7 @@ import uuid
 
 from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.postgres.fields import CIEmailField
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
@@ -43,7 +44,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         default=''
     )
 
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
@@ -136,7 +137,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
 
 
 class Subscription(TimeStampedModel):
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
