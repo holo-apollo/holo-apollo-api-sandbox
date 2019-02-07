@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.postgres.fields import CIEmailField
 from django.core.validators import MinLengthValidator
 from django.db import models
 from django.urls import reverse
@@ -35,7 +36,7 @@ class StoreApplication(TimeStampedModel):
         max_length=61,
         help_text=_('What is your name?')
     )
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
