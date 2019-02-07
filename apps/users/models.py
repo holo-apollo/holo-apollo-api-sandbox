@@ -12,7 +12,7 @@ from django.utils.translation import gettext_lazy as _
 from model_utils.models import TimeStampedModel
 
 from common.fields import PhoneField
-from common.tasks import send_email, send_email_to_managers, send_template_email
+from common.tasks import send_email_to_managers, send_template_email
 from .managers import HoloUserManager
 
 
@@ -106,18 +106,6 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
     get_full_name.short_description = _('Full name')
-
-    def save(self, *args, **kwargs):
-        is_new = not self.pk
-        super(HoloUser, self).save(*args, **kwargs)
-        if is_new:
-            text_content = _('To confirm your email address, follow the link: %s') % \
-                settings.SITE_URL + reverse('confirm-email') + f'?token={self.email_confirm_token}'
-            send_email.delay(
-                self.email,
-                _('Holo-Apollo Email Confirmation'),
-                text_content,
-            )
 
     @property
     def buyer(self):

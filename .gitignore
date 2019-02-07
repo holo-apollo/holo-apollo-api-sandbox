@@ -8,10 +8,5 @@ staticfiles
 *.rdb
 .pytest_cache
 .coverage
-js-coverage
 htmlcov
 .DS_Store
-node_modules
-frontend/build
-frontend/dist
-frontend/i18n/messages
