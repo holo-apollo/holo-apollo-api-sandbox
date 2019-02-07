@@ -27,6 +27,8 @@ def broadcast_email(recipients, subject, text_content, html_content=None):
     msg.send()
 
 
+# NOTE: context should be JSON-serializable, so it's better to put rendering to string outside
+# of the task
 @shared_task
 def send_template_email(recipient, subject_template_name, email_template_name, context,
                         html_email_template_name=None, language=None):
