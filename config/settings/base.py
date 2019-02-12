@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.forms',
 
     # third-party
+    'corsheaders',
     'django_elasticsearch_dsl',
     'django_elasticsearch_dsl_drf',
     'django_filters',
@@ -79,6 +80,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -322,3 +324,13 @@ REST_AUTH_SERIALIZERS = {
 }
 
 CURRENCIES = ('UAH',)
+
+CORS_ORIGIN_WHITELIST = [
+    # TODO: use patterns
+    'localhost:8000',
+    '127.0.0.1:8000',
+    'localhost:3000',
+    '127.0.0.1:3000',
+]
+
+CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
