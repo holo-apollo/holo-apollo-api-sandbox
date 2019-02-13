@@ -17,7 +17,8 @@ CSRF_COOKIE_SECURE = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-SITE_URL = 'https://api.holo-apollo.art'
+API_URL = 'https://api.holo-apollo.art'
+UI_URL = 'https://www.holo-apollo.art'
 
 # AWS
 STATICFILES_LOCATION = 'static'

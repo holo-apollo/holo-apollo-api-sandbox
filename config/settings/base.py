@@ -189,7 +189,8 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SITE_URL = 'http://localhost:8000'
+API_URL = dotenv.get('API_URL', default='http://localhost:8000')
+UI_URL = dotenv.get('UI_URL', default='http://localhost:3000')
 ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)

@@ -1,6 +1,7 @@
 from .base import *
 
-SITE_URL = 'https://holo-apollo-api-staging.herokuapp.com'
+API_URL = 'https://holo-apollo-api-staging.herokuapp.com'
+UI_URL = 'https://holo-apollo-ui-staging.herokuapp.com'
 
 STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media-staging'

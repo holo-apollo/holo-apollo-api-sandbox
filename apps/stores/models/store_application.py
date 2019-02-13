@@ -110,7 +110,7 @@ class StoreApplication(TimeStampedModel):
             url = reverse('admin:stores_storeapplication_change', kwargs={'object_id': self.id})
             send_email_to_managers.delay(
                 subject="Новая заявка от магазина",
-                message=f"Поступила новая заявка от магазина: {settings.SITE_URL}{url}"
+                message=f"Поступила новая заявка от магазина: {settings.API_URL}{url}"
             )
 
     @classmethod

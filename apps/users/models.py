@@ -157,14 +157,14 @@ class Subscription(TimeStampedModel):
                 html_email_template_name='emails/subscription.html',
                 context={
                     'token': self.edit_token,
-                    'host': settings.SITE_URL
+                    'host': settings.UI_URL
                 },
                 language=get_language()
             )
             url = reverse('admin:users_subscription_change', kwargs={'object_id': self.id})
             send_email_to_managers.delay(
                 subject="Новая подписка",
-                message=f"Появилась новая подписка на сайте: {settings.SITE_URL}{url}"
+                message=f"Появилась новая подписка на сайте: {settings.API_URL}{url}"
             )
 
     def __str__(self):
