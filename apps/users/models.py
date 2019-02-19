@@ -2,16 +2,17 @@ import uuid
 
 from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.postgres.fields import CIEmailField
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import get_language
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
 from common.fields import PhoneField
-from common.tasks import send_email, send_email_to_managers, send_template_email
+from common.tasks import send_email_to_managers, send_template_email
 from .managers import HoloUserManager
 
 
@@ -43,7 +44,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         default=''
     )
 
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
@@ -106,18 +107,6 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         return f'{self.first_name} {self.last_name}'
     get_full_name.short_description = _('Full name')
 
-    def save(self, *args, **kwargs):
-        is_new = not self.pk
-        super(HoloUser, self).save(*args, **kwargs)
-        if is_new:
-            text_content = _('To confirm your email address, follow the link: %s') % \
-                settings.SITE_URL + reverse('confirm-email') + f'?token={self.email_confirm_token}'
-            send_email.delay(
-                self.email,
-                _('Holo-Apollo Email Confirmation'),
-                text_content,
-            )
-
     @property
     def buyer(self):
         from buyers.models import Buyer
@@ -136,7 +125,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
 
 
 class Subscription(TimeStampedModel):
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
@@ -168,14 +157,14 @@ class Subscription(TimeStampedModel):
                 html_email_template_name='emails/subscription.html',
                 context={
                     'token': self.edit_token,
-                    'host': settings.SITE_URL
+                    'host': settings.UI_URL
                 },
                 language=get_language()
             )
             url = reverse('admin:users_subscription_change', kwargs={'object_id': self.id})
             send_email_to_managers.delay(
                 subject="Новая подписка",
-                message=f"Появилась новая подписка на сайте: {settings.SITE_URL}{url}"
+                message=f"Появилась новая подписка на сайте: {settings.API_URL}{url}"
             )
 
     def __str__(self):

@@ -13,7 +13,8 @@ coverage==4.5.1
 decorator==4.2.1
 defusedxml==0.5.0
 dj-database-url==0.4.2
-Django==2.1.5
+Django==2.1.7
+django-cors-headers==2.4.0
 django-elasticsearch-dsl==0.5.0
 django-elasticsearch-dsl-drf==0.16
 django-filter==2.0.0
@@ -25,7 +26,6 @@ django-rest-auth==0.9.3
 django-rest-framework==0.1.0
 django-sortedm2m==1.5.0
 django-storages==1.6.5
-django-webpack-loader==0.6.0
 djangorestframework==3.9.0
 docutils==0.14
 elasticsearch==6.3.1

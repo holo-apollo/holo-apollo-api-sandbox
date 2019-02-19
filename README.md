@@ -1,4 +1,16 @@
-# Craft Art Marketplace
+# Holo Apollo API
+
+This is the project for API and admin interface of https://www.holo-apollo.art.
+
+For UI project see https://github.com/holo-apollo/holo-apollo-ui.
+
+## Main endpoints:
+
+https://www.holo-apollo.art/api/v1 - API root.
+
+https://www.holo-apollo.art/api/docs - API documentation.
+
+https://www.holo-apollo.art/admin - Django admin interface.
 
 ## Developers guide
 
@@ -25,8 +37,8 @@ Then follow the steps from the next section, skipping Docker-related ones.
 #### Running DBs in Docker and processes locally
 
 This way has the advantage of quickly bringing up static services like storages (Postgres database,
-Redis and Elasticsearch) and ability to debug dynamic services (web server, Celery worker, webpack)
-while making changes locally.
+Redis and Elasticsearch) and ability to debug dynamic services (web server, Celery worker) while
+making changes locally.
 
 - Install Docker and Docker-compose and add current user to `docker` group:
 
@@ -62,20 +74,6 @@ while making changes locally.
 
   ```
   pip install -r requirements.txt
-  ```
-
-- Install frontend requirements:
-
-  ```
-  npm install
-  ```
-
-  It will also build dev and prod frontend bundles.
-
-  If you work on frontend and want to run webpack in watch mode, run:
-
-  ```
-  npm start
   ```
 
 - Apply migrations:
@@ -132,3 +130,26 @@ API docs are available at [http://localhost:8000/api/docs](http://localhost:8000
 
 Note that API docs show available operations for current user which may vary depending on user's
 permissions.
+
+
+#### Internationalization (i18n)
+
+- Mark all user-facing strings in Python code with `gettext()` and in templates with `trans` or `blocktrans` tags
+
+- Grab messages:
+
+  ```
+  ./manage.py makemessages -a
+  ```
+
+- Translate messages in `.po` files for each language (locale) located at `locale` folder
+
+- Compile messages:
+
+  ```
+  ./manage.py compilemessages
+  ```
+
+- Commit the results
+
+[Django docs](https://docs.djangoproject.com/en/2.1/topics/i18n/translation/)

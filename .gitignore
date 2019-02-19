@@ -8,9 +8,5 @@ staticfiles
 *.rdb
 .pytest_cache
 .coverage
-.nyc_output
 htmlcov
 .DS_Store
-node_modules
-frontend/build
-frontend/dist

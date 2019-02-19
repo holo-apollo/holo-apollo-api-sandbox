@@ -1,9 +1,10 @@
 from django.conf import settings
+from django.contrib.postgres.fields import CIEmailField
 from django.core.validators import MinLengthValidator
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
@@ -35,7 +36,7 @@ class StoreApplication(TimeStampedModel):
         max_length=61,
         help_text=_('What is your name?')
     )
-    email = models.EmailField(
+    email = CIEmailField(
         verbose_name=_('Email'),
         max_length=254,
         unique=True,
@@ -109,5 +110,12 @@ class StoreApplication(TimeStampedModel):
             url = reverse('admin:stores_storeapplication_change', kwargs={'object_id': self.id})
             send_email_to_managers.delay(
                 subject="Новая заявка от магазина",
-                message=f"Поступила новая заявка от магазина: {settings.SITE_URL}{url}"
+                message=f"Поступила новая заявка от магазина: {settings.API_URL}{url}"
             )
+
+    @classmethod
+    def get_category_options(cls):
+        return [{
+            'value': option[0],
+            'label': option[1],
+        } for option in cls.CATEGORY_CHOICES if option[0]]

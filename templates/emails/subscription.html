@@ -40,7 +40,7 @@
             <table id="main" width="600" cellspacing="0" cellpadding="0" align="center">
                 <tr>
                     <td>
-                        <img alt="Holo-Apollo Subscription" src="{{ host }}{% static 'img/email_header.png' %}" />
+                        <img alt="Holo-Apollo Subscription" src="https://s3.us-east-2.amazonaws.com/holo-apollo-assets/static/img/email_header.png" />
                     </td>
                 </tr>
                 <tr>
@@ -92,7 +92,7 @@
             <table id="footer" width="600" align="center" cellpadding="18">
                 <tr>
                     <td>
-                        <a href="{{ host }}{% url 'about' %}?token={{ token }}">{% trans 'Unsubscribe' %}</a>
+                        <a href="{{ host }}?token={{ token }}">{% trans 'Unsubscribe' %}</a>
                     </td>
                 </tr>
             </table>

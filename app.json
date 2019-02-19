@@ -9,7 +9,6 @@
       "generator": "secret"
     },
     "DJANGO_SETTINGS_MODULE": "config.settings.review",
-    "NPM_CONFIG_PRODUCTION": "false",
     "USE_AWS_STATIC": "True",
     "STAGING_DATABASE_URL": {
       "required": true
@@ -44,9 +43,6 @@
     "bonsai"
   ],
   "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
     {
       "url": "heroku/python"
     }

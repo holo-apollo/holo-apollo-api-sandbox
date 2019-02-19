@@ -12,12 +12,3 @@ db_status:
 
 all_status:
 	docker-compose -f docker-compose.db.yml -f docker-compose.processes.yml ps
-
-messages:
-	python manage.py makemessages -a
-	python manage.py makemessages -d djangojs -a
-
-front_clear_build:
-	rm frontend/build/webpack_bundles/*
-	rm frontend/dist/webpack_bundles/*
-	npm install

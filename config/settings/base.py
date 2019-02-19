@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.forms',
 
     # third-party
+    'corsheaders',
     'django_elasticsearch_dsl',
     'django_elasticsearch_dsl_drf',
     'django_filters',
@@ -68,7 +69,6 @@ INSTALLED_APPS = [
     'social_django',
     'rest_auth',
     'storages',
-    'webpack_loader',
 
     # local
     'buyers.apps.BuyersConfig',
@@ -80,6 +80,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -112,8 +113,6 @@ TEMPLATES = [
         },
     },
 ]
-
-FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -190,7 +189,8 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SITE_URL = 'http://127.0.0.1:8000'
+API_URL = dotenv.get('API_URL', default='http://localhost:8000')
+UI_URL = dotenv.get('UI_URL', default='http://localhost:3000')
 ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
@@ -203,22 +203,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-if PRODUCTION:
-    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'build')]
-else:
-    STATICFILES_DIRS += [os.path.join(BASE_DIR, 'frontend', 'dist')]
-STATICFILES_LOCATION = 'static'
-
-STATS_FILE = 'webpack-stats-prod.json' if PRODUCTION else 'webpack-stats.json'
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'CACHE': not DEBUG,
-        'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, STATS_FILE),
-        'TIMEOUT': None,
-        'IGNORE': ['.+\.hot-update.js', '.+\.map']
-    }
-}
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
@@ -341,3 +325,13 @@ REST_AUTH_SERIALIZERS = {
 }
 
 CURRENCIES = ('UAH',)
+
+CORS_ORIGIN_WHITELIST = [
+    # TODO: use patterns
+    'localhost:8000',
+    '127.0.0.1:8000',
+    'localhost:3000',
+    '127.0.0.1:3000',
+]
+
+CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
