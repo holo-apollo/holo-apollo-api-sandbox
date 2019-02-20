@@ -6,15 +6,9 @@ UI_URL = 'https://holo-apollo-ui-test.herokuapp.com'
 STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media-development'
 
-CORS_ORIGIN_WHITELIST = [
-    # TODO: use patterns to allow all local and UI review apps
-    'localhost:8000',
-    '127.0.0.1:8000',
-    'localhost:3000',
-    '127.0.0.1:3000',
-    'holo-apollo-ui-test.herokuapp.com',
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r'localhost:\d+',
+    r'127\.0\.0\.1:\d+',
+    r'holo-apollo-ui-test.herokuapp.com',
+    r'holo-apollo-ui-test-pr-\d+\.herokuapp\.com'
 ]
-
-CORS_ORIGIN_REGEX_WHITELIST = [r'holo-apollo-ui-test-pr-\d+\.herokuapp\.com']
-
-CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
