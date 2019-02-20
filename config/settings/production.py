@@ -4,11 +4,9 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'holo-apollo.art',
     'www.holo-apollo.art',
-    'holo-apollo.herokuapp.com',
-    'www.holo-apollo.herokuapp.com',
     'api.holo-apollo.art',
+    'holo-apollo-ui.herokuapp.com',
     'holo-apollo-api.herokuapp.com',
-    'www.holo-apollo-api.herokuapp.com',
 ]
 
 SECURE_SSL_REDIRECT = True
@@ -26,6 +24,7 @@ MEDIAFILES_LOCATION = 'media'
 
 CORS_ORIGIN_WHITELIST = [
     'holo-apollo-ui.herokuapp.com',
+    'www.holo-apollo.art',
     'holo-apollo.art',
 ]
 
