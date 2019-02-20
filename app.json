@@ -1,6 +1,6 @@
 {
-  "name": "holo-apollo",
-  "description": "Craft Art Marketplace",
+  "name": "holo-apollo-api",
+  "description": "API and admin for Holo Apollo project",
   "scripts": {
     "postdeploy": "./scripts/postdeploy.sh"
   },
@@ -20,12 +20,6 @@
       "required": true
     },
     "AWS_SECRET_ACCESS_KEY": {
-      "required": true
-    },
-    "SOCIAL_AUTH_FACEBOOK_KEY": {
-      "required": true
-    },
-    "SOCIAL_AUTH_FACEBOOK_SECRET": {
       "required": true
     }
   },
@@ -56,8 +50,7 @@
         "DJANGO_SETTINGS_MODULE": "config.settings.test",
         "STAGING_DATABASE_URL": {
           "required": false
-        },
-        "TEST_DATABASE_URL": "postgres://wtkpaviceyhdwf:fcb2d4067a6d4d4274459f8721467df830ba6d11e963e7926ca3dc76365f5690@ec2-184-73-174-171.compute-1.amazonaws.com:5432/d8ng88ge94ofqn"
+        }
       }
     }
   }
