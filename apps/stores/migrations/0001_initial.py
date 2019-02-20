@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        # ('common', '0001_initial'),
+        ('common', '0001_initial'),
     ]
 
     operations = [
