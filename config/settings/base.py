@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'social_django',
     'rest_auth',
     'storages',
+    'django_s3_collectstatic',
 
     # local
     'buyers.apps.BuyersConfig',
@@ -204,11 +205,13 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # AWS
-AWS_STORAGE_BUCKET_NAME = dotenv.get('AWS_STORAGE_BUCKET_NAME', default='holo-apollo-assets')
-AWS_S3_REGION_NAME = dotenv.get('AWS_S3_REGION_NAME', default='us-east-2')
+AWS_STORAGE_BUCKET_NAME = dotenv.get('AWS_STORAGE_BUCKET_NAME', default='holo-apollo-assets-eu')
+AWS_S3_REGION_NAME = dotenv.get('AWS_S3_REGION_NAME', default='eu-west-1')
 AWS_ACCESS_KEY_ID = dotenv.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = dotenv.get('AWS_SECRET_ACCESS_KEY')
-AWS_S3_CUSTOM_DOMAIN = f's3.{AWS_S3_REGION_NAME}.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}'
+AWS_S3_CUSTOM_DOMAIN = dotenv.get('AWS_S3_CUSTOM_DOMAIN',
+                                  default='s3-eu-west-1.amazonaws.com/holo-apollo-assets-eu')
+AWS_PRELOAD_METADATA = True
 MEDIAFILES_LOCATION = 'media-local'
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
 
