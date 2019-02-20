@@ -15,4 +15,6 @@ CORS_ORIGIN_WHITELIST = [
     'holo-apollo-ui-test.herokuapp.com',
 ]
 
+CORS_ORIGIN_REGEX_WHITELIST = [r'holo-apollo-ui-test-pr-\d+\.herokuapp\.com$']
+
 CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
