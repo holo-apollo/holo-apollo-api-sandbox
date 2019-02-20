@@ -6,11 +6,11 @@ For UI project see https://github.com/holo-apollo/holo-apollo-ui.
 
 ## Main endpoints:
 
-https://www.holo-apollo.art/api/v1 - API root.
+https://api.holo-apollo.art/api/v1 - API root.
 
-https://www.holo-apollo.art/api/docs - API documentation.
+https://api.holo-apollo.art/api/docs - API documentation.
 
-https://www.holo-apollo.art/admin - Django admin interface.
+https://api.holo-apollo.art/admin - Django admin interface.
 
 ## Developers guide
 
