@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'social_django',
     'rest_auth',
     'storages',
+    'django_s3_collectstatic',
 
     # local
     'buyers.apps.BuyersConfig',
@@ -210,6 +211,7 @@ AWS_ACCESS_KEY_ID = dotenv.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = dotenv.get('AWS_SECRET_ACCESS_KEY')
 AWS_S3_CUSTOM_DOMAIN = dotenv.get('AWS_S3_CUSTOM_DOMAIN',
                                   default='s3-eu-west-1.amazonaws.com/holo-apollo-assets-eu')
+AWS_PRELOAD_METADATA = True
 MEDIAFILES_LOCATION = 'media-local'
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
 
