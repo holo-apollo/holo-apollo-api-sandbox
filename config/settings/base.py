@@ -321,12 +321,6 @@ REST_AUTH_SERIALIZERS = {
 
 CURRENCIES = ('UAH',)
 
-CORS_ORIGIN_WHITELIST = [
-    # TODO: use patterns
-    'localhost:8000',
-    '127.0.0.1:8000',
-    'localhost:3000',
-    '127.0.0.1:3000',
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r'^(http://)?(localhost|127\.0\.0\.1)(:\d+)?$',
 ]
-
-CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
