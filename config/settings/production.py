@@ -25,8 +25,8 @@ STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media'
 
 CORS_ORIGIN_WHITELIST = [
-    'holo-apollo.herokuapp.com',
+    'holo-apollo-ui.herokuapp.com',
     'holo-apollo.art',
 ]
 
-CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
+CORS_ORIGIN_REGEX_WHITELIST = []
