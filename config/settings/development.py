@@ -9,6 +9,6 @@ MEDIAFILES_LOCATION = 'media-development'
 CORS_ORIGIN_REGEX_WHITELIST = [
     r'localhost:\d+',
     r'127\.0\.0\.1:\d+',
-    r'holo-apollo-ui-test.herokuapp.com',
+    r'holo-apollo-ui-test\.herokuapp\.com',
     r'holo-apollo-ui-test-pr-\d+\.herokuapp\.com'
 ]
