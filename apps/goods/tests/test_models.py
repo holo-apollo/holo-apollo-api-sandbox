@@ -1,11 +1,10 @@
 from django.test import TestCase
 
-from django_elasticsearch_dsl.test import ESTestCase
-
+from common.helpers.test_helpers import MockMixin
 from .factories import GoodFactory, GoodsCategoryFactory
 
 
-class TestGoodsCategory(ESTestCase, TestCase):
+class TestGoodsCategory(MockMixin, TestCase):
     def test_categories_chain(self):
         category = GoodsCategoryFactory()
         subcategory1 = GoodsCategoryFactory(parent_category=category)
@@ -53,7 +52,7 @@ class TestGoodsCategory(ESTestCase, TestCase):
         )
 
 
-class TestGood(ESTestCase, TestCase):
+class TestGood(MockMixin, TestCase):
     def test_categories(self):
         category = GoodsCategoryFactory()
         subcategory = GoodsCategoryFactory(parent_category=category)

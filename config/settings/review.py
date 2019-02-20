@@ -3,13 +3,10 @@ from .base import *
 STATICFILES_LOCATION = 'static-review'
 MEDIAFILES_LOCATION = 'media-review'
 
-CORS_ORIGIN_WHITELIST = [
-    # TODO: use patterns to allow all local and UI review apps
-    'localhost:8000',
-    '127.0.0.1:8000',
-    'localhost:3000',
-    '127.0.0.1:3000',
-    'holo-apollo-ui-test.herokuapp.com',
-]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    # localhost
+    r'^(http://)?(localhost|127\.0\.0\.1)(:\d+)?$',
 
-CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
+    # test or review heroku app
+    r'^(https?://)?(\w+\.)?holo-apollo-ui-test(-pr-\d+)?\.herokuapp\.com$',
+]
