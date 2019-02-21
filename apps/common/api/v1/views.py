@@ -30,6 +30,7 @@ class SignS3(APIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
         s3 = boto3.client('s3')
+        file_name = file_name.replace(' ', '_')
 
         presigned_post = s3.generate_presigned_post(
             Bucket=settings.AWS_STORAGE_BUCKET_NAME,
