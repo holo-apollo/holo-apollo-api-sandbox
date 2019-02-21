@@ -4,10 +4,6 @@ from django.utils.translation import gettext_lazy as _
 from .store_application import StoreApplication
 
 
-def upload_path(instance, filename):
-    return f'{instance.application.instagram_name}/{filename}'
-
-
 class StoreApplicationImage(models.Model):
     application = models.ForeignKey(
         StoreApplication,
@@ -15,10 +11,7 @@ class StoreApplicationImage(models.Model):
         on_delete=models.CASCADE,
         related_name='images'
     )
-    image = models.ImageField(
-        verbose_name=_('Image'),
-        upload_to=upload_path
-    )
+    image_url = models.URLField(verbose_name=_('Image URL'))
 
     class Meta:
         verbose_name = _('Store application image')

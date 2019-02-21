@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-07 16:38+0200\n"
+"POT-Creation-Date: 2019-02-21 18:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,15 +111,15 @@ msgstr "Ціна"
 msgid "Categories names"
 msgstr "Назви категорій"
 
-#: apps/stores/api/v1/serializers.py:28
+#: apps/stores/api/v1/serializers.py:34
 msgid "An application with this email already exists"
 msgstr "Заявка з цією адресою пошти вже існує"
 
-#: apps/stores/api/v1/serializers.py:32
+#: apps/stores/api/v1/serializers.py:38
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка з цим іменем Instagram вже існує"
 
-#: apps/stores/api/v1/serializers.py:45
+#: apps/stores/api/v1/serializers.py:51
 msgid "You must allow your data usage to create application"
 msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
 
@@ -244,19 +244,19 @@ msgstr "Заявки магазинів"
 msgid "Published"
 msgstr "Опубліковано"
 
-#: apps/stores/models/store_application_image.py:14
+#: apps/stores/models/store_application_image.py:10
 msgid "Application"
 msgstr "Заявка"
 
-#: apps/stores/models/store_application_image.py:19
-msgid "Image"
-msgstr "Зображення"
+#: apps/stores/models/store_application_image.py:14
+msgid "Image URL"
+msgstr "URL зображення"
 
-#: apps/stores/models/store_application_image.py:24
+#: apps/stores/models/store_application_image.py:17
 msgid "Store application image"
 msgstr "Зображення заявки магазину"
 
-#: apps/stores/models/store_application_image.py:25
+#: apps/stores/models/store_application_image.py:18
 msgid "Store application images"
 msgstr "Зображення заявок магазинів"
 
@@ -356,15 +356,15 @@ msgstr "Підписка"
 msgid "Subscriptions"
 msgstr "Підписки"
 
-#: config/settings/base.py:174
+#: config/settings/base.py:177
 msgid "Russian"
 msgstr "Російська"
 
-#: config/settings/base.py:175
+#: config/settings/base.py:178
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: config/settings/base.py:176
+#: config/settings/base.py:179
 msgid "English"
 msgstr "Англійська"
 
