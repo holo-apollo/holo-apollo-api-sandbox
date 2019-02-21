@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.db.models import ImageField
+from django.db.models import URLField
 
-from common.forms import ImageWidget
+from common.forms import ImageUrlWidget
 from .models.store import Store
 from .models.store_application import StoreApplication
 from .models.store_application_image import StoreApplicationImage
@@ -15,9 +15,9 @@ class StoreAdmin(admin.ModelAdmin):
 
 class StoreApplicationImageInline(admin.TabularInline):
     model = StoreApplicationImage
-    fields = ('image',)
+    fields = ('image_url',)
     formfield_overrides = {
-        ImageField: {'widget': ImageWidget}
+        URLField: {'widget': ImageUrlWidget},
     }
     extra = 0
 

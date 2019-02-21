@@ -1,6 +1,7 @@
 from django.utils.translation import gettext_lazy as _
 
 from rest_framework import serializers
+from rest_framework.generics import get_object_or_404
 from rest_framework.validators import UniqueValidator
 
 from stores.models.store import Store
@@ -19,7 +20,12 @@ class StoreSerializer(serializers.ModelSerializer):
 class StoreApplicationImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = StoreApplicationImage
-        fields = ('application', 'image',)
+        fields = ('image_url',)
+
+    def validate(self, attrs):
+        application_id = self.context.get('view').kwargs.get('application_pk')
+        attrs['application'] = get_object_or_404(StoreApplication, id=application_id)
+        return attrs
 
 
 class StoreApplicationSerializer(serializers.ModelSerializer):
@@ -45,11 +51,3 @@ class StoreApplicationSerializer(serializers.ModelSerializer):
                 _('You must allow your data usage to create application')
             )
         return value
-
-
-class StoreApplicationReadOnlySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = StoreApplication
-        fields = ('id', 'name', 'email', 'instagram_name', 'category', 'selling_goods',
-                  'goods_description', 'philosophy', 'data_usage_agreement', 'pub_date', 'images')
-        read_only_fields = fields
