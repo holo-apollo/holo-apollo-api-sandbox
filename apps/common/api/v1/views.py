@@ -8,6 +8,16 @@ from rest_framework.views import APIView
 
 
 class SignS3(APIView):
+    """
+    View responsible for generating and returning the signature with which the client-side
+    JavaScript can upload the image to S3.
+
+    The following parameters should be included as part of a URL query string.
+
+    `file_name`: full desired path of the file inside the bucket's media folder
+
+    `file_type`: file MIME type
+    """
     permission_classes = [AllowAny]
 
     def get(self, request, **kwargs):
