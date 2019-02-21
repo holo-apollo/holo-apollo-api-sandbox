@@ -6,7 +6,6 @@ from django.db import migrations, models
 import django.db.models.deletion
 import django.utils.timezone
 import model_utils.fields
-import stores.models.store_application_image
 
 
 class Migration(migrations.Migration):
@@ -59,7 +58,7 @@ class Migration(migrations.Migration):
             name='StoreApplicationImage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to=stores.models.store_application_image.upload_path, verbose_name='Image')),
+                ('image', models.ImageField(upload_to='', verbose_name='Image')),
                 ('application', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='stores.StoreApplication', verbose_name='Application')),
             ],
             options={
