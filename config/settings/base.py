@@ -9,6 +9,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+import json
 import os
 import sys
 
@@ -283,18 +284,34 @@ ELASTICSEARCH_DSL = {
 
 
 # Emails
-# TODO: use mailgun
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
-EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+MAILTRAP_API_TOKEN = dotenv.get('MAILTRAP_API_TOKEN')
+EMAIL_ENABLED = dotenv.get('EMAIL_ENABLED')
+if EMAIL_ENABLED:
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
+    EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+elif MAILTRAP_API_TOKEN:
+    from urllib.request import urlopen, Request
+
+    request = Request(f"https://mailtrap.io/api/v1/inboxes.json?api_token={MAILTRAP_API_TOKEN}")
+    response_body = urlopen(request).read()
+    credentials = json.loads(response_body)[0]
+
+    EMAIL_HOST = credentials['domain']
+    EMAIL_HOST_USER = credentials['username']
+    EMAIL_HOST_PASSWORD = credentials['password']
+    EMAIL_PORT = credentials['smtp_ports'][0]
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DEFAULT_FROM_EMAIL = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
 SERVER_EMAIL = 'robot@holo-apollo.art'
 EMAIL_SUBJECT_PREFIX = '[Holo Notification] '
-if dotenv.get('EMAIL_ENABLED'):
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Raven
