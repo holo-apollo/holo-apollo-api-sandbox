@@ -285,12 +285,12 @@ ELASTICSEARCH_DSL = {
 
 # Emails
 MAILTRAP_API_TOKEN = dotenv.get('MAILTRAP_API_TOKEN')
-EMAIL_ENABLED = dotenv.get('EMAIL_ENABLED')
-if EMAIL_ENABLED:
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_PORT = 587
-    EMAIL_HOST_USER = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
-    EMAIL_HOST_PASSWORD = dotenv.get('EMAIL_HOST_PASSWORD')
+MAILGUN_SMTP_SERVER = dotenv.get('MAILGUN_SMTP_SERVER')
+if MAILGUN_SMTP_SERVER:
+    EMAIL_HOST = MAILGUN_SMTP_SERVER
+    EMAIL_PORT = dotenv.get('MAILGUN_SMTP_PORT', 587)
+    EMAIL_HOST_USER = dotenv.get('MAILGUN_SMTP_LOGIN', '')
+    EMAIL_HOST_PASSWORD = dotenv.get('MAILGUN_SMTP_PASSWORD', '')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
 elif MAILTRAP_API_TOKEN:
@@ -309,7 +309,7 @@ elif MAILTRAP_API_TOKEN:
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = dotenv.get('EMAIL_HOST_USER', default='info@holo-apollo.art')
+DEFAULT_FROM_EMAIL = dotenv.get('DEFAULT_FROM_EMAIL', default='info@holo-apollo.art')
 SERVER_EMAIL = 'robot@holo-apollo.art'
 EMAIL_SUBJECT_PREFIX = '[Holo Notification] '
 
