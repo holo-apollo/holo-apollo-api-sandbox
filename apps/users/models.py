@@ -148,7 +148,7 @@ class Subscription(TimeStampedModel):
         if self.pk:
             prev_version = Subscription.objects.get(pk=self.pk)
             previously_subscribed = prev_version.subscribed
-        super(Subscription, self).save(**kwargs)
+        super().save(**kwargs)
         if not previously_subscribed and self.subscribed:
             send_template_email.delay(
                 recipient=self.email,

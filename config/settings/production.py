@@ -13,8 +13,6 @@ SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
 API_URL = 'https://api.holo-apollo.art'
 UI_URL = 'https://www.holo-apollo.art'
 
