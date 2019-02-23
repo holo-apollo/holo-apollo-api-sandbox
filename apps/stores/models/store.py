@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
 
 from model_utils.models import TimeStampedModel
@@ -12,6 +13,8 @@ class Store(TimeStampedModel):
         verbose_name=_('Store name'),
         max_length=30, unique=True
     )
+    description = models.TextField()
+    location = models.CharField(max_length=50)
     user = models.OneToOneField(
         UserModel,
         verbose_name=_('User'),
@@ -25,3 +28,11 @@ class Store(TimeStampedModel):
 
     def __str__(self):
         return f'Store: {self.user}'
+
+    @cached_property
+    def rating(self):
+        return None
+
+    @cached_property
+    def goods_count(self):
+        return self.goods.count()

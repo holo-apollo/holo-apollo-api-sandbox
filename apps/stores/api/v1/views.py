@@ -2,11 +2,19 @@ from rest_framework import mixins
 from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-from rest_framework.viewsets import GenericViewSet
+from rest_framework.viewsets import GenericViewSet, ReadOnlyModelViewSet
 
+from stores.models.store import Store
 from stores.models.store_application import StoreApplication
 from stores.models.store_application_image import StoreApplicationImage
-from .serializers import StoreApplicationImageSerializer, StoreApplicationSerializer
+from .serializers import (StoreApplicationImageSerializer, StoreApplicationSerializer,
+                          StoreSerializer)
+
+
+class StoreViewSet(ReadOnlyModelViewSet):
+    queryset = Store.objects.all()
+    serializer_class = StoreSerializer
+    permission_classes = [AllowAny]
 
 
 class StoreApplicationViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericViewSet):
