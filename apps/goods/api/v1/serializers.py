@@ -2,7 +2,7 @@ from djmoney.money import Money
 from rest_framework import serializers
 
 from goods.models import Good
-from stores.api.v1.serializers import StoreSerializer
+from stores.api.v1.serializers import SimpleStoreSerializer
 
 
 class GoodSerializer(serializers.ModelSerializer):
@@ -10,7 +10,7 @@ class GoodSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     price = serializers.FloatField(source='price.amount')
     price_currency = serializers.CharField(source='price.currency', default='UAH')
-    seller_info = StoreSerializer(read_only=True, source='seller')
+    seller_info = SimpleStoreSerializer(read_only=True, source='seller')
 
     class Meta:
         model = Good

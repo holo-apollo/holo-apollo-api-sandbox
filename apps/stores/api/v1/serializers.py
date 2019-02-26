@@ -9,12 +9,19 @@ from stores.models.store_application import StoreApplication
 from stores.models.store_application_image import StoreApplicationImage
 
 
-class StoreSerializer(serializers.ModelSerializer):
+class SimpleStoreSerializer(serializers.ModelSerializer):
     store_id = serializers.IntegerField(source='id')
 
     class Meta:
         model = Store
         fields = ['store_id', 'store_name', 'user']
+
+
+class StoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Store
+        fields = ['id', 'store_name', 'description', 'location', 'goods_count', 'rating']
+        read_only_fields = ['goods_count', 'rating']
 
 
 class StoreApplicationImageSerializer(serializers.ModelSerializer):

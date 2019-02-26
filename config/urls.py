@@ -7,13 +7,12 @@ from rest_framework.documentation import include_docs_urls
 
 from common.api.v1.views import SignS3
 from goods.api.v1.urls import router as goods_app_router_v1
-from stores.api.v1.urls import router as stores_router_v1, images_router as stores_images_router_v1
+from stores.api.v1.urls import router as stores_router_v1
 from users.api.v1.urls import router as users_app_router_v1
 
 router_v1 = routers.DefaultRouter()
 router_v1.registry.extend(goods_app_router_v1.registry)
 router_v1.registry.extend(stores_router_v1.registry)
-router_v1.registry.extend(stores_images_router_v1.registry)
 router_v1.registry.extend(users_app_router_v1.registry)
 
 api_patterns = [
