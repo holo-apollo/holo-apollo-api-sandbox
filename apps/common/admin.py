@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 from rest_framework.authtoken.models import Token
 from social_django.models import Association, Nonce, UserSocialAuth
+
 from .models import Color, Size
 
 if not settings.DEBUG:
