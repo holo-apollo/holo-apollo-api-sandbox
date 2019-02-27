@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
-from .models import Good, GoodsCategory
+from .models import Good, GoodsCategory, GoodSpecifications
 
 
 class GoodsCategoryInline(admin.TabularInline):
@@ -9,6 +9,11 @@ class GoodsCategoryInline(admin.TabularInline):
     verbose_name = _('subcategory')
     verbose_name_plural = _('subcategories')
     fields = ['name']
+
+
+class GoodSpecificationsInline(admin.StackedInline):
+    model = GoodSpecifications
+    autocomplete_fields = ['color', 'size']
 
 
 @admin.register(GoodsCategory)
@@ -25,3 +30,4 @@ class GoodAdmin(admin.ModelAdmin):
     readonly_fields = ['categories_names']
     list_display = ['name', 'categories_names', 'seller', 'price']
     autocomplete_fields = ('category', 'seller',)
+    inlines = [GoodSpecificationsInline]

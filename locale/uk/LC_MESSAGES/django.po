@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:02+0200\n"
+"POT-Creation-Date: 2019-02-27 21:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Buyers"
 msgstr "Покупці"
 
-#: apps/buyers/models.py:12 apps/stores/models/store.py:17
+#: apps/buyers/models.py:12 apps/stores/models/store.py:20
 #: apps/users/models.py:97
 msgid "User"
 msgstr "Користувач"
@@ -32,17 +32,41 @@ msgstr "Користувач"
 msgid "Buyer"
 msgstr "Покупець"
 
-#: apps/common/admin.py:14
+#: apps/common/admin.py:15
 msgid "Holo-Apollo site admin"
 msgstr "Адміністрування сайту Holo-Apollo"
 
-#: apps/common/admin.py:15
+#: apps/common/admin.py:16
 msgid "Holo-Apollo administration"
 msgstr "Адміністрування Holo-Apollo"
+
+#: apps/common/apps.py:7
+msgid "Common"
+msgstr "Загальне"
 
 #: apps/common/fields.py:8
 msgid "Phone number"
 msgstr "Номер телефону"
+
+#: apps/common/models.py:7 apps/goods/models.py:115
+msgid "Color"
+msgstr "Колір"
+
+#: apps/common/models.py:8
+msgid "Colors"
+msgstr "Кольори"
+
+#: apps/common/models.py:10 apps/common/models.py:21
+msgid "Definition"
+msgstr "Визначення"
+
+#: apps/common/models.py:18 apps/goods/models.py:117
+msgid "Size"
+msgstr "Розмір"
+
+#: apps/common/models.py:19
+msgid "Sizes"
+msgstr "Розміри"
 
 #: apps/common/validators.py:7
 msgid "Enter a valid phone number"
@@ -56,82 +80,98 @@ msgstr "підкатегорія"
 msgid "subcategories"
 msgstr "підкатегорії"
 
-#: apps/goods/apps.py:7 apps/goods/models.py:54
+#: apps/goods/apps.py:7 apps/goods/models.py:61
 msgid "Goods"
 msgstr "Товари"
 
-#: apps/goods/models.py:14
+#: apps/goods/models.py:17
 msgid "goods category"
 msgstr "категорія товарів"
 
-#: apps/goods/models.py:15
+#: apps/goods/models.py:18
 msgid "goods categories"
 msgstr "категорії товарів"
 
-#: apps/goods/models.py:19 apps/goods/models.py:58
+#: apps/goods/models.py:22 apps/goods/models.py:65
 msgctxt "not person"
 msgid "Name"
 msgstr "Назва"
 
-#: apps/goods/models.py:26
+#: apps/goods/models.py:29
 msgid "Parent category"
 msgstr "Батьківська категорія"
 
-#: apps/goods/models.py:44
+#: apps/goods/models.py:32
+msgid "Applicable specifications"
+msgstr "Застосовні характеристики"
+
+#: apps/goods/models.py:51
 msgid "Categories names chain"
 msgstr "Ланцюжок назв категорій"
 
-#: apps/goods/models.py:48
+#: apps/goods/models.py:55
 msgid "Goods names"
 msgstr "Назви товарів"
 
-#: apps/goods/models.py:53
+#: apps/goods/models.py:60 apps/goods/models.py:113
 msgctxt "product"
 msgid "Good"
 msgstr "Товар"
 
-#: apps/goods/models.py:63
+#: apps/goods/models.py:70
 msgid "Description"
 msgstr "Опис"
 
-#: apps/goods/models.py:65 apps/stores/models/store_application.py:24
+#: apps/goods/models.py:72 apps/stores/models/store_application.py:24
 #: apps/stores/models/store_application.py:58
 msgid "Category"
 msgstr "Категорія"
 
-#: apps/goods/models.py:67
+#: apps/goods/models.py:74
 msgid "Seller"
 msgstr "Продавець"
 
-#: apps/goods/models.py:69
+#: apps/goods/models.py:76
 msgid "Price"
 msgstr "Ціна"
 
-#: apps/goods/models.py:84
+#: apps/goods/models.py:83
+msgid "Discount"
+msgstr "Знижка"
+
+#: apps/goods/models.py:93
 msgid "Categories names"
 msgstr "Назви категорій"
 
-#: apps/stores/api/v1/serializers.py:34
+#: apps/goods/models.py:109 apps/goods/models.py:110
+msgid "Good specifications"
+msgstr "Характеристики товару"
+
+#: apps/goods/models.py:120
+msgid "%(good)s specifications"
+msgstr "Характеристики %(good)s"
+
+#: apps/stores/api/v1/serializers.py:41
 msgid "An application with this email already exists"
 msgstr "Заявка з цією адресою пошти вже існує"
 
-#: apps/stores/api/v1/serializers.py:38
+#: apps/stores/api/v1/serializers.py:45
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка з цим іменем Instagram вже існує"
 
-#: apps/stores/api/v1/serializers.py:51
+#: apps/stores/api/v1/serializers.py:58
 msgid "You must allow your data usage to create application"
 msgstr "Ви повинні дозволити використовувати ваші дані щоб залишити заявку"
 
-#: apps/stores/apps.py:7 apps/stores/models/store.py:24
+#: apps/stores/apps.py:7 apps/stores/models/store.py:27
 msgid "Stores"
 msgstr "Магазини"
 
-#: apps/stores/models/store.py:12
+#: apps/stores/models/store.py:13
 msgid "Store name"
 msgstr "Ім'я магазину"
 
-#: apps/stores/models/store.py:23
+#: apps/stores/models/store.py:26
 msgid "Store"
 msgstr "Магазин"
 
@@ -356,15 +396,15 @@ msgstr "Підписка"
 msgid "Subscriptions"
 msgstr "Підписки"
 
-#: config/settings/base.py:177
+#: config/settings/base.py:178
 msgid "Russian"
 msgstr "Російська"
 
-#: config/settings/base.py:178
+#: config/settings/base.py:179
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: config/settings/base.py:179
+#: config/settings/base.py:180
 msgid "English"
 msgstr "Англійська"
 

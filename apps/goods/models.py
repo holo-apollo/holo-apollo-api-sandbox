@@ -1,3 +1,5 @@
+from django.contrib.postgres.fields import ArrayField
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
@@ -6,6 +8,7 @@ from djmoney.models.fields import MoneyField
 from djmoney.models.validators import MinMoneyValidator
 from model_utils.models import TimeStampedModel
 
+from common.models import Color, Size
 from stores.models.store import Store
 
 
@@ -24,6 +27,10 @@ class GoodsCategory(TimeStampedModel):
     parent_category = models.ForeignKey('self', related_name='subcategories',
                                         on_delete=models.CASCADE, null=True, blank=True,
                                         verbose_name=_('Parent category'))
+    applicable_specifications = ArrayField(
+        base_field=models.CharField(max_length=30), default=list,
+        verbose_name=_('Applicable specifications')
+    )
 
     def __str__(self):
         return self.name
@@ -72,6 +79,8 @@ class Good(TimeStampedModel):
         default_currency='UAH',
         validators=[MinMoneyValidator(0)]
     )
+    discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99)],
+                                           verbose_name=_('Discount'))
 
     def __str__(self):
         return f'{self.name} ({self.category})'
@@ -86,3 +95,26 @@ class Good(TimeStampedModel):
     @property
     def categories_ids(self):
         return [category.id for category in self.categories()]
+
+    @property
+    def specifications(self):
+        try:
+            return self._specifications
+        except GoodSpecifications.DoesNotExist:
+            return None
+
+
+class GoodSpecifications(models.Model):
+    class Meta:
+        verbose_name = _('Good specifications')
+        verbose_name_plural = _('Good specifications')
+
+    good = models.OneToOneField(Good, on_delete=models.CASCADE, related_name='_specifications',
+                                verbose_name=pgettext_lazy('product', 'Good'))
+    color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.SET_NULL,
+                              verbose_name=_('Color'))
+    size = models.ForeignKey(Size, null=True, blank=True, on_delete=models.SET_NULL,
+                             verbose_name=_('Size'))
+
+    def __str__(self):
+        return _('%(good)s specifications') % {'good': self.good.name}
