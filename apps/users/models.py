@@ -16,10 +16,6 @@ from common.tasks import send_email_to_managers, send_template_email
 from .managers import HoloUserManager
 
 
-def avatar_upload_path(self, filename):
-    return f'avatars/{self.username}/{filename}'
-
-
 class HoloUser(AbstractBaseUser, PermissionsMixin):
     objects = HoloUserManager()
 
@@ -83,12 +79,7 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
         verbose_name=_('Last updated'),
         auto_now=True
     )
-    avatar = models.ImageField(
-        verbose_name=_('Avatar'),
-        null=True,
-        blank=True,
-        upload_to=avatar_upload_path
-    )
+    avatar = models.URLField(verbose_name=_('Avatar'), null=True, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'phone']
@@ -106,14 +97,6 @@ class HoloUser(AbstractBaseUser, PermissionsMixin):
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
     get_full_name.short_description = _('Full name')
-
-    @property
-    def buyer(self):
-        from buyers.models import Buyer
-        try:
-            return self._buyer
-        except Buyer.DoesNotExist:
-            return None
 
     @property
     def store(self):

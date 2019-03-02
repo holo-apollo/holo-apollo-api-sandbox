@@ -103,6 +103,10 @@ class Good(TimeStampedModel):
         except GoodSpecifications.DoesNotExist:
             return None
 
+    @property
+    def final_price(self):
+        return round(self.price * (1 - self.discount / 100))
+
 
 class GoodSpecifications(models.Model):
     class Meta:

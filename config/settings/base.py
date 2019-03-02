@@ -73,11 +73,11 @@ INSTALLED_APPS = [
     'django_s3_collectstatic',
 
     # local
-    'buyers.apps.BuyersConfig',
-    'common.apps.CommonConfig',
-    'goods.apps.GoodsConfig',
-    'stores.apps.StoresConfig',
-    'users.apps.UsersConfig',
+    'common',
+    'goods',
+    'orders',
+    'stores',
+    'users',
 ]
 
 MIDDLEWARE = [

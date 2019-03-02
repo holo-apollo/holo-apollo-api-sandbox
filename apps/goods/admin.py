@@ -31,3 +31,4 @@ class GoodAdmin(admin.ModelAdmin):
     list_display = ['name', 'categories_names', 'seller', 'price']
     autocomplete_fields = ('category', 'seller',)
     inlines = [GoodSpecificationsInline]
+    search_fields = ['name']
