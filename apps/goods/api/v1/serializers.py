@@ -1,7 +1,7 @@
 from djmoney.money import Money
 from rest_framework import serializers
 
-from goods.models import Good, GoodSpecifications
+from goods.models import Good, GoodsCategory, GoodSpecifications
 from stores.api.v1.serializers import SimpleStoreSerializer
 
 
@@ -40,3 +40,9 @@ class GoodSerializer(serializers.ModelSerializer):
         if self.context['request'].user.is_staff:
             fields.append('seller')
         return fields
+
+
+class GoodsCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsCategory
+        fields = ['id', 'name']

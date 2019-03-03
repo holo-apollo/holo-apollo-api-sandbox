@@ -10,6 +10,7 @@ from model_utils.models import TimeStampedModel
 
 from common.models import Color, Size
 from stores.models.store import Store
+from .managers import GoodsCategoryManager
 
 
 class GoodsCategory(TimeStampedModel):
@@ -31,6 +32,8 @@ class GoodsCategory(TimeStampedModel):
         base_field=models.CharField(max_length=30), default=list,
         verbose_name=_('Applicable specifications')
     )
+
+    objects = GoodsCategoryManager()
 
     def __str__(self):
         return self.name
