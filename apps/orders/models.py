@@ -47,14 +47,20 @@ class Order(TimeStampedModel):
         good_order = self.good_orders.first()
         return good_order.good.seller if good_order else None
 
+    seller.fget.short_description = _('Seller')
+
     @property
     def buyer(self):
         good_order = self.good_orders.first()
         return good_order.buyer if good_order else None
 
+    buyer.fget.short_description = _('Buyer')
+
     @property
     def goods_names(self):
         return ', '.join(self.good_orders.values_list('good__name', flat=True))
+
+    goods_names.fget.short_description = _('Goods names')
 
     def __str__(self):
         return _('Order %(order_id)d. Seller: %(seller)s; buyer: %(buyer)s') % {
@@ -91,10 +97,20 @@ class GoodOrder(TimeStampedModel):
     def seller(self):
         return self.good.seller
 
+    seller.fget.short_description = _('Seller')
+
     @property
     def total_cost(self):
         return self.good.final_price * self.quantity
 
+    total_cost.fget.short_description = _('Total cost')
+
     @property
     def is_preorder(self):
         return self.order is None
+
+    @property
+    def order_no(self):
+        return self.order_id
+
+    order_no.fget.short_description = _('Order no')

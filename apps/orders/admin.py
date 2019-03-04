@@ -21,7 +21,7 @@ class OrderAdmin(admin.ModelAdmin):
 
 @admin.register(GoodOrder)
 class GoodOrderAdmin(admin.ModelAdmin):
-    list_display = ['buyer', 'seller', 'good', 'quantity', 'total_cost', 'order_id']
+    list_display = ['buyer', 'seller', 'good', 'quantity', 'total_cost', 'order_no']
     fields = ['buyer', 'seller', 'good', 'quantity', 'total_cost', 'order']
     readonly_fields = ['seller', 'total_cost']
     autocomplete_fields = ['buyer', 'good']

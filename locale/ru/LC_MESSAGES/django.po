@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-02 15:43+0200\n"
+"POT-Creation-Date: 2019-03-04 21:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: apps/common/admin.py:16
+#: apps/common/admin.py:12
 msgid "Holo-Apollo site admin"
 msgstr "Администрирование сайта Holo-Apollo"
 
-#: apps/common/admin.py:17
+#: apps/common/admin.py:13
 msgid "Holo-Apollo administration"
 msgstr "Администрирование Holo-Apollo"
 
@@ -36,7 +36,7 @@ msgstr "Общее"
 msgid "Phone number"
 msgstr "Номер телефона"
 
-#: apps/common/models.py:8 apps/goods/models.py:119
+#: apps/common/models.py:8 apps/goods/models.py:123
 msgid "Color"
 msgstr "Цвет"
 
@@ -48,7 +48,7 @@ msgstr "Цвета"
 msgid "Definition"
 msgstr "Определение"
 
-#: apps/common/models.py:19 apps/goods/models.py:121
+#: apps/common/models.py:19 apps/goods/models.py:125
 msgid "Size"
 msgstr "Размер"
 
@@ -68,79 +68,83 @@ msgstr "подкатегория"
 msgid "subcategories"
 msgstr "подкатегории"
 
-#: apps/goods/apps.py:7 apps/goods/models.py:61
+#: apps/goods/apps.py:7 apps/goods/models.py:65
 msgid "Goods"
 msgstr "Товары"
 
-#: apps/goods/models.py:17
+#: apps/goods/models.py:18
 msgid "goods category"
 msgstr "категория товаров"
 
-#: apps/goods/models.py:18
+#: apps/goods/models.py:19
 msgid "goods categories"
 msgstr "категории товаров"
 
-#: apps/goods/models.py:22 apps/goods/models.py:65
+#: apps/goods/models.py:23 apps/goods/models.py:69
 msgctxt "not person"
 msgid "Name"
 msgstr "Название"
 
-#: apps/goods/models.py:29
+#: apps/goods/models.py:28
+msgid "Slug"
+msgstr ""
+
+#: apps/goods/models.py:31
 msgid "Parent category"
 msgstr "Родительская категория"
 
-#: apps/goods/models.py:32
+#: apps/goods/models.py:34
 msgid "Applicable specifications"
 msgstr "Применяемые характеристики"
 
-#: apps/goods/models.py:51
+#: apps/goods/models.py:55
 msgid "Categories names chain"
 msgstr "Цепочка названий категорий"
 
-#: apps/goods/models.py:55
+#: apps/goods/models.py:59 apps/orders/models.py:63
 msgid "Goods names"
 msgstr "Названия товаров"
 
-#: apps/goods/models.py:60 apps/goods/models.py:117 apps/orders/models.py:79
+#: apps/goods/models.py:64 apps/goods/models.py:121 apps/orders/models.py:85
 msgctxt "product"
 msgid "Good"
 msgstr "Товар"
 
-#: apps/goods/models.py:70
+#: apps/goods/models.py:74
 msgid "Description"
 msgstr "Описание"
 
-#: apps/goods/models.py:72 apps/stores/models/store_application.py:24
+#: apps/goods/models.py:76 apps/stores/models/store_application.py:24
 #: apps/stores/models/store_application.py:58
 msgid "Category"
 msgstr "Категория"
 
-#: apps/goods/models.py:74
+#: apps/goods/models.py:78 apps/orders/models.py:50 apps/orders/models.py:100
 msgid "Seller"
 msgstr "Продавец"
 
-#: apps/goods/models.py:76
+#: apps/goods/models.py:80
 msgid "Price"
 msgstr "Цена"
 
-#: apps/goods/models.py:83
+#: apps/goods/models.py:87
 msgid "Discount"
 msgstr "Скидка"
 
-#: apps/goods/models.py:93
+#: apps/goods/models.py:97
 msgid "Categories names"
 msgstr "Названия категорий"
 
-#: apps/goods/models.py:113 apps/goods/models.py:114
+#: apps/goods/models.py:117 apps/goods/models.py:118
 msgid "Good specifications"
 msgstr "Характеристики товара"
 
-#: apps/goods/models.py:124
+#: apps/goods/models.py:128
 #, python-format
 msgid "%(good)s specifications"
 msgstr "Характеристики %(good)s"
 
-#: apps/orders/apps.py:7 apps/orders/models.py:68
+#: apps/orders/apps.py:7 apps/orders/models.py:74
 msgid "Orders"
 msgstr "Заказы"
 
@@ -192,35 +196,43 @@ msgstr "Детали доставки"
 msgid "Rating"
 msgstr "Оценка"
 
-#: apps/orders/models.py:60
+#: apps/orders/models.py:57 apps/orders/models.py:83
+msgid "Buyer"
+msgstr "Покупатель"
+
+#: apps/orders/models.py:66
 #, python-format
 msgid "Order %(order_id)d. Seller: %(seller)s; buyer: %(buyer)s"
 msgstr "Заказ %(order_id)d. Продавец: %(seller)s; покупатель: %(buyer)s"
 
-#: apps/orders/models.py:67 apps/orders/models.py:82
+#: apps/orders/models.py:73 apps/orders/models.py:88
 msgid "Order"
 msgstr "Заказ"
 
-#: apps/orders/models.py:73
+#: apps/orders/models.py:79
 msgid "Good order"
 msgstr "Заказ товара"
 
-#: apps/orders/models.py:74
+#: apps/orders/models.py:80
 msgid "Good orders"
 msgstr "Заказы товаров"
 
-#: apps/orders/models.py:77
-msgid "Buyer"
-msgstr "Покупатель"
-
-#: apps/orders/models.py:80
+#: apps/orders/models.py:86
 msgid "Quantity"
 msgstr "Количество"
 
-#: apps/orders/models.py:85
+#: apps/orders/models.py:91
 #, python-format
 msgid "Buyer: %(buyer)s. Good: %(good)s"
 msgstr "Покупатель: %(buyer)s. Товар: %(good)s"
+
+#: apps/orders/models.py:106
+msgid "Total cost"
+msgstr "Общая стоимость"
+
+#: apps/orders/models.py:116
+msgid "Order no"
+msgstr "№ заказа"
 
 #: apps/stores/api/v1/serializers.py:41
 msgid "An application with this email already exists"
@@ -471,15 +483,15 @@ msgstr "Подписка"
 msgid "Subscriptions"
 msgstr "Подписки"
 
-#: config/settings/base.py:178
+#: config/settings/base.py:161
 msgid "Russian"
 msgstr "Русский"
 
-#: config/settings/base.py:179
+#: config/settings/base.py:162
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: config/settings/base.py:180
+#: config/settings/base.py:163
 msgid "English"
 msgstr "Английский"
 
