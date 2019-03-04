@@ -10,18 +10,18 @@ class StoreFactory(factory.DjangoModelFactory):
         model = Store
 
     user = factory.SubFactory(HoloUserFactory)
-    store_name = factory.Sequence(lambda n: f'Store {n}')
+    store_name = factory.Faker('company')
 
 
 class StoreApplicationFactory(factory.DjangoModelFactory):
     class Meta:
         model = StoreApplication
 
-    name = "Jane Doe"
-    email = factory.Sequence(lambda n: f'store-{n}@ha.rt')
-    instagram_name = factory.Sequence(lambda n: f'@store-{n}')
+    name = factory.Faker('name')
+    email = factory.Faker('email')
+    instagram_name = factory.Faker('word')
     category = StoreApplication.OTHER
-    selling_goods = 'Goods'
-    goods_description = 'Goods' * 20
-    philosophy = 'Goods' * 20
+    selling_goods = factory.Faker('text')
+    goods_description = factory.Faker('text')
+    philosophy = factory.Faker('text')
     data_usage_agreement = True

@@ -9,6 +9,7 @@ class GoodsCategoryFactory(factory.DjangoModelFactory):
         model = GoodsCategory
 
     name = factory.Sequence(lambda n: f'Category {n}')
+    slug = factory.LazyAttribute(lambda a: a.name.lower().replace(' ', '_'))
 
 
 class GoodFactory(factory.DjangoModelFactory):

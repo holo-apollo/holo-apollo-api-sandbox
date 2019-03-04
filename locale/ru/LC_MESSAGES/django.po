@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 18:02+0200\n"
+"POT-Creation-Date: 2019-03-04 21:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,30 +20,41 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: apps/buyers/apps.py:7 apps/buyers/models.py:16
-msgid "Buyers"
-msgstr "Покупатели"
-
-#: apps/buyers/models.py:12 apps/stores/models/store.py:17
-#: apps/users/models.py:97
-msgid "User"
-msgstr "Пользователь"
-
-#: apps/buyers/models.py:15
-msgid "Buyer"
-msgstr "Покупатель"
-
-#: apps/common/admin.py:14
+#: apps/common/admin.py:12
 msgid "Holo-Apollo site admin"
 msgstr "Администрирование сайта Holo-Apollo"
 
-#: apps/common/admin.py:15
+#: apps/common/admin.py:13
 msgid "Holo-Apollo administration"
 msgstr "Администрирование Holo-Apollo"
+
+#: apps/common/apps.py:7
+msgid "Common"
+msgstr "Общее"
 
 #: apps/common/fields.py:8
 msgid "Phone number"
 msgstr "Номер телефона"
+
+#: apps/common/models.py:8 apps/goods/models.py:123
+msgid "Color"
+msgstr "Цвет"
+
+#: apps/common/models.py:9
+msgid "Colors"
+msgstr "Цвета"
+
+#: apps/common/models.py:11 apps/common/models.py:22
+msgid "Definition"
+msgstr "Определение"
+
+#: apps/common/models.py:19 apps/goods/models.py:125
+msgid "Size"
+msgstr "Размер"
+
+#: apps/common/models.py:20
+msgid "Sizes"
+msgstr "Размеры"
 
 #: apps/common/validators.py:7
 msgid "Enter a valid phone number"
@@ -57,82 +68,197 @@ msgstr "подкатегория"
 msgid "subcategories"
 msgstr "подкатегории"
 
-#: apps/goods/apps.py:7 apps/goods/models.py:54
+#: apps/goods/apps.py:7 apps/goods/models.py:65
 msgid "Goods"
 msgstr "Товары"
 
-#: apps/goods/models.py:14
+#: apps/goods/models.py:18
 msgid "goods category"
 msgstr "категория товаров"
 
-#: apps/goods/models.py:15
+#: apps/goods/models.py:19
 msgid "goods categories"
 msgstr "категории товаров"
 
-#: apps/goods/models.py:19 apps/goods/models.py:58
+#: apps/goods/models.py:23 apps/goods/models.py:69
 msgctxt "not person"
 msgid "Name"
 msgstr "Название"
 
-#: apps/goods/models.py:26
+#: apps/goods/models.py:28
+msgid "Slug"
+msgstr ""
+
+#: apps/goods/models.py:31
 msgid "Parent category"
 msgstr "Родительская категория"
 
-#: apps/goods/models.py:44
+#: apps/goods/models.py:34
+msgid "Applicable specifications"
+msgstr "Применяемые характеристики"
+
+#: apps/goods/models.py:55
 msgid "Categories names chain"
 msgstr "Цепочка названий категорий"
 
-#: apps/goods/models.py:48
+#: apps/goods/models.py:59 apps/orders/models.py:63
 msgid "Goods names"
 msgstr "Названия товаров"
 
-#: apps/goods/models.py:53
+#: apps/goods/models.py:64 apps/goods/models.py:121 apps/orders/models.py:85
 msgctxt "product"
 msgid "Good"
 msgstr "Товар"
 
-#: apps/goods/models.py:63
+#: apps/goods/models.py:74
 msgid "Description"
 msgstr "Описание"
 
-#: apps/goods/models.py:65 apps/stores/models/store_application.py:24
+#: apps/goods/models.py:76 apps/stores/models/store_application.py:24
 #: apps/stores/models/store_application.py:58
 msgid "Category"
 msgstr "Категория"
 
-#: apps/goods/models.py:67
+#: apps/goods/models.py:78 apps/orders/models.py:50 apps/orders/models.py:100
 msgid "Seller"
 msgstr "Продавец"
 
-#: apps/goods/models.py:69
+#: apps/goods/models.py:80
 msgid "Price"
 msgstr "Цена"
 
-#: apps/goods/models.py:84
+#: apps/goods/models.py:87
+msgid "Discount"
+msgstr "Скидка"
+
+#: apps/goods/models.py:97
 msgid "Categories names"
 msgstr "Названия категорий"
 
-#: apps/stores/api/v1/serializers.py:34
+#: apps/goods/models.py:117 apps/goods/models.py:118
+msgid "Good specifications"
+msgstr "Характеристики товара"
+
+#: apps/goods/models.py:128
+#, python-format
+msgid "%(good)s specifications"
+msgstr "Характеристики %(good)s"
+
+#: apps/orders/apps.py:7 apps/orders/models.py:74
+msgid "Orders"
+msgstr "Заказы"
+
+#: apps/orders/models.py:20
+msgid "New"
+msgstr "Новый"
+
+#: apps/orders/models.py:21
+msgid "Accepted"
+msgstr "Принят"
+
+#: apps/orders/models.py:22
+msgid "Sent"
+msgstr "Отправлен"
+
+#: apps/orders/models.py:23
+msgid "Completed"
+msgstr "Выполнен"
+
+#: apps/orders/models.py:31
+msgid "Pickup"
+msgstr "Самовывоз"
+
+#: apps/orders/models.py:32
+msgid "New post branch"
+msgstr "Отделение Новой Почты"
+
+#: apps/orders/models.py:33
+msgid "New post express"
+msgstr "Курьервская доставка Новой Почтой"
+
+#: apps/orders/models.py:37
+msgid "Status"
+msgstr "Статус"
+
+#: apps/orders/models.py:38
+msgid "Delivery city"
+msgstr "Город доставки"
+
+#: apps/orders/models.py:40
+msgid "Delivery method"
+msgstr "Способ доставки"
+
+#: apps/orders/models.py:41
+msgid "Delivery info"
+msgstr "Детали доставки"
+
+#: apps/orders/models.py:43
+msgid "Rating"
+msgstr "Оценка"
+
+#: apps/orders/models.py:57 apps/orders/models.py:83
+msgid "Buyer"
+msgstr "Покупатель"
+
+#: apps/orders/models.py:66
+#, python-format
+msgid "Order %(order_id)d. Seller: %(seller)s; buyer: %(buyer)s"
+msgstr "Заказ %(order_id)d. Продавец: %(seller)s; покупатель: %(buyer)s"
+
+#: apps/orders/models.py:73 apps/orders/models.py:88
+msgid "Order"
+msgstr "Заказ"
+
+#: apps/orders/models.py:79
+msgid "Good order"
+msgstr "Заказ товара"
+
+#: apps/orders/models.py:80
+msgid "Good orders"
+msgstr "Заказы товаров"
+
+#: apps/orders/models.py:86
+msgid "Quantity"
+msgstr "Количество"
+
+#: apps/orders/models.py:91
+#, python-format
+msgid "Buyer: %(buyer)s. Good: %(good)s"
+msgstr "Покупатель: %(buyer)s. Товар: %(good)s"
+
+#: apps/orders/models.py:106
+msgid "Total cost"
+msgstr "Общая стоимость"
+
+#: apps/orders/models.py:116
+msgid "Order no"
+msgstr "№ заказа"
+
+#: apps/stores/api/v1/serializers.py:41
 msgid "An application with this email already exists"
 msgstr "Заявка с этим адресом почты уже существует"
 
-#: apps/stores/api/v1/serializers.py:38
+#: apps/stores/api/v1/serializers.py:45
 msgid "An application with this Instagram name already exists"
 msgstr "Заявка с этим Instagram-именем уже существует"
 
-#: apps/stores/api/v1/serializers.py:51
+#: apps/stores/api/v1/serializers.py:58
 msgid "You must allow your data usage to create application"
 msgstr "Вы должны разрешить ииспользование Ваших данных, чтобы оставить заявку"
 
-#: apps/stores/apps.py:7 apps/stores/models/store.py:24
+#: apps/stores/apps.py:7 apps/stores/models/store.py:27
 msgid "Stores"
 msgstr "Магазины"
 
-#: apps/stores/models/store.py:12
+#: apps/stores/models/store.py:13
 msgid "Store name"
 msgstr "Имя магазина"
 
-#: apps/stores/models/store.py:23
+#: apps/stores/models/store.py:20 apps/users/models.py:88
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/stores/models/store.py:26
 msgid "Store"
 msgstr "Магазин"
 
@@ -172,8 +298,8 @@ msgstr "Имя"
 msgid "What is your name?"
 msgstr "Как Вас зовут?"
 
-#: apps/stores/models/store_application.py:40 apps/users/models.py:48
-#: apps/users/models.py:129
+#: apps/stores/models/store_application.py:40 apps/users/models.py:44
+#: apps/users/models.py:112
 msgid "Email"
 msgstr "Email"
 
@@ -277,7 +403,7 @@ msgstr ""
 msgid "Sorry, subscription not found."
 msgstr "Извините, подписка не найдена"
 
-#: apps/users/apps.py:7 apps/users/models.py:98
+#: apps/users/apps.py:7 apps/users/models.py:89
 msgid "Users"
 msgstr "Пользователи"
 
@@ -285,87 +411,87 @@ msgstr "Пользователи"
 msgid "The given email must be set"
 msgstr "Адрес почты должен быть установлен."
 
-#: apps/users/models.py:27
+#: apps/users/models.py:23
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: apps/users/models.py:31
+#: apps/users/models.py:27
 msgid "That username is already taken."
 msgstr "Это имя пользователя уже занято."
 
-#: apps/users/models.py:35
+#: apps/users/models.py:31
 msgid "First name"
 msgstr "Имя"
 
-#: apps/users/models.py:41
+#: apps/users/models.py:37
 msgid "Last name"
 msgstr "Фамилия"
 
-#: apps/users/models.py:52
+#: apps/users/models.py:48
 msgid "That email address is already taken."
 msgstr "Этот адрес уже занят."
 
-#: apps/users/models.py:56
+#: apps/users/models.py:52
 msgid "Email confirmed"
 msgstr "Email пожтверждён"
 
-#: apps/users/models.py:61
+#: apps/users/models.py:57
 msgid "Phone"
 msgstr "Телефон"
 
-#: apps/users/models.py:66
+#: apps/users/models.py:62
 msgid "That phone number is already taken."
 msgstr "Этот телефон уже занят."
 
-#: apps/users/models.py:71
+#: apps/users/models.py:67
 msgid "Staff status"
 msgstr "Статус персонала"
 
-#: apps/users/models.py:75
+#: apps/users/models.py:71
 msgid "Active status"
 msgstr "Активный статус"
 
-#: apps/users/models.py:79
+#: apps/users/models.py:75
 msgid "Date joined"
 msgstr "Дата регистрации"
 
-#: apps/users/models.py:83
+#: apps/users/models.py:79
 msgid "Last updated"
 msgstr "Последнее обновление"
 
-#: apps/users/models.py:87
+#: apps/users/models.py:82
 msgid "Avatar"
 msgstr "Аватар"
 
-#: apps/users/models.py:108
+#: apps/users/models.py:99
 msgid "Full name"
 msgstr "Полное имя"
 
-#: apps/users/models.py:133
+#: apps/users/models.py:116
 msgid "That email address is already subscribed."
 msgstr "Этот адрес уже подписан."
 
-#: apps/users/models.py:137
+#: apps/users/models.py:120
 msgid "Subscribed"
 msgstr "Подписан"
 
-#: apps/users/models.py:143
+#: apps/users/models.py:126
 msgid "Subscription"
 msgstr "Подписка"
 
-#: apps/users/models.py:144
+#: apps/users/models.py:127
 msgid "Subscriptions"
 msgstr "Подписки"
 
-#: config/settings/base.py:177
+#: config/settings/base.py:161
 msgid "Russian"
 msgstr "Русский"
 
-#: config/settings/base.py:178
+#: config/settings/base.py:162
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: config/settings/base.py:179
+#: config/settings/base.py:163
 msgid "English"
 msgstr "Английский"
 
