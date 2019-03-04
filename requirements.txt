@@ -81,8 +81,6 @@ requests-oauthlib==0.8.0
 s3transfer==0.1.13
 simplegeneric==0.8.1
 six==1.11.0
-social-auth-app-django==2.1.0
-social-auth-core==1.7.0
 tap.py==2.4
 testfixtures==6.3.0
 text-unidecode==1.1
