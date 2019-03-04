@@ -45,4 +45,4 @@ class GoodSerializer(serializers.ModelSerializer):
 class GoodsCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = GoodsCategory
-        fields = ['id', 'name']
+        fields = ['slug', 'name']

@@ -25,6 +25,7 @@ class GoodsCategory(TimeStampedModel):
         null=False,
         blank=False
     )
+    slug = models.SlugField(max_length=30, verbose_name=_('Slug'), unique=True, db_index=True)
     parent_category = models.ForeignKey('self', related_name='subcategories',
                                         on_delete=models.CASCADE, null=True, blank=True,
                                         verbose_name=_('Parent category'))
