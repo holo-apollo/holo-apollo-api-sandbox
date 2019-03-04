@@ -7,7 +7,7 @@ from .factories import HoloUserFactory, SubscriptionFactory
 
 class TestHoloUser(TestCase):
     def setUp(self):
-        self.user = HoloUserFactory()
+        self.user = HoloUserFactory(first_name='Jane', last_name='Doe')
 
     def test_short_name(self):
         self.assertEqual(self.user.get_short_name(), 'Jane')
