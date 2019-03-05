@@ -85,6 +85,7 @@ class Good(TimeStampedModel):
     )
     discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99)],
                                            verbose_name=_('Discount'))
+    is_in_stock = models.BooleanField(default=True, verbose_name=_('In stock'))
 
     def __str__(self):
         return f'{self.name} ({self.category})'

@@ -4,7 +4,7 @@ from django_elasticsearch_dsl_drf.constants import (LOOKUP_FILTER_RANGE, LOOKUP_
 from django_elasticsearch_dsl_drf.filter_backends import (DefaultOrderingFilterBackend,
                                                           FilteringFilterBackend,
                                                           OrderingFilterBackend,
-                                                          SearchFilterBackend)
+                                                          CompoundSearchFilterBackend)
 from django_elasticsearch_dsl_drf.viewsets import BaseDocumentViewSet
 
 from goods.documents import GoodDocument
@@ -19,7 +19,7 @@ class GoodDocumentViewSet(BaseDocumentViewSet):
         FilteringFilterBackend,
         OrderingFilterBackend,
         DefaultOrderingFilterBackend,
-        SearchFilterBackend
+        CompoundSearchFilterBackend
     ]
     search_fields = ['name', 'description']
     filter_fields = {

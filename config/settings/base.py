@@ -158,9 +158,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 LANGUAGES = [
+    ('en', _('English')),
     ('ru', _('Russian')),
     ('uk', _('Ukrainian')),
-    ('en', _('English')),
 ]
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')

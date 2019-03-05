@@ -23,7 +23,8 @@ class GoodDocument(DocType):
     categories_ids = fields.IntegerField()
     categories = fields.NestedField(properties={
         'id': fields.IntegerField(),
-        'name': fields.TextField()
+        'slug': fields.TextField(),
+        'name': fields.TextField(),
     })
     seller = fields.ObjectField(properties={
         'store_id': fields.IntegerField(attr='id'),
@@ -34,6 +35,12 @@ class GoodDocument(DocType):
     })
     price = fields.FloatField(attr='price.amount')
     price_currency = fields.KeywordField()
+    discount = fields.IntegerField()
+    is_in_stock = fields.BooleanField()
+    specifications = fields.ObjectField(properties={
+        'color': fields.TextField(attr='color.definition'),
+        'size': fields.TextField(attr='size.definition'),
+    })
     created = fields.DateField()
     modified = fields.DateField()
 
