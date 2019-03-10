@@ -1,7 +1,7 @@
 from djmoney.money import Money
 from rest_framework import serializers
 
-from goods.models import Good, GoodsCategory, GoodSpecifications
+from goods.models import Good, GoodImage, GoodsCategory, GoodSpecifications
 from stores.api.v1.serializers import StoreSerializer
 
 
@@ -14,6 +14,12 @@ class GoodSpecificationsSerializer(serializers.ModelSerializer):
         fields = ['color', 'size']
 
 
+class GoodImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodImage
+        fields = ['image_url']
+
+
 class GoodSerializer(serializers.ModelSerializer):
     categories_ids = serializers.ListField(read_only=True)
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
@@ -21,12 +27,13 @@ class GoodSerializer(serializers.ModelSerializer):
     price_currency = serializers.CharField(source='price.currency', default='UAH')
     seller_info = StoreSerializer(read_only=True, source='seller')
     specifications = GoodSpecificationsSerializer(read_only=True)
+    images = GoodImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Good
         fields = ['id', 'name', 'description', 'category', 'price', 'price_currency',
                   'categories_ids', 'user', 'seller_info', 'specifications', 'discount',
-                  'is_in_stock']
+                  'availability', 'images']
 
     def validate(self, validated_data):
         user = validated_data.pop('user')

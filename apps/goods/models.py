@@ -65,6 +65,16 @@ class Good(TimeStampedModel):
         verbose_name_plural = _('Goods')
         unique_together = ('name', 'category')
 
+    AVAILABLE = 'available'
+    NOT_AVAILABLE = 'not_available'
+    ON_REQUEST = 'on_request'
+
+    AVAILABILITY_CHOICES = (
+        (AVAILABLE, _('Available')),
+        (NOT_AVAILABLE, _('Not available')),
+        (ON_REQUEST, _('On request')),
+    )
+
     name = models.CharField(
         verbose_name=pgettext_lazy('not person', 'Name'),
         max_length=30,
@@ -85,7 +95,8 @@ class Good(TimeStampedModel):
     )
     discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99)],
                                            verbose_name=_('Discount'))
-    is_in_stock = models.BooleanField(default=True, verbose_name=_('In stock'))
+    availability = models.CharField(max_length=20, choices=AVAILABILITY_CHOICES, default=AVAILABLE,
+                                    verbose_name=_('Availability'))
 
     def __str__(self):
         return f'{self.name} ({self.category})'
@@ -127,3 +138,9 @@ class GoodSpecifications(models.Model):
 
     def __str__(self):
         return _('%(good)s specifications') % {'good': self.good.name}
+
+
+class GoodImage(models.Model):
+    good = models.ForeignKey(Good, on_delete=models.CASCADE, related_name='images',
+                             verbose_name=_('Good image'))
+    image_url = models.URLField(verbose_name=_('Image URL'))

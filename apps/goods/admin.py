@@ -1,7 +1,9 @@
 from django.contrib import admin
+from django.db.models import URLField
 from django.utils.translation import gettext_lazy as _
 
-from .models import Good, GoodsCategory, GoodSpecifications
+from common.forms import ImageUrlWidget
+from .models import Good, GoodImage, GoodsCategory, GoodSpecifications
 
 
 class GoodsCategoryInline(admin.TabularInline):
@@ -14,6 +16,15 @@ class GoodsCategoryInline(admin.TabularInline):
 class GoodSpecificationsInline(admin.StackedInline):
     model = GoodSpecifications
     autocomplete_fields = ['color', 'size']
+
+
+class GoodImageInline(admin.TabularInline):
+    model = GoodImage
+    fields = ['image_url']
+    formfield_overrides = {
+        URLField: {'widget': ImageUrlWidget},
+    }
+    extra = 0
 
 
 @admin.register(GoodsCategory)
@@ -31,5 +42,5 @@ class GoodAdmin(admin.ModelAdmin):
     readonly_fields = ['categories_names']
     list_display = ['name', 'categories_names', 'seller', 'price']
     autocomplete_fields = ['category', 'seller']
-    inlines = [GoodSpecificationsInline]
+    inlines = [GoodSpecificationsInline, GoodImageInline]
     search_fields = ['name']

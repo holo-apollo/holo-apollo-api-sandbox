@@ -36,7 +36,7 @@ class GoodDocument(DocType):
     price = fields.FloatField(attr='price.amount')
     price_currency = fields.KeywordField()
     discount = fields.IntegerField()
-    is_in_stock = fields.BooleanField()
+    availability = fields.TextField()
     specifications = fields.ObjectField(properties={
         'color': fields.TextField(attr='color.definition'),
         'size': fields.TextField(attr='size.definition'),
