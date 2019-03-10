@@ -28,12 +28,13 @@ class GoodSerializer(serializers.ModelSerializer):
     seller_info = StoreSerializer(read_only=True, source='seller')
     specifications = GoodSpecificationsSerializer(read_only=True)
     images = GoodImageSerializer(many=True, read_only=True)
+    availability_display = serializers.CharField(source='get_availability_display', read_only=True)
 
     class Meta:
         model = Good
         fields = ['id', 'name', 'description', 'category', 'price', 'price_currency',
                   'categories_ids', 'user', 'seller_info', 'specifications', 'discount',
-                  'availability', 'images']
+                  'availability', 'availability_display', 'images']
 
     def validate(self, validated_data):
         user = validated_data.pop('user')
