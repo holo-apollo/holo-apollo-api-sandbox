@@ -20,3 +20,4 @@ class GoodsCategoryViewSet(ModelViewSet):
     queryset = GoodsCategory.objects.main()
     serializer_class = GoodsCategorySerializer
     permission_classes = [AllowAny]
+    pagination_class = None
