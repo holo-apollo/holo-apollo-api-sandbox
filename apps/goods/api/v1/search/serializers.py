@@ -6,6 +6,6 @@ from goods.documents import GoodDocument
 class GoodDocumentSerializer(DocumentSerializer):
     class Meta:
         document = GoodDocument
-        fields = ['id', 'name', 'description', 'categories_ids', 'categories', 'seller', 'price',
-                  'price_currency', 'created', 'modified', 'discount', 'availability',
-                  'specifications']
+        fields = ['id', 'name', 'description', 'category_id', 'seller', 'price',
+                  'price_currency', 'discount', 'availability',
+                  'specifications', 'images']

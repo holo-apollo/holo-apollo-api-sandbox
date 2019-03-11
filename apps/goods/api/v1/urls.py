@@ -1,6 +1,6 @@
 from rest_framework import routers
 
-from .search.good_api import GoodDocumentViewSet
+from .search.views import GoodDocumentViewSet
 from .views import GoodsCategoryViewSet, GoodViewSet
 
 router = routers.SimpleRouter()
