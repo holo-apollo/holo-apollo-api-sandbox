@@ -105,8 +105,12 @@ class Good(TimeStampedModel):
         return self.category.categories_chain()
 
     def categories_names(self):
-        return ' > '.join([str(category) for category in self.categories()])
+        return [category.name for category in self.categories()]
     categories_names.short_description = _('Categories names')
+
+    def categories_names_chain(self):
+        return ' > '.join([str(category) for category in self.categories()])
+    categories_names_chain.short_description = _('Categories names chain')
 
     @property
     def categories_ids(self):

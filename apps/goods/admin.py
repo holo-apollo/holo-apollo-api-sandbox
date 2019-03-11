@@ -39,8 +39,8 @@ class GoodsCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Good)
 class GoodAdmin(admin.ModelAdmin):
-    readonly_fields = ['categories_names']
-    list_display = ['name', 'categories_names', 'seller', 'price']
+    readonly_fields = ['categories_names_chain']
+    list_display = ['name', 'categories_names_chain', 'seller', 'price']
     autocomplete_fields = ['category', 'seller']
     inlines = [GoodSpecificationsInline, GoodImageInline]
     search_fields = ['name']

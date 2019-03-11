@@ -28,6 +28,9 @@ class GoodDocument(DocType):
     description_uk = fields.StringField()
     category_id = fields.IntegerField()
     categories_ids = fields.IntegerField()
+    categories_names = fields.StringField(fields={
+        'raw': fields.KeywordField(),
+    })
     categories = fields.NestedField(properties={
         'id': fields.IntegerField(),
         'slug': fields.KeywordField(),
