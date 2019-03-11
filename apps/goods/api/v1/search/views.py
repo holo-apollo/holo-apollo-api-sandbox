@@ -44,7 +44,7 @@ class GoodDocumentViewSet(BaseDocumentViewSet, MoreLikeThisMixin):
             'field': 'price_currency'
         },
         'seller': {
-            'field': 'seller.store_id'
+            'field': 'seller.id'
         }
     }
     ordering_fields = {

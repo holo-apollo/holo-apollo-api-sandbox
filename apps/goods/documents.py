@@ -42,7 +42,7 @@ class GoodDocument(DocType):
         'name_uk': fields.StringField(),
     })
     seller = fields.ObjectField(properties={
-        'store_id': fields.IntegerField(attr='id'),
+        'id': fields.IntegerField(),
         'store_name': fields.StringField(fields={
             'raw': fields.KeywordField(),
         }),
