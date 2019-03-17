@@ -60,6 +60,7 @@ class GoodDocumentViewSet(BaseDocumentViewSet, MoreLikeThisMixin):
         'fields': [
             'name',
             'description',
+            'category.name',
             'categories_names',
             'seller.store_name',
             'specifications.color',

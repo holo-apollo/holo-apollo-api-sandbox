@@ -58,6 +58,10 @@ class GoodsCategory(TimeStampedModel):
         return ', '.join([str(good) for good in self.all_goods()])
     goods_names.short_description = _('Goods names')
 
+    @property
+    def is_main(self):
+        return self.parent_category is None
+
 
 class Good(TimeStampedModel):
     class Meta:

@@ -26,7 +26,17 @@ class GoodDocument(DocType):
     description_en = fields.StringField(analyzer='english')
     description_ru = fields.StringField(analyzer='russian')
     description_uk = fields.StringField()
-    category_id = fields.IntegerField()
+    category = fields.ObjectField(properties={
+        'id': fields.IntegerField(),
+        'slug': fields.KeywordField(),
+        'name': fields.StringField(fields={
+            'raw': fields.KeywordField(),
+        }),
+        'name_en': fields.StringField(analyzer='english'),
+        'name_ru': fields.StringField(analyzer='russian'),
+        'name_uk': fields.StringField(),
+        'is_main': fields.BooleanField(),
+    })
     categories_ids = fields.IntegerField()
     categories_names = fields.StringField(fields={
         'raw': fields.KeywordField(),
@@ -40,6 +50,7 @@ class GoodDocument(DocType):
         'name_en': fields.StringField(analyzer='english'),
         'name_ru': fields.StringField(analyzer='russian'),
         'name_uk': fields.StringField(),
+        'is_main': fields.BooleanField(),
     })
     seller = fields.ObjectField(properties={
         'id': fields.IntegerField(),
@@ -52,9 +63,15 @@ class GoodDocument(DocType):
         'description': fields.StringField(fields={
             'raw': fields.KeywordField(),
         }),
+        'description_en': fields.StringField(analyzer='english'),
+        'description_ru': fields.StringField(analyzer='russian'),
+        'description_uk': fields.StringField(),
         'location': fields.StringField(fields={
             'raw': fields.KeywordField(),
         }),
+        'location_en': fields.StringField(analyzer='english'),
+        'location_ru': fields.StringField(analyzer='russian'),
+        'location_uk': fields.StringField(),
         'goods_count': fields.IntegerField(),
         'rating': fields.FloatField(),
     })

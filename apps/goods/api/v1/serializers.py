@@ -21,9 +21,17 @@ class GoodImageSerializer(serializers.ModelSerializer):
         fields = ['image_url']
 
 
+class GoodsCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsCategory
+        fields = ['id', 'slug', 'name', 'is_main']
+        read_only_fields = ['is_main']
+
+
 class GoodSerializer(serializers.ModelSerializer):
-    category_id = serializers.PrimaryKeyRelatedField(source='category',
-                                                     queryset=GoodsCategory.objects.all())
+    category_id = serializers.PrimaryKeyRelatedField(
+        source='category', queryset=GoodsCategory.objects.all(), write_only=True)
+    categories = GoodsCategorySerializer(many=True, read_only=True)
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     price = serializers.FloatField(source='price.amount')
     price_currency = serializers.CharField(source='price.currency', default='UAH')
@@ -35,8 +43,8 @@ class GoodSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Good
-        fields = ['id', 'name', 'description', 'category_id', 'seller', 'price', 'price_currency',
-                  'user', 'seller_id', 'specifications', 'discount',
+        fields = ['id', 'name', 'description', 'category_id', 'categories', 'seller', 'price',
+                  'price_currency', 'user', 'seller_id', 'specifications', 'discount',
                   'availability', 'images']
 
     def validate(self, validated_data):
@@ -52,9 +60,3 @@ class GoodSerializer(serializers.ModelSerializer):
         if self.context['request'].user.is_staff:
             fields.append('seller')
         return fields
-
-
-class GoodsCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = GoodsCategory
-        fields = ['id', 'slug', 'name']

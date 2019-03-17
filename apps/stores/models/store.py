@@ -31,7 +31,7 @@ class Store(TimeStampedModel):
 
     @cached_property
     def rating(self):
-        return None
+        return 4.8
 
     @cached_property
     def goods_count(self):
