@@ -20,7 +20,7 @@ class GoodSpecificationsInline(admin.StackedInline):
 
 class GoodImageInline(admin.TabularInline):
     model = GoodImage
-    fields = ['image_url']
+    fields = ['image_url', 'is_main']
     formfield_overrides = {
         URLField: {'widget': ImageUrlWidget},
     }

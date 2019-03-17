@@ -152,3 +152,13 @@ class GoodImage(models.Model):
     good = models.ForeignKey(Good, on_delete=models.CASCADE, related_name='images',
                              verbose_name=_('Good image'))
     image_url = models.URLField(verbose_name=_('Image URL'))
+    is_main = models.BooleanField(default=False, verbose_name=_('Is main'))
+
+    def save(self, *args, **kwargs):
+        if self.is_main:
+            if self.pk:
+                other_images = self.good.images.exclude(pk=self.pk)
+            else:
+                other_images = self.good.images.all()
+            other_images.update(is_main=False)
+        super().save(*args, **kwargs)

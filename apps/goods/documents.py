@@ -13,7 +13,8 @@ good.settings(
 
 @good.doc_type
 class GoodDocument(DocType):
-    id = fields.IntegerField(attr='id')
+    pk = fields.IntegerField()
+    id = fields.IntegerField()
     name = fields.StringField(fields={
         'raw': fields.KeywordField(),
     })
@@ -95,6 +96,7 @@ class GoodDocument(DocType):
     })
     images = fields.NestedField(properties={
         'image_url': fields.KeywordField(),
+        'is_main': fields.BooleanField(),
     })
     created = fields.DateField()
     modified = fields.DateField()

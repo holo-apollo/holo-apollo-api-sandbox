@@ -18,7 +18,7 @@ class GoodSpecificationsSerializer(serializers.ModelSerializer):
 class GoodImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GoodImage
-        fields = ['image_url']
+        fields = ['image_url', 'is_main']
 
 
 class GoodsCategorySerializer(serializers.ModelSerializer):

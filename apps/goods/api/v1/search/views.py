@@ -16,7 +16,9 @@ class GoodDocumentViewSet(BaseDocumentViewSet, MoreLikeThisMixin):
     document = GoodDocument
     serializer_class = GoodDocumentSerializer
     pagination_class = PaginationWithCountHeader
-    lookup_field = 'id'
+    # a bit of hack. using 'id' as lookup field gives inconsistent object representation
+    # maybe there's a better solution to avoid filtering instead of getting by id
+    lookup_field = 'pk'
     filter_backends = [
         FilteringFilterBackend,
         IdsFilterBackend,
