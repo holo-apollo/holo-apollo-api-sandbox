@@ -18,7 +18,7 @@ class GoodSpecificationsSerializer(serializers.ModelSerializer):
 class GoodImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GoodImage
-        fields = ['image_url', 'is_main']
+        fields = ['image_url']
 
 
 class GoodsCategorySerializer(serializers.ModelSerializer):
@@ -45,7 +45,7 @@ class GoodSerializer(serializers.ModelSerializer):
         model = Good
         fields = ['id', 'name', 'description', 'category_id', 'categories', 'seller', 'price',
                   'price_currency', 'user', 'seller_id', 'specifications', 'discount',
-                  'availability', 'images']
+                  'availability', 'images', 'main_image_url']
 
     def validate(self, validated_data):
         user = validated_data.pop('user')

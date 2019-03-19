@@ -96,8 +96,8 @@ class GoodDocument(DocType):
     })
     images = fields.NestedField(properties={
         'image_url': fields.KeywordField(),
-        'is_main': fields.BooleanField(),
     })
+    main_image_url = fields.KeywordField()
     created = fields.DateField()
     modified = fields.DateField()
 

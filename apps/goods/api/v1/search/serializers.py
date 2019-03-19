@@ -8,5 +8,5 @@ class GoodDocumentSerializer(DocumentSerializer):
         document = GoodDocument
         fields = ['id', 'name', 'name_en', 'name_ru', 'name_uk', 'description', 'description_en',
                   'description_ru', 'description_uk', 'categories', 'seller', 'price',
-                  'price_currency', 'discount', 'availability',
-                  'specifications', 'images']
+                  'price_currency', 'discount', 'availability', 'specifications', 'images',
+                  'main_image_url']

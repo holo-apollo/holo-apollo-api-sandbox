@@ -131,6 +131,11 @@ class Good(TimeStampedModel):
     def final_price(self):
         return round(self.price * (1 - self.discount / 100))
 
+    @property
+    def main_image_url(self):
+        image = self.images.filter(is_main=True).first() or self.images.order_by('id').first()
+        return image.image_url if image else ''
+
 
 class GoodSpecifications(models.Model):
     class Meta:
