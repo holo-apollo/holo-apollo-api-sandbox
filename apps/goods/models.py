@@ -58,12 +58,26 @@ class GoodsCategory(TimeStampedModel):
         return ', '.join([str(good) for good in self.all_goods()])
     goods_names.short_description = _('Goods names')
 
+    @property
+    def is_main(self):
+        return self.parent_category is None
+
 
 class Good(TimeStampedModel):
     class Meta:
         verbose_name = pgettext_lazy('product', 'Good')
         verbose_name_plural = _('Goods')
         unique_together = ('name', 'category')
+
+    AVAILABLE = 'available'
+    NOT_AVAILABLE = 'not_available'
+    ON_REQUEST = 'on_request'
+
+    AVAILABILITY_CHOICES = (
+        (AVAILABLE, _('Available')),
+        (NOT_AVAILABLE, _('Not available')),
+        (ON_REQUEST, _('On request')),
+    )
 
     name = models.CharField(
         verbose_name=pgettext_lazy('not person', 'Name'),
@@ -85,6 +99,8 @@ class Good(TimeStampedModel):
     )
     discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99)],
                                            verbose_name=_('Discount'))
+    availability = models.CharField(max_length=20, choices=AVAILABILITY_CHOICES, default=AVAILABLE,
+                                    verbose_name=_('Availability'))
 
     def __str__(self):
         return f'{self.name} ({self.category})'
@@ -93,8 +109,12 @@ class Good(TimeStampedModel):
         return self.category.categories_chain()
 
     def categories_names(self):
-        return ' > '.join([str(category) for category in self.categories()])
+        return [category.name for category in self.categories()]
     categories_names.short_description = _('Categories names')
+
+    def categories_names_chain(self):
+        return ' > '.join([str(category) for category in self.categories()])
+    categories_names_chain.short_description = _('Categories names chain')
 
     @property
     def categories_ids(self):
@@ -111,6 +131,11 @@ class Good(TimeStampedModel):
     def final_price(self):
         return round(self.price * (1 - self.discount / 100))
 
+    @property
+    def main_image_url(self):
+        image = self.images.filter(is_main=True).first() or self.images.order_by('id').first()
+        return image.image_url if image else ''
+
 
 class GoodSpecifications(models.Model):
     class Meta:
@@ -126,3 +151,19 @@ class GoodSpecifications(models.Model):
 
     def __str__(self):
         return _('%(good)s specifications') % {'good': self.good.name}
+
+
+class GoodImage(models.Model):
+    good = models.ForeignKey(Good, on_delete=models.CASCADE, related_name='images',
+                             verbose_name=_('Good image'))
+    image_url = models.URLField(verbose_name=_('Image URL'))
+    is_main = models.BooleanField(default=False, verbose_name=_('Is main'))
+
+    def save(self, *args, **kwargs):
+        if self.is_main:
+            if self.pk:
+                other_images = self.good.images.exclude(pk=self.pk)
+            else:
+                other_images = self.good.images.all()
+            other_images.update(is_main=False)
+        super().save(*args, **kwargs)

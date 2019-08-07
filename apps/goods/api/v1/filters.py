@@ -1,12 +1,11 @@
-import django_filters
+from django_filters import rest_framework as filters
 
-from goods.models import Good
+from goods.models import GoodsCategory
 
 
-class GoodFilter(django_filters.FilterSet):
-    price__gte = django_filters.NumberFilter(field_name='price', lookup_expr='gte')
-    price__lte = django_filters.NumberFilter(field_name='price', lookup_expr='lte')
+class GoodsCategoryFilter(filters.FilterSet):
+    is_main = filters.BooleanFilter(field_name='parent_category', lookup_expr='isnull')
 
     class Meta:
-        model = Good
-        fields = ['price_currency', 'seller', 'price__gte', 'price__lte']
+        model = GoodsCategory
+        fields = ['is_main']

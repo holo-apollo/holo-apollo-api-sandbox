@@ -11,7 +11,7 @@ UserModel = get_user_model()
 class Store(TimeStampedModel):
     store_name = models.CharField(
         verbose_name=_('Store name'),
-        max_length=30, unique=True
+        max_length=50, unique=True
     )
     description = models.TextField()
     location = models.CharField(max_length=50)
@@ -31,7 +31,7 @@ class Store(TimeStampedModel):
 
     @cached_property
     def rating(self):
-        return None
+        return 4.8
 
     @cached_property
     def goods_count(self):
