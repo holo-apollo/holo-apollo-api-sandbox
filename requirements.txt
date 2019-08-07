@@ -13,7 +13,7 @@ coverage==4.5.1
 decorator==4.2.1
 defusedxml==0.5.0
 dj-database-url==0.4.2
-Django==2.1.7
+Django==2.2.4
 django-cors-headers==2.4.0
 django-debug-toolbar==1.9.1
 django-elasticsearch-debug-toolbar==1.2.0
@@ -29,7 +29,7 @@ django-rest-framework==0.1.0
 django-s3-collectstatic==1.0
 django-sortedm2m==1.5.0
 django-storages==1.6.5
-djangorestframework==3.9.0
+djangorestframework==3.9.1
 djangorestframework-camel-case==1.0.3
 docutils==0.14
 elasticsearch==6.3.1
@@ -48,7 +48,7 @@ ipython-genutils==0.2.0
 isort==4.3.4
 itypes==1.1.0
 jedi==0.11.1
-Jinja2==2.10
+Jinja2==2.10.1
 jmespath==0.9.3
 kombu==4.1.0
 Markdown==2.6.11
@@ -78,7 +78,7 @@ python3-openid==3.1.0
 pytz==2017.3
 raven==6.5.0
 redis==2.10.6
-requests==2.20.0
+requests==2.22.0
 requests-oauthlib==0.8.0
 s3transfer==0.1.13
 simplegeneric==0.8.1
@@ -89,7 +89,7 @@ testfixtures==6.3.0
 text-unidecode==1.1
 traitlets==4.3.2
 uritemplate==3.0.0
-urllib3==1.24.1
+urllib3==1.25.3
 vine==1.1.4
 wcwidth==0.1.7
 whitenoise==3.3.1
